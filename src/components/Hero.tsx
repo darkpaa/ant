@@ -1,5 +1,6 @@
 import { useState, useEffect, useCallback, useRef } from 'react';
 import { ArrowRight, PhoneCall, ChevronLeft, ChevronRight } from 'lucide-react';
+import { Link } from 'react-router-dom';
 import { useLang } from '../i18n/LanguageContext';
 
 const SWIPE_THRESHOLD = 60;
@@ -169,13 +170,13 @@ const Hero: React.FC = () => {
                       {t.hero.ctaServices}
                       <ArrowRight className="w-5 h-5 transition-transform duration-300 group-hover:translate-x-1" />
                     </a>
-                    <a
-                      href="/iletisim"
+                    <Link
+                      to="/iletisim"
                       className="group inline-flex items-center justify-center gap-3 bg-white/10 hover:bg-white/15 backdrop-blur-sm border border-white/20 hover:border-white/30 text-white px-8 py-4 rounded-2xl text-base font-semibold transition-all duration-300 hover:-translate-y-1"
                     >
                       <PhoneCall className="w-5 h-5" />
                       {t.hero.ctaContact}
-                    </a>
+                    </Link>
                   </div>
                 </div>
               </div>
