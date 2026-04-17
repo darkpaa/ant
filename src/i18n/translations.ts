@@ -185,7 +185,7 @@ const tr: Dictionary = {
         highlightedWord: 'Birlikte',
         headlineEnd: '\nİnşa Ediyoruz',
         subHeadline:
-          'Yönetim danışmanlığı, Ar-Ge, inovasyon ve kurumsal gelişim alanlarında sunduğumuz uzman çözümlerle işletmenizi geleceğe taşıyoruz.',
+          'OSB, Ar-Ge ve Tasarım Yönetim danışmanlığı, inovasyon ve kurumsal gelişim alanlarında sunduğumuz uzman çözümlerle kuruluşunuzu geleceğe taşıyoruz.',
       },
       {
         badge: 'Sürdürülebilir Başarı',
@@ -201,7 +201,7 @@ const tr: Dictionary = {
         highlightedWord: 'Dönüşüm',
         headlineEnd: '\nYol Haritanız',
         subHeadline:
-          'Hibe ve teşvik danışmanlığından ISO belgelendirmeye, Ar-Ge projelerinden stratejik planlamaya kadar tüm süreçlerde yanınızdayız.',
+          'Hibe ve teşvik danışmanlığında, Ar-Ge projelerinde ve stratejik planlamada yanınızdayız.',
       },
     ],
     ctaServices: 'Hizmetlerimizi İnceleyin',
