@@ -21,7 +21,7 @@ interface FormState {
 
 const initialForm: FormState = { name: '', email: '', subject: '', message: '' };
 
-const FORMSUBMIT_URL = 'https://formsubmit.co/ajax/info@antyonetim.com';
+const FORMSUBMIT_URL = 'https://formsubmit.co/ajax/kurumsal@antyonetim.com';
 
 const Contact: React.FC = () => {
   const { t, lang } = useLang();
@@ -263,7 +263,7 @@ const Contact: React.FC = () => {
                 </li>
                 <li>
                   <a
-                    href="mailto:info@antyonetim.com"
+                    href="mailto:kurumsal@antyonetim.com"
                     className="flex items-start gap-4 group"
                   >
                     <div className="w-11 h-11 rounded-xl bg-accent-400/10 group-hover:bg-accent-400/20 flex items-center justify-center flex-shrink-0 transition-colors">
@@ -274,7 +274,7 @@ const Contact: React.FC = () => {
                         {t.contact.infoEmailLabel}
                       </div>
                       <div className="text-navy-900 font-semibold group-hover:text-accent-600 transition-colors">
-                        info@antyonetim.com
+                        kurumsal@antyonetim.com
                       </div>
                     </div>
                   </a>

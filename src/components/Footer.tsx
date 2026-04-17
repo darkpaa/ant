@@ -120,7 +120,7 @@ const Footer: React.FC = () => {
               </li>
               <li>
                 <a
-                  href="mailto:info@antyonetim.com"
+                  href="mailto:kurumsal@antyonetim.com"
                   className="flex items-start gap-3 text-white/40 hover:text-white transition-colors duration-300 group"
                 >
                   <div className="w-9 h-9 rounded-lg bg-white/5 group-hover:bg-accent-400/10 flex items-center justify-center flex-shrink-0 transition-colors duration-300">
@@ -128,7 +128,7 @@ const Footer: React.FC = () => {
                   </div>
                   <div>
                     <div className="text-sm font-medium text-white/60 group-hover:text-white transition-colors">
-                      info@antyonetim.com
+                      kurumsal@antyonetim.com
                     </div>
                   </div>
                 </a>

@@ -501,6 +501,204 @@ const tr: Dictionary = {
           ],
         },
       },
+      {
+        id: 'arge-tasarim-inovasyon',
+        title: 'Ar-Ge, Tasarım ve İnovasyon Ekosistemi Danışmanlığı',
+        excerpt:
+          'Türkiye\'nin teknoloji odaklı kalkınma hedefleri doğrultusunda, 5746 ve 4691 sayılı kanunlar kapsamında sunulan devlet teşviklerinden en yüksek verimle yararlanmanız için stratejik çözüm ortaklığı sunuyoruz.',
+        publishedAt: '18 Nisan 2026',
+        readTime: '6 dk okuma',
+        content: {
+          intro:
+            'Türkiye\'nin teknoloji odaklı kalkınma hedefleri doğrultusunda, 5746 ve 4691 sayılı kanunlar kapsamında sunulan devlet teşviklerinden en yüksek verimle ve sıfır hata payıyla yararlanmanız için stratejik çözüm ortaklığı sunuyoruz. Denetim standartlarını merkeze alarak, teknik ve idari süreçlerinizi uçtan uca yönetiyoruz.',
+          sections: [
+            {
+              title: '1. 5746 Sayılı Kanun: Ar-Ge ve Tasarım Merkezleri Yönetimi',
+              paragraphs: [
+                'İşletme bünyesinde kurulan merkezlerin, sürdürülebilir bir teşvik mekanizmasına dönüşmesi için teknik izleme ve denetim hazırlığı süreçlerini yürütüyoruz.',
+                'Merkezin fiziksel alan tasarımı, personel nitelik analizini mevzuat kriterlerine uygun hazırlanması.',
+                'Sürekli Denetim ve Mevzuat Uyumu: Aylık ve yıllık bazda Ar-Ge indirimleri, gelir vergisi stopaj teşviki ve sigorta primi desteği uygulamalarının takibi.',
+                'Teknik Raporlama ve Faaliyet Takibi: Yıllık faaliyet raporlarının, projelerin teknik derinliğini ve yenilikçi yönünü (Ar-Ge/Tasarım niteliği) vurgulayacak şekilde veriye dayalı hazırlanması.',
+                'Denetleme Hazırlığı: "Ön Denetim" simülasyonları ile risklerin (adam/ay süreleri, harcama kalemleri vb.) analizi.',
+              ],
+            },
+            {
+              title: '2. 4691 Sayılı Kanun: Teknoloji Geliştirme Bölgeleri (TGB) Danışmanlığı',
+              paragraphs: [
+                'Teknopark yönetici şirketleri ve bölge içerisinde yer alan girişimci firmalar için mevzuata tam uyumlu ekosistem yönetimi sağlıyoruz.',
+                'Portal ve Muafiyet Yönetimi: Teknopark Portalı üzerinden yürütülen proje girişleri, muafiyet belgeleri ve personel takiplerinin yönetimi.',
+                'Proje Kabul ve İzleme: Bölgeye girecek projelerin 4691 sayılı kanun kapsamındaki uygunluk kriterlerinin belirlenmesi.',
+                'Yönetici Şirket Denetim Hazırlığı: Yönetici şirketlerin "Ön Denetim" simülasyonları ile risklerin analizi.',
+              ],
+            },
+          ],
+          hashtags: [
+            '#ArGe',
+            '#Tasarım',
+            '#İnovasyon',
+            '#5746',
+            '#4691',
+            '#Teknopark',
+            '#TeşvikYönetimi',
+          ],
+        },
+      },
+      {
+        id: 'yesil-osb-yol-haritasi',
+        title: 'Sanayide Yeşil Dönüşüm Yol Haritası: Yeşil OSB Nasıl Olunur? 🌍🏭',
+        excerpt:
+          'Sürdürülebilir kalkınma ve Avrupa Yeşil Mutabakatı\'na uyum sürecinde OSB\'lerin dönüşümü çerçevesinde Yeşil OSB Sertifikasyon Sistemi hakkında bilmeniz gerekenler.',
+        publishedAt: '18 Nisan 2026',
+        readTime: '7 dk okuma',
+        content: {
+          intro:
+            'Sürdürülebilir kalkınma ve Avrupa Yeşil Mutabakatı\'na uyum sürecinde Organize Sanayi Bölgelerinin dönüşümü çerçevesinde Sanayi ve Teknoloji Bakanlığı ile TSE iş birliğinde yürütülen Yeşil OSB Sertifikasyon Sistemi, OSB\'leri sadece ekonomik değil, çevresel ve sosyal performanslarıyla da değerlendiriyor.',
+          sections: [
+            {
+              title: '✅ 1. Adım: "Ön Kriterleri" Sağlamak',
+              paragraphs: [
+                'Performans puanlamasına geçebilmek için bir OSB\'nin öncelikle şu 6 temel koşulu yerine getirmesi gerekiyor:',
+                '1️⃣ OSB\'de üretimde olan en az 1 firmanın bulunması.',
+                '2️⃣ Atık suların tümünün arıtılıyor olması.',
+                '3️⃣ Enerji üretim kaynağı olarak kömür kullanımının olmaması.',
+                '4️⃣ Yönetimin TS EN ISO 14001 (Çevre) ve TS EN ISO 50001 (Enerji) belgelerine sahip olması.',
+                '5️⃣ İklim değişikliği biriminin kurulması ve yetkin personel istihdamı.',
+                '6️⃣ En az "Temel Seviye Sıfır Atık Belgesi"ne sahip olunması.',
+              ],
+            },
+            {
+              title: '📊 2. Adım: Performans Göstergeleri ile Puanlama',
+              paragraphs: [
+                'Ön kriterleri geçen OSB\'ler, 4 ana kategoride toplam 38 performans göstergesi üzerinden değerlendirilir.',
+                '🌿 Çevresel: 17 Gösterge (Ağırlık: %39)',
+                '💰 Ekonomik: 10 Gösterge (Ağırlık: %27)',
+                '🤝 Sosyal: 6 Gösterge (Ağırlık: %24)',
+                '🏛️ Yönetim: 5 Gösterge (Ağırlık: %10)',
+              ],
+            },
+            {
+              title: '🚀 3. Adım: Başvuru ve Belgelendirme Süreci',
+              paragraphs: [
+                '• Başvuru: OSB yönetimi, MEYDİP sistemi üzerinden Bakanlığa başvurur.',
+                '• Ön İnceleme: Bakanlık ön kriterleri kontrol eder, uygunsa başvuruyu TSE\'ye iletir.',
+                '• Saha Denetimi: Sahada performans göstergelerini denetlenir ve puanlanır.',
+                '• Sertifikasyon: 100 üzerinden alınan puana göre Bronz, Gümüş, Altın veya Platin belge düzenlenir.',
+                'Belge geçerlilik süresi 3 yıldır, ancak OSB\'lerin her yıl "İyileştirme Raporu" hazırlaması ve iyileştirme raporlarında her bir kritere ilişkin hedeflerini belirlemesi gerekmektedir.',
+                'Geleceğin sanayisi, kaynaklarını verimli kullanan ve çevreye saygılı OSB\'ler üzerinde yükselecek.',
+              ],
+            },
+          ],
+          hashtags: [
+            '#YeşilOSB',
+            '#Sürdürülebilirlik',
+            '#SanayiVeTeknoloji',
+            '#YeşilDönüşüm',
+            '#TSE',
+            '#OSB',
+            '#CleanTech',
+          ],
+        },
+      },
+      {
+        id: 'is-surekliligi-plani',
+        title: 'Organize Sanayi Bölgelerinin Ekonomik Kalkanı: İş Sürekliliği Planı (İSP)',
+        excerpt:
+          'OSB Uygulama Yönetmeliği gereği OSB\'lerin bir İş Sürekliliği Planı hazırlaması artık resmi bir yükümlülüktür. İSP\'nin kapsamı ve temel süreçleri hakkında bilmeniz gerekenler.',
+        publishedAt: '18 Nisan 2026',
+        readTime: '8 dk okuma',
+        content: {
+          intro:
+            'Organize Sanayi Bölgeleri Uygulama Yönetmeliği gereği OSB\'lerin bir İş Sürekliliği Planı (İSP) hazırlaması artık resmi bir yükümlülüktür. Bu kapsamda AFAD\'ın yayımladığı "Organize Sanayi Bölgeleri İçin İş Sürekliliği Planı Hazırlama ve Uygulama Kılavuzu", OSB\'lerin süreci sağlıklı ve sistematik biçimde kurması için temel bir rehber niteliğindedir.',
+          sections: [
+            {
+              title: '💡 İSP\'nin Temel Amacı',
+              paragraphs: [
+                'İSP\'nin temel amacı, bir kesinti durumunda OSB\'nin değer yaratan faaliyetlerini (ürünler, hizmetler) sürdürebilmesini, kurtarabilmesini ve eski haline getirebilmesini sağlayacak yazılı planlar oluşturmaktır. OSB özelinde birincil amaç, misyonun yerine getirilebilmesi için kritik altyapı hizmetlerinin sürekliliğidir.',
+              ],
+            },
+            {
+              title: '🎯 İş Sürekliliği Planının Amaç ve Hedefleri',
+              paragraphs: [
+                '🔌 Kritik Altyapı Hizmetlerinin Sürdürülebilirliği: OSB\'nin misyonunu yerine getirebilmesini sağlayacak düzeyde kritik altyapı hizmetlerinin sürdürebilirliğini sağlamaktır.',
+                '🏭 Katılımcı Şirketlerin Desteklenmesi: İSP, bir kesinti sırasında katılımcı şirketlere sağlanan kritik altyapı hizmetlerinin, şirketin kendini kurtarmasının mümkün olamayacağı "kritik eşik" değerin üzerinde bir seviyede sağlanacağına dair garanti vererek katılımcı şirketlerin sürdürülebilirliğini desteklemeyi amaçlar.',
+                '🔄 Hızlı Toparlanma ve Dayanıklılık: İSP, OSB\'lerin afet ve acil durumlardan en az düzeyde etkilenmesini, üretim ve istihdam süreçlerinde hızla toparlanabilmesini sağlayacaktır.',
+                '🔒 Değer ve İtibarın Korunması: Plan, işletmelerdeki olası can ve mal kayıplarını azaltacak, ticarî itibarlarını sürdürmede ve arttırmada katkı sağlayacaktır.',
+                '🛡️ Proaktif Yaklaşım: İSP, bir afet/acil durum sonrasında, kuruluşun değer yaratan faaliyetlerini sürdürebilmesini veya hızlı şekilde eski haline getirebilmesini amaçlayan proaktif bir yaklaşımdır.',
+              ],
+            },
+            {
+              title: '📌 İSP Nasıl Çalışır?',
+              paragraphs: [
+                'Plan, dört aşamalı metodolojik bir süreçten oluşur:',
+                '1️⃣ İş Etki Analizi',
+                '2️⃣ İş Kurtarma Stratejileri',
+                '3️⃣ Plan Hazırlama',
+                '4️⃣ Test ve Tatbikatlar',
+              ],
+            },
+            {
+              title: '🔁 İSP\'nin SSP/ADP\'den Farkı',
+              paragraphs: [
+                'İSP, Sivil Savunma Planı (SSP) ve Acil Durum Planı\'ndan (ADP) farklıdır.',
+                '📢 SSP ve ADP, Afet ve Acil Durum Yönetiminin araçlarıdır.',
+                '🧠 İSP ise İş Sürekliliği Yönetim Sisteminin temel bileşenidir.',
+                '➡️ SSP/ADP can ve mal güvenliğine odaklanırken, İSP\'nin amacı kuruluşun değer yaratan faaliyetlerini korumak ve kayıpları azaltmaktır.',
+                '✔️ Bu planlar amaçları bakımından farklı olsalar da, acil durumlarda kabul edilebilir işleyişi sürdürmek için birbirlerini tamamlarlar ve hazırlık aşamasında birlikte kullanılabilirler.',
+              ],
+            },
+          ],
+          hashtags: [
+            '#İşSürekliliği',
+            '#OSB',
+            '#AfetDirenci',
+            '#İşSürekliliğiPlanı',
+            '#İSY',
+          ],
+        },
+      },
+      {
+        id: 'parsel-tahsis-iptali',
+        title: 'Parsel Tahsisinin İptali ve İadesinde Değerleme',
+        excerpt:
+          'OSB\'lerde tahsis edilen sanayi parsellerinin iade ve iptal süreçlerinde değerleme yöntemleri ve süre uzatımının geri ödemeye etkisi hakkında kritik bilgiler.',
+        publishedAt: '18 Nisan 2026',
+        readTime: '5 dk okuma',
+        content: {
+          intro:
+            '📘 Organize Sanayi Bölgelerinde tahsis edilen sanayi parselleri, katılımcı tarafından OSB Uygulama Yönetmeliğinin 60\'ıncı maddesinde belirlenen süreler içerisinde istenildiği zaman iade edilebilir veya yine aynı maddede belirtilen sürelerde gerekli ruhsat ve izinlerini almayan katılımcıların tahsisleri OSB tarafından iptal edilir.',
+          sections: [
+            {
+              title: '📌 Tahsis İptal Koşulları',
+              paragraphs: [
+                'a) Tahsis tarihinden itibaren 1 yıl içerisinde gerçekleştireceği yapıya ait projeleri OSB\'ye tasdik ettirerek yapı ruhsatının alınmaması,',
+                'b) Yapı ruhsatı aldığı tarihten itibaren 2 yıl içinde iş yeri açma ve çalışma ruhsatının alınmaması halinde tahsis iptal edilir, ancak mücbir sebeplerin varlığı halinde yönetim kurulu tarafından bu süreler 1\'er yıl uzatılabilir. Ayrıca Bakanlığın da belli şartlarda süre uzatımı yetkisi bulunmaktadır.',
+              ],
+            },
+            {
+              title: '🔁 Süre Uzatımı ve Geri Ödeme Farkı',
+              paragraphs: [
+                'Süre uzatımı alınması veya alınmaması durumuna göre; katılımcı tarafından ödenen arsa tahsis bedellerinin iadesi değişkenlik göstermektedir.',
+                '📌 Süre uzatımı verilmeksizin tahsisin iadesi ve iptali durumunda, parsel tahsisi/satışı için ödenen bedel, 213 sayılı Kanun uyarınca belirlenen yeniden değerleme oranı ile güncellenir.',
+                '📌 Süre uzatımı verilmesi sonrasında tahsisin iadesi ve iptali durumunda, parsel tahsisi/satışı için ödenen bedel yasal faiz oranı ve yeniden değerleme oranından düşük olanı üzerinden değerlenerek geri ödeme gerçekleştirilmektedir.',
+              ],
+            },
+            {
+              title: '⚠️ Pratik Etki ve Tavsiye',
+              paragraphs: [
+                '2024 yılı yeniden değerleme oranının %43,93 olduğu, kanuni faizin ise 01.06.2024 günü itibariyle %24 olarak belirlendiği göz önüne alındığında, katılımcılara ödenecek tutarlar arasında ciddi farklar oluşabilecektir.',
+                '✅ Bu sebeple, özellikle enflasyonun yüksek olduğu dönemlerde bir katılımcının, yatırımı gerçekleştiremeyeceğini anladığında süre uzatımı talep etmek yerine tahsisin iadesini değerlendirmek, geri alacağı tutarın hesabında ciddi fark yaratacaktır.',
+              ],
+            },
+          ],
+          hashtags: [
+            '#OSB',
+            '#ParselTahsis',
+            '#Yatırım',
+            '#SanayiBölgeleri',
+            '#Değerleme',
+          ],
+        },
+      },
     ],
   },
   contact: {
@@ -870,6 +1068,204 @@ const en: Dictionary = {
           ],
           disclaimer:
             'The views expressed above reflect purely personal opinions and are not the official position of the Ministry or other relevant authorities. Please note that the practices of the Ministry or other authorities on this topic may differ.',
+        },
+      },
+      {
+        id: 'arge-tasarim-inovasyon',
+        title: 'R&D, Design and Innovation Ecosystem Consulting',
+        excerpt:
+          'We offer strategic partnership to maximise the value of government incentives under Laws No. 5746 and 4691, in line with Türkiye\'s technology-driven development goals.',
+        publishedAt: 'April 18, 2026',
+        readTime: '6 min read',
+        content: {
+          intro:
+            'In line with Türkiye\'s technology-driven development goals, we offer strategic partnership so that you can benefit from government incentives under Laws No. 5746 and 4691 with maximum efficiency and zero margin of error. Placing audit standards at the centre, we manage your technical and administrative processes end-to-end.',
+          sections: [
+            {
+              title: '1. Law No. 5746: R&D and Design Centre Management',
+              paragraphs: [
+                'We carry out technical monitoring and audit-readiness processes to turn in-house centres into a sustainable incentive mechanism.',
+                'Preparation of the centre\'s physical space design and personnel qualification analysis in line with regulatory criteria.',
+                'Continuous Audit and Regulatory Compliance: Monthly and annual tracking of R&D deductions, income tax withholding incentives and social-security premium support.',
+                'Technical Reporting and Activity Tracking: Data-driven preparation of annual activity reports that highlight the technical depth and innovative aspects (R&D/Design qualification) of projects.',
+                'Audit Preparation: Analysis of risks (man/month durations, expenditure items, etc.) through "Pre-Audit" simulations.',
+              ],
+            },
+            {
+              title: '2. Law No. 4691: Technology Development Zone (TDZ) Consulting',
+              paragraphs: [
+                'We provide fully regulation-compliant ecosystem management for technopark management companies and start-ups located within the zones.',
+                'Portal and Exemption Management: Management of project entries, exemption certificates and personnel tracking conducted through the Technopark Portal.',
+                'Project Acceptance and Monitoring: Determination of eligibility criteria under Law No. 4691 for projects entering the zone.',
+                'Management Company Audit Preparation: Risk analysis of management companies through "Pre-Audit" simulations.',
+              ],
+            },
+          ],
+          hashtags: [
+            '#RnD',
+            '#Design',
+            '#Innovation',
+            '#5746',
+            '#4691',
+            '#Technopark',
+            '#IncentiveManagement',
+          ],
+        },
+      },
+      {
+        id: 'yesil-osb-yol-haritasi',
+        title: 'Green Transformation Roadmap for Industry: How to Become a Green OIZ? 🌍🏭',
+        excerpt:
+          'Everything you need to know about the Green OIZ Certification System in the context of the transformation of OIZs for sustainable development and EU Green Deal compliance.',
+        publishedAt: 'April 18, 2026',
+        readTime: '7 min read',
+        content: {
+          intro:
+            'In the context of sustainable development and compliance with the European Green Deal, the Green OIZ Certification System — run jointly by the Ministry of Industry and Technology and TSE — evaluates OIZs not only on economic performance but also on environmental and social outcomes.',
+          sections: [
+            {
+              title: '✅ Step 1: Meeting the "Pre-Criteria"',
+              paragraphs: [
+                'To proceed to performance scoring, an OIZ must first satisfy these 6 fundamental conditions:',
+                '1️⃣ At least 1 company actively manufacturing in the OIZ.',
+                '2️⃣ All wastewater must be treated.',
+                '3️⃣ No coal used as an energy source.',
+                '4️⃣ Management must hold TS EN ISO 14001 (Environment) and TS EN ISO 50001 (Energy) certificates.',
+                '5️⃣ A climate-change unit must be established with qualified personnel.',
+                '6️⃣ At least a "Basic-Level Zero Waste Certificate" must be obtained.',
+              ],
+            },
+            {
+              title: '📊 Step 2: Scoring via Performance Indicators',
+              paragraphs: [
+                'OIZs that pass the pre-criteria are assessed against a total of 38 performance indicators across 4 main categories.',
+                '🌿 Environmental: 17 Indicators (Weight: 39%)',
+                '💰 Economic: 10 Indicators (Weight: 27%)',
+                '🤝 Social: 6 Indicators (Weight: 24%)',
+                '🏛️ Governance: 5 Indicators (Weight: 10%)',
+              ],
+            },
+            {
+              title: '🚀 Step 3: Application and Certification Process',
+              paragraphs: [
+                '• Application: OIZ management applies to the Ministry through the MEYDİP system.',
+                '• Preliminary Review: The Ministry checks pre-criteria; if met, forwards the application to TSE.',
+                '• On-site Audit: Performance indicators are audited and scored on-site.',
+                '• Certification: Bronze, Silver, Gold or Platinum certificates are issued based on the score out of 100.',
+                'The certificate is valid for 3 years, but OIZs must prepare an annual "Improvement Report" setting targets for each criterion.',
+                'The industry of the future will be built on OIZs that use resources efficiently and respect the environment.',
+              ],
+            },
+          ],
+          hashtags: [
+            '#GreenOIZ',
+            '#Sustainability',
+            '#IndustryAndTechnology',
+            '#GreenTransformation',
+            '#TSE',
+            '#OIZ',
+            '#CleanTech',
+          ],
+        },
+      },
+      {
+        id: 'is-surekliligi-plani',
+        title: 'The Economic Shield of Organized Industrial Zones: Business Continuity Plan (BCP)',
+        excerpt:
+          'Under the OIZ Implementing Regulation, preparing a Business Continuity Plan is now an official obligation for OIZs. Here is what you need to know about the scope and processes.',
+        publishedAt: 'April 18, 2026',
+        readTime: '8 min read',
+        content: {
+          intro:
+            'Under the Organized Industrial Zones Implementing Regulation, preparing a Business Continuity Plan (BCP) is now an official obligation for OIZs. In this context, AFAD\'s published "Business Continuity Plan Preparation and Implementation Guide for Organized Industrial Zones" serves as a fundamental reference for OIZs to establish the process in a sound and systematic manner.',
+          sections: [
+            {
+              title: '💡 The Core Purpose of BCP',
+              paragraphs: [
+                'The core purpose of a BCP is to create written plans that enable the OIZ to sustain, recover and restore its value-creating activities (products, services) in the event of a disruption. For OIZs specifically, the primary goal is the continuity of critical infrastructure services so that the mission can be fulfilled.',
+              ],
+            },
+            {
+              title: '🎯 Goals and Objectives of the Business Continuity Plan',
+              paragraphs: [
+                '🔌 Sustainability of Critical Infrastructure Services: Ensuring the continuity of critical infrastructure services at a level that enables the OIZ to fulfil its mission.',
+                '🏭 Supporting Participant Companies: The BCP aims to support the sustainability of participant companies by guaranteeing that critical infrastructure services will be maintained above the "critical threshold" — the point beyond which self-recovery becomes impossible.',
+                '🔄 Rapid Recovery and Resilience: The BCP will ensure that OIZs are minimally affected by disasters and emergencies and can quickly recover production and employment processes.',
+                '🔒 Protecting Value and Reputation: The plan will reduce potential loss of life and property at enterprises and contribute to maintaining and enhancing commercial reputation.',
+                '🛡️ Proactive Approach: The BCP is a proactive approach aimed at enabling the organisation to sustain or rapidly restore its value-creating activities following a disaster or emergency.',
+              ],
+            },
+            {
+              title: '📌 How Does BCP Work?',
+              paragraphs: [
+                'The plan consists of a four-stage methodological process:',
+                '1️⃣ Business Impact Analysis',
+                '2️⃣ Business Recovery Strategies',
+                '3️⃣ Plan Preparation',
+                '4️⃣ Testing and Exercises',
+              ],
+            },
+            {
+              title: '🔁 How BCP Differs from CDP/ERP',
+              paragraphs: [
+                'BCP is different from the Civil Defence Plan (CDP) and Emergency Response Plan (ERP).',
+                '📢 CDP and ERP are tools of Disaster and Emergency Management.',
+                '🧠 BCP is a core component of the Business Continuity Management System.',
+                '➡️ While CDP/ERP focus on safety of life and property, BCP aims to protect the organisation\'s value-creating activities and minimise losses.',
+                '✔️ Although these plans differ in purpose, they complement each other in maintaining acceptable operations during emergencies and can be used together during the preparedness phase.',
+              ],
+            },
+          ],
+          hashtags: [
+            '#BusinessContinuity',
+            '#OIZ',
+            '#DisasterResilience',
+            '#BCP',
+            '#BCMS',
+          ],
+        },
+      },
+      {
+        id: 'parsel-tahsis-iptali',
+        title: 'Valuation in Parcel Allocation Cancellation and Refund',
+        excerpt:
+          'Critical information on valuation methods during the refund and cancellation of allocated industrial parcels in OIZs, and the impact of time extensions on repayments.',
+        publishedAt: 'April 18, 2026',
+        readTime: '5 min read',
+        content: {
+          intro:
+            '📘 Industrial parcels allocated in Organized Industrial Zones may be returned voluntarily by the participant within the periods set out in Article 60 of the OIZ Implementing Regulation, or the OIZ may cancel allocations for participants who fail to obtain the required permits and licences within the specified timeframes.',
+          sections: [
+            {
+              title: '📌 Allocation Cancellation Conditions',
+              paragraphs: [
+                'a) Failure to obtain a building permit by having project plans for the intended structure approved by the OIZ within 1 year from the allocation date.',
+                'b) Failure to obtain a workplace opening and operation licence within 2 years from the building permit date results in cancellation; however, in the presence of force majeure the board of directors may extend these periods by 1 year each. The Ministry also has extension authority under certain conditions.',
+              ],
+            },
+            {
+              title: '🔁 Time Extension and Repayment Difference',
+              paragraphs: [
+                'The refund of land allocation fees paid by the participant varies depending on whether a time extension has been granted.',
+                '📌 If the allocation is returned or cancelled without a time extension, the amount paid is updated using the revaluation rate determined under Law No. 213.',
+                '📌 If the allocation is returned or cancelled after a time extension has been granted, the repayment is calculated at the lower of the statutory interest rate and the revaluation rate.',
+              ],
+            },
+            {
+              title: '⚠️ Practical Impact and Advice',
+              paragraphs: [
+                'Considering that the 2024 revaluation rate is 43.93% while the statutory interest rate was set at 24% as of 1 June 2024, significant differences may arise in the amounts paid to participants.',
+                '✅ Therefore, especially during periods of high inflation, a participant who realises they cannot carry out the investment would find it significantly more advantageous to return the allocation rather than requesting a time extension, as the difference in the refund calculation can be substantial.',
+              ],
+            },
+          ],
+          hashtags: [
+            '#OIZ',
+            '#ParcelAllocation',
+            '#Investment',
+            '#IndustrialZones',
+            '#Valuation',
+          ],
         },
       },
     ],
