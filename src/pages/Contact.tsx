@@ -214,9 +214,6 @@ const Contact: React.FC = () => {
                       <div className="text-navy-900 font-semibold group-hover:text-accent-600 transition-colors">
                         info@antdanismanlik.com
                       </div>
-                      <div className="text-xs text-navy-500">
-                        {t.contact.infoEmailSub}
-                      </div>
                     </div>
                   </a>
                 </li>

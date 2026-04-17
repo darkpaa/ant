@@ -120,9 +120,6 @@ export interface Dictionary {
     serviceLinks: { label: string; href: string }[];
     legalLinks: { label: string; href: string }[];
     workingHours: string;
-    emailSupport: string;
-    addressLine1: string;
-    addressLine2: string;
     copyright: (year: number) => string;
     madeIn: string;
   };
@@ -154,10 +151,7 @@ export interface Dictionary {
     infoPhoneLabel: string;
     infoPhoneSub: string;
     infoEmailLabel: string;
-    infoEmailSub: string;
-    infoAddressLabel: string;
-    infoAddressLine1: string;
-    infoAddressLine2: string;
+
     linkedinTitle: string;
     linkedinDescription: string;
     linkedinCta: string;
@@ -437,8 +431,6 @@ const tr: Dictionary = {
       { label: 'Çerez Politikası', href: '#' },
     ],
     workingHours: 'Pzt - Cum, 09:00 - 18:00',
-    addressLine1: 'Levent Mah. Büyükdere Cad.',
-    addressLine2: 'No: 185, Kat: 12, 34394 Şişli / İstanbul',
     copyright: (year) => `© ${year} ANT Danışmanlık. Tüm hakları saklıdır.`,
     madeIn: 'İstanbul’da hazırlanmıştır',
   },
@@ -807,9 +799,6 @@ const en: Dictionary = {
       { label: 'Cookie Policy', href: '#' },
     ],
     workingHours: 'Mon - Fri, 09:00 - 18:00',
-    emailSupport: '24/7 email support',
-    addressLine1: 'Levent Mah. Büyükdere Cad.',
-    addressLine2: 'No: 185, Floor 12, 34394 Şişli / Istanbul',
     copyright: (year) => `© ${year} ANT Consulting. All rights reserved.`,
     madeIn: '',
   },
@@ -904,10 +893,6 @@ const en: Dictionary = {
     infoPhoneLabel: 'Phone',
     infoPhoneSub: 'Mon - Fri, 09:00 - 18:00',
     infoEmailLabel: 'Email',
-    infoEmailSub: '24/7 email support',
-    infoAddressLabel: 'Office Address',
-    infoAddressLine1: 'Levent Mah. Büyükdere Cad.',
-    infoAddressLine2: 'No: 185, Floor 12, 34394 Şişli / Istanbul',
     linkedinTitle: 'Connect on LinkedIn',
     linkedinDescription:
       'Follow my LinkedIn profile for regular content, sector analyses and consulting notes.',
