@@ -201,7 +201,7 @@ const Contact: React.FC = () => {
                 </li>
                 <li>
                   <a
-                    href="mailto:info@antdanismanlik.com"
+                    href="mailto:info@antyonetim.com"
                     className="flex items-start gap-4 group"
                   >
                     <div className="w-11 h-11 rounded-xl bg-accent-400/10 group-hover:bg-accent-400/20 flex items-center justify-center flex-shrink-0 transition-colors">
@@ -212,7 +212,7 @@ const Contact: React.FC = () => {
                         {t.contact.infoEmailLabel}
                       </div>
                       <div className="text-navy-900 font-semibold group-hover:text-accent-600 transition-colors">
-                        info@antdanismanlik.com
+                        info@antyonetim.com
                       </div>
                     </div>
                   </a>
