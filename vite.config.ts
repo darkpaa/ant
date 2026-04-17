@@ -7,4 +7,9 @@ export default defineConfig({
     react(),
     tailwindcss(),
   ],
+  preview: {
+    headers: {
+      'Cache-Control': 'public, max-age=600',
+    },
+  },
 });
