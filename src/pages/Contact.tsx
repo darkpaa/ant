@@ -5,6 +5,8 @@ import {
   ArrowRight,
   Send,
   CheckCircle2,
+  Loader2,
+  AlertCircle,
 } from 'lucide-react';
 import { useLang } from '../i18n/LanguageContext';
 import { LINKEDIN_URL } from '../i18n/translations';
@@ -19,10 +21,14 @@ interface FormState {
 
 const initialForm: FormState = { name: '', email: '', subject: '', message: '' };
 
+const FORMSUBMIT_URL = 'https://formsubmit.co/ajax/info@antyonetim.com';
+
 const Contact: React.FC = () => {
-  const { t } = useLang();
+  const { t, lang } = useLang();
   const [form, setForm] = useState<FormState>(initialForm);
   const [submitted, setSubmitted] = useState<boolean>(false);
+  const [submitting, setSubmitting] = useState<boolean>(false);
+  const [error, setError] = useState<string | null>(null);
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
@@ -30,10 +36,46 @@ const Contact: React.FC = () => {
     setForm((f) => ({ ...f, [e.target.name]: e.target.value }));
   };
 
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    setSubmitted(true);
-    setForm(initialForm);
+    setSubmitting(true);
+    setError(null);
+
+    try {
+      const res = await fetch(FORMSUBMIT_URL, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          Accept: 'application/json',
+        },
+        body: JSON.stringify({
+          name: form.name,
+          email: form.email,
+          _subject: `[ANT Web] ${form.subject}`,
+          message: form.message,
+          _template: 'table',
+        }),
+      });
+
+      if (res.ok) {
+        setSubmitted(true);
+        setForm(initialForm);
+      } else {
+        setError(
+          lang === 'tr'
+            ? 'Mesaj gönderilemedi. Lütfen tekrar deneyin.'
+            : 'Failed to send message. Please try again.'
+        );
+      }
+    } catch {
+      setError(
+        lang === 'tr'
+          ? 'Bağlantı hatası. Lütfen internet bağlantınızı kontrol edin.'
+          : 'Connection error. Please check your internet connection.'
+      );
+    } finally {
+      setSubmitting(false);
+    }
   };
 
   return (
@@ -88,6 +130,13 @@ const Contact: React.FC = () => {
               </div>
             )}
 
+            {error && (
+              <div className="mb-6 flex items-start gap-3 p-4 rounded-xl bg-red-50 border border-red-200 text-red-800">
+                <AlertCircle className="w-5 h-5 shrink-0 mt-0.5" />
+                <p className="text-sm leading-relaxed">{error}</p>
+              </div>
+            )}
+
             <form onSubmit={handleSubmit} className="space-y-5">
               <div>
                 <label
@@ -101,9 +150,10 @@ const Contact: React.FC = () => {
                   type="text"
                   name="name"
                   required
+                  disabled={submitting}
                   value={form.name}
                   onChange={handleChange}
-                  className="w-full px-4 py-3 rounded-xl border border-navy-200 bg-white text-navy-900 focus:border-accent-400 focus:ring-2 focus:ring-accent-400/20 outline-none transition"
+                  className="w-full px-4 py-3 rounded-xl border border-navy-200 bg-white text-navy-900 focus:border-accent-400 focus:ring-2 focus:ring-accent-400/20 outline-none transition disabled:opacity-50"
                 />
               </div>
 
@@ -119,9 +169,10 @@ const Contact: React.FC = () => {
                   type="email"
                   name="email"
                   required
+                  disabled={submitting}
                   value={form.email}
                   onChange={handleChange}
-                  className="w-full px-4 py-3 rounded-xl border border-navy-200 bg-white text-navy-900 focus:border-accent-400 focus:ring-2 focus:ring-accent-400/20 outline-none transition"
+                  className="w-full px-4 py-3 rounded-xl border border-navy-200 bg-white text-navy-900 focus:border-accent-400 focus:ring-2 focus:ring-accent-400/20 outline-none transition disabled:opacity-50"
                 />
               </div>
 
@@ -137,9 +188,10 @@ const Contact: React.FC = () => {
                   type="text"
                   name="subject"
                   required
+                  disabled={submitting}
                   value={form.subject}
                   onChange={handleChange}
-                  className="w-full px-4 py-3 rounded-xl border border-navy-200 bg-white text-navy-900 focus:border-accent-400 focus:ring-2 focus:ring-accent-400/20 outline-none transition"
+                  className="w-full px-4 py-3 rounded-xl border border-navy-200 bg-white text-navy-900 focus:border-accent-400 focus:ring-2 focus:ring-accent-400/20 outline-none transition disabled:opacity-50"
                 />
               </div>
 
@@ -155,18 +207,28 @@ const Contact: React.FC = () => {
                   name="message"
                   rows={5}
                   required
+                  disabled={submitting}
                   value={form.message}
                   onChange={handleChange}
-                  className="w-full px-4 py-3 rounded-xl border border-navy-200 bg-white text-navy-900 focus:border-accent-400 focus:ring-2 focus:ring-accent-400/20 outline-none transition resize-none"
+                  className="w-full px-4 py-3 rounded-xl border border-navy-200 bg-white text-navy-900 focus:border-accent-400 focus:ring-2 focus:ring-accent-400/20 outline-none transition resize-none disabled:opacity-50"
                 />
               </div>
 
               <button
                 type="submit"
-                className="group w-full inline-flex items-center justify-center gap-2 bg-gradient-to-r from-accent-400 to-accent-500 hover:from-accent-500 hover:to-accent-600 text-white px-6 py-3.5 rounded-xl text-sm font-semibold transition-all duration-300 shadow-lg shadow-accent-400/25 hover:shadow-accent-400/40 hover:-translate-y-0.5 cursor-pointer"
+                disabled={submitting}
+                className="group w-full inline-flex items-center justify-center gap-2 bg-gradient-to-r from-accent-400 to-accent-500 hover:from-accent-500 hover:to-accent-600 text-white px-6 py-3.5 rounded-xl text-sm font-semibold transition-all duration-300 shadow-lg shadow-accent-400/25 hover:shadow-accent-400/40 hover:-translate-y-0.5 cursor-pointer disabled:opacity-60 disabled:cursor-not-allowed disabled:hover:translate-y-0"
               >
-                <Send className="w-4 h-4" />
-                {t.contact.formSubmit}
+                {submitting ? (
+                  <Loader2 className="w-4 h-4 animate-spin" />
+                ) : (
+                  <Send className="w-4 h-4" />
+                )}
+                {submitting
+                  ? lang === 'tr'
+                    ? 'Gönderiliyor...'
+                    : 'Sending...'
+                  : t.contact.formSubmit}
               </button>
             </form>
           </div>
