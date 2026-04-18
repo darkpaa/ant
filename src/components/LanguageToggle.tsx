@@ -14,13 +14,16 @@ const LanguageToggle: React.FC<LanguageToggleProps> = ({
 
   const isLight = variant === 'light';
   const wrapper = isLight
-    ? 'bg-white/10 border-white/15 text-white/80 backdrop-blur-md'
-    : 'bg-navy-50/80 border-navy-200/70 text-navy-700 backdrop-blur-md';
+    ? 'bg-white/10 border-white/15 backdrop-blur-md'
+    : 'bg-navy-50/80 border-navy-200/70 backdrop-blur-md';
   const globeColor = isLight ? 'text-white/60' : 'text-navy-500';
   const knob = isLight
-    ? 'bg-white text-navy-900 shadow-md shadow-black/20'
-    : 'bg-navy-900 text-white shadow-md shadow-navy-900/20';
-  const idleText = isLight ? 'text-white/60' : 'text-navy-400';
+    ? 'bg-white shadow-md shadow-black/20'
+    : 'bg-navy-900 shadow-md shadow-navy-900/20';
+  const activeText = isLight ? 'text-navy-900' : 'text-white';
+  const idleText = isLight
+    ? 'text-white/70 hover:text-white'
+    : 'text-navy-500 hover:text-navy-700';
 
   return (
     <div
@@ -42,8 +45,8 @@ const LanguageToggle: React.FC<LanguageToggleProps> = ({
           type="button"
           onClick={() => setLang('tr')}
           aria-pressed={lang === 'tr'}
-          className={`relative z-10 w-[34px] h-6 flex items-center justify-center rounded-full transition-colors duration-300 cursor-pointer ${
-            lang === 'tr' ? '' : idleText
+          className={`relative z-10 w-[34px] h-6 flex items-center justify-center rounded-full transition-colors duration-300 cursor-pointer font-bold ${
+            lang === 'tr' ? activeText : idleText
           }`}
         >
           {t.languageToggle.tr}
@@ -52,8 +55,8 @@ const LanguageToggle: React.FC<LanguageToggleProps> = ({
           type="button"
           onClick={() => setLang('en')}
           aria-pressed={lang === 'en'}
-          className={`relative z-10 w-[34px] h-6 flex items-center justify-center rounded-full transition-colors duration-300 cursor-pointer ${
-            lang === 'en' ? '' : idleText
+          className={`relative z-10 w-[34px] h-6 flex items-center justify-center rounded-full transition-colors duration-300 cursor-pointer font-bold ${
+            lang === 'en' ? activeText : idleText
           }`}
         >
           {t.languageToggle.en}

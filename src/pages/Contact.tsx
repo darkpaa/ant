@@ -15,11 +15,18 @@ import LinkedinIcon from '../components/icons/LinkedinIcon';
 interface FormState {
   name: string;
   email: string;
+  phone: string;
   subject: string;
   message: string;
 }
 
-const initialForm: FormState = { name: '', email: '', subject: '', message: '' };
+const initialForm: FormState = {
+  name: '',
+  email: '',
+  phone: '',
+  subject: '',
+  message: '',
+};
 
 const FORMSUBMIT_URL = 'https://formsubmit.co/ajax/kurumsal@antyonetim.com';
 
@@ -90,6 +97,7 @@ const Contact: React.FC = () => {
         body: JSON.stringify({
           name: form.name,
           email: form.email,
+          phone: form.phone,
           _subject: `[ANT Web] ${form.subject}`,
           message: form.message,
           _template: 'table',
@@ -213,6 +221,26 @@ const Contact: React.FC = () => {
                   required
                   disabled={submitting}
                   value={form.email}
+                  onChange={handleChange}
+                  className="w-full px-4 py-3 rounded-xl border border-navy-200 bg-white text-navy-900 focus:border-accent-400 focus:ring-2 focus:ring-accent-400/20 outline-none transition disabled:opacity-50"
+                />
+              </div>
+
+              <div>
+                <label
+                  htmlFor="contact-phone"
+                  className="block text-xs font-semibold text-navy-700 uppercase tracking-wider mb-2"
+                >
+                  {t.contact.formPhone}
+                </label>
+                <input
+                  id="contact-phone"
+                  type="tel"
+                  name="phone"
+                  inputMode="tel"
+                  autoComplete="tel"
+                  disabled={submitting}
+                  value={form.phone}
                   onChange={handleChange}
                   className="w-full px-4 py-3 rounded-xl border border-navy-200 bg-white text-navy-900 focus:border-accent-400 focus:ring-2 focus:ring-accent-400/20 outline-none transition disabled:opacity-50"
                 />

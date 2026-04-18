@@ -152,6 +152,7 @@ export interface Dictionary {
     formDescription: string;
     formName: string;
     formEmail: string;
+    formPhone: string;
     formSubject: string;
     formMessage: string;
     formSubmit: string;
@@ -288,16 +289,20 @@ const tr: Dictionary = {
             '4562 sayılı OSB Kanunu ve ilgili uygulama yönetmelikleri çerçevesinde, bölgelerin idari ve teknik süreçlerini yönetiyoruz.',
           points: [
             {
-              label: 'Arsa Tahsis Süreçleri',
-              text: 'Yer seçimi, parselasyon ve katılımcı tahsis prosedürlerinin mevzuata uygun yönetimi.',
+              label: 'Arsa Tahsis ve İptal Yönetimi Danışmanlığı',
+              text: 'Yer seçimi, parselasyon ve katılımcı ön tahsis ve tahsis prosedürlerinin mevzuata uygun yönetimi.',
             },
             {
               label: 'Organ Yönetimi',
-              text: 'Müteşebbis Heyet, Yönetim Kurulu ve Denetim Kurulu süreçlerinin yapılandırılması.',
+              text: 'Müteşebbis Heyet, Genel Kurul, Yönetim Kurulu ve Denetim Kurulu süreçlerinin yapılandırılması ve OSB iç işleyiş kurallarının (prensip karar, yönerge, talimatname, rehber vb.) belirlenmesi.',
+            },
+            {
+              label: 'Organ Üyelerinin Sorumluluk Yönetimi',
+              text: 'Yönetim ve denetim kurulu üyelerinin hukuki ve cezai sorumlulukları konusunda bilgilendirme ve risk analizi.',
             },
             {
               label: 'Sözleşme Yönetimi',
-              text: 'Katılımcı ve üçüncü taraflarla yapılan teknik ve idari sözleşmelerin hazırlanması.',
+              text: 'Katılımcı ve üçüncü taraflarla yapılan tahsis, ön tahsis, teknik ve idari sözleşmelerin hazırlanması.',
             },
           ],
         },
@@ -317,7 +322,26 @@ const tr: Dictionary = {
           ],
         },
         {
-          title: '3. Dijital Dönüşüm ve Veri Odaklı Yönetim',
+          title: '3. Finansal ve Altyapı Yönetimi',
+          intro:
+            'OSB’lerin finansal sürdürülebilirliğini ve altyapı yatırımlarını, mevzuata ve bütçe disiplinine uygun biçimde yönetiyoruz.',
+          points: [
+            {
+              label: 'Bakanlık Kredileri ve Teşvikler',
+              text: 'Altyapı ve genel idare giderleri için kredi kullanımı, borçlanma ve hakediş raporlarının vize edilmesi.',
+            },
+            {
+              label: 'İhale Yönetimi',
+              text: 'OSB’lerde ihale süreçlerinin hazırlanması ve yürütülmesi.',
+            },
+            {
+              label: 'Altyapı Tesisleri',
+              text: 'Elektrik, su, kanalizasyon, doğalgaz, arıtma tesisi gibi altyapı tesislerinin kurma ve işletme hakkına ilişkin iş ve işlemler; hizmet sözleşmeleri ve bedel tahakkuk esaslarının belirlenmesi.',
+            },
+          ],
+        },
+        {
+          title: '4. Dijital Dönüşüm ve Veri Odaklı Yönetim',
           intro:
             'Geleneksel sanayi yönetimini modern veri teknolojileriyle birleştirerek, “Akıllı OSB” vizyonunu hayata geçiriyoruz.',
           points: [
@@ -336,7 +360,7 @@ const tr: Dictionary = {
           ],
         },
         {
-          title: '4. İş Sürekliliği ve Risk Yönetimi',
+          title: '5. İş Sürekliliği ve Risk Yönetimi',
           intro:
             'Endüstriyel altyapıların afetlere ve beklenmedik durumlara karşı dayanıklılığını artırıyoruz.',
           points: [
@@ -351,7 +375,7 @@ const tr: Dictionary = {
           ],
         },
         {
-          title: '5. Teknoloji ve İnovasyon Ekosistemleri',
+          title: '6. Teknoloji ve İnovasyon Ekosistemleri',
           intro:
             'AR-GE ve inovasyonun sanayi ile buluştuğu ekosistemlerin kurulmasını sağlıyoruz.',
           points: [
@@ -758,6 +782,7 @@ const tr: Dictionary = {
       'Formu doldurun, ekibimiz en kısa sürede size geri dönüş yapsın.',
     formName: 'Ad Soyad',
     formEmail: 'E-posta',
+    formPhone: 'Telefon',
     formSubject: 'Konu',
     formMessage: 'Mesajınız',
     formSubmit: 'Mesajı Gönder',
@@ -787,7 +812,7 @@ const tr: Dictionary = {
     founderName: 'İlker Tura',
     founderRole: 'Kurucu ve Yönetici Ortak',
     founderParagraphs: [
-      'İlker Tura; Elektrik-Elektronik Mühendisliği, İşletme ve Kamu Yönetimi alanlarında aldığı lisans ve yüksek lisans eğitimini, kamuda 15 yılı aşkın tecrübesiyle birleştirerek sanayi ve teknoloji ekosistemine değer katmayı amaçlamaktadır.',
+      'Kurucumuz İlker Tura; Elektrik-Elektronik Mühendisliği, İşletme ve Kamu Yönetimi alanlarında aldığı lisans ve yüksek lisans eğitimini, kamuda 15 yılı aşkın tecrübesiyle birleştirerek sanayi ve teknoloji ekosistemine değer katmayı amaçlamaktadır.',
       'Sanayi ve Teknoloji Bakanlığı’nda 2012-2026 yılları arasında Müfettiş Yardımcısı, Müfettiş ve Başmüfettiş olarak görev alan İlker Tura, son olarak 2019-2026 yılları arasında yaklaşık 6,5 yıl Rehberlik ve Teftiş Başkan Yardımcılığı görevini yürütmüştür.',
       'Bu süreçte; Organize Sanayi Bölgeleri (OSB), Teknoloji Geliştirme Bölgeleri, Ar-Ge ve Tasarım Merkezleri ve Endüstri Bölgeleri’nin denetim, mevzuat uyumu ve yönetimsel süreçlerinin koordinasyonunda roller üstlenmiştir. Bu süreçlerde edinilen kapsamlı bilgi birikimi; Ant Yönetim’in çözüm üretme kabiliyetine doğrudan yansımaktadır.',
     ],
@@ -902,16 +927,20 @@ const en: Dictionary = {
             'Within the framework of Law No. 4562 on Organized Industrial Zones and related regulations, we manage the administrative and technical processes of the zones.',
           points: [
             {
-              label: 'Land Allocation Processes',
-              text: 'Regulatory-compliant management of site selection, parceling and participant allocation procedures.',
+              label: 'Land Allocation and Cancellation Management',
+              text: 'Regulatory-compliant management of site selection, parceling, and participant pre-allocation and allocation procedures.',
             },
             {
               label: 'Governance Body Management',
-              text: 'Structuring the processes of the Entrepreneur Committee, Board of Directors and Audit Board.',
+              text: 'Structuring the processes of the Entrepreneur Committee, General Assembly, Board of Directors and Audit Board, and defining the internal governance rules (principle decisions, directives, guidelines, handbooks, etc.).',
+            },
+            {
+              label: 'Liability Management of Board Members',
+              text: 'Briefing on the legal and criminal liabilities of board of directors and audit board members, along with risk analysis.',
             },
             {
               label: 'Contract Management',
-              text: 'Preparation of technical and administrative contracts with participants and third parties.',
+              text: 'Preparation of allocation, pre-allocation, technical and administrative contracts with participants and third parties.',
             },
           ],
         },
@@ -931,7 +960,26 @@ const en: Dictionary = {
           ],
         },
         {
-          title: '3. Digital Transformation and Data-Driven Management',
+          title: '3. Financial and Infrastructure Management',
+          intro:
+            'We manage the financial sustainability and infrastructure investments of OIZs in line with regulations and budget discipline.',
+          points: [
+            {
+              label: 'Ministry Loans and Incentives',
+              text: 'Use of loans for infrastructure and general administration expenses, borrowing processes, and approval of progress-payment reports.',
+            },
+            {
+              label: 'Tender Management',
+              text: 'Preparation and execution of tender processes in OIZs.',
+            },
+            {
+              label: 'Infrastructure Facilities',
+              text: 'Operations related to the right to establish and operate infrastructure facilities such as electricity, water, sewage, natural gas, and treatment plants; service agreements and fee accrual principles.',
+            },
+          ],
+        },
+        {
+          title: '4. Digital Transformation and Data-Driven Management',
           intro:
             'By blending traditional industrial management with modern data technologies, we bring the "Smart OIZ" vision to life.',
           points: [
@@ -950,7 +998,7 @@ const en: Dictionary = {
           ],
         },
         {
-          title: '4. Business Continuity and Risk Management',
+          title: '5. Business Continuity and Risk Management',
           intro:
             'We increase the resilience of industrial infrastructures against disasters and unexpected events.',
           points: [
@@ -965,7 +1013,7 @@ const en: Dictionary = {
           ],
         },
         {
-          title: '5. Technology and Innovation Ecosystems',
+          title: '6. Technology and Innovation Ecosystems',
           intro:
             'We enable the creation of ecosystems where R&D and innovation meet industry.',
           points: [
@@ -1374,6 +1422,7 @@ const en: Dictionary = {
       'Fill in the form and our team will get back to you as soon as possible.',
     formName: 'Full Name',
     formEmail: 'Email',
+    formPhone: 'Phone',
     formSubject: 'Subject',
     formMessage: 'Your Message',
     formSubmit: 'Send Message',
