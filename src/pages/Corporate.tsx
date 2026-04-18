@@ -1,10 +1,8 @@
 import { Link } from 'react-router-dom';
-import { ArrowRight, Award, Briefcase, Users, Sparkles } from 'lucide-react';
+import { ArrowRight, Sparkles } from 'lucide-react';
 import { useLang } from '../i18n/LanguageContext';
 import { LINKEDIN_URL } from '../i18n/translations';
 import LinkedinIcon from '../components/icons/LinkedinIcon';
-
-const highlightIcons = [Award, Briefcase, Users];
 
 const Corporate: React.FC = () => {
   const { t } = useLang();
@@ -65,28 +63,6 @@ const Corporate: React.FC = () => {
               </p>
             ))}
           </div>
-        </div>
-
-        <div className="grid sm:grid-cols-3 gap-4">
-          {c.highlights.map((h, idx) => {
-            const Icon = highlightIcons[idx] ?? Award;
-            return (
-              <div
-                key={h.label}
-                className="bg-white rounded-2xl p-6 border border-navy-100 shadow-sm hover:-translate-y-1 hover:shadow-lg transition-all duration-300"
-              >
-                <div className="w-10 h-10 rounded-xl bg-accent-400/10 text-accent-500 flex items-center justify-center mb-4">
-                  <Icon className="w-5 h-5" />
-                </div>
-                <div className="text-2xl font-bold text-navy-900 mb-1">
-                  {h.value}
-                </div>
-                <div className="text-sm text-navy-500 font-medium uppercase tracking-wider">
-                  {h.label}
-                </div>
-              </div>
-            );
-          })}
         </div>
 
         <div className="relative bg-gradient-to-br from-navy-900 via-navy-800 to-navy-900 rounded-3xl p-8 lg:p-12 shadow-2xl shadow-navy-900/20 overflow-hidden">

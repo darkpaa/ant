@@ -312,10 +312,6 @@ const tr: Dictionary = {
             'Sürdürülebilir kalkınma hedefleri doğrultusunda, OSB’lerin çevresel performansını artırıyor ve “Yeşil OSB” sertifikasyon süreçlerine hazırlıyoruz.',
           points: [
             {
-              label: 'Çevresel Göstergeler',
-              text: 'Karbon ayak izi ölçümü ve kaynak verimliliği analizi.',
-            },
-            {
               label: 'Yeşil Dönüşüm',
               text: 'Avrupa Yeşil Mutabakatı uyum süreçleri ve performans takibi.',
             },
@@ -323,8 +319,7 @@ const tr: Dictionary = {
         },
         {
           title: '3. Finansal ve Altyapı Yönetimi',
-          intro:
-            'OSB’lerin finansal sürdürülebilirliğini ve altyapı yatırımlarını, mevzuata ve bütçe disiplinine uygun biçimde yönetiyoruz.',
+          intro: '',
           points: [
             {
               label: 'Bakanlık Kredileri ve Teşvikler',
@@ -332,11 +327,11 @@ const tr: Dictionary = {
             },
             {
               label: 'İhale Yönetimi',
-              text: 'OSB’lerde ihale süreçlerinin hazırlanması ve yürütülmesi.',
+              text: 'OSB’lerde ihale süreçlerine hazırlanması.',
             },
             {
               label: 'Altyapı Tesisleri',
-              text: 'Elektrik, su, kanalizasyon, doğalgaz, arıtma tesisi gibi altyapı tesislerinin kurma ve işletme hakkına ilişkin iş ve işlemler; hizmet sözleşmeleri ve bedel tahakkuk esaslarının belirlenmesi.',
+              text: 'Elektrik, su, kanalizasyon, doğalgaz, arıtma tesisi gibi altyapı tesisleri kurma ve işletme hakkına ilişkin iş ve işlemler, hizmet sözleşmeleri ve bedel tahakkuk esaslarının belirlenmesi.',
             },
           ],
         },
@@ -377,10 +372,10 @@ const tr: Dictionary = {
         {
           title: '6. Teknoloji ve İnovasyon Ekosistemleri',
           intro:
-            'AR-GE ve inovasyonun sanayi ile buluştuğu ekosistemlerin kurulmasını sağlıyoruz.',
+            'AR-GE ve inovasyonun sanayi ile buluştuğu ekosistemlerin işletilmesini sağlıyoruz.',
           points: [
             {
-              label: 'TEKMER ve TGB Kurulumu',
+              label: 'TEKMER ve TGB',
               text: 'Teknoloji Geliştirme Merkezleri ve Bölgelerinin kuruluş ve işletme süreçleri.',
             },
             {
@@ -417,13 +412,14 @@ const tr: Dictionary = {
         'Türkiye’nin teknoloji odaklı kalkınma hedefleri doğrultusunda, 5746 ve 4691 sayılı kanunlar kapsamında sunulan devlet teşviklerinden en yüksek verimle ve sıfır hata payıyla yararlanmanız için stratejik çözüm ortaklığı sunuyoruz. Denetim standartlarını merkeze alarak, teknik ve idari süreçlerinizi uçtan uca yönetiyoruz.',
       sections: [
         {
-          title: '1. 5746 Sayılı Kanun: Ar-Ge ve Tasarım Merkezleri Yönetimi',
+          title:
+            '1. 5746 Sayılı Kanun: Ar-Ge ve Tasarım Merkezleri Yönetim Danışmanlığı',
           intro:
             'İşletme bünyesinde kurulan merkezlerin, sürdürülebilir bir teşvik mekanizmasına dönüşmesi için teknik izleme ve denetim hazırlığı süreçlerini yürütüyoruz.',
           points: [
             {
-              label: 'Kuruluş ve Yapılandırma',
-              text: 'Merkezin fiziksel alan tasarımı ve personel nitelik analizinin mevzuat kriterlerine uygun hazırlanması.',
+              label: 'Merkez Tasarımı ve Yönetimi',
+              text: 'Merkezin fiziksel alan tasarımı, personel nitelik analizinin mevzuat kriterlerine uygun hazırlanması.',
             },
             {
               label: 'Sürekli Denetim ve Mevzuat Uyumu',
@@ -442,9 +438,12 @@ const tr: Dictionary = {
         {
           title:
             '2. 4691 Sayılı Kanun: Teknoloji Geliştirme Bölgeleri (TGB) Danışmanlığı',
-          intro:
-            'Teknopark yönetici şirketleri ve bölge içerisinde yer alan girişimci firmalar için mevzuata tam uyumlu ekosistem yönetimi sağlıyoruz.',
+          intro: '',
           points: [
+            {
+              label: 'Yönetici Şirket Operasyonel Yönetimi',
+              text: 'Teknopark yönetici şirketleri ve bölge içerisinde yer alan girişimci firmalar için mevzuata tam uyumlu ekosistem yönetimi sağlıyoruz.',
+            },
             {
               label: 'Portal ve Muafiyet Yönetimi',
               text: 'Teknopark Portalı üzerinden yürütülen proje girişleri, muafiyet belgeleri ve personel takiplerinin yönetimi.',
@@ -810,7 +809,7 @@ const tr: Dictionary = {
     ],
     founderTitle: 'Kurucumuz',
     founderName: 'İlker Tura',
-    founderRole: 'Kurucu ve Yönetici Ortak',
+    founderRole: 'Kurucu',
     founderParagraphs: [
       'Kurucumuz İlker Tura; Elektrik-Elektronik Mühendisliği, İşletme ve Kamu Yönetimi alanlarında aldığı lisans ve yüksek lisans eğitimini, kamuda 15 yılı aşkın tecrübesiyle birleştirerek sanayi ve teknoloji ekosistemine değer katmayı amaçlamaktadır.',
       'Sanayi ve Teknoloji Bakanlığı’nda 2012-2026 yılları arasında Müfettiş Yardımcısı, Müfettiş ve Başmüfettiş olarak görev alan İlker Tura, son olarak 2019-2026 yılları arasında yaklaşık 6,5 yıl Rehberlik ve Teftiş Başkan Yardımcılığı görevini yürütmüştür.',
@@ -950,10 +949,6 @@ const en: Dictionary = {
             'In line with sustainable development goals, we improve the environmental performance of OIZs and prepare them for "Green OIZ" certification.',
           points: [
             {
-              label: 'Environmental Indicators',
-              text: 'Carbon footprint measurement and resource efficiency analysis.',
-            },
-            {
               label: 'Green Transition',
               text: 'Compliance with the European Green Deal and performance monitoring.',
             },
@@ -961,16 +956,15 @@ const en: Dictionary = {
         },
         {
           title: '3. Financial and Infrastructure Management',
-          intro:
-            'We manage the financial sustainability and infrastructure investments of OIZs in line with regulations and budget discipline.',
+          intro: '',
           points: [
             {
               label: 'Ministry Loans and Incentives',
-              text: 'Use of loans for infrastructure and general administration expenses, borrowing processes, and approval of progress-payment reports.',
+              text: 'Use of loans for infrastructure and general administration expenses, borrowing, and approval of progress-payment reports.',
             },
             {
               label: 'Tender Management',
-              text: 'Preparation and execution of tender processes in OIZs.',
+              text: 'Preparation for tender processes in OIZs.',
             },
             {
               label: 'Infrastructure Facilities',
@@ -1015,10 +1009,10 @@ const en: Dictionary = {
         {
           title: '6. Technology and Innovation Ecosystems',
           intro:
-            'We enable the creation of ecosystems where R&D and innovation meet industry.',
+            'We enable the operation of ecosystems where R&D and innovation meet industry.',
           points: [
             {
-              label: 'TEKMER & TDZ Setup',
+              label: 'TEKMER & TDZ',
               text: 'Establishment and operation processes of Technology Development Centers and Zones.',
             },
             {
@@ -1055,12 +1049,13 @@ const en: Dictionary = {
         'In line with Türkiye’s technology-driven development goals, we offer strategic partnership to maximise the value of government incentives under Laws No. 5746 and 4691 with zero margin of error. Placing audit standards at the centre, we manage your technical and administrative processes end-to-end.',
       sections: [
         {
-          title: '1. Law No. 5746: R&D and Design Centre Management',
+          title:
+            '1. Law No. 5746: R&D and Design Centre Management Consulting',
           intro:
             'We carry out the technical monitoring and audit-readiness processes required to turn in-house centres into a sustainable incentive mechanism.',
           points: [
             {
-              label: 'Setup and Structuring',
+              label: 'Centre Design and Management',
               text: 'Preparation of the centre’s physical space design and personnel qualification analysis in line with regulatory criteria.',
             },
             {
@@ -1079,9 +1074,12 @@ const en: Dictionary = {
         },
         {
           title: '2. Law No. 4691: Technology Development Zone (TDZ) Consulting',
-          intro:
-            'We provide fully regulation-compliant ecosystem management for technopark management companies and start-ups located within the zones.',
+          intro: '',
           points: [
+            {
+              label: 'Management Company Operational Governance',
+              text: 'We provide fully regulation-compliant ecosystem management for technopark management companies and start-ups located within the zones.',
+            },
             {
               label: 'Portal and Exemption Management',
               text: 'Management of project entries, exemption certificates and personnel tracking conducted through the Technopark Portal.',
@@ -1450,7 +1448,7 @@ const en: Dictionary = {
     ],
     founderTitle: 'Our Founder',
     founderName: 'İlker Tura',
-    founderRole: 'Founder and Managing Partner',
+    founderRole: 'Founder',
     founderParagraphs: [
       'İlker Tura combines his undergraduate and graduate education in Electrical-Electronics Engineering, Business Administration and Public Administration with more than 15 years of public-sector experience, aiming to add value to the industrial and technology ecosystem.',
       'Between 2012 and 2026 he served at the Ministry of Industry and Technology as Assistant Inspector, Inspector and Chief Inspector, most recently as Deputy Head of the Guidance and Inspection Board for approximately 6.5 years from 2019 to 2026.',
