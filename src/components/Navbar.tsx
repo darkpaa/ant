@@ -17,7 +17,7 @@ const Navbar: React.FC = () => {
   const [scrolled, setScrolled] = useState<boolean>(false);
 
   const navLinks: NavLinkItem[] = [
-    { label: t.nav.corporate, href: '/#kurumsal' },
+    { label: t.nav.corporate, href: '/kurumsal' },
     { label: t.nav.services, href: '/#hizmetlerimiz' },
     { label: t.nav.blog, href: '/blog' },
     { label: t.nav.contact, href: '/iletisim' },
@@ -73,7 +73,7 @@ const Navbar: React.FC = () => {
               }`}
             >
               <img
-                src="/antgorsel.jpg"
+                src="/antlogo.png"
                 alt="ANT"
                 className="h-11 w-11 object-cover"
               />

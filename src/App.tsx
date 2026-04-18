@@ -6,6 +6,7 @@ import Home from './pages/Home';
 import Blog from './pages/Blog';
 import BlogPost from './pages/BlogPost';
 import Contact from './pages/Contact';
+import Corporate from './pages/Corporate';
 
 const ScrollManager: React.FC = () => {
   const { pathname, hash } = useLocation();
@@ -32,6 +33,8 @@ const App: React.FC = () => {
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/kurumsal" element={<Corporate />} />
+        <Route path="/about" element={<Corporate />} />
         <Route path="/blog" element={<Blog />} />
         <Route path="/blog/:id" element={<BlogPost />} />
         <Route path="/iletisim" element={<Contact />} />

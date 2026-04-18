@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useMemo, useRef, useState } from 'react';
 import {
   Phone,
   Mail,
@@ -23,12 +23,32 @@ const initialForm: FormState = { name: '', email: '', subject: '', message: '' }
 
 const FORMSUBMIT_URL = 'https://formsubmit.co/ajax/kurumsal@antyonetim.com';
 
+const MIN_SUBMIT_MS = 2500;
+
+const generateChallenge = (): { a: number; b: number } => ({
+  a: Math.floor(Math.random() * 8) + 2,
+  b: Math.floor(Math.random() * 8) + 1,
+});
+
 const Contact: React.FC = () => {
   const { t, lang } = useLang();
   const [form, setForm] = useState<FormState>(initialForm);
   const [submitted, setSubmitted] = useState<boolean>(false);
   const [submitting, setSubmitting] = useState<boolean>(false);
   const [error, setError] = useState<string | null>(null);
+  const [honeypot, setHoneypot] = useState<string>('');
+  const [captchaAnswer, setCaptchaAnswer] = useState<string>('');
+  const [challenge, setChallenge] = useState(() => generateChallenge());
+  const loadedAtRef = useRef<number>(Date.now());
+
+  useEffect(() => {
+    loadedAtRef.current = Date.now();
+  }, []);
+
+  const expectedSum = useMemo(
+    () => challenge.a + challenge.b,
+    [challenge]
+  );
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
@@ -38,8 +58,27 @@ const Contact: React.FC = () => {
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    setSubmitting(true);
     setError(null);
+
+    if (honeypot.trim() !== '') {
+      setSubmitted(true);
+      setForm(initialForm);
+      return;
+    }
+
+    if (Date.now() - loadedAtRef.current < MIN_SUBMIT_MS) {
+      setError(t.contact.formCaptchaError);
+      return;
+    }
+
+    if (parseInt(captchaAnswer, 10) !== expectedSum) {
+      setError(t.contact.formCaptchaError);
+      setChallenge(generateChallenge());
+      setCaptchaAnswer('');
+      return;
+    }
+
+    setSubmitting(true);
 
     try {
       const res = await fetch(FORMSUBMIT_URL, {
@@ -60,6 +99,9 @@ const Contact: React.FC = () => {
       if (res.ok) {
         setSubmitted(true);
         setForm(initialForm);
+        setCaptchaAnswer('');
+        setChallenge(generateChallenge());
+        loadedAtRef.current = Date.now();
       } else {
         setError(
           lang === 'tr'
@@ -214,6 +256,56 @@ const Contact: React.FC = () => {
                 />
               </div>
 
+              <div
+                aria-hidden="true"
+                style={{
+                  position: 'absolute',
+                  left: '-10000px',
+                  top: 'auto',
+                  width: '1px',
+                  height: '1px',
+                  overflow: 'hidden',
+                }}
+              >
+                <label htmlFor="contact-website">Website</label>
+                <input
+                  id="contact-website"
+                  type="text"
+                  name="website"
+                  tabIndex={-1}
+                  autoComplete="off"
+                  value={honeypot}
+                  onChange={(e) => setHoneypot(e.target.value)}
+                />
+              </div>
+
+              <div>
+                <label
+                  htmlFor="contact-captcha"
+                  className="block text-xs font-semibold text-navy-700 uppercase tracking-wider mb-2"
+                >
+                  {t.contact.formCaptchaLabel}
+                </label>
+                <div className="flex items-center gap-3">
+                  <div className="shrink-0 px-4 py-3 rounded-xl bg-navy-50 border border-navy-200 text-navy-900 font-semibold tracking-wider select-none">
+                    {challenge.a} + {challenge.b} =
+                  </div>
+                  <input
+                    id="contact-captcha"
+                    type="text"
+                    inputMode="numeric"
+                    pattern="[0-9]*"
+                    name="captcha"
+                    required
+                    disabled={submitting}
+                    value={captchaAnswer}
+                    onChange={(e) => setCaptchaAnswer(e.target.value)}
+                    autoComplete="off"
+                    className="w-full px-4 py-3 rounded-xl border border-navy-200 bg-white text-navy-900 focus:border-accent-400 focus:ring-2 focus:ring-accent-400/20 outline-none transition disabled:opacity-50"
+                  />
+                </div>
+              </div>
+
               <button
                 type="submit"
                 disabled={submitting}
@@ -255,9 +347,11 @@ const Contact: React.FC = () => {
                       <div className="text-navy-900 font-semibold group-hover:text-accent-600 transition-colors">
                         +90 (506) 986 26 20
                       </div>
-                      <div className="text-xs text-navy-500">
-                        {t.contact.infoPhoneSub}
-                      </div>
+                      {t.contact.infoPhoneSub && (
+                        <div className="text-xs text-navy-500">
+                          {t.contact.infoPhoneSub}
+                        </div>
+                      )}
                     </div>
                   </a>
                 </li>

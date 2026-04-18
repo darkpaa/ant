@@ -1,10 +1,5 @@
 import { Link } from 'react-router-dom';
-import {
-  Phone,
-  Mail,
-  ArrowUpRight,
-  Heart,
-} from 'lucide-react';
+import { Phone, Mail, ArrowUpRight } from 'lucide-react';
 import { useLang } from '../i18n/LanguageContext';
 import { LINKEDIN_URL } from '../i18n/translations';
 import LinkedinIcon from './icons/LinkedinIcon';
@@ -26,7 +21,7 @@ const Footer: React.FC = () => {
             <Link to="/" className="flex items-center gap-3 group">
               <div className="overflow-hidden rounded-xl bg-white/5 ring-1 ring-white/10 group-hover:ring-accent-400/40 transition-all duration-300 shadow-lg">
                 <img
-                  src="/antgorsel.jpg"
+                  src="/antlogo.png"
                   alt="ANT"
                   className="h-11 w-11 object-cover"
                 />
@@ -112,9 +107,11 @@ const Footer: React.FC = () => {
                     <div className="text-sm font-medium text-white/60 group-hover:text-white transition-colors">
                       +90 (506) 986 26 20
                     </div>
-                    <div className="text-xs text-white/30">
-                      {t.footer.workingHours}
-                    </div>
+                    {t.footer.workingHours && (
+                      <div className="text-xs text-white/30">
+                        {t.footer.workingHours}
+                      </div>
+                    )}
                   </div>
                 </a>
               </li>
@@ -141,8 +138,6 @@ const Footer: React.FC = () => {
           <div className="flex flex-col md:flex-row items-center justify-between gap-4">
             <p className="text-white/30 text-sm flex items-center gap-1 flex-wrap justify-center md:justify-start">
               {t.footer.copyright(currentYear)}
-              <Heart className="w-3 h-3 text-red-400 inline mx-1" />
-              {t.footer.madeIn}
             </p>
             <div className="flex flex-wrap items-center gap-x-6 gap-y-2">
               {t.footer.legalLinks.map((link) => (

@@ -91,6 +91,15 @@ export interface Dictionary {
         items: OsbPoint[];
       };
     };
+    argeModal: {
+      badge: string;
+      titleStart: string;
+      titleAccent: string;
+      titleEnd: string;
+      intro: string;
+      sections: OsbSection[];
+      hashtags: string[];
+    };
   };
   whyUs: {
     badge: string;
@@ -147,6 +156,8 @@ export interface Dictionary {
     formMessage: string;
     formSubmit: string;
     formSuccess: string;
+    formCaptchaLabel: string;
+    formCaptchaError: string;
     infoTitle: string;
     infoPhoneLabel: string;
     infoPhoneSub: string;
@@ -155,6 +166,21 @@ export interface Dictionary {
     linkedinTitle: string;
     linkedinDescription: string;
     linkedinCta: string;
+  };
+  corporate: {
+    pageBadge: string;
+    pageTitleStart: string;
+    pageTitleAccent: string;
+    pageDescription: string;
+    introTitle: string;
+    introParagraphs: string[];
+    founderTitle: string;
+    founderName: string;
+    founderRole: string;
+    founderParagraphs: string[];
+    highlights: { label: string; value: string }[];
+    ctaText: string;
+    ctaLabel: string;
   };
 }
 
@@ -358,6 +384,68 @@ const tr: Dictionary = {
         ],
       },
     },
+    argeModal: {
+      badge: 'Detaylı Bilgi',
+      titleStart: 'Ar-Ge, Tasarım ve',
+      titleAccent: 'İnovasyon',
+      titleEnd: 'Ekosistemi Danışmanlığı',
+      intro:
+        'Türkiye’nin teknoloji odaklı kalkınma hedefleri doğrultusunda, 5746 ve 4691 sayılı kanunlar kapsamında sunulan devlet teşviklerinden en yüksek verimle ve sıfır hata payıyla yararlanmanız için stratejik çözüm ortaklığı sunuyoruz. Denetim standartlarını merkeze alarak, teknik ve idari süreçlerinizi uçtan uca yönetiyoruz.',
+      sections: [
+        {
+          title: '1. 5746 Sayılı Kanun: Ar-Ge ve Tasarım Merkezleri Yönetimi',
+          intro:
+            'İşletme bünyesinde kurulan merkezlerin, sürdürülebilir bir teşvik mekanizmasına dönüşmesi için teknik izleme ve denetim hazırlığı süreçlerini yürütüyoruz.',
+          points: [
+            {
+              label: 'Kuruluş ve Yapılandırma',
+              text: 'Merkezin fiziksel alan tasarımı ve personel nitelik analizinin mevzuat kriterlerine uygun hazırlanması.',
+            },
+            {
+              label: 'Sürekli Denetim ve Mevzuat Uyumu',
+              text: 'Aylık ve yıllık bazda Ar-Ge indirimleri, gelir vergisi stopaj teşviki ve sigorta primi desteği uygulamalarının takibi.',
+            },
+            {
+              label: 'Teknik Raporlama ve Faaliyet Takibi',
+              text: 'Yıllık faaliyet raporlarının, projelerin teknik derinliğini ve yenilikçi yönünü (Ar-Ge/Tasarım niteliği) vurgulayacak şekilde veriye dayalı hazırlanması.',
+            },
+            {
+              label: 'Denetleme Hazırlığı',
+              text: '“Ön Denetim” simülasyonları ile risklerin (adam/ay süreleri, harcama kalemleri vb.) analizi.',
+            },
+          ],
+        },
+        {
+          title:
+            '2. 4691 Sayılı Kanun: Teknoloji Geliştirme Bölgeleri (TGB) Danışmanlığı',
+          intro:
+            'Teknopark yönetici şirketleri ve bölge içerisinde yer alan girişimci firmalar için mevzuata tam uyumlu ekosistem yönetimi sağlıyoruz.',
+          points: [
+            {
+              label: 'Portal ve Muafiyet Yönetimi',
+              text: 'Teknopark Portalı üzerinden yürütülen proje girişleri, muafiyet belgeleri ve personel takiplerinin yönetimi.',
+            },
+            {
+              label: 'Proje Kabul ve İzleme',
+              text: 'Bölgeye girecek projelerin 4691 sayılı kanun kapsamındaki uygunluk kriterlerinin belirlenmesi.',
+            },
+            {
+              label: 'Yönetici Şirket Denetim Hazırlığı',
+              text: 'Yönetici şirketlerin “Ön Denetim” simülasyonları ile risklerin analizi.',
+            },
+          ],
+        },
+      ],
+      hashtags: [
+        '#ArGe',
+        '#Tasarım',
+        '#İnovasyon',
+        '#5746',
+        '#4691',
+        '#Teknopark',
+        '#TeşvikYönetimi',
+      ],
+    },
   },
   whyUs: {
     badge: 'Neden Biz?',
@@ -412,8 +500,8 @@ const tr: Dictionary = {
     columnServices: 'Hizmetlerimiz',
     columnContact: 'İletişim',
     companyLinks: [
-      { label: 'Hakkımızda', href: '/#kurumsal' },
-      { label: 'Ekibimiz', href: '/#kurumsal' },
+      { label: 'Hakkımızda', href: '/kurumsal' },
+      { label: 'Ekibimiz', href: '/kurumsal' },
       { label: 'Blog', href: '/blog' },
       { label: 'İletişim', href: '/iletisim' },
     ],
@@ -430,9 +518,9 @@ const tr: Dictionary = {
       { label: 'KVKK Aydınlatma Metni', href: '#' },
       { label: 'Çerez Politikası', href: '#' },
     ],
-    workingHours: 'Pzt - Cum, 09:00 - 18:00',
+    workingHours: '',
     copyright: (year) => `© ${year} ANT Danışmanlık. Tüm hakları saklıdır.`,
-    madeIn: 'İstanbul’da hazırlanmıştır',
+    madeIn: '',
   },
   blog: {
     pageBadge: 'Blog',
@@ -498,48 +586,6 @@ const tr: Dictionary = {
             '#KurumsalYönetim',
             '#Şeffaflık',
             '#YatırımGüveni',
-          ],
-        },
-      },
-      {
-        id: 'arge-tasarim-inovasyon',
-        title: 'Ar-Ge, Tasarım ve İnovasyon Ekosistemi Danışmanlığı',
-        excerpt:
-          'Türkiye\'nin teknoloji odaklı kalkınma hedefleri doğrultusunda, 5746 ve 4691 sayılı kanunlar kapsamında sunulan devlet teşviklerinden en yüksek verimle yararlanmanız için stratejik çözüm ortaklığı sunuyoruz.',
-        publishedAt: '18 Nisan 2026',
-        readTime: '6 dk okuma',
-        content: {
-          intro:
-            'Türkiye\'nin teknoloji odaklı kalkınma hedefleri doğrultusunda, 5746 ve 4691 sayılı kanunlar kapsamında sunulan devlet teşviklerinden en yüksek verimle ve sıfır hata payıyla yararlanmanız için stratejik çözüm ortaklığı sunuyoruz. Denetim standartlarını merkeze alarak, teknik ve idari süreçlerinizi uçtan uca yönetiyoruz.',
-          sections: [
-            {
-              title: '1. 5746 Sayılı Kanun: Ar-Ge ve Tasarım Merkezleri Yönetimi',
-              paragraphs: [
-                'İşletme bünyesinde kurulan merkezlerin, sürdürülebilir bir teşvik mekanizmasına dönüşmesi için teknik izleme ve denetim hazırlığı süreçlerini yürütüyoruz.',
-                'Merkezin fiziksel alan tasarımı, personel nitelik analizini mevzuat kriterlerine uygun hazırlanması.',
-                'Sürekli Denetim ve Mevzuat Uyumu: Aylık ve yıllık bazda Ar-Ge indirimleri, gelir vergisi stopaj teşviki ve sigorta primi desteği uygulamalarının takibi.',
-                'Teknik Raporlama ve Faaliyet Takibi: Yıllık faaliyet raporlarının, projelerin teknik derinliğini ve yenilikçi yönünü (Ar-Ge/Tasarım niteliği) vurgulayacak şekilde veriye dayalı hazırlanması.',
-                'Denetleme Hazırlığı: "Ön Denetim" simülasyonları ile risklerin (adam/ay süreleri, harcama kalemleri vb.) analizi.',
-              ],
-            },
-            {
-              title: '2. 4691 Sayılı Kanun: Teknoloji Geliştirme Bölgeleri (TGB) Danışmanlığı',
-              paragraphs: [
-                'Teknopark yönetici şirketleri ve bölge içerisinde yer alan girişimci firmalar için mevzuata tam uyumlu ekosistem yönetimi sağlıyoruz.',
-                'Portal ve Muafiyet Yönetimi: Teknopark Portalı üzerinden yürütülen proje girişleri, muafiyet belgeleri ve personel takiplerinin yönetimi.',
-                'Proje Kabul ve İzleme: Bölgeye girecek projelerin 4691 sayılı kanun kapsamındaki uygunluk kriterlerinin belirlenmesi.',
-                'Yönetici Şirket Denetim Hazırlığı: Yönetici şirketlerin "Ön Denetim" simülasyonları ile risklerin analizi.',
-              ],
-            },
-          ],
-          hashtags: [
-            '#ArGe',
-            '#Tasarım',
-            '#İnovasyon',
-            '#5746',
-            '#4691',
-            '#Teknopark',
-            '#TeşvikYönetimi',
           ],
         },
       },
@@ -716,14 +762,42 @@ const tr: Dictionary = {
     formMessage: 'Mesajınız',
     formSubmit: 'Mesajı Gönder',
     formSuccess: 'Mesajınız alındı. Kısa sürede size dönüş yapacağız.',
+    formCaptchaLabel: 'Güvenlik doğrulaması',
+    formCaptchaError: 'Güvenlik doğrulaması hatalı. Lütfen tekrar deneyin.',
     infoTitle: 'İletişim Bilgileri',
     infoPhoneLabel: 'Telefon',
-    infoPhoneSub: 'Pzt - Cum, 09:00 - 18:00',
+    infoPhoneSub: '',
     infoEmailLabel: 'E-posta',
     linkedinTitle: 'LinkedIn Üzerinden Bağlantı Kurun',
     linkedinDescription:
       'Güncel içerikler, sektörel analizler ve danışmanlık notları için LinkedIn profilimi takip edebilirsiniz.',
     linkedinCta: 'LinkedIn Profilini Görüntüle',
+  },
+  corporate: {
+    pageBadge: 'Kurumsal',
+    pageTitleStart: 'Mühendislik Disiplini, Kamu Tecrübesi ve',
+    pageTitleAccent: 'Stratejik Yönetim',
+    pageDescription:
+      'Sanayi, teknoloji ve kamu yönetimi alanlarında edinilmiş çok disiplinli bilgi birikimiyle; stratejik yönetim, denetim ve kurumsal rehberlik hizmetleri sunuyoruz.',
+    introTitle: 'Ant Yönetim Danışmanlık ve Mühendislik',
+    introParagraphs: [
+      'Ant Yönetim Danışmanlık ve Mühendislik; sanayi, teknoloji ve kamu yönetimi alanlarında edinilmiş çok disiplinli bilgi birikimi ile, sanayi ve Ar-Ge ekosisteminin dinamiklerini hem teknik hem de yönetimsel boyutta derinlemesine analiz eden bir vizyonla kurulmuş; stratejik yönetim, denetim ve kurumsal rehberlik hizmetleri sunan uzman bir yapıdır.',
+    ],
+    founderTitle: 'Kurucumuz',
+    founderName: 'İlker Tura',
+    founderRole: 'Kurucu ve Yönetici Ortak',
+    founderParagraphs: [
+      'İlker Tura; Elektrik-Elektronik Mühendisliği, İşletme ve Kamu Yönetimi alanlarında aldığı lisans ve yüksek lisans eğitimini, kamuda 15 yılı aşkın tecrübesiyle birleştirerek sanayi ve teknoloji ekosistemine değer katmayı amaçlamaktadır.',
+      'Sanayi ve Teknoloji Bakanlığı’nda 2012-2026 yılları arasında Müfettiş Yardımcısı, Müfettiş ve Başmüfettiş olarak görev alan İlker Tura, son olarak 2019-2026 yılları arasında yaklaşık 6,5 yıl Rehberlik ve Teftiş Başkan Yardımcılığı görevini yürütmüştür.',
+      'Bu süreçte; Organize Sanayi Bölgeleri (OSB), Teknoloji Geliştirme Bölgeleri, Ar-Ge ve Tasarım Merkezleri ve Endüstri Bölgeleri’nin denetim, mevzuat uyumu ve yönetimsel süreçlerinin koordinasyonunda roller üstlenmiştir. Bu süreçlerde edinilen kapsamlı bilgi birikimi; Ant Yönetim’in çözüm üretme kabiliyetine doğrudan yansımaktadır.',
+    ],
+    highlights: [
+      { label: 'Kamu Tecrübesi', value: '15+ Yıl' },
+      { label: 'Bakanlık Müfettişliği', value: '2012-2026' },
+      { label: 'Rehberlik ve Teftiş Başkan Yardımcılığı', value: '6,5 Yıl' },
+    ],
+    ctaText: 'Projeleriniz için stratejik çözüm ortağınız olmaya hazırız.',
+    ctaLabel: 'Bizimle İletişime Geçin',
   },
 };
 
@@ -924,6 +998,67 @@ const en: Dictionary = {
         ],
       },
     },
+    argeModal: {
+      badge: 'Learn More',
+      titleStart: 'R&D, Design and',
+      titleAccent: 'Innovation',
+      titleEnd: 'Ecosystem Consulting',
+      intro:
+        'In line with Türkiye’s technology-driven development goals, we offer strategic partnership to maximise the value of government incentives under Laws No. 5746 and 4691 with zero margin of error. Placing audit standards at the centre, we manage your technical and administrative processes end-to-end.',
+      sections: [
+        {
+          title: '1. Law No. 5746: R&D and Design Centre Management',
+          intro:
+            'We carry out the technical monitoring and audit-readiness processes required to turn in-house centres into a sustainable incentive mechanism.',
+          points: [
+            {
+              label: 'Setup and Structuring',
+              text: 'Preparation of the centre’s physical space design and personnel qualification analysis in line with regulatory criteria.',
+            },
+            {
+              label: 'Continuous Audit and Regulatory Compliance',
+              text: 'Monthly and annual tracking of R&D deductions, income tax withholding incentives and social-security premium support.',
+            },
+            {
+              label: 'Technical Reporting and Activity Tracking',
+              text: 'Data-driven preparation of annual activity reports that highlight the technical depth and innovative aspects (R&D/Design qualification) of projects.',
+            },
+            {
+              label: 'Audit Preparation',
+              text: 'Analysis of risks (man/month durations, expenditure items, etc.) through “Pre-Audit” simulations.',
+            },
+          ],
+        },
+        {
+          title: '2. Law No. 4691: Technology Development Zone (TDZ) Consulting',
+          intro:
+            'We provide fully regulation-compliant ecosystem management for technopark management companies and start-ups located within the zones.',
+          points: [
+            {
+              label: 'Portal and Exemption Management',
+              text: 'Management of project entries, exemption certificates and personnel tracking conducted through the Technopark Portal.',
+            },
+            {
+              label: 'Project Acceptance and Monitoring',
+              text: 'Determination of eligibility criteria under Law No. 4691 for projects entering the zone.',
+            },
+            {
+              label: 'Management Company Audit Preparation',
+              text: 'Risk analysis of management companies through “Pre-Audit” simulations.',
+            },
+          ],
+        },
+      ],
+      hashtags: [
+        '#RnD',
+        '#Design',
+        '#Innovation',
+        '#5746',
+        '#4691',
+        '#Technopark',
+        '#IncentiveManagement',
+      ],
+    },
   },
   whyUs: {
     badge: 'Why Us?',
@@ -978,8 +1113,8 @@ const en: Dictionary = {
     columnServices: 'Services',
     columnContact: 'Contact',
     companyLinks: [
-      { label: 'About Us', href: '/#kurumsal' },
-      { label: 'Our Team', href: '/#kurumsal' },
+      { label: 'About Us', href: '/kurumsal' },
+      { label: 'Our Team', href: '/kurumsal' },
       { label: 'Blog', href: '/blog' },
       { label: 'Contact', href: '/iletisim' },
     ],
@@ -996,7 +1131,7 @@ const en: Dictionary = {
       { label: 'GDPR Notice', href: '#' },
       { label: 'Cookie Policy', href: '#' },
     ],
-    workingHours: 'Mon - Fri, 09:00 - 18:00',
+    workingHours: '',
     copyright: (year) => `© ${year} ANT Consulting. All rights reserved.`,
     madeIn: '',
   },
@@ -1068,48 +1203,6 @@ const en: Dictionary = {
           ],
           disclaimer:
             'The views expressed above reflect purely personal opinions and are not the official position of the Ministry or other relevant authorities. Please note that the practices of the Ministry or other authorities on this topic may differ.',
-        },
-      },
-      {
-        id: 'arge-tasarim-inovasyon',
-        title: 'R&D, Design and Innovation Ecosystem Consulting',
-        excerpt:
-          'We offer strategic partnership to maximise the value of government incentives under Laws No. 5746 and 4691, in line with Türkiye\'s technology-driven development goals.',
-        publishedAt: 'April 18, 2026',
-        readTime: '6 min read',
-        content: {
-          intro:
-            'In line with Türkiye\'s technology-driven development goals, we offer strategic partnership so that you can benefit from government incentives under Laws No. 5746 and 4691 with maximum efficiency and zero margin of error. Placing audit standards at the centre, we manage your technical and administrative processes end-to-end.',
-          sections: [
-            {
-              title: '1. Law No. 5746: R&D and Design Centre Management',
-              paragraphs: [
-                'We carry out technical monitoring and audit-readiness processes to turn in-house centres into a sustainable incentive mechanism.',
-                'Preparation of the centre\'s physical space design and personnel qualification analysis in line with regulatory criteria.',
-                'Continuous Audit and Regulatory Compliance: Monthly and annual tracking of R&D deductions, income tax withholding incentives and social-security premium support.',
-                'Technical Reporting and Activity Tracking: Data-driven preparation of annual activity reports that highlight the technical depth and innovative aspects (R&D/Design qualification) of projects.',
-                'Audit Preparation: Analysis of risks (man/month durations, expenditure items, etc.) through "Pre-Audit" simulations.',
-              ],
-            },
-            {
-              title: '2. Law No. 4691: Technology Development Zone (TDZ) Consulting',
-              paragraphs: [
-                'We provide fully regulation-compliant ecosystem management for technopark management companies and start-ups located within the zones.',
-                'Portal and Exemption Management: Management of project entries, exemption certificates and personnel tracking conducted through the Technopark Portal.',
-                'Project Acceptance and Monitoring: Determination of eligibility criteria under Law No. 4691 for projects entering the zone.',
-                'Management Company Audit Preparation: Risk analysis of management companies through "Pre-Audit" simulations.',
-              ],
-            },
-          ],
-          hashtags: [
-            '#RnD',
-            '#Design',
-            '#Innovation',
-            '#5746',
-            '#4691',
-            '#Technopark',
-            '#IncentiveManagement',
-          ],
         },
       },
       {
@@ -1285,14 +1378,42 @@ const en: Dictionary = {
     formMessage: 'Your Message',
     formSubmit: 'Send Message',
     formSuccess: 'Your message has been received. We will get back to you soon.',
+    formCaptchaLabel: 'Security check',
+    formCaptchaError: 'Security check failed. Please try again.',
     infoTitle: 'Contact Information',
     infoPhoneLabel: 'Phone',
-    infoPhoneSub: 'Mon - Fri, 09:00 - 18:00',
+    infoPhoneSub: '',
     infoEmailLabel: 'Email',
     linkedinTitle: 'Connect on LinkedIn',
     linkedinDescription:
       'Follow my LinkedIn profile for regular content, sector analyses and consulting notes.',
     linkedinCta: 'View LinkedIn Profile',
+  },
+  corporate: {
+    pageBadge: 'About',
+    pageTitleStart: 'Engineering Discipline, Public Service Experience and',
+    pageTitleAccent: 'Strategic Management',
+    pageDescription:
+      'With multi-disciplinary know-how in industry, technology and public administration, we deliver strategic management, audit and corporate advisory services.',
+    introTitle: 'Ant Management Consulting and Engineering',
+    introParagraphs: [
+      'Ant Management Consulting and Engineering is an expert firm founded on a vision that analyses the dynamics of the industrial and R&D ecosystem in depth — technically and managerially — drawing on multi-disciplinary expertise gained across industry, technology and public administration. We deliver strategic management, audit and corporate advisory services.',
+    ],
+    founderTitle: 'Our Founder',
+    founderName: 'İlker Tura',
+    founderRole: 'Founder and Managing Partner',
+    founderParagraphs: [
+      'İlker Tura combines his undergraduate and graduate education in Electrical-Electronics Engineering, Business Administration and Public Administration with more than 15 years of public-sector experience, aiming to add value to the industrial and technology ecosystem.',
+      'Between 2012 and 2026 he served at the Ministry of Industry and Technology as Assistant Inspector, Inspector and Chief Inspector, most recently as Deputy Head of the Guidance and Inspection Board for approximately 6.5 years from 2019 to 2026.',
+      'During this period he led the audit, regulatory compliance and governance coordination of Organized Industrial Zones (OIZ), Technology Development Zones, R&D and Design Centres and Industrial Zones. The deep experience accumulated in these roles is reflected directly in Ant Management’s ability to deliver solutions.',
+    ],
+    highlights: [
+      { label: 'Public Service', value: '15+ Years' },
+      { label: 'Ministry Inspectorate', value: '2012-2026' },
+      { label: 'Guidance & Inspection', value: '6.5 Years' },
+    ],
+    ctaText: 'We are ready to be your strategic solution partner.',
+    ctaLabel: 'Get in Touch',
   },
 };
 

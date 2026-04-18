@@ -17,12 +17,14 @@ import {
 import type { LucideIcon } from 'lucide-react';
 import { useLang } from '../i18n/LanguageContext';
 
+type DetailKey = 'osb' | 'arge';
+
 interface ServiceMeta {
   icon: LucideIcon;
   gradient: string;
   iconBg: string;
   iconColor: string;
-  detailKey?: 'osb';
+  detailKey?: DetailKey;
 }
 
 const serviceMeta: ServiceMeta[] = [
@@ -38,6 +40,7 @@ const serviceMeta: ServiceMeta[] = [
     gradient: 'from-amber-500 to-orange-500',
     iconBg: 'bg-amber-50 group-hover:bg-amber-100',
     iconColor: 'text-amber-600',
+    detailKey: 'arge',
   },
   {
     icon: Gift,
@@ -66,10 +69,11 @@ const serviceMeta: ServiceMeta[] = [
 ];
 
 const sectionIcons: LucideIcon[] = [Building2, Leaf, Cpu, ShieldAlert, Rocket];
+const argeSectionIcons: LucideIcon[] = [Lightbulb, Rocket];
 
 const Services: React.FC = () => {
   const { t } = useLang();
-  const [openDetail, setOpenDetail] = useState<null | 'osb'>(null);
+  const [openDetail, setOpenDetail] = useState<null | DetailKey>(null);
 
   useEffect(() => {
     if (!openDetail) return;
@@ -284,6 +288,123 @@ const Services: React.FC = () => {
                 href="/iletisim"
                 onClick={() => setOpenDetail(null)}
                 className="inline-flex items-center gap-2 bg-gradient-to-r from-accent-400 to-accent-500 hover:from-accent-500 hover:to-accent-600 text-white px-5 py-2.5 rounded-xl text-sm font-semibold transition-all duration-300 shadow-lg shadow-accent-400/25 hover:shadow-accent-400/40"
+              >
+                {t.services.contactUs}
+                <ArrowRight className="w-4 h-4" />
+              </a>
+            </div>
+          </div>
+        </div>
+      )}
+
+      {openDetail === 'arge' && (
+        <div
+          className="fixed inset-0 z-[100] flex items-center justify-center p-4 sm:p-6 animate-fade-in"
+          role="dialog"
+          aria-modal="true"
+          aria-labelledby="arge-detail-title"
+        >
+          <div
+            className="absolute inset-0 bg-navy-950/70 backdrop-blur-sm"
+            onClick={() => setOpenDetail(null)}
+          />
+
+          <div className="relative bg-white w-full max-w-4xl max-h-[90vh] rounded-3xl shadow-2xl overflow-hidden flex flex-col">
+            <div className="relative bg-gradient-to-br from-amber-600 via-amber-700 to-orange-700 px-6 sm:px-10 py-8">
+              <div className="flex items-start justify-between gap-4">
+                <div>
+                  <div className="inline-flex items-center gap-2 bg-white/10 border border-white/10 rounded-full px-4 py-1.5 mb-4">
+                    <div className="w-1.5 h-1.5 bg-accent-400 rounded-full" />
+                    <span className="text-white/80 text-xs font-semibold uppercase tracking-wider">
+                      {t.services.argeModal.badge}
+                    </span>
+                  </div>
+                  <h3
+                    id="arge-detail-title"
+                    className="text-2xl sm:text-3xl font-bold text-white tracking-tight leading-tight"
+                  >
+                    {t.services.argeModal.titleStart}{' '}
+                    <span className="bg-gradient-to-r from-accent-400 to-amber-200 bg-clip-text text-transparent">
+                      {t.services.argeModal.titleAccent}
+                    </span>{' '}
+                    {t.services.argeModal.titleEnd}
+                  </h3>
+                </div>
+                <button
+                  onClick={() => setOpenDetail(null)}
+                  aria-label={t.services.close}
+                  className="shrink-0 w-10 h-10 rounded-xl bg-white/10 hover:bg-white/20 border border-white/10 flex items-center justify-center text-white transition-all duration-200 cursor-pointer"
+                >
+                  <X className="w-5 h-5" />
+                </button>
+              </div>
+            </div>
+
+            <div className="overflow-y-auto px-6 sm:px-10 py-8 space-y-10">
+              <p className="text-navy-600 leading-relaxed text-base sm:text-lg">
+                {t.services.argeModal.intro}
+              </p>
+
+              {t.services.argeModal.sections.map((section, idx) => {
+                const SectionIcon = argeSectionIcons[idx] ?? Lightbulb;
+                return (
+                  <div key={section.title}>
+                    <div className="flex items-center gap-3 mb-3">
+                      <div className="inline-flex items-center justify-center w-10 h-10 rounded-xl bg-amber-400/10 text-amber-600">
+                        <SectionIcon className="w-5 h-5" />
+                      </div>
+                      <h4 className="text-lg sm:text-xl font-bold text-navy-900">
+                        {section.title}
+                      </h4>
+                    </div>
+                    {section.intro && (
+                      <p className="text-navy-500 leading-relaxed mb-4">
+                        {section.intro}
+                      </p>
+                    )}
+                    <ul className="space-y-3">
+                      {section.points.map((p) => (
+                        <li
+                          key={p.label}
+                          className="flex gap-3 p-4 rounded-xl border border-navy-100 hover:border-amber-400/40 hover:bg-amber-400/5 transition-all duration-200"
+                        >
+                          <CheckCircle2 className="w-5 h-5 text-amber-600 shrink-0 mt-0.5" />
+                          <p className="text-sm sm:text-base text-navy-600 leading-relaxed">
+                            <span className="font-semibold text-navy-900 italic">
+                              {p.label}:
+                            </span>{' '}
+                            {p.text}
+                          </p>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                );
+              })}
+
+              <div className="flex flex-wrap gap-2 pt-2">
+                {t.services.argeModal.hashtags.map((tag) => (
+                  <span
+                    key={tag}
+                    className="inline-flex items-center px-3 py-1 rounded-full bg-amber-50 text-amber-700 text-xs font-semibold border border-amber-100"
+                  >
+                    {tag}
+                  </span>
+                ))}
+              </div>
+            </div>
+
+            <div className="border-t border-navy-100 px-6 sm:px-10 py-5 flex items-center justify-end gap-3 bg-white">
+              <button
+                onClick={() => setOpenDetail(null)}
+                className="px-5 py-2.5 rounded-xl text-sm font-semibold text-navy-600 hover:text-navy-900 transition-colors cursor-pointer"
+              >
+                {t.services.close}
+              </button>
+              <a
+                href="/iletisim"
+                onClick={() => setOpenDetail(null)}
+                className="inline-flex items-center gap-2 bg-gradient-to-r from-amber-500 to-orange-500 hover:from-amber-600 hover:to-orange-600 text-white px-5 py-2.5 rounded-xl text-sm font-semibold transition-all duration-300 shadow-lg shadow-amber-500/25 hover:shadow-amber-500/40"
               >
                 {t.services.contactUs}
                 <ArrowRight className="w-4 h-4" />

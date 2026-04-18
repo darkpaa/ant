@@ -1,3 +1,4 @@
+import { Globe } from 'lucide-react';
 import { useLang } from '../i18n/LanguageContext';
 
 interface LanguageToggleProps {
@@ -11,44 +12,53 @@ const LanguageToggle: React.FC<LanguageToggleProps> = ({
 }) => {
   const { lang, setLang, t } = useLang();
 
-  const base =
-    'inline-flex items-center rounded-xl p-1 text-xs font-semibold transition-colors duration-300';
-  const wrapper =
-    variant === 'light'
-      ? 'bg-white/10 border border-white/15 text-white/80'
-      : 'bg-navy-100 border border-navy-200 text-navy-700';
-
-  const pill = (active: boolean) =>
-    active
-      ? variant === 'light'
-        ? 'bg-white text-navy-900 shadow-sm'
-        : 'bg-navy-900 text-white shadow-sm'
-      : variant === 'light'
-        ? 'text-white/70 hover:text-white'
-        : 'text-navy-500 hover:text-navy-900';
+  const isLight = variant === 'light';
+  const wrapper = isLight
+    ? 'bg-white/10 border-white/15 text-white/80 backdrop-blur-md'
+    : 'bg-navy-50/80 border-navy-200/70 text-navy-700 backdrop-blur-md';
+  const globeColor = isLight ? 'text-white/60' : 'text-navy-500';
+  const knob = isLight
+    ? 'bg-white text-navy-900 shadow-md shadow-black/20'
+    : 'bg-navy-900 text-white shadow-md shadow-navy-900/20';
+  const idleText = isLight ? 'text-white/60' : 'text-navy-400';
 
   return (
     <div
       role="group"
       aria-label={t.languageToggle.ariaLabel}
-      className={`${base} ${wrapper} ${className}`}
+      className={`relative inline-flex items-center gap-1.5 pl-2 pr-1 py-1 rounded-full border text-[11px] font-bold tracking-wider transition-all duration-300 hover:-translate-y-0.5 ${wrapper} ${className}`}
     >
-      <button
-        type="button"
-        onClick={() => setLang('tr')}
-        aria-pressed={lang === 'tr'}
-        className={`px-3 py-1 rounded-lg transition-all duration-200 cursor-pointer ${pill(lang === 'tr')}`}
-      >
-        {t.languageToggle.tr}
-      </button>
-      <button
-        type="button"
-        onClick={() => setLang('en')}
-        aria-pressed={lang === 'en'}
-        className={`px-3 py-1 rounded-lg transition-all duration-200 cursor-pointer ${pill(lang === 'en')}`}
-      >
-        {t.languageToggle.en}
-      </button>
+      <Globe className={`w-3.5 h-3.5 ${globeColor}`} aria-hidden="true" />
+
+      <div className="relative flex items-center">
+        <span
+          aria-hidden="true"
+          className={`absolute top-0 bottom-0 w-[34px] rounded-full transition-all duration-300 ease-out ${knob} ${
+            lang === 'tr' ? 'left-0' : 'left-[34px]'
+          }`}
+        />
+
+        <button
+          type="button"
+          onClick={() => setLang('tr')}
+          aria-pressed={lang === 'tr'}
+          className={`relative z-10 w-[34px] h-6 flex items-center justify-center rounded-full transition-colors duration-300 cursor-pointer ${
+            lang === 'tr' ? '' : idleText
+          }`}
+        >
+          {t.languageToggle.tr}
+        </button>
+        <button
+          type="button"
+          onClick={() => setLang('en')}
+          aria-pressed={lang === 'en'}
+          className={`relative z-10 w-[34px] h-6 flex items-center justify-center rounded-full transition-colors duration-300 cursor-pointer ${
+            lang === 'en' ? '' : idleText
+          }`}
+        >
+          {t.languageToggle.en}
+        </button>
+      </div>
     </div>
   );
 };
