@@ -12,7 +12,7 @@ const Home: React.FC = () => {
     <>
       <SEO
         title="OSB, Ar-Ge ve Kurumsal Yönetim Danışmanlığı"
-        description="OSB Danışmanlığı, Ar-Ge ve Tasarım Merkezi kurulumu ve Kurumsal Yönetim Danışmanlığında 15+ yıl kamu tecrübesi. Ücretsiz ön görüşme için hemen bize ulaşın."
+        description="OSB mevzuatı, Ar-Ge ve Tasarım Merkezi kurulumu ve kurumsal yönetim süreçlerinde 15+ yıl kamu tecrübesiyle danışmanlık. Ücretsiz ön görüşme için bize ulaşın."
         url="/"
         type="website"
         lang={lang}
