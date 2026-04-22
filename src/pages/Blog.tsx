@@ -3,8 +3,50 @@ import { ArrowRight, Calendar, Clock } from 'lucide-react';
 import { useLang } from '../i18n/LanguageContext';
 import SEO from '../components/SEO';
 
+const SITE_URL = 'https://antyonetim.com';
+
+const blogBreadcrumbLd = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    {
+      '@type': 'ListItem',
+      position: 1,
+      name: 'Anasayfa',
+      item: SITE_URL,
+    },
+    {
+      '@type': 'ListItem',
+      position: 2,
+      name: 'Blog',
+      item: `${SITE_URL}/blog`,
+    },
+  ],
+};
+
 const Blog: React.FC = () => {
   const { t, lang } = useLang();
+
+  const blogLd = {
+    '@context': 'https://schema.org',
+    '@type': 'Blog',
+    '@id': `${SITE_URL}/blog#blog`,
+    name: 'ANT Danışmanlık Blog',
+    url: `${SITE_URL}/blog`,
+    inLanguage: lang === 'en' ? 'en-US' : 'tr-TR',
+    publisher: {
+      '@type': 'Organization',
+      name: 'ANT Yönetim Danışmanlık',
+      url: SITE_URL,
+    },
+    blogPost: t.blog.posts.map((p) => ({
+      '@type': 'BlogPosting',
+      headline: p.title,
+      description: p.excerpt,
+      datePublished: p.publishedAt,
+      url: `${SITE_URL}/blog/${p.id}`,
+    })),
+  };
 
   return (
     <>
@@ -21,8 +63,10 @@ const Blog: React.FC = () => {
           'Ar-Ge ve Tasarım Merkezi yazıları',
           'Teknopark muafiyetleri',
           'yeşil OSB',
+          'KOSGEB teşvik',
           'ANT Yönetim Danışmanlık blog',
         ]}
+        jsonLd={[blogLd, blogBreadcrumbLd]}
       />
     <main className="relative bg-gray-50/60 min-h-screen">
       <section className="relative bg-gradient-to-br from-navy-950 via-navy-900 to-navy-800 overflow-hidden">

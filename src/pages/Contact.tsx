@@ -144,6 +144,19 @@ const Contact: React.FC = () => {
           'Ar-Ge ve Tasarım Merkezi danışmanlığı iletişim',
           'ANT Yönetim Danışmanlık iletişim',
         ]}
+        jsonLd={{
+          '@context': 'https://schema.org',
+          '@type': 'ContactPage',
+          url: 'https://antyonetim.com/iletisim',
+          name: 'İletişim — ANT Yönetim Danışmanlık',
+          mainEntity: {
+            '@type': 'Organization',
+            name: 'ANT Yönetim Danışmanlık',
+            email: 'kurumsal@antyonetim.com',
+            telephone: '+90-506-986-26-20',
+            url: 'https://antyonetim.com',
+          },
+        }}
       />
       <main className="relative bg-gray-50/60 min-h-screen">
       <section className="relative bg-gradient-to-br from-navy-950 via-navy-900 to-navy-800 overflow-hidden">

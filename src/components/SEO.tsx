@@ -7,6 +7,8 @@ const DEFAULT_IMAGE = `${SITE_URL}/antlogo.png`;
 export type SEOType = 'website' | 'article' | 'profile';
 export type SEOLang = 'tr' | 'en';
 
+export type JsonLd = Record<string, unknown>;
+
 export interface SEOProps {
   title: string;
   description: string;
@@ -17,6 +19,7 @@ export interface SEOProps {
   noIndex?: boolean;
   publishedAt?: string;
   keywords?: string[];
+  jsonLd?: JsonLd | JsonLd[];
 }
 
 const buildCanonical = (url: string): string => {
@@ -35,9 +38,11 @@ const SEO: React.FC<SEOProps> = ({
   noIndex = false,
   publishedAt,
   keywords,
+  jsonLd,
 }) => {
   const canonical = buildCanonical(url);
   const fullTitle = `${title} | ${SITE_NAME}`;
+  const ldArray = jsonLd ? (Array.isArray(jsonLd) ? jsonLd : [jsonLd]) : [];
 
   return (
     <Helmet prioritizeSeoTags>
@@ -51,6 +56,14 @@ const SEO: React.FC<SEOProps> = ({
         name="robots"
         content={noIndex ? 'noindex, nofollow' : 'index, follow'}
       />
+      <meta
+        name="googlebot"
+        content={
+          noIndex
+            ? 'noindex, nofollow'
+            : 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1'
+        }
+      />
       <link rel="canonical" href={canonical} />
 
       <meta property="og:site_name" content={SITE_NAME} />
@@ -59,6 +72,7 @@ const SEO: React.FC<SEOProps> = ({
       <meta property="og:description" content={description} />
       <meta property="og:url" content={canonical} />
       <meta property="og:image" content={image} />
+      <meta property="og:image:alt" content={fullTitle} />
       <meta property="og:locale" content={lang === 'en' ? 'en_US' : 'tr_TR'} />
       {publishedAt && (
         <meta property="article:published_time" content={publishedAt} />
@@ -68,6 +82,12 @@ const SEO: React.FC<SEOProps> = ({
       <meta name="twitter:title" content={fullTitle} />
       <meta name="twitter:description" content={description} />
       <meta name="twitter:image" content={image} />
+
+      {ldArray.map((ld, idx) => (
+        <script key={idx} type="application/ld+json">
+          {JSON.stringify(ld)}
+        </script>
+      ))}
     </Helmet>
   );
 };

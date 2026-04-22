@@ -5,6 +5,36 @@ import { LINKEDIN_URL } from '../i18n/translations';
 import LinkedinIcon from '../components/icons/LinkedinIcon';
 import SEO from '../components/SEO';
 
+const SITE_URL = 'https://antyonetim.com';
+
+const corporateBreadcrumbLd = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Anasayfa', item: SITE_URL },
+    {
+      '@type': 'ListItem',
+      position: 2,
+      name: 'Kurumsal',
+      item: `${SITE_URL}/kurumsal`,
+    },
+  ],
+};
+
+const aboutPageLd = {
+  '@context': 'https://schema.org',
+  '@type': 'AboutPage',
+  '@id': `${SITE_URL}/kurumsal#aboutpage`,
+  name: 'Kurumsal — ANT Yönetim Danışmanlık',
+  url: `${SITE_URL}/kurumsal`,
+  mainEntity: {
+    '@type': 'Organization',
+    name: 'ANT Yönetim Danışmanlık',
+    url: SITE_URL,
+    sameAs: [LINKEDIN_URL],
+  },
+};
+
 const Corporate: React.FC = () => {
   const { t, lang } = useLang();
   const c = t.corporate;
@@ -25,6 +55,7 @@ const Corporate: React.FC = () => {
           'Ar-Ge ve Tasarım Merkezi danışmanlığı',
           'Sanayi ve Teknoloji Bakanlığı müfettişi',
         ]}
+        jsonLd={[aboutPageLd, corporateBreadcrumbLd]}
       />
     <main className="relative bg-gray-50/60 min-h-screen">
       <section className="relative bg-gradient-to-br from-navy-950 via-navy-900 to-navy-800 overflow-hidden">

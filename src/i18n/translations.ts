@@ -207,28 +207,28 @@ const tr: Dictionary = {
   hero: {
     slides: [
       {
-        badge: 'OSB Danışmanlığı',
-        headline: 'OSB Danışmanlığında ',
-        highlightedWord: 'Mevzuata Tam Hakim',
+        badge: '15+ Yıl Kamu ve Mevzuat Tecrübesi',
+        headline: 'OSB, Ar-Ge ve Kurumsal Yönetim ',
+        highlightedWord: 'Danışmanlığı',
         headlineEnd: '\nStratejik Çözüm Ortağınız',
         subHeadline:
-          '4562 sayılı OSB Kanunu, yeşil dönüşüm süreçleri ve dijital dönüşüm danışmanlığıyla Organize Sanayi Bölgelerinin idari, teknik ve finansal süreçlerini uçtan uca yönetiyoruz.',
+          'OSB mevzuatı, Teknopark muafiyetleri ve yeşil OSB süreçlerinde yasal risk yönetimiyle birleşen mühendislik disipliniyle, sanayi kuruluşlarına uçtan uca danışmanlık sunuyoruz.',
       },
       {
-        badge: 'Ar-Ge ve Tasarım Merkezi Danışmanlığı',
-        headline: 'Ar-Ge ve Tasarım Merkezi ',
-        highlightedWord: 'Yönetim',
-        headlineEnd: '\nDanışmanlığı',
+        badge: 'Ar-Ge, Tasarım Merkezi ve Teknopark',
+        headline: 'Ar-Ge ve Teknopark Süreçlerinde ',
+        highlightedWord: 'Stratejik',
+        headlineEnd: '\nÇözüm Ortağınız',
         subHeadline:
           '5746 sayılı Kanun kapsamında Ar-Ge indirimi, Teknopark muafiyetleri ve 4691 sayılı Kanun uyum süreçlerini sıfır hata prensibiyle yönetiyor; denetim hazırlığınızı veri odaklı raporlarla güvence altına alıyoruz.',
       },
       {
-        badge: 'Kurumsal Yönetim Danışmanlığı',
-        headline: 'Kurumsal Yönetim ',
-        highlightedWord: 'Danışmanlığında',
+        badge: 'Kurumsal Yönetim ve Kapasite Geliştirme',
+        headline: 'Kurumsal Yönetim ve ',
+        highlightedWord: 'Kapasite Geliştirmede',
         headlineEnd: '\nOtorite Güvencesi',
         subHeadline:
-          'OSB mevzuat uyum süreçleri, teşvik yönetimi ve stratejik planlama alanlarında kamu tecrübesi ile desteklenmiş, veri odaklı ve yapay zeka destekli danışmanlık sunuyoruz.',
+          'OSB mevzuat uyum süreçleri, yasal risk yönetimi ve stratejik planlama alanlarında kamu tecrübesi ile desteklenmiş; veri odaklı ve yapay zeka destekli danışmanlık sunuyoruz.',
       },
     ],
     ctaServices: 'Hizmetlerimizi İnceleyin',
@@ -247,34 +247,34 @@ const tr: Dictionary = {
     contactUs: 'Bize Ulaşın',
     items: [
       {
-        title: 'OSB Mevzuat ve Yönetim Danışmanlığı',
+        title: 'OSB Danışmanlığı ve Mevzuat Uyumu',
         description:
-          '4562 sayılı OSB Kanunu, arsa tahsis yönetimi, yeşil dönüşüm süreçleri ve akıllı OSB dijital dönüşümünde Organize Sanayi Bölgelerine uçtan uca danışmanlık sunuyoruz.',
+          '4562 sayılı OSB Kanunu kapsamında arsa tahsis yönetimi, organ yönetimi ve altyapı proje danışmanlığı süreçlerini; OSB kurumsal kapasite geliştirme ve Akıllı OSB dijital dönüşüm perspektifiyle uçtan uca yönetiyoruz.',
       },
       {
-        title: 'Ar-Ge ve Tasarım Merkezi Danışmanlığı',
+        title: 'Ar-Ge, Tasarım Merkezi ve Teknopark',
         description:
-          '5746 sayılı Kanun kapsamında merkez kurulumu, Ar-Ge indirimi, teşvik yönetimi ve denetim hazırlığını sıfır hata prensibiyle yönetiyor; yapay zeka destekli teknik raporlama ile fark yaratıyoruz.',
+          '5746 sayılı Kanun kapsamında Ar-Ge ve Tasarım Merkezi kurulumu, 4691 sayılı Kanun çerçevesinde Teknopark muafiyetleri ve denetim hazırlığını; veri odaklı süreç yönetimi ve sıfır hata prensibiyle yürütüyoruz.',
       },
       {
-        title: 'Hibe ve Teşvik Yönetimi',
+        title: 'Hibe, Teşvik ve Proje Danışmanlığı',
         description:
-          'Devlet hibeleri, AB fonları ve 5746/4691 sayılı kanun teşvikleri için başvuru, izleme ve mevzuat uyum süreçlerini uçtan uca yönetiyoruz.',
+          'TÜBİTAK ve KOSGEB projeleri, AB fonları ile 5746 ve 4691 sayılı kanun teşviklerinde; fizibilite, başvuru, izleme ve mevzuat uyum süreçlerini uçtan uca yönetiyor, kaynak verimliliğini azami seviyeye taşıyoruz.',
       },
       {
-        title: 'Kurumsal Yönetim Danışmanlığı',
+        title: 'Kurumsal Yönetim ve Kapasite Geliştirme',
         description:
-          'Kurumsallaşma yol haritası, OSB organ yönetimi ve organizasyonel yapılanmada; şirketinizin yönetim ve denetim süreçlerini veriye dayalı çerçevede yeniden tasarlıyoruz.',
+          'OSB organ yönetimi, yönetim-denetim kurulu sorumluluk analizi ve kurumsallaşma yol haritasında; yasal risk yönetimini merkeze alarak kurumların operasyonel kapasitesini veri odaklı çerçevede yeniden tasarlıyoruz.',
       },
       {
-        title: 'Teknopark ve TGB Yönetim Danışmanlığı',
+        title: 'TGB Yönetici Şirket Danışmanlığı',
         description:
-          '4691 sayılı Kanun kapsamında Teknoloji Geliştirme Bölgeleri yönetici şirket operasyonları, Teknopark muafiyetleri ve portal üzerinden proje izleme süreçlerinde tam uyum sağlıyoruz.',
+          '4691 sayılı Kanun kapsamında Teknoloji Geliştirme Bölgeleri yönetici şirket operasyonları, Teknopark muafiyetleri, portal üzerinden proje izleme ve ön denetim süreçlerinde mevzuata tam uyumlu ekosistem yönetimi sağlıyoruz.',
       },
       {
         title: 'Stratejik Planlama ve Yeşil Dönüşüm',
         description:
-          'Uzun vadeli büyüme hedeflerinizi somut aksiyon planlarına dönüştürüyor; Avrupa Yeşil Mutabakatı, sürdürülebilirlik ve yeşil dönüşüm süreçlerinde yol haritanızı birlikte oluşturuyoruz.',
+          'Avrupa Yeşil Mutabakatı ve yeşil OSB hedefleri doğrultusunda; sanayide yeşil dönüşüm ve inovasyon yönetimini stratejik planlamayla birleştirerek, uzun vadeli büyüme hedeflerinizi ölçülebilir aksiyon planlarına dönüştürüyoruz.',
       },
     ],
     osbModal: {
@@ -286,7 +286,7 @@ const tr: Dictionary = {
         {
           title: '1. OSB Mevzuat ve Yönetim Danışmanlığı',
           intro:
-            '4562 sayılı OSB Kanunu ve ilgili uygulama yönetmelikleri çerçevesinde, bölgelerin idari ve teknik süreçlerini yönetiyoruz.',
+            '4562 sayılı OSB Kanunu ve ilgili uygulama yönetmelikleri çerçevesinde; OSB kurumsal kapasite geliştirme yaklaşımıyla bölgelerin idari, hukuki ve teknik süreçlerini uçtan uca yönetiyoruz.',
           points: [
             {
               label: 'Arsa Tahsis ve İptal Yönetimi Danışmanlığı',
@@ -338,7 +338,7 @@ const tr: Dictionary = {
         {
           title: '4. Dijital Dönüşüm ve Veri Odaklı Yönetim',
           intro:
-            'Geleneksel sanayi yönetimini modern veri teknolojileriyle birleştirerek, “Akıllı OSB” vizyonunu hayata geçiriyoruz.',
+            'Geleneksel sanayi yönetimini modern veri teknolojileriyle birleştirerek, Akıllı OSB stratejik planlama çerçevesinde veri odaklı karar mekanizmalarını kuruyor ve “Akıllı OSB” vizyonunu hayata geçiriyoruz.',
           points: [
             {
               label: 'Dijital Strateji Geliştirme',
@@ -415,7 +415,7 @@ const tr: Dictionary = {
           title:
             '1. 5746 Sayılı Kanun: Ar-Ge ve Tasarım Merkezleri Yönetim Danışmanlığı',
           intro:
-            'İşletme bünyesinde kurulan merkezlerin, sürdürülebilir bir teşvik mekanizmasına dönüşmesi için teknik izleme ve denetim hazırlığı süreçlerini yürütüyoruz.',
+            'İşletme bünyesinde kurulan merkezlerin sürdürülebilir bir teşvik mekanizmasına dönüşmesi için; Ar-Ge merkezi veri odaklı süreç yönetimi yaklaşımıyla teknik izleme, raporlama ve denetim hazırlığı süreçlerini uçtan uca yürütüyoruz.',
           points: [
             {
               label: 'Merkez Tasarımı ve Yönetimi',
