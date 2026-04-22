@@ -75,6 +75,10 @@ const Navbar: React.FC = () => {
               <img
                 src="/antlogo.png"
                 alt="ANT"
+                width={44}
+                height={44}
+                decoding="async"
+                fetchPriority="high"
                 className="h-11 w-11 object-cover"
               />
             </div>

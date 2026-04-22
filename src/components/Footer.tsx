@@ -23,6 +23,10 @@ const Footer: React.FC = () => {
                 <img
                   src="/antlogo.png"
                   alt="ANT"
+                  loading="lazy"
+                  decoding="async"
+                  width={44}
+                  height={44}
                   className="h-11 w-11 object-cover"
                 />
               </div>

@@ -20,6 +20,10 @@ const WhyUs: React.FC = () => {
                 <img
                   src="/why-us.png"
                   alt={t.whyUs.altImage}
+                  loading="lazy"
+                  decoding="async"
+                  width={1200}
+                  height={500}
                   className="w-full h-[500px] object-cover"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-navy-900/30 via-transparent to-navy-900/10" />
