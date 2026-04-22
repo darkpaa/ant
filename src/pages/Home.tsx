@@ -2,15 +2,37 @@ import Hero from '../components/Hero';
 import Services from '../components/Services';
 import WhyUs from '../components/WhyUs';
 import CTABanner from '../components/CTABanner';
+import SEO from '../components/SEO';
+import { useLang } from '../i18n/LanguageContext';
 
 const Home: React.FC = () => {
+  const { lang } = useLang();
+
   return (
-    <main>
-      <Hero />
-      <Services />
-      <WhyUs />
-      <CTABanner />
-    </main>
+    <>
+      <SEO
+        title="OSB, Ar-Ge ve Kurumsal Yönetim Danışmanlığı"
+        description="OSB Danışmanlığı, Ar-Ge ve Tasarım Merkezi kurulumu ve Kurumsal Yönetim Danışmanlığında 15+ yıl kamu tecrübesi. Ücretsiz ön görüşme için hemen bize ulaşın."
+        url="/"
+        type="website"
+        lang={lang}
+        keywords={[
+          'OSB danışmanlığı',
+          'Organize Sanayi Bölgesi danışmanlığı',
+          'Ar-Ge ve Tasarım Merkezi danışmanlığı',
+          'Kurumsal Yönetim Danışmanlığı',
+          'Teknopark muafiyetleri',
+          'yeşil OSB',
+          'ANT Yönetim Danışmanlık',
+        ]}
+      />
+      <main>
+        <Hero />
+        <Services />
+        <WhyUs />
+        <CTABanner />
+      </main>
+    </>
   );
 };
 

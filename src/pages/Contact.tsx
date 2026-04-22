@@ -11,6 +11,7 @@ import {
 import { useLang } from '../i18n/LanguageContext';
 import { LINKEDIN_URL } from '../i18n/translations';
 import LinkedinIcon from '../components/icons/LinkedinIcon';
+import SEO from '../components/SEO';
 
 interface FormState {
   name: string;
@@ -129,7 +130,22 @@ const Contact: React.FC = () => {
   };
 
   return (
-    <main className="relative bg-gray-50/60 min-h-screen">
+    <>
+      <SEO
+        title="İletişim — Ücretsiz Ön Görüşme Planlayın"
+        description="OSB, Ar-Ge ve Tasarım Merkezi ve Kurumsal Yönetim Danışmanlığı için ANT Yönetim Danışmanlık'a ulaşın — 24 saat içinde uzman ön görüşmesi planlayalım."
+        url="/iletisim"
+        type="website"
+        lang={lang}
+        keywords={[
+          'iletişim',
+          'danışmanlık talebi',
+          'OSB danışmanlığı iletişim',
+          'Ar-Ge ve Tasarım Merkezi danışmanlığı iletişim',
+          'ANT Yönetim Danışmanlık iletişim',
+        ]}
+      />
+      <main className="relative bg-gray-50/60 min-h-screen">
       <section className="relative bg-gradient-to-br from-navy-950 via-navy-900 to-navy-800 overflow-hidden">
         <div className="absolute top-20 right-20 w-96 h-96 bg-accent-400/10 rounded-full blur-3xl" />
         <div className="absolute bottom-0 left-10 w-72 h-72 bg-blue-500/10 rounded-full blur-3xl" />
@@ -433,6 +449,7 @@ const Contact: React.FC = () => {
         </div>
       </section>
     </main>
+    </>
   );
 };
 

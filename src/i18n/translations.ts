@@ -207,28 +207,28 @@ const tr: Dictionary = {
   hero: {
     slides: [
       {
-        badge: 'Profesyonel Danışmanlık Hizmetleri',
-        headline: 'Geleceğinizi ',
-        highlightedWord: 'Birlikte',
-        headlineEnd: '\nİnşa Ediyoruz',
+        badge: 'OSB Danışmanlığı',
+        headline: 'OSB Danışmanlığında ',
+        highlightedWord: 'Mevzuata Tam Hakim',
+        headlineEnd: '\nStratejik Çözüm Ortağınız',
         subHeadline:
-          'OSB, Ar-Ge ve Tasarım Yönetim danışmanlığı, inovasyon ve kurumsal gelişim alanlarında sunduğumuz uzman çözümlerle kuruluşunuzu geleceğe taşıyoruz.',
+          '4562 sayılı OSB Kanunu, yeşil dönüşüm süreçleri ve dijital dönüşüm danışmanlığıyla Organize Sanayi Bölgelerinin idari, teknik ve finansal süreçlerini uçtan uca yönetiyoruz.',
       },
       {
-        badge: 'Sürdürülebilir Başarı',
-        headline: 'Stratejik ',
-        highlightedWord: 'Büyüme',
-        headlineEnd: '\nOrtağınız',
+        badge: 'Ar-Ge ve Tasarım Merkezi Danışmanlığı',
+        headline: 'Ar-Ge ve Tasarım Merkezi ',
+        highlightedWord: 'Yönetim',
+        headlineEnd: '\nDanışmanlığı',
         subHeadline:
-          'İşletmenizin potansiyelini keşfediyor, sürdürülebilir büyüme için kanıtlanmış stratejiler geliştiriyoruz. Hedeflerinize birlikte ulaşıyoruz.',
+          '5746 sayılı Kanun kapsamında Ar-Ge indirimi, Teknopark muafiyetleri ve 4691 sayılı Kanun uyum süreçlerini sıfır hata prensibiyle yönetiyor; denetim hazırlığınızı veri odaklı raporlarla güvence altına alıyoruz.',
       },
       {
-        badge: 'Uçtan Uca Danışmanlık',
-        headline: 'Kurumsal ',
-        highlightedWord: 'Dönüşüm',
-        headlineEnd: '\nYol Haritanız',
+        badge: 'Kurumsal Yönetim Danışmanlığı',
+        headline: 'Kurumsal Yönetim ',
+        highlightedWord: 'Danışmanlığında',
+        headlineEnd: '\nOtorite Güvencesi',
         subHeadline:
-          'Hibe ve teşvik danışmanlığında, Ar-Ge projelerinde ve stratejik planlamada yanınızdayız.',
+          'OSB mevzuat uyum süreçleri, teşvik yönetimi ve stratejik planlama alanlarında kamu tecrübesi ile desteklenmiş, veri odaklı ve yapay zeka destekli danışmanlık sunuyoruz.',
       },
     ],
     ctaServices: 'Hizmetlerimizi İnceleyin',
@@ -237,11 +237,11 @@ const tr: Dictionary = {
     nextSlide: 'Sonraki slayt',
   },
   services: {
-    badge: 'Hizmetlerimiz',
-    titleStart: 'Kapsamlı Danışmanlık',
-    titleAccent: 'Çözümlerimiz',
+    badge: 'Uzmanlık Alanlarımız',
+    titleStart: 'OSB, Ar-Ge ve Kurumsal Yönetim',
+    titleAccent: 'Danışmanlığı',
     description:
-      'İşletmenizin her aşamasında ihtiyaç duyduğunuz profesyonel danışmanlık desteğini sunuyor, büyüme yolculuğunuzda stratejik ortağınız oluyoruz.',
+      'OSB mevzuatından Ar-Ge ve Tasarım Merkezi yönetimine, yeşil OSB dönüşümünden Teknopark muafiyetlerine kadar her süreçte; mühendislik disiplini, kamu tecrübesi ve veri odaklı metodolojiyle çalışan uzman danışman kadromuzla yanınızdayız.',
     detail: 'Detaylı Bilgi',
     close: 'Kapat',
     contactUs: 'Bize Ulaşın',
@@ -249,32 +249,32 @@ const tr: Dictionary = {
       {
         title: 'OSB Mevzuat ve Yönetim Danışmanlığı',
         description:
-          '4562 sayılı OSB Kanunu ve ilgili uygulama yönetmelikleri çerçevesinde, bölgelerin idari ve teknik süreçlerini yönetiyoruz.',
+          '4562 sayılı OSB Kanunu, arsa tahsis yönetimi, yeşil dönüşüm süreçleri ve akıllı OSB dijital dönüşümünde Organize Sanayi Bölgelerine uçtan uca danışmanlık sunuyoruz.',
       },
       {
-        title: 'Ar-Ge ve İnovasyon',
+        title: 'Ar-Ge ve Tasarım Merkezi Danışmanlığı',
         description:
-          'Ar-Ge projelerinizi kurguluyor, TÜBİTAK ve KOSGEB başvurularınızı yönetiyoruz. İnovasyon stratejinizi şekillendirip rekabet avantajı yaratıyoruz.',
+          '5746 sayılı Kanun kapsamında merkez kurulumu, Ar-Ge indirimi, teşvik yönetimi ve denetim hazırlığını sıfır hata prensibiyle yönetiyor; yapay zeka destekli teknik raporlama ile fark yaratıyoruz.',
       },
       {
-        title: 'Hibe ve Teşvikler',
+        title: 'Hibe ve Teşvik Yönetimi',
         description:
-          'Devlet hibe programları, AB fonları ve teşvik mekanizmalarından en yüksek verimi almanız için başvuru süreçlerinizi uçtan uca yönetiyoruz.',
+          'Devlet hibeleri, AB fonları ve 5746/4691 sayılı kanun teşvikleri için başvuru, izleme ve mevzuat uyum süreçlerini uçtan uca yönetiyoruz.',
       },
       {
-        title: 'Kurumsal Gelişim',
+        title: 'Kurumsal Yönetim Danışmanlığı',
         description:
-          'Kurumsallaşma yol haritanızı çiziyor, organizasyonel yapınızı modernize ediyoruz. İnsan kaynakları ve süreç yönetimi alanlarında kapsamlı destek sunuyoruz.',
+          'Kurumsallaşma yol haritası, OSB organ yönetimi ve organizasyonel yapılanmada; şirketinizin yönetim ve denetim süreçlerini veriye dayalı çerçevede yeniden tasarlıyoruz.',
       },
       {
-        title: 'Yönetim Danışmanlığı',
+        title: 'Teknopark ve TGB Yönetim Danışmanlığı',
         description:
-          'İş süreçlerinizi optimize ediyor, kurumsal yönetim yapınızı güçlendiriyoruz. Stratejik karar alma süreçlerinizde yanınızda olarak sürdürülebilir büyüme sağlıyoruz.',
+          '4691 sayılı Kanun kapsamında Teknoloji Geliştirme Bölgeleri yönetici şirket operasyonları, Teknopark muafiyetleri ve portal üzerinden proje izleme süreçlerinde tam uyum sağlıyoruz.',
       },
       {
-        title: 'Stratejik Planlama',
+        title: 'Stratejik Planlama ve Yeşil Dönüşüm',
         description:
-          'Uzun vadeli büyüme hedeflerinizi somut aksiyon planlarına dönüştürüyoruz. Pazar analizi, rekabet stratejisi ve yol haritası oluşturma konularında rehberlik ediyoruz.',
+          'Uzun vadeli büyüme hedeflerinizi somut aksiyon planlarına dönüştürüyor; Avrupa Yeşil Mutabakatı, sürdürülebilirlik ve yeşil dönüşüm süreçlerinde yol haritanızı birlikte oluşturuyoruz.',
       },
     ],
     osbModal: {
@@ -471,35 +471,35 @@ const tr: Dictionary = {
     },
   },
   whyUs: {
-    badge: 'Neden Biz?',
-    titleStart: 'Başarınız İçin',
-    titleAccent: 'Doğru Partner',
+    badge: 'Neden ANT Yönetim?',
+    titleStart: 'Mevzuata Tam Hakim,',
+    titleAccent: 'Veri Odaklı Danışmanlık',
     description:
-      "ANT Danışmanlık olarak, yalnızca danışmanlık vermekle kalmıyor; işletmenizin DNA'sını anlayarak sürdürülebilir büyüme stratejileri oluşturuyoruz. Metodolojimiz, kanıtlanmış sonuçlara ve sektörel uzmanlığa dayanır.",
-    badgeExperienceValue: '10+',
-    badgeExperienceLabel: 'Yıllık',
-    badgeExperienceSub: 'Deneyim',
-    altImage: 'ANT Danışmanlık Uzman Ekip',
+      'ANT Yönetim Danışmanlık olarak; karmaşık OSB mevzuatı ve organ yönetim süreçlerinde sıfır hata prensibiyle çalışıyor, Ar-Ge ve Tasarım Merkezi süreçlerinde veri odaklı ve yapay zeka destekli modern mühendislik yaklaşımıyla ölçülebilir sonuçlar üretiyoruz.',
+    badgeExperienceValue: '15+',
+    badgeExperienceLabel: 'Yıl',
+    badgeExperienceSub: 'Kamu Tecrübesi',
+    altImage: 'ANT Yönetim Danışmanlık uzman ekibi',
     points: [
       {
-        title: 'Sonuç Odaklı Yaklaşım',
+        title: 'OSB Mevzuatında Sıfır Hata',
         description:
-          'Sadece strateji önermekle kalmıyor, sahada uygulamayı takip ederek ölçülebilir sonuçlar elde ediyoruz.',
+          '4562 sayılı OSB Kanunu, arsa tahsis ve organ yönetim süreçlerinde denetim odaklı çalışıyor; uyum hatası kaynaklı risklerinizi tasarım aşamasında bertaraf ediyoruz.',
       },
       {
-        title: 'Güvenilir İş Ortağı',
+        title: 'Bakanlık Düzeyinde Mevzuat Hakimiyeti',
         description:
-          '10 yılı aşkın sektör deneyimimizle müşterilerimizin en güvendiği stratejik partneriyiz.',
+          '4562 sayılı OSB Kanunu, 5746 ve 4691 sayılı kanunlar ile Teknopark muafiyetlerine ilişkin güncel regülasyonları Bakanlık müfettişliği tecrübesiyle yorumluyoruz.',
       },
       {
-        title: 'Kişiye Özel Çözümler',
+        title: 'Veri Odaklı ve Yapay Zeka Destekli Ar-Ge',
         description:
-          'Her işletmenin ihtiyacının farklı olduğunu biliyor, size özel çözüm paketleri sunuyoruz.',
+          'Büyük veri analizleri ve yapay zeka destekli karar mekanizmalarıyla Ar-Ge ve Tasarım Merkezi yönetim süreçlerinizi ölçülebilir ve sürdürülebilir hale getiriyoruz.',
       },
       {
-        title: 'Uzman Kadro',
+        title: 'Kamu Tecrübesiyle Kurumsal Güvence',
         description:
-          'Alanında uzman danışman kadromuzla sektörünüze en uygun çözümleri geliştiriyoruz.',
+          '15+ yıl Sanayi ve Teknoloji Bakanlığı deneyimiyle; yeşil dönüşüm süreçleri ve kurumsal yönetim danışmanlığında kamu-özel sektör arasında güvenilir köprü kuruyoruz.',
       },
     ],
   },
@@ -677,7 +677,7 @@ const tr: Dictionary = {
         readTime: '8 dk okuma',
         content: {
           intro:
-            'Organize Sanayi Bölgeleri Uygulama Yönetmeliği gereği OSB\'lerin bir İş Sürekliliği Planı (İSP) hazırlaması artık resmi bir yükümlülüktür. Bu kapsamda AFAD\'ın yayımladığı "Organize Sanayi Bölgeleri İçin İş Sürekliliği Planı Hazırlama ve Uygulama Kılavuzu", OSB\'lerin süreci sağlıklı ve sistematik biçimde kurması için temel bir rehber niteliğindedir.',
+            'Organize Sanayi Bölgeleri Uygulama Yönetmeliği gereği OSB\'lerin bir İş Sürekliliği Planı (İSP) hazırlaması artık resmi bir yükümlülüktür. Bu kapsamda AFAD\'ın yayımladığı "Organize Sanayi Bölgeleri İçin İş Sürekliliği Planı Hazırlama ve Uygulama Kılavuzu", OSB\'lerin süreci sağlıklı ve sistematik biçimde kurması için temel bir rehber niteliğindedir. Bu kılavuzdan yararlanarak İSP\'nin kapsamını ve temel süreçlerini özetlemeye çalıştım.',
           sections: [
             {
               title: '💡 İSP\'nin Temel Amacı',
@@ -768,6 +768,119 @@ const tr: Dictionary = {
           ],
         },
       },
+      {
+        id: 'girisim-ofisi-kulucka-merkezi',
+        title:
+          'Teknoloji Geliştirme Bölgeleri Alanı Dışında Kuluçka Merkezi Kurulması (Girişimcilik Ofisleri-GO)',
+        excerpt:
+          '2022 yılından itibaren teknopark yönetici şirketleri, Sanayi ve Teknoloji Bakanlığı izniyle TGB alanı dışında da Kuluçka Merkezleri (Girişim Ofisleri) kurabilmektedir. Sağlanan destekler ve aranan şartlar.',
+        publishedAt: '18 Nisan 2026',
+        readTime: '4 dk okuma',
+        content: {
+          intro:
+            '📌 2022 yılından itibaren teknopark yönetici şirketleri, Sanayi ve Teknoloji Bakanlığı izniyle Teknoloji Geliştirme Bölgeleri alanı dışında da Kuluçka Merkezleri kurabilmektedir. Girişim Ofisi (GO) olarak da adlandırılan bu yapılar; inovasyonu ve teknoloji tabanlı girişimciliği yalnızca teknopark sınırlarıyla sınırlı kalmadan, şehrin farklı noktalarına yaymayı hedeflemektedir.',
+          sections: [
+            {
+              title: '🏗️ Kuruluşun Başlangıcı ve Gelişimi',
+              paragraphs: [
+                'Bu çerçevede ilk olarak;',
+                '• Ankara Teknoloji Geliştirme Bölgesi (Bilkent Cyberpark) – Ankara Teknoloji Köprüsü Kuluçka Merkezi',
+                '• TÜBİTAK Marmara Araştırma Merkezi Teknopark – Marmara Teknokent TÜGİP Kuluçka Merkezi',
+                '2022 yılı Eylül ayında ilan edilmiştir.',
+                '📊 Bakanlık verilerine göre, en son Boğaziçi Teknopark Batman Girişim Ofisi ilan edilmiş olup, bölge alanları dışında kurulan Girişim Ofisi sayısı 11\'e ulaşmıştır.',
+              ],
+            },
+            {
+              title: '💼 Girişimcilere Sağlanan Destek ve Avantajlar',
+              paragraphs: [
+                'Bölge alanı dışında kurulan bu merkezlerde yer alan girişimciler; ilgili Kanun kapsamındaki tüm destek, teşvik, muafiyet ve istisnalardan (Gelir/Kurumlar Vergisi, KDV, Damga Vergisi istisnaları ile sigorta primi desteği gibi) aynen yararlanabilmektedir.',
+              ],
+            },
+            {
+              title: '🧩 İşletmeler İçin Aranan Şartlar',
+              paragraphs: [
+                'Bu ofislerde yer alacak işletmeler için;',
+                '• Teknoloji tabanlı olması,',
+                '• Son 3 yıl içerisinde kurulmuş olması,',
+                '• Personel sayısının 10 kişiden az olması',
+                'şartları aranmaktadır.',
+              ],
+            },
+            {
+              title: '🏢 Teknoparkların Kuluçka Merkezi Kurma Kriterleri',
+              paragraphs: [
+                'Bir teknoparkın bölge alanı dışında kuluçka merkezi kurabilmesi için;',
+                '• Bünyesinde halihazırda bir kuluçka merkezinin bulunması,',
+                '• Toplam firma sayısının en az %10\'unun kuluçka firması olması,',
+                '• Kiralanabilir alanların %5\'inin bu firmalara ayrılmış olması',
+                'gerekmektedir.',
+                '⏳ Yönetici şirketler, ön kuluçka programındaki girişimcilere bu merkezlerde 18 aya kadar yer tahsisi yapabilmektedir.',
+              ],
+            },
+          ],
+          hashtags: [
+            '#Teknopark',
+            '#Girişimcilik',
+            '#İnovasyon',
+            '#KuluçkaMerkezi',
+            '#GirişimOfisi',
+          ],
+        },
+      },
+      {
+        id: 'osb-huzur-hakki',
+        title: 'Organize Sanayi Bölgelerine Yapılacak Huzur Hakkı Ödemeleri',
+        excerpt:
+          'OSB organ üyelerine ödenecek huzur haklarının 2025 yılı üst limiti, Cumhurbaşkanlığı Kararı çerçevesinde hesaplama yöntemi ve farklı organlar için ödeme esasları.',
+        publishedAt: '18 Nisan 2026',
+        readTime: '6 dk okuma',
+        content: {
+          intro:
+            '📌 OSB Uygulama Yönetmeliğinde OSB organ üyelerine ödenecek huzur hakları ile ilgili olarak; "Müteşebbis heyet ile yönetim ve denetim kurullarının üyelerine, müteşebbis heyet tarafından toplantı başına tespit edilen tutarda huzur hakkı ödenebilir. Ödenecek bu huzur hakkının aylık toplam tutarı, her yıl Cumhurbaşkanlığınca belirlenen kamu iktisadi teşebbüsleri ve bağlı ortaklıklarının yönetim kurulu başkan ve üyelerine ödenen net aylık ücreti aşamaz." denilmektedir.',
+          sections: [
+            {
+              title: '📢 Cumhurbaşkanlığı Kararı ve Hesaplama',
+              paragraphs: [
+                '29/5/2025 tarihli ve 9904 sayılı Cumhurbaşkanı Kararında ödeme sistemi belirlenmiş ve kararda Posta ve Telgraf Teşkilatı A.Ş. ve İller Bankası A.Ş. yönetim kurulu üyelerine (30.720) gösterge rakamının memur aylık katsayısı ile çarpımı sonucunda bulunacak tutarı, yönetim kurulu başkanına bu ücretin iki katını, denetim kurulu üyelerine ise yönetim kurulu üyeleri için belirlenen ücretin 3/4\'ünü aşmayacak şekilde Genel Kurul tarafından belirlenen miktarda net aylık ücret verilir hükmüne yer verilmiştir. Memur aylık katsayısı ise 2025 yılı Ocak-Temmuz dönemi için 1,012556 olarak belirlenmiştir.',
+                'Not: "Net" ifadesi bir önceki kararda yer almamaktadır.',
+                '🎯 Buradan yapılacak hesap ile 30.720 × 1,012556 = 31.105,72 TL huzur hakları için belirlenen üst limittir. Yılın başında Sanayi Bölgeleri Genel Müdürlüğünce OSB\'lere yapılan bildirimde de üst limitin 31.106 TL olduğu iletilmiştir.',
+              ],
+            },
+            {
+              title:
+                '💡 Müteşebbis Heyet ve Yönetim Kurulu Başkanlarına Yapılacak Ödemeler',
+              paragraphs: [
+                'Müteşebbis heyet ile yönetilen OSB\'lerde yetkili organ tarafından karar alınması halinde, yönetim ve denetim kurulu üyelerine ödenebilecek en yüksek tutarın aylık ❗iki katını❗ geçmemek üzere müteşebbis heyet ve yönetim kurulu başkanına ödeme yapılabilir.',
+              ],
+            },
+            {
+              title: '💡 Denetim Kuruluna Yapılacak Ödemeler',
+              paragraphs: [
+                'OSB Uygulama Yönetmeliğinde OSB denetim kurulu üyelerinin ücretlerinin Cumhurbaşkanlığı kararında geçen denetim kurulu üyelerinin ücretleri (yönetim kurulu üyeleri için belirlenen ücretin 3/4\'ünü aşmayacak şekilde) ile değil, yönetim kurulu ücretleri ile sınırlandırıldığı dikkate alındığında, OSB Denetim Kurulu Üyelerine ödenecek huzur hakkı ödemelerinde aylık üst sınır olarak OSB Yönetim Kurulu Üyelerinde olduğu gibi (31.106 TL) belirlenebilecektir.',
+              ],
+            },
+            {
+              title: '⚠️ Diğer Ödemeler',
+              paragraphs: [
+                'OSB organ üyelerine yetkili organ kararı olsa bile huzur hakkı ödemesi dışında prim, ikramiye, komisyon başkan ve üyesi gibi gerekçelerle her ne ad altında olursa olsun farklı bir ödeme yapılamaz. Özetle; CB kararında bahsedilen Ocak ve Temmuz aylarında yapılabileceği belirtilen ek ödemeler OSB\'lerde ödenemeyecektir.',
+              ],
+            },
+            {
+              title: '✅ Genel Kurul ile İdare Edilen OSB\'lerde Huzur Hakkı',
+              paragraphs: [
+                'Genel kurula geçen ve müteşebbis heyetin görevinin sona erdiği OSB\'lerde yönetim ve denetim kurulu üyelerine, genel kurul tarafından tespit edilecek tutarda huzur hakkı ödenebilir.',
+              ],
+            },
+          ],
+          hashtags: [
+            '#OSB',
+            '#HuzurHakkı',
+            '#KurumsalYönetim',
+            '#SanayiBölgeleri',
+            '#MevzuatUygulama',
+          ],
+        },
+      },
     ],
   },
   contact: {
@@ -799,13 +912,14 @@ const tr: Dictionary = {
   },
   corporate: {
     pageBadge: 'Kurumsal',
-    pageTitleStart: 'Mühendislik Disiplini, Kamu Tecrübesi ve',
-    pageTitleAccent: 'Stratejik Yönetim',
+    pageTitleStart: 'OSB ve Ar-Ge Danışmanlığında',
+    pageTitleAccent: 'Kamu Tecrübesi',
     pageDescription:
-      'Sanayi, teknoloji ve kamu yönetimi alanlarında edinilmiş çok disiplinli bilgi birikimiyle; stratejik yönetim, denetim ve kurumsal rehberlik hizmetleri sunuyoruz.',
-    introTitle: 'Ant Yönetim Danışmanlık ve Mühendislik',
+      '15+ yıl Sanayi ve Teknoloji Bakanlığı müfettişlik tecrübesiyle; OSB danışmanlığı, Ar-Ge ve Tasarım Merkezi yönetim danışmanlığı ve kurumsal yönetim danışmanlığı hizmetlerinde stratejik çözüm ortağınız.',
+    introTitle: 'ANT Yönetim Danışmanlık ve Mühendislik',
     introParagraphs: [
-      'Ant Yönetim Danışmanlık ve Mühendislik; sanayi, teknoloji ve kamu yönetimi alanlarında edinilmiş çok disiplinli bilgi birikimi ile, sanayi ve Ar-Ge ekosisteminin dinamiklerini hem teknik hem de yönetimsel boyutta derinlemesine analiz eden bir vizyonla kurulmuş; stratejik yönetim, denetim ve kurumsal rehberlik hizmetleri sunan uzman bir yapıdır.',
+      'ANT Yönetim Danışmanlık ve Mühendislik; sanayi, teknoloji ve kamu yönetimi alanlarında edinilmiş çok disiplinli bilgi birikimiyle kurulmuş; OSB danışmanlığı, Ar-Ge ve Tasarım Merkezi danışmanlığı ve kurumsal yönetim danışmanlığı hizmetlerini tek çatı altında sunan, denetim standartlarını merkeze alan uzman bir yapıdır.',
+      'Mühendislik disipliniyle kurguladığımız danışmanlık metodolojimiz; OSB mevzuat uyum süreçlerini, arsa tahsis yönetimini, Teknopark muafiyetlerini ve yeşil dönüşüm süreçlerini veri odaklı bir çerçevede birleştirir. Yapay zeka destekli karar mekanizmalarıyla, geleneksel sanayi yönetimini modern mühendislik vizyonuyla buluşturuyoruz.',
     ],
     founderTitle: 'Kurucumuz',
     founderName: 'İlker Tura',
@@ -844,28 +958,28 @@ const en: Dictionary = {
   hero: {
     slides: [
       {
-        badge: 'Professional Consulting Services',
-        headline: 'Building Your ',
-        highlightedWord: 'Future',
-        headlineEnd: '\nTogether',
+        badge: 'OIZ Consulting',
+        headline: 'OIZ Consulting with ',
+        highlightedWord: 'Regulatory Mastery',
+        headlineEnd: '\nYour Strategic Partner',
         subHeadline:
-          'We move your business forward with expert solutions in management consulting, R&D, innovation and corporate development.',
+          'We deliver end-to-end administrative, technical and financial management for Organized Industrial Zones under Law No. 4562, with a focus on green transition and digital transformation.',
       },
       {
-        badge: 'Sustainable Success',
-        headline: 'Your Strategic ',
-        highlightedWord: 'Growth',
-        headlineEnd: '\nPartner',
+        badge: 'R&D and Design Centre Consulting',
+        headline: 'R&D and Design Centre ',
+        highlightedWord: 'Management',
+        headlineEnd: '\nConsulting',
         subHeadline:
-          'We unlock your business potential and develop proven strategies for sustainable growth. We reach your goals together.',
+          'Under Law No. 5746, we manage R&D tax deductions, Technopark exemptions and Law No. 4691 compliance with a zero-error principle, securing your audit readiness with data-driven reports.',
       },
       {
-        badge: 'End-to-End Consulting',
-        headline: 'Your Corporate ',
-        highlightedWord: 'Transformation',
-        headlineEnd: '\nRoadmap',
+        badge: 'Corporate Governance Consulting',
+        headline: 'Authority-Grade ',
+        highlightedWord: 'Corporate Governance',
+        headlineEnd: '\nConsulting',
         subHeadline:
-          'From grants and incentives to ISO certification, from R&D projects to strategic planning — we stand by you at every step.',
+          'We deliver data-driven, AI-supported consulting in OIZ regulatory compliance, incentive management and strategic planning — backed by deep public-sector experience.',
       },
     ],
     ctaServices: 'Explore Our Services',
@@ -874,11 +988,11 @@ const en: Dictionary = {
     nextSlide: 'Next slide',
   },
   services: {
-    badge: 'Services',
-    titleStart: 'Comprehensive Consulting',
-    titleAccent: 'Solutions',
+    badge: 'Our Expertise',
+    titleStart: 'OIZ, R&D and Corporate Governance',
+    titleAccent: 'Consulting',
     description:
-      'We deliver the professional consulting support you need at every stage of your business and become your strategic partner in growth.',
+      'From OIZ regulation to R&D and Design Centre management, from Green OIZ transformation to Technopark exemptions — we stand by you with engineering discipline, public-sector experience and a data-driven methodology.',
     detail: 'Learn More',
     close: 'Close',
     contactUs: 'Contact Us',
@@ -886,32 +1000,32 @@ const en: Dictionary = {
       {
         title: 'OIZ Regulation & Governance Consulting',
         description:
-          'Within the framework of Law No. 4562 on Organized Industrial Zones and related regulations, we manage the administrative and technical processes of the zones.',
+          'End-to-end consulting for Organized Industrial Zones on Law No. 4562, land allocation governance, green transition and Smart-OIZ digital transformation.',
       },
       {
-        title: 'R&D and Innovation',
+        title: 'R&D and Design Centre Consulting',
         description:
-          'We design your R&D projects and manage TÜBİTAK and KOSGEB applications. We shape your innovation strategy to create a competitive edge.',
+          'Under Law No. 5746, we manage centre setup, R&D deductions, incentive management and audit readiness with zero-error principles — powered by AI-supported technical reporting.',
       },
       {
-        title: 'Grants and Incentives',
+        title: 'Grant and Incentive Management',
         description:
-          'We manage the full application process for government grants, EU funds and incentive mechanisms to maximize the value you receive.',
+          'We manage the full application, monitoring and compliance cycle for government grants, EU funds and Law 5746/4691 incentives.',
       },
       {
-        title: 'Corporate Development',
+        title: 'Corporate Governance Consulting',
         description:
-          'We draw your institutionalization roadmap and modernize your organizational structure. We provide comprehensive support in HR and process management.',
+          'We redesign your governance, OIZ body management and audit processes within a data-driven framework and draw a clear institutionalization roadmap.',
       },
       {
-        title: 'Management Consulting',
+        title: 'Technopark and TDZ Management Consulting',
         description:
-          'We optimize your business processes and strengthen corporate governance. As your partner in strategic decision-making, we enable sustainable growth.',
+          'Under Law No. 4691, we ensure full compliance for Technology Development Zone management companies, Technopark exemptions and portal-based project tracking.',
       },
       {
-        title: 'Strategic Planning',
+        title: 'Strategic Planning and Green Transition',
         description:
-          'We convert your long-term growth goals into concrete action plans. We guide you through market analysis, competitive strategy and roadmap creation.',
+          'We turn long-term growth goals into concrete action plans and co-create your roadmap for the European Green Deal, sustainability and green transition processes.',
       },
     ],
     osbModal: {
@@ -1107,35 +1221,35 @@ const en: Dictionary = {
     },
   },
   whyUs: {
-    badge: 'Why Us?',
-    titleStart: 'The Right Partner for',
-    titleAccent: 'Your Success',
+    badge: 'Why ANT Consulting?',
+    titleStart: 'Regulation-First,',
+    titleAccent: 'Data-Driven Consulting',
     description:
-      "At ANT Consulting we don't just give advice — we understand the DNA of your business to craft sustainable growth strategies. Our methodology is rooted in proven outcomes and sectoral expertise.",
-    badgeExperienceValue: '10+',
-    badgeExperienceLabel: 'Years of',
-    badgeExperienceSub: 'Experience',
-    altImage: 'ANT Consulting Expert Team',
+      'At ANT Management Consulting we operate with a zero-error principle in complex OIZ regulation and governance-body processes, and deliver measurable outcomes in R&D and Design Centres through a data-driven, AI-supported engineering approach.',
+    badgeExperienceValue: '15+',
+    badgeExperienceLabel: 'Years',
+    badgeExperienceSub: 'Public-Sector Experience',
+    altImage: 'ANT Management Consulting expert team',
     points: [
       {
-        title: 'Results-Oriented Approach',
+        title: 'Zero-Error in OIZ Regulation',
         description:
-          'We don’t just propose strategies — we track field execution to deliver measurable outcomes.',
+          'Audit-focused delivery on Law No. 4562, land allocation and governance-body processes — we eliminate compliance risk at the design stage.',
       },
       {
-        title: 'Trusted Business Partner',
+        title: 'Ministry-Level Regulatory Mastery',
         description:
-          'With over 10 years of sector experience, we are the strategic partner our clients trust most.',
+          'We interpret Law 4562 (OIZ), 5746 and 4691, and Technopark exemption rules with the depth of Ministry-level inspection experience.',
       },
       {
-        title: 'Tailored Solutions',
+        title: 'Data-Driven, AI-Supported R&D',
         description:
-          'We know every business is different and offer solution packages tailored to you.',
+          'We turn R&D and Design Centre management into a measurable, sustainable process through big-data analyses and AI-supported decision mechanisms.',
       },
       {
-        title: 'Expert Team',
+        title: 'Public-Sector-Grade Corporate Assurance',
         description:
-          'Our expert consultants craft the most suitable solutions for your sector.',
+          'With 15+ years of Ministry of Industry and Technology experience, we bridge public and private sectors in green transition and corporate governance consulting.',
       },
     ],
   },
@@ -1316,7 +1430,7 @@ const en: Dictionary = {
         readTime: '8 min read',
         content: {
           intro:
-            'Under the Organized Industrial Zones Implementing Regulation, preparing a Business Continuity Plan (BCP) is now an official obligation for OIZs. In this context, AFAD\'s published "Business Continuity Plan Preparation and Implementation Guide for Organized Industrial Zones" serves as a fundamental reference for OIZs to establish the process in a sound and systematic manner.',
+            'Under the Organized Industrial Zones Implementing Regulation, preparing a Business Continuity Plan (BCP) is now an official obligation for OIZs. In this context, AFAD\'s published "Business Continuity Plan Preparation and Implementation Guide for Organized Industrial Zones" serves as a fundamental reference for OIZs to establish the process in a sound and systematic manner. Drawing on this guide, I have tried to summarise the scope and core processes of the BCP.',
           sections: [
             {
               title: '💡 The Core Purpose of BCP',
@@ -1407,6 +1521,117 @@ const en: Dictionary = {
           ],
         },
       },
+      {
+        id: 'girisim-ofisi-kulucka-merkezi',
+        title:
+          'Establishing Incubation Centres Outside Technology Development Zones (Entrepreneurship Offices-GO)',
+        excerpt:
+          'Since 2022, technopark management companies can establish Incubation Centres (Entrepreneurship Offices) outside TDZ areas with Ministry approval. Incentives and eligibility criteria explained.',
+        publishedAt: 'April 18, 2026',
+        readTime: '4 min read',
+        content: {
+          intro:
+            '📌 Since 2022, technopark management companies have been able to establish Incubation Centres outside Technology Development Zones with authorisation from the Ministry of Industry and Technology. These structures — also referred to as Entrepreneurship Offices (GO) — aim to spread innovation and technology-based entrepreneurship beyond technopark boundaries and into different parts of the city.',
+          sections: [
+            {
+              title: '🏗️ Initial Launch and Progress',
+              paragraphs: [
+                'In this context, the following were first announced:',
+                '• Ankara Technology Development Zone (Bilkent Cyberpark) – Ankara Technology Bridge Incubation Centre',
+                '• TÜBİTAK Marmara Research Centre Technopark – Marmara Teknokent TÜGİP Incubation Centre',
+                'Both were declared in September 2022.',
+                '📊 According to Ministry data, the most recently declared one — Boğaziçi Technopark Batman Entrepreneurship Office — has brought the total number of Entrepreneurship Offices established outside zone areas to 11.',
+              ],
+            },
+            {
+              title: '💼 Support and Advantages for Entrepreneurs',
+              paragraphs: [
+                'Entrepreneurs located in these centres outside zone areas can benefit from all supports, incentives, exemptions and allowances under the relevant Law — including Income/Corporate Tax, VAT and Stamp Duty exemptions, as well as social-security premium support — in exactly the same way as those within the zones.',
+              ],
+            },
+            {
+              title: '🧩 Eligibility Criteria for Companies',
+              paragraphs: [
+                'Companies seeking to operate in these offices must meet the following criteria:',
+                '• Be technology-based,',
+                '• Have been established within the last 3 years,',
+                '• Have fewer than 10 employees.',
+              ],
+            },
+            {
+              title: '🏢 Requirements for Technoparks to Establish Incubation Centres',
+              paragraphs: [
+                'For a technopark to establish an incubation centre outside its zone area:',
+                '• It must already host an incubation centre in its own premises,',
+                '• At least 10% of total firms must be incubator firms,',
+                '• At least 5% of leasable area must be allocated to these firms.',
+                '⏳ Management companies may allocate space to entrepreneurs in the pre-incubation programme for up to 18 months in these centres.',
+              ],
+            },
+          ],
+          hashtags: [
+            '#Technopark',
+            '#Entrepreneurship',
+            '#Innovation',
+            '#IncubationCentre',
+            '#EntrepreneurshipOffice',
+          ],
+        },
+      },
+      {
+        id: 'osb-huzur-hakki',
+        title: 'Attendance Fee Payments to Organized Industrial Zone Bodies',
+        excerpt:
+          'The 2025 upper limit for attendance fees payable to OIZ body members, the calculation methodology under the Presidential Decree, and payment principles for different governing bodies.',
+        publishedAt: 'April 18, 2026',
+        readTime: '6 min read',
+        content: {
+          intro:
+            '📌 The OIZ Implementing Regulation states the following on attendance fees payable to OIZ body members: "Members of the Entrepreneur Committee and the boards of directors and audit may receive an attendance fee per meeting in an amount determined by the Entrepreneur Committee. The total monthly amount of this attendance fee may not exceed the net monthly remuneration paid to the chairman and members of the boards of directors of public economic enterprises and their affiliates, as determined each year by the Presidency."',
+          sections: [
+            {
+              title: '📢 Presidential Decree and Calculation',
+              paragraphs: [
+                'Presidential Decree No. 9904 dated 29 May 2025 sets out the payment system. Under the decree, board members of Türkiye Post and Telegraph A.Ş. and İller Bankası A.Ş. receive an amount calculated by multiplying the indicator figure (30,720) by the civil-servant monthly coefficient; the board chairman receives twice this amount; and audit board members receive an amount set by the General Assembly not exceeding 3/4 of the figure set for board members. The civil-servant monthly coefficient for January–July 2025 is 1.012556.',
+                'Note: The term "net" did not appear in the previous decree.',
+                '🎯 Based on this, the calculation 30,720 × 1.012556 = TRY 31,105.72 is the upper limit for attendance fees. The Directorate General for Industrial Zones\' notification to OIZs at the start of the year also stated the upper limit as TRY 31,106.',
+              ],
+            },
+            {
+              title:
+                '💡 Payments to the Entrepreneur Committee and Board Chairmen',
+              paragraphs: [
+                'In OIZs administered by an Entrepreneur Committee, if a decision is taken by the authorised body, the Entrepreneur Committee chairman and the Board of Directors chairman may receive payment not exceeding ❗twice❗ the monthly maximum payable to board of directors and audit board members.',
+              ],
+            },
+            {
+              title: '💡 Payments to the Audit Board',
+              paragraphs: [
+                'Given that the OIZ Implementing Regulation caps the fees of OIZ audit board members not by the audit board member fees defined in the Presidential Decree (not exceeding 3/4 of the amount set for board members) but by the board of directors fees, the upper monthly limit for attendance fees payable to OIZ Audit Board Members may be set at the same level as OIZ Board of Directors members (TRY 31,106).',
+              ],
+            },
+            {
+              title: '⚠️ Other Payments',
+              paragraphs: [
+                'Even with an authorised body decision, OIZ body members cannot receive any other payment besides the attendance fee under any name — such as bonuses, commissions, or committee chairmanship/membership fees. In short, the additional January and July payments mentioned in the Presidential Decree cannot be made in OIZs.',
+              ],
+            },
+            {
+              title: '✅ Attendance Fees in OIZs Governed by a General Assembly',
+              paragraphs: [
+                'In OIZs where governance has passed to the General Assembly and the Entrepreneur Committee\'s duties have ended, attendance fees may be paid to board of directors and audit board members in amounts determined by the General Assembly.',
+              ],
+            },
+          ],
+          hashtags: [
+            '#OIZ',
+            '#AttendanceFee',
+            '#CorporateGovernance',
+            '#IndustrialZones',
+            '#RegulatoryCompliance',
+          ],
+        },
+      },
     ],
   },
   contact: {
@@ -1438,13 +1663,14 @@ const en: Dictionary = {
   },
   corporate: {
     pageBadge: 'About',
-    pageTitleStart: 'Engineering Discipline, Public Service Experience and',
-    pageTitleAccent: 'Strategic Management',
+    pageTitleStart: 'OIZ and R&D Consulting with',
+    pageTitleAccent: 'Public-Sector Experience',
     pageDescription:
-      'With multi-disciplinary know-how in industry, technology and public administration, we deliver strategic management, audit and corporate advisory services.',
-    introTitle: 'Ant Management Consulting and Engineering',
+      'With 15+ years of Ministry-level inspection experience, your strategic partner in OIZ consulting, R&D and Design Centre management consulting, and corporate governance consulting.',
+    introTitle: 'ANT Management Consulting and Engineering',
     introParagraphs: [
-      'Ant Management Consulting and Engineering is an expert firm founded on a vision that analyses the dynamics of the industrial and R&D ecosystem in depth — technically and managerially — drawing on multi-disciplinary expertise gained across industry, technology and public administration. We deliver strategic management, audit and corporate advisory services.',
+      'ANT Management Consulting and Engineering is an expert firm founded on multi-disciplinary expertise in industry, technology and public administration — uniting OIZ consulting, R&D and Design Centre consulting and corporate governance consulting under one roof with audit standards at its core.',
+      'Our engineering-grounded methodology brings together OIZ regulatory compliance, land allocation management, Technopark exemptions and green-transition processes in a data-driven framework. We fuse traditional industrial management with a modern engineering vision through AI-supported decision mechanisms.',
     ],
     founderTitle: 'Our Founder',
     founderName: 'İlker Tura',

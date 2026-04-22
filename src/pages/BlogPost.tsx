@@ -1,9 +1,10 @@
 import { Link, useParams, Navigate } from 'react-router-dom';
 import { ArrowLeft, Calendar, Clock, Info } from 'lucide-react';
 import { useLang } from '../i18n/LanguageContext';
+import SEO from '../components/SEO';
 
 const BlogPost: React.FC = () => {
-  const { t } = useLang();
+  const { t, lang } = useLang();
   const { id } = useParams<{ id: string }>();
   const post = t.blog.posts.find((p) => p.id === id);
 
@@ -11,7 +12,21 @@ const BlogPost: React.FC = () => {
     return <Navigate to="/blog" replace />;
   }
 
+  const seoKeywords = post.content.hashtags
+    ? post.content.hashtags.map((tag) => tag.replace(/^#/, ''))
+    : undefined;
+
   return (
+    <>
+      <SEO
+        title={post.title}
+        description={post.excerpt}
+        url={`/blog/${post.id}`}
+        type="article"
+        lang={lang}
+        publishedAt={post.publishedAt}
+        keywords={seoKeywords}
+      />
     <main className="relative bg-gray-50/60 min-h-screen">
       <section className="relative bg-gradient-to-br from-navy-950 via-navy-900 to-navy-800 overflow-hidden">
         <div className="absolute top-20 right-20 w-96 h-96 bg-accent-400/10 rounded-full blur-3xl" />
@@ -119,6 +134,7 @@ const BlogPost: React.FC = () => {
         </div>
       </article>
     </main>
+    </>
   );
 };
 

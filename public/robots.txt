@@ -1,0 +1,10 @@
+# https://antyonetim.com
+User-agent: *
+Allow: /
+
+# Block admin / API paths (none yet; keep the placeholder for the future)
+Disallow: /api/
+
+# Preferred host & sitemap
+Host: https://antyonetim.com
+Sitemap: https://antyonetim.com/sitemap.xml

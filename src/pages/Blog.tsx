@@ -1,11 +1,29 @@
 import { Link } from 'react-router-dom';
 import { ArrowRight, Calendar, Clock } from 'lucide-react';
 import { useLang } from '../i18n/LanguageContext';
+import SEO from '../components/SEO';
 
 const Blog: React.FC = () => {
-  const { t } = useLang();
+  const { t, lang } = useLang();
 
   return (
+    <>
+      <SEO
+        title="Blog — OSB Mevzuatı, Ar-Ge ve Teşvik İçerikleri"
+        description="OSB mevzuatı, arsa tahsis, Ar-Ge ve Tasarım Merkezi yönetimi, Teknopark muafiyetleri ve yeşil OSB süreçlerinde uzman içerikler — güncel regülasyonları ANT blogunda takip edin."
+        url="/blog"
+        type="website"
+        lang={lang}
+        keywords={[
+          'OSB mevzuat blog',
+          'Organize Sanayi Bölgesi yazıları',
+          'arsa tahsis',
+          'Ar-Ge ve Tasarım Merkezi yazıları',
+          'Teknopark muafiyetleri',
+          'yeşil OSB',
+          'ANT Yönetim Danışmanlık blog',
+        ]}
+      />
     <main className="relative bg-gray-50/60 min-h-screen">
       <section className="relative bg-gradient-to-br from-navy-950 via-navy-900 to-navy-800 overflow-hidden">
         <div className="absolute top-20 right-20 w-96 h-96 bg-accent-400/10 rounded-full blur-3xl" />
@@ -78,6 +96,7 @@ const Blog: React.FC = () => {
         </div>
       </section>
     </main>
+    </>
   );
 };
 

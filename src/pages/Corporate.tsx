@@ -3,12 +3,29 @@ import { ArrowRight, Sparkles } from 'lucide-react';
 import { useLang } from '../i18n/LanguageContext';
 import { LINKEDIN_URL } from '../i18n/translations';
 import LinkedinIcon from '../components/icons/LinkedinIcon';
+import SEO from '../components/SEO';
 
 const Corporate: React.FC = () => {
-  const { t } = useLang();
+  const { t, lang } = useLang();
   const c = t.corporate;
 
   return (
+    <>
+      <SEO
+        title="Kurumsal — OSB ve Ar-Ge Danışmanlığında Otorite"
+        description="15+ yıl Bakanlık müfettişliği tecrübesiyle OSB, Ar-Ge ve Tasarım Merkezi ve Kurumsal Yönetim Danışmanlığında stratejik partneriniz. Tanışma görüşmesi için bize ulaşın."
+        url="/kurumsal"
+        type="profile"
+        lang={lang}
+        keywords={[
+          'ANT Yönetim Danışmanlık kurumsal',
+          'İlker Tura',
+          'kamu tecrübesi',
+          'OSB danışmanlığı',
+          'Ar-Ge ve Tasarım Merkezi danışmanlığı',
+          'Sanayi ve Teknoloji Bakanlığı müfettişi',
+        ]}
+      />
     <main className="relative bg-gray-50/60 min-h-screen">
       <section className="relative bg-gradient-to-br from-navy-950 via-navy-900 to-navy-800 overflow-hidden">
         <div className="absolute top-20 right-20 w-96 h-96 bg-accent-400/10 rounded-full blur-3xl" />
@@ -24,7 +41,7 @@ const Corporate: React.FC = () => {
           }}
         />
 
-        <div className="relative max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 pt-40 pb-24">
+        <header className="relative max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 pt-40 pb-24">
           <div className="inline-flex items-center gap-2 bg-white/10 border border-white/10 rounded-full px-5 py-2 mb-6">
             <div className="w-1.5 h-1.5 bg-accent-400 rounded-full" />
             <span className="text-white/80 text-sm font-semibold uppercase tracking-wider">
@@ -40,7 +57,7 @@ const Corporate: React.FC = () => {
           <p className="text-white/60 text-lg sm:text-xl leading-relaxed max-w-3xl">
             {c.pageDescription}
           </p>
-        </div>
+        </header>
       </section>
 
       <section className="relative max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-20 space-y-12">
@@ -65,7 +82,7 @@ const Corporate: React.FC = () => {
           </div>
         </div>
 
-        <div className="relative bg-gradient-to-br from-navy-900 via-navy-800 to-navy-900 rounded-3xl p-8 lg:p-12 shadow-2xl shadow-navy-900/20 overflow-hidden">
+        <article className="relative bg-gradient-to-br from-navy-900 via-navy-800 to-navy-900 rounded-3xl p-8 lg:p-12 shadow-2xl shadow-navy-900/20 overflow-hidden">
           <div className="absolute top-0 right-0 w-72 h-72 bg-accent-400/10 rounded-full blur-3xl" />
           <div className="absolute bottom-0 left-0 w-64 h-64 bg-blue-500/10 rounded-full blur-3xl" />
 
@@ -119,7 +136,7 @@ const Corporate: React.FC = () => {
               ))}
             </div>
           </div>
-        </div>
+        </article>
 
         <div className="bg-white rounded-3xl p-8 lg:p-10 border border-navy-100 shadow-sm flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6">
           <p className="text-navy-700 font-medium text-lg leading-relaxed">
@@ -135,6 +152,7 @@ const Corporate: React.FC = () => {
         </div>
       </section>
     </main>
+    </>
   );
 };
 
