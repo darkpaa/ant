@@ -1,5 +1,13 @@
 import { Link, useParams, Navigate } from 'react-router-dom';
-import { ArrowLeft, Calendar, Clock, Info } from 'lucide-react';
+import {
+  ArrowLeft,
+  ArrowRight,
+  Calendar,
+  Clock,
+  HelpCircle,
+  Info,
+  Layers,
+} from 'lucide-react';
 import { useLang } from '../i18n/LanguageContext';
 import SEO from '../components/SEO';
 
@@ -190,6 +198,85 @@ const BlogPost: React.FC = () => {
               </div>
             </div>
           )}
+
+          <section aria-labelledby="related-content-heading" className="pt-6">
+            <h2
+              id="related-content-heading"
+              className="text-2xl font-bold text-navy-900 tracking-tight mb-5"
+            >
+              {t.blog.relatedTitle}
+            </h2>
+            <div className="grid sm:grid-cols-2 gap-4">
+              <Link
+                to="/#hizmetlerimiz"
+                className="group block bg-white rounded-2xl p-6 border border-navy-100 hover:border-accent-400/40 hover:shadow-lg hover:shadow-navy-900/5 transition-all duration-300"
+              >
+                <div className="w-10 h-10 rounded-xl bg-accent-400/10 flex items-center justify-center mb-4">
+                  <Layers className="w-5 h-5 text-accent-500" />
+                </div>
+                <h3 className="font-bold text-navy-900 mb-2 group-hover:text-accent-600 transition-colors">
+                  {t.blog.relatedServicesTitle}
+                </h3>
+                <p className="text-navy-500 text-sm leading-relaxed mb-3">
+                  {t.blog.relatedServicesDesc}
+                </p>
+                <span className="inline-flex items-center gap-1 text-xs font-semibold text-navy-700 group-hover:text-accent-600 transition-colors">
+                  {t.blog.readPost}
+                  <ArrowRight className="w-3.5 h-3.5 transition-transform duration-300 group-hover:translate-x-1" />
+                </span>
+              </Link>
+              <Link
+                to="/sss"
+                className="group block bg-white rounded-2xl p-6 border border-navy-100 hover:border-accent-400/40 hover:shadow-lg hover:shadow-navy-900/5 transition-all duration-300"
+              >
+                <div className="w-10 h-10 rounded-xl bg-accent-400/10 flex items-center justify-center mb-4">
+                  <HelpCircle className="w-5 h-5 text-accent-500" />
+                </div>
+                <h3 className="font-bold text-navy-900 mb-2 group-hover:text-accent-600 transition-colors">
+                  {t.blog.relatedFaqTitle}
+                </h3>
+                <p className="text-navy-500 text-sm leading-relaxed mb-3">
+                  {t.blog.relatedFaqDesc}
+                </p>
+                <span className="inline-flex items-center gap-1 text-xs font-semibold text-navy-700 group-hover:text-accent-600 transition-colors">
+                  {t.blog.readPost}
+                  <ArrowRight className="w-3.5 h-3.5 transition-transform duration-300 group-hover:translate-x-1" />
+                </span>
+              </Link>
+            </div>
+          </section>
+
+          {(() => {
+            const others = t.blog.posts.filter((p) => p.id !== post.id).slice(0, 3);
+            if (others.length === 0) return null;
+            return (
+              <section aria-labelledby="other-posts-heading" className="pt-4">
+                <h2
+                  id="other-posts-heading"
+                  className="text-2xl font-bold text-navy-900 tracking-tight mb-5"
+                >
+                  {t.blog.otherPostsTitle}
+                </h2>
+                <ul className="grid sm:grid-cols-3 gap-4">
+                  {others.map((other) => (
+                    <li key={other.id}>
+                      <Link
+                        to={`/blog/${other.id}`}
+                        className="group block h-full bg-white rounded-2xl p-5 border border-navy-100 hover:border-accent-400/40 hover:shadow-lg hover:shadow-navy-900/5 transition-all duration-300"
+                      >
+                        <div className="text-[11px] uppercase tracking-wider text-accent-500 font-semibold mb-2">
+                          {other.readTime}
+                        </div>
+                        <h3 className="font-semibold text-navy-900 text-sm leading-snug group-hover:text-accent-600 transition-colors">
+                          {other.title}
+                        </h3>
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </section>
+            );
+          })()}
         </div>
       </article>
     </main>

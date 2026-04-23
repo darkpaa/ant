@@ -1,6 +1,13 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { ChevronDown, HelpCircle, ArrowRight, Sparkles } from 'lucide-react';
+import {
+  ChevronDown,
+  HelpCircle,
+  ArrowRight,
+  Sparkles,
+  BookOpen,
+  Layers,
+} from 'lucide-react';
 import { useLang } from '../i18n/LanguageContext';
 import SEO from '../components/SEO';
 
@@ -195,6 +202,37 @@ const FAQ: React.FC = () => {
               </div>
             </div>
           ))}
+
+          <div className="grid sm:grid-cols-2 gap-4">
+            <Link
+              to="/#hizmetlerimiz"
+              className="group block bg-white rounded-2xl p-6 border border-navy-100 hover:border-accent-400/40 hover:shadow-lg hover:shadow-navy-900/5 transition-all duration-300"
+            >
+              <div className="w-10 h-10 rounded-xl bg-accent-400/10 flex items-center justify-center mb-4">
+                <Layers className="w-5 h-5 text-accent-500" />
+              </div>
+              <h3 className="font-bold text-navy-900 mb-2 group-hover:text-accent-600 transition-colors">
+                {t.blog.relatedServicesTitle}
+              </h3>
+              <p className="text-navy-500 text-sm leading-relaxed">
+                {t.blog.relatedServicesDesc}
+              </p>
+            </Link>
+            <Link
+              to="/blog"
+              className="group block bg-white rounded-2xl p-6 border border-navy-100 hover:border-accent-400/40 hover:shadow-lg hover:shadow-navy-900/5 transition-all duration-300"
+            >
+              <div className="w-10 h-10 rounded-xl bg-accent-400/10 flex items-center justify-center mb-4">
+                <BookOpen className="w-5 h-5 text-accent-500" />
+              </div>
+              <h3 className="font-bold text-navy-900 mb-2 group-hover:text-accent-600 transition-colors">
+                {t.blog.pageBadge}
+              </h3>
+              <p className="text-navy-500 text-sm leading-relaxed">
+                {t.blog.pageDescription}
+              </p>
+            </Link>
+          </div>
 
           <div className="bg-white rounded-3xl p-8 lg:p-10 border border-navy-100 shadow-sm flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6">
             <p className="text-navy-700 font-medium text-lg leading-relaxed">

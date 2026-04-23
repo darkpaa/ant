@@ -144,6 +144,18 @@ export interface Dictionary {
     readPost: string;
     backToBlog: string;
     disclaimerTitle: string;
+    relatedTitle: string;
+    relatedServicesTitle: string;
+    relatedServicesDesc: string;
+    relatedFaqTitle: string;
+    relatedFaqDesc: string;
+    otherPostsTitle: string;
+    linkedInBadge: string;
+    linkedInTitle: string;
+    linkedInSubtitle: string;
+    linkedInFollow: string;
+    linkedInViewPost: string;
+    linkedInPosts: { date: string; excerpt: string; url: string }[];
     posts: BlogPost[];
   };
   contact: {
@@ -589,6 +601,40 @@ const tr: Dictionary = {
     readPost: 'Yazıyı Oku',
     backToBlog: 'Blog listesine dön',
     disclaimerTitle: 'Not',
+    relatedTitle: 'İlgili İçerikler',
+    relatedServicesTitle: 'Hizmetlerimizi İnceleyin',
+    relatedServicesDesc:
+      'OSB, Ar-Ge ve Tasarım Merkezi, Teknopark ve Kurumsal Yönetim alanlarında uçtan uca danışmanlık.',
+    relatedFaqTitle: 'Sıkça Sorulan Sorular',
+    relatedFaqDesc:
+      'OSB mevzuatı, Ar-Ge Merkezi kurulumu ve KOSGEB-TÜBİTAK projelerine dair uzman yanıtlar.',
+    otherPostsTitle: 'Diğer Blog Yazıları',
+    linkedInBadge: 'LinkedIn',
+    linkedInTitle: 'LinkedIn’de Takipte Kalın',
+    linkedInSubtitle:
+      'Kurucumuz İlker Tura’nın OSB, Ar-Ge ve sanayi politikaları üzerine güncel paylaşımları.',
+    linkedInFollow: 'LinkedIn Profilini Ziyaret Et',
+    linkedInViewPost: 'Gönderiyi Gör',
+    linkedInPosts: [
+      {
+        date: 'Güncel',
+        excerpt:
+          'OSB mevzuatında 2026 yılı için öne çıkan değişiklikler ve katılımcıların yatırım planlamasına etkileri hakkında notlar.',
+        url: 'https://www.linkedin.com/in/ilker-tura-02354984/',
+      },
+      {
+        date: 'Güncel',
+        excerpt:
+          'Ar-Ge ve Tasarım Merkezi denetimlerinde sıkça karşılaştığımız bulgular ve sıfır hata prensibiyle hazırlık rehberi.',
+        url: 'https://www.linkedin.com/in/ilker-tura-02354984/',
+      },
+      {
+        date: 'Güncel',
+        excerpt:
+          'Yeşil OSB sertifikasyon süreci ve Avrupa Yeşil Mutabakatı uyumunun Türk sanayisine getirdiği fırsatlar.',
+        url: 'https://www.linkedin.com/in/ilker-tura-02354984/',
+      },
+    ],
     posts: [
       {
         id: 'osb-on-tahsis',
@@ -1486,6 +1532,40 @@ const en: Dictionary = {
       'Current analyses on OIZ regulation, industrial policy, green transformation and digitalization.',
     postMeta: (date, readTime) => `${date} · ${readTime}`,
     readPost: 'Read Article',
+    relatedTitle: 'Related Content',
+    relatedServicesTitle: 'Explore Our Services',
+    relatedServicesDesc:
+      'End-to-end consulting in OIZ, R&D and Design Centres, Technopark and Corporate Governance.',
+    relatedFaqTitle: 'Frequently Asked Questions',
+    relatedFaqDesc:
+      'Expert answers on OIZ regulation, R&D Centre setup and KOSGEB-TÜBİTAK projects.',
+    otherPostsTitle: 'Other Articles',
+    linkedInBadge: 'LinkedIn',
+    linkedInTitle: 'Stay Connected on LinkedIn',
+    linkedInSubtitle:
+      'Founder İlker Tura’s recent posts on OIZ, R&D and industrial policy.',
+    linkedInFollow: 'Visit LinkedIn Profile',
+    linkedInViewPost: 'View Post',
+    linkedInPosts: [
+      {
+        date: 'Recent',
+        excerpt:
+          'Key changes in OIZ regulations for 2026 and their impact on participant investment planning.',
+        url: 'https://www.linkedin.com/in/ilker-tura-02354984/',
+      },
+      {
+        date: 'Recent',
+        excerpt:
+          'Common findings in R&D and Design Centre audits — a zero-error preparation guide.',
+        url: 'https://www.linkedin.com/in/ilker-tura-02354984/',
+      },
+      {
+        date: 'Recent',
+        excerpt:
+          'The Green OIZ certification process and opportunities the EU Green Deal creates for Turkish industry.',
+        url: 'https://www.linkedin.com/in/ilker-tura-02354984/',
+      },
+    ],
     backToBlog: 'Back to blog',
     disclaimerTitle: 'Disclaimer',
     posts: [
