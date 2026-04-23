@@ -2,6 +2,8 @@ import { Link, useParams, Navigate } from 'react-router-dom';
 import {
   ArrowLeft,
   ArrowRight,
+  ArrowUpRight,
+  BookMarked,
   Calendar,
   Clock,
   HelpCircle,
@@ -181,6 +183,39 @@ const BlogPost: React.FC = () => {
                 </span>
               ))}
             </div>
+          )}
+
+          {post.content.sources && post.content.sources.length > 0 && (
+            <section aria-labelledby="sources-heading" className="pt-6">
+              <div className="bg-white rounded-2xl border border-navy-100 p-6">
+                <div className="flex items-center gap-3 mb-4">
+                  <div className="w-9 h-9 rounded-xl bg-accent-400/10 flex items-center justify-center shrink-0">
+                    <BookMarked className="w-4 h-4 text-accent-500" />
+                  </div>
+                  <h2
+                    id="sources-heading"
+                    className="text-lg sm:text-xl font-bold text-navy-900 tracking-tight"
+                  >
+                    {t.blog.sourcesTitle}
+                  </h2>
+                </div>
+                <ul className="space-y-2 pl-12">
+                  {post.content.sources.map((source) => (
+                    <li key={source.url}>
+                      <a
+                        href={source.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="group inline-flex items-start gap-1.5 text-navy-600 hover:text-accent-600 text-sm leading-relaxed transition-colors"
+                      >
+                        <span>{source.label}</span>
+                        <ArrowUpRight className="w-3.5 h-3.5 mt-1 shrink-0 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </section>
           )}
 
           {post.content.disclaimer && (

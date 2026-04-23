@@ -1,0 +1,27 @@
+{
+  "name": "ANT Yönetim Danışmanlık",
+  "short_name": "ANT",
+  "description": "OSB, Ar-Ge ve Tasarım Merkezi, Teknopark ve Kurumsal Yönetim Danışmanlığında 15+ yıl Bakanlık tecrübesiyle stratejik çözüm ortağınız.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "background_color": "#ffffff",
+  "theme_color": "#0b1d3a",
+  "lang": "tr-TR",
+  "categories": ["business", "consulting", "productivity"],
+  "icons": [
+    {
+      "src": "/antlogo.png",
+      "sizes": "256x256",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/antlogo.png",
+      "sizes": "256x256",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ]
+}

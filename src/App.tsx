@@ -9,6 +9,9 @@ const Blog = lazy(() => import('./pages/Blog'));
 const BlogPost = lazy(() => import('./pages/BlogPost'));
 const Contact = lazy(() => import('./pages/Contact'));
 const FAQ = lazy(() => import('./pages/FAQ'));
+const LegalPage = lazy(() => import('./pages/LegalPage'));
+const OsbDanismanligi = lazy(() => import('./pages/OsbDanismanligi'));
+const Glossary = lazy(() => import('./pages/Glossary'));
 
 const RouteFallback: React.FC = () => (
   <div
@@ -55,6 +58,11 @@ const App: React.FC = () => {
           <Route path="/contact" element={<Contact />} />
           <Route path="/sss" element={<FAQ />} />
           <Route path="/faq" element={<FAQ />} />
+          <Route path="/gizlilik" element={<LegalPage variant="privacy" />} />
+          <Route path="/kvkk" element={<LegalPage variant="kvkk" />} />
+          <Route path="/cerez" element={<LegalPage variant="cookies" />} />
+          <Route path="/osb-danismanligi" element={<OsbDanismanligi />} />
+          <Route path="/osb-sozlugu" element={<Glossary />} />
         </Routes>
       </Suspense>
       <Footer />

@@ -145,13 +145,13 @@ const Footer: React.FC = () => {
             </p>
             <div className="flex flex-wrap items-center gap-x-6 gap-y-2">
               {t.footer.legalLinks.map((link) => (
-                <a
+                <Link
                   key={link.label}
-                  href={link.href}
+                  to={link.href}
                   className="text-white/30 hover:text-white/60 text-xs transition-colors duration-300"
                 >
                   {link.label}
-                </a>
+                </Link>
               ))}
             </div>
           </div>

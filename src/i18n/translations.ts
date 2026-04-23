@@ -38,6 +38,7 @@ export interface BlogPostContent {
     outro?: string;
   };
   hashtags?: string[];
+  sources?: { label: string; url: string }[];
   disclaimer?: string;
 }
 
@@ -150,6 +151,7 @@ export interface Dictionary {
     relatedFaqTitle: string;
     relatedFaqDesc: string;
     otherPostsTitle: string;
+    sourcesTitle: string;
     posts: BlogPost[];
   };
   contact: {
@@ -205,6 +207,51 @@ export interface Dictionary {
       items: { question: string; answer: string }[];
     }[];
   };
+  legal: {
+    lastUpdatedLabel: string;
+    lastUpdatedDate: string;
+    disclaimer: string;
+    privacy: LegalDoc;
+    kvkk: LegalDoc;
+    cookies: LegalDoc;
+  };
+  osbPillar: {
+    pageBadge: string;
+    pageTitleStart: string;
+    pageTitleAccent: string;
+    pageDescription: string;
+    tocTitle: string;
+    sections: {
+      id: string;
+      title: string;
+      paragraphs: string[];
+      bullets?: string[];
+    }[];
+    ctaHeading: string;
+    ctaText: string;
+    ctaLabel: string;
+  };
+  glossary: {
+    pageBadge: string;
+    pageTitleStart: string;
+    pageTitleAccent: string;
+    pageDescription: string;
+    searchPlaceholder: string;
+    emptyState: string;
+    backToTop: string;
+    categories: {
+      title: string;
+      terms: { term: string; definition: string }[];
+    }[];
+  };
+}
+
+export interface LegalDoc {
+  pageBadge: string;
+  pageTitleStart: string;
+  pageTitleAccent: string;
+  pageDescription: string;
+  sections: { title: string; paragraphs: string[] }[];
 }
 
 export const LINKEDIN_URL =
@@ -577,9 +624,9 @@ const tr: Dictionary = {
       { label: 'Stratejik Planlama', href: '/#hizmetlerimiz' },
     ],
     legalLinks: [
-      { label: 'Gizlilik Politikası', href: '#' },
-      { label: 'KVKK Aydınlatma Metni', href: '#' },
-      { label: 'Çerez Politikası', href: '#' },
+      { label: 'Gizlilik Politikası', href: '/gizlilik' },
+      { label: 'KVKK Aydınlatma Metni', href: '/kvkk' },
+      { label: 'Çerez Politikası', href: '/cerez' },
     ],
     workingHours: '',
     copyright: (year) => `© ${year} ANT Danışmanlık. Tüm hakları saklıdır.`,
@@ -603,6 +650,7 @@ const tr: Dictionary = {
     relatedFaqDesc:
       'OSB mevzuatı, Ar-Ge Merkezi kurulumu ve KOSGEB-TÜBİTAK projelerine dair uzman yanıtlar.',
     otherPostsTitle: 'Diğer Blog Yazıları',
+    sourcesTitle: 'Kaynaklar ve Resmi Referanslar',
     posts: [
       {
         id: 'osb-on-tahsis',
@@ -657,6 +705,11 @@ const tr: Dictionary = {
             '#KurumsalYönetim',
             '#Şeffaflık',
             '#YatırımGüveni',
+          ],
+          sources: [
+            { label: '4562 sayılı Organize Sanayi Bölgeleri Kanunu — Mevzuat Bilgi Sistemi', url: 'https://www.mevzuat.gov.tr/' },
+            { label: 'T.C. Sanayi ve Teknoloji Bakanlığı — Sanayi Bölgeleri', url: 'https://www.sanayi.gov.tr/' },
+            { label: 'Organize Sanayi Bölgeleri Üst Kuruluşu (OSBÜK)', url: 'https://www.osbuk.org.tr/' },
           ],
         },
       },
@@ -713,6 +766,11 @@ const tr: Dictionary = {
             '#TSE',
             '#OSB',
             '#CleanTech',
+          ],
+          sources: [
+            { label: 'T.C. Sanayi ve Teknoloji Bakanlığı — Yeşil OSB', url: 'https://www.sanayi.gov.tr/' },
+            { label: 'T.C. Ticaret Bakanlığı — Avrupa Yeşil Mutabakatı', url: 'https://www.ticaret.gov.tr/' },
+            { label: 'Organize Sanayi Bölgeleri Üst Kuruluşu (OSBÜK)', url: 'https://www.osbuk.org.tr/' },
           ],
         },
       },
@@ -771,6 +829,11 @@ const tr: Dictionary = {
             '#İşSürekliliğiPlanı',
             '#İSY',
           ],
+          sources: [
+            { label: 'OSB Uygulama Yönetmeliği — Mevzuat Bilgi Sistemi', url: 'https://www.mevzuat.gov.tr/' },
+            { label: 'T.C. Sanayi ve Teknoloji Bakanlığı — Sanayi Bölgeleri', url: 'https://www.sanayi.gov.tr/' },
+            { label: 'T.C. AFAD — İş Sürekliliği Rehberleri', url: 'https://www.afad.gov.tr/' },
+          ],
         },
       },
       {
@@ -813,6 +876,11 @@ const tr: Dictionary = {
             '#Yatırım',
             '#SanayiBölgeleri',
             '#Değerleme',
+          ],
+          sources: [
+            { label: '4562 sayılı Organize Sanayi Bölgeleri Kanunu — Mevzuat Bilgi Sistemi', url: 'https://www.mevzuat.gov.tr/' },
+            { label: 'T.C. Sanayi ve Teknoloji Bakanlığı — Sanayi Bölgeleri', url: 'https://www.sanayi.gov.tr/' },
+            { label: 'Organize Sanayi Bölgeleri Üst Kuruluşu (OSBÜK)', url: 'https://www.osbuk.org.tr/' },
           ],
         },
       },
@@ -873,6 +941,11 @@ const tr: Dictionary = {
             '#KuluçkaMerkezi',
             '#GirişimOfisi',
           ],
+          sources: [
+            { label: 'T.C. Sanayi ve Teknoloji Bakanlığı — Teknoloji Geliştirme Bölgeleri', url: 'https://www.sanayi.gov.tr/' },
+            { label: 'KOSGEB — Girişimcilik Destekleri', url: 'https://www.kosgeb.gov.tr/' },
+            { label: 'TÜBİTAK — Girişimcilik ve Yenilik Destekleri', url: 'https://www.tubitak.gov.tr/' },
+          ],
         },
       },
       {
@@ -926,6 +999,11 @@ const tr: Dictionary = {
             '#KurumsalYönetim',
             '#SanayiBölgeleri',
             '#MevzuatUygulama',
+          ],
+          sources: [
+            { label: '4562 sayılı Organize Sanayi Bölgeleri Kanunu — Mevzuat Bilgi Sistemi', url: 'https://www.mevzuat.gov.tr/' },
+            { label: 'T.C. Resmî Gazete — Cumhurbaşkanlığı Kararları', url: 'https://www.resmigazete.gov.tr/' },
+            { label: 'Organize Sanayi Bölgeleri Üst Kuruluşu (OSBÜK)', url: 'https://www.osbuk.org.tr/' },
           ],
         },
       },
@@ -1111,6 +1189,530 @@ const tr: Dictionary = {
             question: 'Türkiye genelinde mi hizmet veriyorsunuz?',
             answer:
               'Evet. ANT Yönetim Danışmanlık; Türkiye’nin 81 ilinde faaliyet gösteren OSB’lere, Ar-Ge ve Tasarım Merkezlerine, Teknoparklardaki yönetici şirketlere ve KOBİ’lere; hibrit (yerinde + uzaktan) çalışma modelimiz ile hizmet sunmaktadır.',
+          },
+        ],
+      },
+    ],
+  },
+  legal: {
+    lastUpdatedLabel: 'Son güncelleme',
+    lastUpdatedDate: '23 Nisan 2026',
+    disclaimer:
+      'Bu metin bilgilendirme amaçlı hazırlanmıştır ve hukuki görüş niteliği taşımaz. Kurumsal düzeyde tam metin için lütfen hukuk danışmanınıza başvurunuz.',
+    privacy: {
+      pageBadge: 'Yasal',
+      pageTitleStart: 'Gizlilik',
+      pageTitleAccent: 'Politikası',
+      pageDescription:
+        'ANT Yönetim Danışmanlık olarak ziyaretçi gizliliğini önemsiyoruz. Bu politika; hangi verileri neden topladığımızı, nasıl kullandığımızı ve haklarınızı sade bir dille özetler.',
+      sections: [
+        {
+          title: 'Topladığımız Veriler',
+          paragraphs: [
+            'İletişim formu üzerinden ilettiğiniz verileri topluyoruz: ad-soyad, e-posta adresi, telefon numarası, konu başlığı ve mesaj içeriği.',
+            'Bunlara ek olarak, dil tercihinizi hatırlamak için tarayıcınızın yerel deposunda (localStorage) “tr” veya “en” değeri saklanır. Bu bir çerez değildir; üçüncü taraflarla paylaşılmaz.',
+            'Sitemiz analitik veya reklam takibi amacıyla kişisel veri toplamaz; Google Analytics, Facebook Pixel vb. takip araçları kullanmaz.',
+          ],
+        },
+        {
+          title: 'Verilerin Kullanım Amacı',
+          paragraphs: [
+            'İletişim formu verileri yalnızca talebinize dönüş yapmak ve danışmanlık süreçlerimizi yürütmek amacıyla kullanılır.',
+            'Pazarlama iletisi gönderimi için e-posta listesi tutmuyoruz; açık rızanız olmadan ticari ileti göndermiyoruz.',
+          ],
+        },
+        {
+          title: 'Üçüncü Taraf Hizmet Sağlayıcıları',
+          paragraphs: [
+            'İletişim formu gönderimi için FormSubmit (formsubmit.co) hizmetini kullanıyoruz. Formdan gelen veriler bu servis üzerinden kurumsal@antyonetim.com adresimize iletilir. FormSubmit Amerika Birleşik Devletleri’nde faaliyet göstermektedir; bu nedenle bir yurt dışı veri aktarımı söz konusudur.',
+            'Site font dosyaları Google Fonts üzerinden yüklenmektedir. Google Fonts standart yükleme sürecinde IP adresi gibi teknik bilgileri işleyebilmektedir.',
+          ],
+        },
+        {
+          title: 'Veri Saklama Süresi',
+          paragraphs: [
+            'İletişim formu üzerinden iletilen verileri yalnızca talebin çözümlenmesi ve olası bir sözleşme sürecinin yürütülmesi için gerekli süre boyunca saklıyoruz. Bu süre genellikle son iletişimden itibaren 2 yıldır; mevzuattaki özel saklama yükümlülükleri saklıdır.',
+          ],
+        },
+        {
+          title: 'Güvenlik Önlemleri',
+          paragraphs: [
+            'Site HTTPS şifreleme ile yayınlanır. İletişim formunda otomatik gönderimlere karşı güvenlik doğrulaması (basit matematik sorusu) ve honeypot alanı bulunur.',
+          ],
+        },
+        {
+          title: 'Çerezler Hakkında',
+          paragraphs: [
+            'Sitemiz analitik veya reklam çerezi kullanmaz. Yalnızca dil tercihinin korunması için tarayıcı yerel deposundan faydalanılır. Ayrıntı için Çerez Politikamıza bakabilirsiniz.',
+          ],
+        },
+        {
+          title: 'Haklarınız ve İletişim',
+          paragraphs: [
+            '6698 sayılı Kişisel Verilerin Korunması Kanunu (KVKK) kapsamındaki haklarınız için KVKK Aydınlatma Metni sayfamızı inceleyebilirsiniz.',
+            'Gizlilikle ilgili her türlü talep ve sorunuz için kurumsal@antyonetim.com adresinden bize ulaşabilirsiniz.',
+          ],
+        },
+      ],
+    },
+    kvkk: {
+      pageBadge: 'Yasal',
+      pageTitleStart: 'KVKK Aydınlatma',
+      pageTitleAccent: 'Metni',
+      pageDescription:
+        '6698 sayılı Kişisel Verilerin Korunması Kanunu (KVKK) uyarınca; veri sorumlusu sıfatıyla ANT Yönetim Danışmanlık tarafından işlenen kişisel verilerinize ilişkin aydınlatma metni.',
+      sections: [
+        {
+          title: '1. Veri Sorumlusu',
+          paragraphs: [
+            'Bu aydınlatma metni; veri sorumlusu sıfatıyla ANT Yönetim Danışmanlık tarafından, 6698 sayılı KVKK’nın 10. maddesi gereğince hazırlanmıştır.',
+            'İletişim: kurumsal@antyonetim.com · +90 (506) 986 26 20',
+          ],
+        },
+        {
+          title: '2. İşlenen Kişisel Veri Kategorileri',
+          paragraphs: [
+            'Kimlik verisi: ad-soyad.',
+            'İletişim verisi: e-posta adresi, telefon numarası.',
+            'Müşteri işlem verisi: iletişim formu konusu ve mesaj içeriği.',
+            'İşlem güvenliği verisi: formun doldurulma süresi ve güvenlik doğrulaması yanıtı (bot trafiği tespiti için).',
+          ],
+        },
+        {
+          title: '3. Kişisel Verilerin İşlenme Amaçları',
+          paragraphs: [
+            'Ziyaretçi talep ve sorularının karşılanması, danışmanlık hizmetleri hakkında bilgi verilmesi.',
+            'Olası bir danışmanlık sözleşmesinin kurulması ve ifasının gerçekleştirilmesi.',
+            'Elektronik ticari iletilerin tâbi olduğu mevzuata uygun iletişim yönetimi.',
+            'Bot trafiği ve kötü niyetli form gönderimlerinin önlenmesi amacıyla sınırlı işlem güvenliği süreçleri.',
+          ],
+        },
+        {
+          title: '4. Kişisel Verilerin Toplanma Yöntemi ve Hukuki Sebebi',
+          paragraphs: [
+            'Veriler; sitemiz üzerinden ilettiğiniz iletişim formu aracılığıyla elektronik ortamda toplanmaktadır.',
+            'Hukuki sebep olarak; KVKK 5/2-c (bir sözleşmenin kurulması veya ifasıyla doğrudan doğruya ilgili olması) ve KVKK 5/2-f (ilgili kişinin temel hak ve özgürlüklerine zarar vermemek kaydıyla, veri sorumlusunun meşru menfaati) ile 5/1 (açık rıza) dayanakları kullanılmaktadır.',
+          ],
+        },
+        {
+          title: '5. Kişisel Verilerin Aktarılması',
+          paragraphs: [
+            'İletişim formu teslimi için FormSubmit (formsubmit.co) hizmet sağlayıcısı kullanılmakta ve form verileri bu servise iletilmektedir. FormSubmit ABD merkezlidir; bu nedenle yurt dışı aktarım gerçekleşmektedir. Bu aktarım, hizmetin gerçekleştirilmesi için zorunlu olup sözleşmenin ifasına yöneliktir.',
+            'Mevzuat kapsamında yetkili kamu kurum ve kuruluşlarının talebi halinde, yasal yükümlülük gereği aktarım yapılabilir.',
+          ],
+        },
+        {
+          title: '6. Saklama Süresi',
+          paragraphs: [
+            'Kişisel veriler; işleme amaçlarının gerektirdiği süre ile sınırlı olmak kaydıyla, ilgili mevzuatta öngörülen süreler boyunca saklanır. Form verileri için standart saklama süresi iletişimin son bulduğu tarihten itibaren 2 yıldır.',
+          ],
+        },
+        {
+          title: '7. KVKK 11. Madde Kapsamındaki Haklarınız',
+          paragraphs: [
+            'Kişisel verilerinizin işlenip işlenmediğini öğrenme; işlenmişse buna ilişkin bilgi talep etme; işlenme amacını ve amacına uygun kullanılıp kullanılmadığını öğrenme; yurt içinde veya yurt dışında aktarıldığı üçüncü kişileri bilme; eksik veya yanlış işlenmişse düzeltilmesini isteme; silinmesini veya yok edilmesini isteme; düzeltme, silme veya yok etme işlemlerinin üçüncü kişilere bildirilmesini isteme; işlenen verilerin münhasıran otomatik sistemlerle analizi neticesinde aleyhinize bir sonuç doğması halinde buna itiraz etme; kanuna aykırı işleme nedeniyle zarara uğramanız halinde zararın giderilmesini talep etme haklarına sahipsiniz.',
+          ],
+        },
+        {
+          title: '8. Başvuru Yöntemi',
+          paragraphs: [
+            'KVKK 11. madde kapsamındaki haklarınıza ilişkin başvurularınızı kurumsal@antyonetim.com e-posta adresimiz üzerinden yazılı olarak iletebilirsiniz. Başvurularınız 6698 sayılı Kanun’un 13. maddesi uyarınca en geç 30 gün içinde sonuçlandırılır.',
+          ],
+        },
+      ],
+    },
+    cookies: {
+      pageBadge: 'Yasal',
+      pageTitleStart: 'Çerez',
+      pageTitleAccent: 'Politikası',
+      pageDescription:
+        'Sitemiz reklam veya analitik çerezi kullanmaz. Bu sayfada kullandığımız sınırlı istemci-tarafı depolama yöntemlerini ve üçüncü taraf hizmetlerinden kaynaklı istekleri şeffaf biçimde açıklarız.',
+      sections: [
+        {
+          title: 'Çerez Nedir?',
+          paragraphs: [
+            'Çerezler; bir web sitesini ziyaret ettiğinizde tarayıcınıza yerleştirilen küçük metin dosyalarıdır. Oturum yönetimi, kullanıcı tercihleri veya ziyaretçi analizi gibi farklı amaçlarla kullanılabilir.',
+          ],
+        },
+        {
+          title: 'Sitemizin Çerez Kullanımı',
+          paragraphs: [
+            'Sitemizde analitik, reklam veya profilleme çerezleri yoktur. Google Analytics, Facebook Pixel, Hotjar vb. üçüncü taraf takip araçları kullanılmamaktadır.',
+            'Dil tercihinizi hatırlamak için tarayıcınızın yerel deposunda (localStorage) “ant-lang” adlı bir anahtar saklanır. Bu teknik olarak çerez değildir; ağ üzerinden sunucuya gönderilmez, yalnızca cihazınızda saklanır.',
+          ],
+        },
+        {
+          title: 'Üçüncü Taraf Hizmetlerinden Kaynaklı İstekler',
+          paragraphs: [
+            'Google Fonts: Site tipografisi için fonts.googleapis.com ve fonts.gstatic.com alan adlarından font dosyaları yüklenir. Google Fonts, standart yükleme sürecinde IP adresi gibi teknik bilgileri işleyebilmektedir. Google, bu verilerle reklam hedeflemesi yapmadığını beyan eder.',
+            'FormSubmit: Yalnızca iletişim formu gönderimi sırasında formsubmit.co adresine istek yapılır; pasif olarak çerez bırakmaz.',
+          ],
+        },
+        {
+          title: 'Çerez Tercihleri ve Silme',
+          paragraphs: [
+            'Tarayıcınızın ayarlarından yerel depoyu ve çerezleri her zaman silebilir, engelleyebilir veya yönetebilirsiniz. Dil tercihi silindiğinde bir sonraki ziyarette tarayıcınızın dili algılanacak ve uygun dil otomatik seçilecektir.',
+            'Chrome: Ayarlar → Gizlilik ve Güvenlik → Çerezler ve diğer site verileri.',
+            'Safari: Tercihler → Gizlilik → Tüm Web Sitesi Verilerini Yönet.',
+            'Firefox: Seçenekler → Gizlilik ve Güvenlik → Çerezler ve Site Verileri.',
+          ],
+        },
+      ],
+    },
+  },
+  osbPillar: {
+    pageBadge: 'Kapsamlı Rehber',
+    pageTitleStart: 'OSB Danışmanlığı —',
+    pageTitleAccent: 'Tüm Süreçler Tek Rehberde',
+    pageDescription:
+      'Organize Sanayi Bölgesi (OSB) mevzuatı, arsa tahsis yönetimi, organ yönetimi, altyapı projeleri, Yeşil OSB dönüşümü, Akıllı OSB dijitalleşmesi ve iş sürekliliği süreçlerini tek çatı altında bulabileceğiniz kapsamlı danışmanlık rehberi.',
+    tocTitle: 'Bu Rehberde Neler Var?',
+    sections: [
+      {
+        id: 'osb-nedir',
+        title: 'OSB Nedir ve Neden Önemlidir?',
+        paragraphs: [
+          'Organize Sanayi Bölgesi (OSB); sanayinin planlı biçimde yapılanmasını, belirli standartlar altında üretim yapmasını ve çevresel sürdürülebilirlik açısından denetlenebilir olmasını sağlamak amacıyla kurulan mal ve hizmet üretim bölgeleridir. 4562 sayılı Organize Sanayi Bölgeleri Kanunu temel düzenleyici çerçevedir.',
+          'Türkiye sanayisinin omurgasını oluşturan 300’ün üzerinde OSB, sanayi üretiminin önemli bir bölümünü gerçekleştirir. Bu bölgelerde faaliyet gösteren katılımcılar; altyapı, enerji, atık yönetimi ve çevre sürdürülebilirliği açısından OSB yönetimiyle sürekli etkileşim içerisindedir.',
+          'Bir OSB’nin başarısı yalnızca parsel tahsisi ile sınırlı değildir; kurumsal yönetim kalitesi, mevzuata uyum, mali disiplin, altyapı bakımı ve dijital dönüşüm kapasitesi uzun vadeli performansı belirler. Bu nedenle OSB’ler giderek daha profesyonel bir yönetim anlayışına geçmektedir.',
+        ],
+      },
+      {
+        id: 'mevzuat',
+        title: 'OSB Mevzuatı ve 4562 sayılı Kanun',
+        paragraphs: [
+          '4562 sayılı Organize Sanayi Bölgeleri Kanunu; OSB’lerin kuruluşunu, organlarını, altyapı çalışmalarını, katılımcı sözleşmelerini ve denetim süreçlerini düzenler. Kanun, OSB Uygulama Yönetmeliği ile detaylandırılır.',
+          'Uygulama Yönetmeliği; Müteşebbis Heyet, Genel Kurul, Yönetim Kurulu ve Denetim Kurulu gibi organların görev-yetki-sorumluluk çerçevesini, arsa tahsis prosedürlerini, altyapı projelerini, ihale süreçlerini, bakanlık kredilerini ve hakediş yönetimini kapsayan operasyonel kuralları içerir.',
+          'Mevzuat uyumu, yalnızca bir yasal zorunluluk değil; organ üyelerinin hukuki ve cezai sorumluluklarını da doğrudan etkileyen kritik bir süreçtir. Kararların mevzuata uygun alınması, tutanakların doğru düzenlenmesi ve katılımcı sözleşmelerinin özenle hazırlanması olası ihtilaf risklerini minimize eder.',
+        ],
+        bullets: [
+          'Düzenleyici temel metin: 4562 sayılı OSB Kanunu',
+          'İkincil mevzuat: OSB Uygulama Yönetmeliği',
+          'Karar organları: Müteşebbis Heyet, Genel Kurul, Yönetim ve Denetim Kurulu',
+          'Kamu denetim mekanizması: Sanayi ve Teknoloji Bakanlığı denetimleri',
+        ],
+      },
+      {
+        id: 'arsa-tahsis',
+        title: 'Arsa Tahsis Süreci: Ön Tahsis, Tahsis ve İptal',
+        paragraphs: [
+          'OSB’de arsa tahsisi; katılımcının yatırım niteliği, sektör uyumu ve mali yeterliliği değerlendirildikten sonra Yönetim Kurulu kararıyla önce ön tahsis, ardından tahsis şeklinde yapılır. Ön tahsis; belirli süre içinde yatırım ve üretim taahhütlerinin yerine getirilmesi şartıyla tahsise dönüştürülür.',
+          'Ön tahsis aşamasında kesin tahsis bedelinin belirleme yöntemi sözleşmede açıkça belirtilmelidir. Aksi halde enflasyon, arsa değerleme farklılıkları ve döviz kurunun değişmesi; taraflar arasında ihtilaf doğurabilir. Nitekim mevzuat, pre-allocation bedelinin hesaplanma yönteminin önceden yazılı olarak belirlenmesini aramaktadır.',
+          'Mevzuatta belirtilen sürelerde yatırımın başlamaması, üretime geçilmemesi veya taahhütlere uyulmaması durumunda tahsis iptal edilebilir. İptal süreci; geri ödeme değerlemesi, süre uzatımlarının hukuki etkisi ve olası tazminat talepleri açısından profesyonel olarak yönetilmelidir.',
+        ],
+      },
+      {
+        id: 'organ-yonetimi',
+        title: 'Organ Yönetimi ve Sorumluluklar',
+        paragraphs: [
+          'OSB’nin karar organları; kuruluş aşamasında Müteşebbis Heyet, sicil kaydından sonra Genel Kurul, Yönetim Kurulu ve Denetim Kurulu’dur. Her organın görevi, yetki sınırı ve ödeme esasları Uygulama Yönetmeliği ile açıkça tanımlanmıştır.',
+          'Organ üyelerinin hukuki ve cezai sorumlulukları büyük önem taşır. Mevzuata aykırı alınmış bir karar; üyelerin şahsi mal varlığını, sonraki dönemlerde kamu ihalelerinden men durumunu ve çeşitli yaptırımları etkileyebilir. Huzur hakkı ödemeleri de Cumhurbaşkanlığı Kararı ile belirlenen üst limitlere tâbidir.',
+          'Kurumsal yönetim kalitesini artırmak için prensip kararlar, yönergeler, iç işleyiş kuralları ve denetim raporlarının düzenli güncellenmesi kritik önemdedir.',
+        ],
+      },
+      {
+        id: 'altyapi',
+        title: 'Altyapı Proje Yönetimi ve İhale Süreçleri',
+        paragraphs: [
+          'Bir OSB’nin değer önerisi; elektrik, su, kanalizasyon, doğalgaz, arıtma tesisi ve iletişim altyapısının zamanında ve kaliteli biçimde sunulmasıyla doğrudan ilişkilidir. Bu nedenle altyapı proje yönetimi, OSB’nin en görünür ve en maliyetli süreçlerinden biridir.',
+          'Sanayi ve Teknoloji Bakanlığı kredi destekleri ve altyapı giderleri için borçlanma süreçleri; hakediş raporlarının vize süreçleri, ihale yönetimi ve hizmet sözleşmelerinin hazırlanması gibi teknik alanlarda uzmanlık gerektirir.',
+          'İhale yönetiminde şeffaflık, rekabetçi fiyatlandırma ve mevzuata tam uyum; hem katılımcıların hem denetim mekanizmalarının güvenini korumanın temel şartıdır.',
+        ],
+      },
+      {
+        id: 'yesil-osb',
+        title: 'Yeşil OSB ve Sürdürülebilirlik',
+        paragraphs: [
+          'Yeşil OSB; enerji verimliliği, yenilenebilir enerji kullanımı, atık yönetimi, su tasarrufu ve karbon ayak izi gibi sürdürülebilirlik kriterleri çerçevesinde Sanayi ve Teknoloji Bakanlığı tarafından sertifikalandırılan bir performans düzeyidir.',
+          'Avrupa Yeşil Mutabakatı ve sınırda karbon düzenlemesi (CBAM) ile uyum; ihracatçı sanayi kuruluşları için artık opsiyonel değil; rekabet gücünün temel belirleyicisidir. Yeşil OSB’ler bu dönüşümü bölgesel düzeyde mümkün kılar.',
+          'Sertifikasyon süreci; öz değerlendirme, yerinde denetim ve puanlama aşamalarını içerir. Stratejik bir yol haritasıyla süreç yönetildiğinde Yeşil OSB sertifikası; marka değeri, katılımcı çekiciliği ve kamu destekleri açısından ciddi avantajlar getirir.',
+        ],
+      },
+      {
+        id: 'akilli-osb',
+        title: 'Akıllı OSB ve Dijital Dönüşüm',
+        paragraphs: [
+          'Akıllı OSB; büyük veri, yapay zeka, IoT ve süreç otomasyonu teknolojilerinin OSB yönetimine entegre edildiği çağdaş yönetim modelidir. Enerji ölçümü, atık yönetimi, güvenlik, katılımcı iletişimi ve operasyonel raporlama süreçleri dijital altyapıya taşınır.',
+          'Dijital arşivleme ve kurumsal hafızanın korunması; organ değişikliklerinde bilgi kaybını önlemek, denetim süreçlerini hızlandırmak ve karar kalitesini artırmak için kritik öneme sahiptir.',
+          'Veri odaklı karar destek mekanizmaları; yatırım değerlendirmesi, arsa tahsis önceliklendirmesi ve altyapı planlamasında OSB yöneticilerine somut avantaj sağlar.',
+        ],
+      },
+      {
+        id: 'is-surekliligi',
+        title: 'İş Sürekliliği ve Risk Yönetimi',
+        paragraphs: [
+          'Endüstriyel altyapıların afetlere, siber saldırılara ve beklenmedik kesintilere karşı dayanıklılığı artık OSB’ler için bir yükümlülüktür. OSB Uygulama Yönetmeliği çerçevesinde İş Sürekliliği Planı (İSP) hazırlığı resmi bir süreç haline gelmiştir.',
+          'İSP; kritik süreçlerin kesintisiz devamı için risk analizi, müdahale planları, yedekleme stratejileri ve kurtarma prosedürlerini içerir. Planın uygulanabilirliği, düzenli tatbikatlar ve güncel risk değerlendirmeleriyle test edilir.',
+          'Acil durum yönetimi; geleneksel yöntemlerin ötesinde, dayanıklılık (resilience) odaklı stratejik bir yaklaşım gerektirir. Bu, hem mevzuat uyumu hem de paydaş güveni açısından kritik bir ayırt edici unsurdur.',
+        ],
+      },
+      {
+        id: 'ant-ile-calisma',
+        title: 'ANT Yönetim Danışmanlık ile Çalışma Süreci',
+        paragraphs: [
+          'ANT Yönetim Danışmanlık olarak; 15+ yıllık Sanayi ve Teknoloji Bakanlığı müfettişlik tecrübesiyle OSB’lerin kuruluşundan işletmesine, mevzuat uyumundan dijital dönüşümüne kadar tüm süreçlerde stratejik çözüm ortağıyız.',
+          'Çalışma sürecimiz; ücretsiz ön görüşme, ihtiyaç analizi, kapsam tanımlama, yol haritası oluşturma, uygulama ve izleme aşamalarından oluşur. Her projede; mühendislik disipliniyle hazırlanmış iş planı, ölçülebilir çıktılar, düzenli raporlama ve denetim hazırlığı içeren bir yapı sunarız.',
+          'Sıfır hata prensibi, veri odaklı karar destek mekanizmaları ve kamu tecrübesi; bizi sadece bir danışman değil, OSB’nin uzun vadeli başarısının ortağı haline getirir.',
+        ],
+      },
+    ],
+    ctaHeading: 'OSB süreçleriniz için stratejik çözüm ortağı arıyorsanız',
+    ctaText:
+      'Ücretsiz ön görüşme ile ihtiyaçlarınızı bağlayıcı olmayan şekilde birlikte değerlendirelim.',
+    ctaLabel: 'Ücretsiz Ön Görüşme Planlayın',
+  },
+  glossary: {
+    pageBadge: 'OSB, Ar-Ge ve Teşvik Sözlüğü',
+    pageTitleStart: 'OSB ve Sanayi',
+    pageTitleAccent: 'Terimler Sözlüğü',
+    pageDescription:
+      'Organize Sanayi Bölgesi (OSB), Ar-Ge ve Tasarım Merkezi, Teknopark, KOSGEB-TÜBİTAK ve yeşil dönüşüm süreçlerinde sıkça karşılaşılan 50+ temel kavramın özet açıklamaları.',
+    searchPlaceholder: 'Terim ara…',
+    emptyState: 'Aradığınız terime ilişkin sonuç bulunamadı.',
+    backToTop: 'Yukarı çık',
+    categories: [
+      {
+        title: 'Organize Sanayi Bölgesi (OSB)',
+        terms: [
+          {
+            term: 'Organize Sanayi Bölgesi (OSB)',
+            definition:
+              'Sanayinin uygun görülen alanlarda yapılanmasını sağlamak amacıyla 4562 sayılı Kanun kapsamında kurulan, altyapısı ortaklaşa sunulan mal ve hizmet üretim bölgesi.',
+          },
+          {
+            term: '4562 sayılı OSB Kanunu',
+            definition:
+              'Organize Sanayi Bölgelerinin kuruluşunu, organlarını, altyapı ve denetim süreçlerini düzenleyen temel yasal çerçeve.',
+          },
+          {
+            term: 'OSB Uygulama Yönetmeliği',
+            definition:
+              '4562 sayılı Kanun’un uygulanmasına ilişkin ayrıntılı hükümleri düzenleyen, prosedürel konuları kapsayan ikincil mevzuat.',
+          },
+          {
+            term: 'Müteşebbis Heyet',
+            definition:
+              'OSB’nin kuruluş aşamasında karar organı olarak görev yapan; il özel idaresi, belediye, ticaret/sanayi odası ve sanayici temsilcilerinden oluşan kurul.',
+          },
+          {
+            term: 'Genel Kurul',
+            definition:
+              'Müteşebbis Heyetin yerini alan; katılımcıların temsil edildiği en üst karar organı. OSB sicile kaydından sonra göreve gelir.',
+          },
+          {
+            term: 'Yönetim Kurulu',
+            definition:
+              'OSB’nin icrai organı; arsa tahsisi, ihale, sözleşmeler ve günlük operasyon kararlarını alır.',
+          },
+          {
+            term: 'Denetim Kurulu',
+            definition:
+              'OSB’nin mali ve idari işlemlerini denetleyen; raporunu Genel Kurul’a sunan bağımsız organ.',
+          },
+          {
+            term: 'Bölge Müdürlüğü',
+            definition:
+              'OSB’nin günlük idari ve teknik hizmetlerini yürüten profesyonel yönetim birimi.',
+          },
+          {
+            term: 'Katılımcı',
+            definition:
+              'OSB içinde parsel tahsisi almış ve faaliyet gösteren sanayi kuruluşu.',
+          },
+          {
+            term: 'Ön Tahsis',
+            definition:
+              'Yatırım ve üretim taahhütlerine bağlı olarak, kesin tahsise dönüşmek üzere verilen geçici arsa tahsisi.',
+          },
+          {
+            term: 'Kesin Tahsis',
+            definition:
+              'Ön tahsis şartlarının yerine getirilmesinin ardından, katılımcıya arsa üzerinde kalıcı hak veren tahsis işlemi.',
+          },
+          {
+            term: 'Tahsis İptali',
+            definition:
+              'Katılımcının yatırım veya üretim taahhütlerini süresinde yerine getirmemesi halinde Yönetim Kurulu tarafından tahsisin geri alınması.',
+          },
+          {
+            term: 'Huzur Hakkı',
+            definition:
+              'OSB organ üyelerine, toplantı başına veya aylık olarak ödenen; Cumhurbaşkanlığı Kararı ile belirlenen üst limite tâbi ücret.',
+          },
+          {
+            term: 'Bakanlık Kredisi',
+            definition:
+              'Sanayi ve Teknoloji Bakanlığı’nca OSB’lerin altyapı ve genel idare giderleri için sağlanan kredi desteği.',
+          },
+          {
+            term: 'Hakediş Raporu',
+            definition:
+              'Altyapı projelerinde ilerleme düzeyine göre hak edilen ödeme tutarını ortaya koyan teknik belge.',
+          },
+          {
+            term: 'Yeşil OSB',
+            definition:
+              'Enerji verimliliği, atık yönetimi ve karbon ayak izi kriterleri çerçevesinde Bakanlıkça sertifikalandırılan sürdürülebilirlik performans düzeyi.',
+          },
+          {
+            term: 'Akıllı OSB',
+            definition:
+              'Büyük veri, yapay zeka, IoT ve süreç otomasyonu teknolojilerinin OSB yönetimine entegre edildiği dijital dönüşüm modeli.',
+          },
+          {
+            term: 'İş Sürekliliği Planı (İSP)',
+            definition:
+              'Kritik süreçlerin kesintisiz devamı için risk analizi, müdahale ve kurtarma prosedürlerini tanımlayan belge.',
+          },
+        ],
+      },
+      {
+        title: 'Ar-Ge ve Tasarım Merkezi',
+        terms: [
+          {
+            term: 'Ar-Ge Merkezi',
+            definition:
+              '5746 sayılı Kanun kapsamında, asgari Ar-Ge personeli ve fiziksel altyapı şartıyla Bakanlık onayıyla kurulan, Ar-Ge indirimlerinden yararlanan birim.',
+          },
+          {
+            term: 'Tasarım Merkezi',
+            definition:
+              'Endüstriyel tasarım faaliyetleri yürüten, 5746 sayılı Kanun teşviklerinden yararlanan, Ar-Ge Merkezi ile benzer nitelikte tescilli birim.',
+          },
+          {
+            term: '5746 sayılı Kanun',
+            definition:
+              'Ar-Ge ve Tasarım Faaliyetlerinin Desteklenmesi Hakkında Kanun; Ar-Ge indirimi, stopaj teşviki ve SGK prim desteği gibi avantajları düzenler.',
+          },
+          {
+            term: 'Ar-Ge İndirimi',
+            definition:
+              'Ar-Ge harcamalarının %100’ünün kurumlar vergisi matrahından düşülmesine imkân veren vergi avantajı.',
+          },
+          {
+            term: 'Tam Zamanlı Eşdeğer (TZE)',
+            definition:
+              'Ar-Ge personelinin çalışma süresini tam zamanlı eşdeğer olarak ölçen; Ar-Ge Merkezi eşikleri için kullanılan hesaplama yöntemi.',
+          },
+          {
+            term: 'Adam/Ay',
+            definition:
+              'Bir projede ortalama bir kişinin bir ayda yaptığı işi temsil eden çalışma süresi birimi.',
+          },
+          {
+            term: 'Faaliyet Raporu',
+            definition:
+              'Ar-Ge veya Tasarım Merkezi’nin yıllık Ar-Ge faaliyetlerini, çıktılarını ve harcamalarını Bakanlığa sunulmak üzere düzenleyen resmi rapor.',
+          },
+          {
+            term: 'Ön Denetim',
+            definition:
+              'Bakanlık denetiminden önce danışman tarafından gerçekleştirilen simülasyon niteliğindeki risk analizi incelemesi.',
+          },
+        ],
+      },
+      {
+        title: 'Teknopark ve TGB',
+        terms: [
+          {
+            term: 'Teknopark / Teknoloji Geliştirme Bölgesi (TGB)',
+            definition:
+              '4691 sayılı Kanun kapsamında kurulan, Ar-Ge, tasarım ve yazılım faaliyetlerinin vergi istisnalarından yararlandığı özel ekonomik bölge.',
+          },
+          {
+            term: '4691 sayılı Kanun',
+            definition:
+              'Teknoloji Geliştirme Bölgeleri Kanunu; bölge içindeki firmalara sağlanan teşvikleri ve yönetici şirket operasyonlarını düzenler.',
+          },
+          {
+            term: 'Yönetici Şirket',
+            definition:
+              'TGB’nin planlama, işletme, kiralama, proje kabulü ve Bakanlıkla koordinasyon süreçlerini yürüten tüzel kişilik.',
+          },
+          {
+            term: 'Teknopark Portalı',
+            definition:
+              'Bakanlıkça yönetilen; TGB proje girişleri, muafiyet belgeleri, personel kayıtları ve denetim süreçlerinin dijital olarak yürütüldüğü sistem.',
+          },
+          {
+            term: 'Teknopark Muafiyeti',
+            definition:
+              '4691 sayılı Kanun kapsamında bölge içi firmalara sağlanan gelir-kurumlar vergisi, KDV ve stopaj istisnaları paketi.',
+          },
+          {
+            term: 'Kuluçka Merkezi (Girişim Ofisi - GO)',
+            definition:
+              '2022 sonrası Bakanlık izniyle TGB alanı dışında da kurulabilen, erken aşama girişimleri barındıran yapılar.',
+          },
+        ],
+      },
+      {
+        title: 'KOSGEB, TÜBİTAK ve Hibe-Teşvik',
+        terms: [
+          {
+            term: 'KOSGEB',
+            definition:
+              'Küçük ve Orta Ölçekli İşletmeleri Geliştirme ve Destekleme İdaresi Başkanlığı; KOBİ’lere yönelik hibe ve proje desteklerini yürütür.',
+          },
+          {
+            term: 'KOBİ',
+            definition:
+              'Çalışan sayısı, yıllık ciro ve bilanço değerlerine göre mevzuatta tanımlanan küçük ve orta ölçekli işletme.',
+          },
+          {
+            term: 'KOBİ Bilgi Beyannamesi',
+            definition:
+              'Bir işletmenin KOBİ statüsünü ortaya koyan ve KOSGEB desteklerine başvuru için güncel tutulması gereken belge.',
+          },
+          {
+            term: 'TÜBİTAK',
+            definition:
+              'Türkiye Bilimsel ve Teknolojik Araştırma Kurumu; Ar-Ge ve inovasyon projelerinin değerlendirilmesi ve desteklenmesi süreçlerinden sorumludur.',
+          },
+          {
+            term: 'TÜBİTAK 1501',
+            definition:
+              'Sanayi Ar-Ge Projeleri Destekleme Programı; orta ve büyük ölçekli firmalara yönelik hibe destek çağrısı.',
+          },
+          {
+            term: 'TÜBİTAK 1507',
+            definition:
+              'KOBİ Ar-Ge Başlangıç Destek Programı; KOBİ’lerin ilk beş Ar-Ge projesi için hibe desteği sağlar.',
+          },
+        ],
+      },
+      {
+        title: 'Yeşil Dönüşüm ve Diğer',
+        terms: [
+          {
+            term: 'Avrupa Yeşil Mutabakatı',
+            definition:
+              'Avrupa Birliği’nin 2050 karbon-nötr hedefi kapsamında yayımladığı yeşil dönüşüm strateji çerçevesi.',
+          },
+          {
+            term: 'Sınırda Karbon Düzenlemesi (CBAM)',
+            definition:
+              'AB’ye ithal edilen belirli ürünler için karbon ayak izine bağlı olarak uygulanacak sınır vergisi mekanizması.',
+          },
+          {
+            term: 'Sürdürülebilirlik Sertifikası',
+            definition:
+              'Enerji, su, atık ve karbon ayak izi performansının bağımsız biçimde doğrulandığı belge (ör. Yeşil OSB, LEED, BREEAM).',
+          },
+          {
+            term: 'KVKK',
+            definition:
+              '6698 sayılı Kişisel Verilerin Korunması Kanunu; kişisel veri işlemenin hukuki çerçevesini düzenler.',
+          },
+          {
+            term: 'Resilience (Dayanıklılık)',
+            definition:
+              'Kuruluşun beklenmedik kesintilere rağmen faaliyetlerini sürdürebilme ve hızla toparlanma kapasitesi.',
+          },
+          {
+            term: 'Dijital Dönüşüm',
+            definition:
+              'İş süreçlerinin dijital teknolojiler yardımıyla yeniden tasarlanarak verimlilik, şeffaflık ve kalite kazandırılması.',
           },
         ],
       },
@@ -1484,9 +2086,9 @@ const en: Dictionary = {
       { label: 'Strategic Planning', href: '/#hizmetlerimiz' },
     ],
     legalLinks: [
-      { label: 'Privacy Policy', href: '#' },
-      { label: 'GDPR Notice', href: '#' },
-      { label: 'Cookie Policy', href: '#' },
+      { label: 'Privacy Policy', href: '/gizlilik' },
+      { label: 'KVKK Notice', href: '/kvkk' },
+      { label: 'Cookie Policy', href: '/cerez' },
     ],
     workingHours: '',
     copyright: (year) => `© ${year} ANT Consulting. All rights reserved.`,
@@ -1508,6 +2110,7 @@ const en: Dictionary = {
     relatedFaqDesc:
       'Expert answers on OIZ regulation, R&D Centre setup and KOSGEB-TÜBİTAK projects.',
     otherPostsTitle: 'Other Articles',
+    sourcesTitle: 'Sources and Official References',
     backToBlog: 'Back to blog',
     disclaimerTitle: 'Disclaimer',
     posts: [
@@ -1565,6 +2168,11 @@ const en: Dictionary = {
             '#Governance',
             '#Transparency',
             '#InvestorConfidence',
+          ],
+          sources: [
+            { label: 'Law No. 4562 on Organized Industrial Zones — Turkish Legislation Database', url: 'https://www.mevzuat.gov.tr/' },
+            { label: 'Ministry of Industry and Technology (Türkiye) — Industrial Zones', url: 'https://www.sanayi.gov.tr/' },
+            { label: 'OSBÜK — OIZ Umbrella Organization of Türkiye', url: 'https://www.osbuk.org.tr/' },
           ],
           disclaimer:
             'The views expressed above reflect purely personal opinions and are not the official position of the Ministry or other relevant authorities. Please note that the practices of the Ministry or other authorities on this topic may differ.',
@@ -1624,6 +2232,11 @@ const en: Dictionary = {
             '#OIZ',
             '#CleanTech',
           ],
+          sources: [
+            { label: 'Ministry of Industry and Technology — Green OIZ', url: 'https://www.sanayi.gov.tr/' },
+            { label: 'Ministry of Trade — European Green Deal', url: 'https://www.ticaret.gov.tr/' },
+            { label: 'OSBÜK — OIZ Umbrella Organization of Türkiye', url: 'https://www.osbuk.org.tr/' },
+          ],
         },
       },
       {
@@ -1681,6 +2294,11 @@ const en: Dictionary = {
             '#BCP',
             '#BCMS',
           ],
+          sources: [
+            { label: 'OIZ Implementing Regulation — Turkish Legislation Database', url: 'https://www.mevzuat.gov.tr/' },
+            { label: 'Ministry of Industry and Technology — Industrial Zones', url: 'https://www.sanayi.gov.tr/' },
+            { label: 'AFAD — Disaster and Emergency Management Authority', url: 'https://www.afad.gov.tr/' },
+          ],
         },
       },
       {
@@ -1723,6 +2341,11 @@ const en: Dictionary = {
             '#Investment',
             '#IndustrialZones',
             '#Valuation',
+          ],
+          sources: [
+            { label: 'Law No. 4562 on Organized Industrial Zones — Turkish Legislation Database', url: 'https://www.mevzuat.gov.tr/' },
+            { label: 'Ministry of Industry and Technology — Industrial Zones', url: 'https://www.sanayi.gov.tr/' },
+            { label: 'OSBÜK — OIZ Umbrella Organization of Türkiye', url: 'https://www.osbuk.org.tr/' },
           ],
         },
       },
@@ -1781,6 +2404,11 @@ const en: Dictionary = {
             '#IncubationCentre',
             '#EntrepreneurshipOffice',
           ],
+          sources: [
+            { label: 'Ministry of Industry and Technology — Technology Development Zones', url: 'https://www.sanayi.gov.tr/' },
+            { label: 'KOSGEB — SME Entrepreneurship Support', url: 'https://www.kosgeb.gov.tr/' },
+            { label: 'TÜBİTAK — Entrepreneurship and Innovation Support', url: 'https://www.tubitak.gov.tr/' },
+          ],
         },
       },
       {
@@ -1834,6 +2462,11 @@ const en: Dictionary = {
             '#CorporateGovernance',
             '#IndustrialZones',
             '#RegulatoryCompliance',
+          ],
+          sources: [
+            { label: 'Law No. 4562 on Organized Industrial Zones — Turkish Legislation Database', url: 'https://www.mevzuat.gov.tr/' },
+            { label: 'Official Gazette of Türkiye — Presidential Decrees', url: 'https://www.resmigazete.gov.tr/' },
+            { label: 'OSBÜK — OIZ Umbrella Organization of Türkiye', url: 'https://www.osbuk.org.tr/' },
           ],
         },
       },
@@ -2020,6 +2653,358 @@ const en: Dictionary = {
             answer:
               'Yes. ANT Management Consulting serves OIZs, R&D and Design Centres, Technopark managing companies and SMEs across all 81 provinces of Turkey through a hybrid (on-site + remote) delivery model.',
           },
+        ],
+      },
+    ],
+  },
+  legal: {
+    lastUpdatedLabel: 'Last updated',
+    lastUpdatedDate: '23 April 2026',
+    disclaimer:
+      'This document is provided for informational purposes only and does not constitute legal advice. Please consult qualified counsel for a tailored legal framework.',
+    privacy: {
+      pageBadge: 'Legal',
+      pageTitleStart: 'Privacy',
+      pageTitleAccent: 'Policy',
+      pageDescription:
+        'At ANT Management Consulting we value visitor privacy. This policy summarises, in plain language, what data we collect, how we use it and the rights you have.',
+      sections: [
+        {
+          title: 'Data We Collect',
+          paragraphs: [
+            'We collect the data you submit through our contact form: full name, email address, phone number, subject and message content.',
+            'We also store your language preference (“tr” or “en”) in your browser’s local storage. This is not a cookie; it is not shared with third parties.',
+            'Our site does not run analytics or advertising trackers. We do not use Google Analytics, Facebook Pixel or similar tracking tools.',
+          ],
+        },
+        {
+          title: 'Purpose of Data Use',
+          paragraphs: [
+            'Contact form data is used solely to respond to your inquiry and to carry out our consulting processes.',
+            'We do not maintain marketing email lists and do not send commercial messages without your explicit consent.',
+          ],
+        },
+        {
+          title: 'Third-Party Service Providers',
+          paragraphs: [
+            'Form submissions are relayed via FormSubmit (formsubmit.co). Data entered into the form is transmitted through this service to our email at kurumsal@antyonetim.com. FormSubmit operates in the United States, so a cross-border data transfer is involved.',
+            'Site typography is loaded from Google Fonts. Google Fonts may process technical information such as IP addresses during the standard font delivery process.',
+          ],
+        },
+        {
+          title: 'Data Retention',
+          paragraphs: [
+            'Contact form data is retained only for as long as necessary to resolve your inquiry and manage any potential contractual relationship. This is typically 2 years from the last communication; specific legal retention obligations may extend this period.',
+          ],
+        },
+        {
+          title: 'Security Measures',
+          paragraphs: [
+            'Our site is served over HTTPS. The contact form includes a simple math-based security check and a honeypot field to mitigate automated submissions.',
+          ],
+        },
+        {
+          title: 'Cookies',
+          paragraphs: [
+            'We do not use analytics or advertising cookies. Only browser local storage is used to persist your language preference. See the Cookie Policy page for details.',
+          ],
+        },
+        {
+          title: 'Your Rights and Contact',
+          paragraphs: [
+            'For rights under Turkey’s Law No. 6698 on the Protection of Personal Data (KVKK), please see our KVKK Notice page.',
+            'For any privacy-related questions, reach us at kurumsal@antyonetim.com.',
+          ],
+        },
+      ],
+    },
+    kvkk: {
+      pageBadge: 'Legal',
+      pageTitleStart: 'KVKK',
+      pageTitleAccent: 'Notice',
+      pageDescription:
+        'Information notice prepared pursuant to Turkey’s Law No. 6698 on the Protection of Personal Data (KVKK), describing the personal data processed by ANT Management Consulting as data controller.',
+      sections: [
+        {
+          title: '1. Data Controller',
+          paragraphs: [
+            'This notice is prepared by ANT Management Consulting as data controller, pursuant to Article 10 of Law No. 6698.',
+            'Contact: kurumsal@antyonetim.com · +90 (506) 986 26 20',
+          ],
+        },
+        {
+          title: '2. Categories of Personal Data Processed',
+          paragraphs: [
+            'Identity data: full name.',
+            'Contact data: email address, phone number.',
+            'Customer transaction data: contact form subject and message content.',
+            'Transaction security data: form completion time and security check response (to detect bot traffic).',
+          ],
+        },
+        {
+          title: '3. Purposes of Processing',
+          paragraphs: [
+            'Responding to visitor inquiries and providing information about our consulting services.',
+            'Establishing and performing a potential consulting engagement.',
+            'Communication management consistent with applicable commercial-message legislation.',
+            'Limited transaction security processing to prevent bot traffic and abusive form submissions.',
+          ],
+        },
+        {
+          title: '4. Collection Method and Legal Basis',
+          paragraphs: [
+            'Data is collected electronically through the contact form on our website.',
+            'Legal bases include KVKK Article 5/2-c (directly related to the establishment or performance of a contract) and KVKK Article 5/2-f (legitimate interest of the data controller without harming the fundamental rights and freedoms of the data subject), alongside Article 5/1 (explicit consent).',
+          ],
+        },
+        {
+          title: '5. Data Transfers',
+          paragraphs: [
+            'Form data is processed via FormSubmit (formsubmit.co), a US-based service; an international transfer is therefore involved. This transfer is strictly necessary for the performance of the service.',
+            'Transfers may be made to competent public authorities when required by law.',
+          ],
+        },
+        {
+          title: '6. Retention Period',
+          paragraphs: [
+            'Personal data is retained only for the period required by the processing purposes, within the limits of applicable legislation. The standard retention period for form data is 2 years from the last communication.',
+          ],
+        },
+        {
+          title: '7. Rights under KVKK Article 11',
+          paragraphs: [
+            'You have the right to: learn whether your personal data is being processed; request information about processing; learn the purpose of processing and whether the data is used consistent with that purpose; know the third parties to whom data is transferred domestically or abroad; request correction of incomplete or inaccurate data; request deletion or destruction; request notification of such actions to third parties; object to an outcome derived from automated processing that is adverse to you; and seek compensation for damages arising from unlawful processing.',
+          ],
+        },
+        {
+          title: '8. How to Apply',
+          paragraphs: [
+            'You can submit requests under Article 11 in writing to kurumsal@antyonetim.com. Requests are handled within 30 days in accordance with Article 13 of Law No. 6698.',
+          ],
+        },
+      ],
+    },
+    cookies: {
+      pageBadge: 'Legal',
+      pageTitleStart: 'Cookie',
+      pageTitleAccent: 'Policy',
+      pageDescription:
+        'Our site uses no advertising or analytics cookies. This page transparently explains the limited client-side storage we rely on and the third-party requests that occur.',
+      sections: [
+        {
+          title: 'What Is a Cookie?',
+          paragraphs: [
+            'Cookies are small text files placed in your browser when you visit a website. They may be used for session management, user preferences or visitor analytics.',
+          ],
+        },
+        {
+          title: 'Our Cookie Usage',
+          paragraphs: [
+            'There are no analytics, advertising or profiling cookies on our site. We do not use third-party trackers such as Google Analytics, Facebook Pixel or Hotjar.',
+            'A key named “ant-lang” is stored in your browser’s local storage to remember your language preference. Technically this is not a cookie — it is kept only on your device and not sent over the network.',
+          ],
+        },
+        {
+          title: 'Third-Party Service Requests',
+          paragraphs: [
+            'Google Fonts: font files are loaded from fonts.googleapis.com and fonts.gstatic.com for site typography. Google Fonts may process technical information such as IP addresses during standard delivery. Google states that this data is not used for ad targeting.',
+            'FormSubmit: a request is made to formsubmit.co only when the contact form is submitted; it does not passively set cookies.',
+          ],
+        },
+        {
+          title: 'Managing and Deleting Cookies',
+          paragraphs: [
+            'You can clear, block or manage your browser’s local storage and cookies at any time through browser settings. If the language preference is cleared, your browser’s locale will be auto-detected on the next visit.',
+            'Chrome: Settings → Privacy and Security → Cookies and other site data.',
+            'Safari: Preferences → Privacy → Manage Website Data.',
+            'Firefox: Options → Privacy & Security → Cookies and Site Data.',
+          ],
+        },
+      ],
+    },
+  },
+  osbPillar: {
+    pageBadge: 'Comprehensive Guide',
+    pageTitleStart: 'OIZ Consulting —',
+    pageTitleAccent: 'All Processes in One Guide',
+    pageDescription:
+      'A comprehensive guide covering Organized Industrial Zone (OIZ) regulation, land allocation, governance bodies, infrastructure projects, Green OIZ transition, Smart OIZ digitalization and business continuity — in one place.',
+    tocTitle: 'What You’ll Find in This Guide',
+    sections: [
+      {
+        id: 'osb-nedir',
+        title: 'What is an OIZ and Why Does It Matter?',
+        paragraphs: [
+          'An Organized Industrial Zone (OIZ) is a designated manufacturing area established to enable planned industrial development, ensure production to defined standards and provide environmental accountability. Turkish Law No. 4562 is the primary regulatory framework.',
+          'Over 300 OIZs form the backbone of Turkish industry and account for a significant share of manufacturing output. Companies operating in these zones continuously interact with OIZ management on infrastructure, energy, waste and sustainability matters.',
+          'Success of an OIZ is not limited to land allocation — it is determined by governance quality, regulatory compliance, financial discipline, infrastructure maintenance and digital transformation capacity. OIZs are therefore moving towards increasingly professional management.',
+        ],
+      },
+      {
+        id: 'mevzuat',
+        title: 'OIZ Regulation and Law No. 4562',
+        paragraphs: [
+          'Law No. 4562 governs OIZ establishment, governance bodies, infrastructure, participant contracts and audit processes. It is complemented by the OIZ Implementing Regulation.',
+          'The Implementing Regulation details the duties and powers of bodies such as the Founding Committee, General Assembly, Board of Directors and Supervisory Board, together with land allocation procedures, infrastructure projects, tenders, ministry credits and progress-payment management.',
+          'Regulatory compliance is not just a legal duty; it directly affects the civil and criminal liability of board members. Lawful decisions, accurate minutes and carefully drafted participant contracts significantly reduce dispute risk.',
+        ],
+        bullets: [
+          'Primary instrument: Law No. 4562',
+          'Secondary: OIZ Implementing Regulation',
+          'Bodies: Founding Committee, General Assembly, Board of Directors, Supervisory Board',
+          'Oversight: Ministry of Industry and Technology audits',
+        ],
+      },
+      {
+        id: 'arsa-tahsis',
+        title: 'Land Allocation: Pre-Allocation, Allocation and Revocation',
+        paragraphs: [
+          'In an OIZ, land is allocated based on the participant’s investment profile, sector alignment and financial capacity — first as a pre-allocation and then, upon fulfilment of investment and production commitments, as a definitive allocation by resolution of the Board of Directors.',
+          'At the pre-allocation stage, the method for determining the definitive allocation price must be clearly specified in the contract. Otherwise inflation, valuation differences and currency movements can trigger disputes.',
+          'Failure to commence investment, reach production or meet commitments within regulatory timelines may lead to revocation. Revocation processes must be managed professionally given their legal, valuation and potential-damages implications.',
+        ],
+      },
+      {
+        id: 'organ-yonetimi',
+        title: 'Governance Bodies and Liabilities',
+        paragraphs: [
+          'Decision-making bodies include the Founding Committee at establishment, then the General Assembly, Board of Directors and Supervisory Board. Each body’s duties, limits and compensation rules are defined in the Implementing Regulation.',
+          'Civil and criminal liability of board members is significant. Decisions taken in breach of legislation can affect personal assets, create bans from future public tenders and trigger other sanctions. Attendance-fee payments are also subject to upper limits set by Presidential Decree.',
+          'Raising governance quality relies on up-to-date principle decisions, directives, internal rules and regularly reviewed audit reports.',
+        ],
+      },
+      {
+        id: 'altyapi',
+        title: 'Infrastructure Project Management and Tenders',
+        paragraphs: [
+          'An OIZ’s value proposition depends directly on timely, high-quality delivery of electricity, water, sewage, natural gas, treatment plants and communication infrastructure — making infrastructure project management one of its most visible and capital-intensive processes.',
+          'Ministry credits for infrastructure and financing processes for general administrative expenses require domain expertise on progress-payment approvals, tender management and service-contract drafting.',
+          'Transparent tender management, competitive pricing and full regulatory compliance are essential to maintain the confidence of participants and oversight bodies alike.',
+        ],
+      },
+      {
+        id: 'yesil-osb',
+        title: 'Green OIZ and Sustainability',
+        paragraphs: [
+          'Green OIZ is a performance tier certified by the Ministry of Industry and Technology based on energy efficiency, renewable-energy use, waste management, water conservation and carbon footprint.',
+          'Alignment with the European Green Deal and the Carbon Border Adjustment Mechanism (CBAM) is no longer optional for export-oriented industry; it is now a core determinant of competitiveness. Green OIZs make this transition possible at zone scale.',
+          'Certification involves self-assessment, on-site audit and scoring. Managed strategically, Green OIZ certification delivers significant advantages in brand equity, participant attractiveness and public support programmes.',
+        ],
+      },
+      {
+        id: 'akilli-osb',
+        title: 'Smart OIZ and Digital Transformation',
+        paragraphs: [
+          'Smart OIZ is a modern management model where big data, AI, IoT and process automation are integrated into OIZ management — moving energy metering, waste, security, participant communications and operational reporting onto a digital backbone.',
+          'Digital archiving and institutional-memory preservation are critical to avoid knowledge loss during board transitions, to accelerate audits and to raise decision quality.',
+          'Data-driven decision-support mechanisms offer tangible advantages in investment evaluation, allocation prioritisation and infrastructure planning.',
+        ],
+      },
+      {
+        id: 'is-surekliligi',
+        title: 'Business Continuity and Risk Management',
+        paragraphs: [
+          'Resilience against disasters, cyber incidents and unexpected disruptions is now a responsibility for OIZs. The OIZ Implementing Regulation has formalised Business Continuity Plan (BCP) preparation as an official process.',
+          'A BCP sets out risk analysis, response plans, backup strategies and recovery procedures for uninterrupted operation of critical processes. Plan viability is tested through regular drills and refreshed risk assessments.',
+          'Emergency management requires a resilience-oriented strategic approach beyond traditional methods — a key differentiator for both compliance and stakeholder trust.',
+        ],
+      },
+      {
+        id: 'ant-ile-calisma',
+        title: 'Working with ANT Management Consulting',
+        paragraphs: [
+          'With 15+ years of inspection experience at the Ministry of Industry and Technology, we serve as a strategic partner across the full OIZ lifecycle — from establishment and operation to regulatory compliance and digital transformation.',
+          'Our engagement follows five stages: free introductory call, needs assessment, scope definition, roadmap, implementation and monitoring. Every project includes an engineering-grade work plan, measurable outputs, regular reporting and audit-ready practices.',
+          'The combination of zero-error discipline, data-driven decision support and public-sector experience positions us not just as a consultant but as a partner in long-term OIZ success.',
+        ],
+      },
+    ],
+    ctaHeading: 'Looking for a strategic partner across your OIZ lifecycle?',
+    ctaText:
+      'Let’s evaluate your needs in a non-binding free introductory call.',
+    ctaLabel: 'Schedule a Free Introductory Call',
+  },
+  glossary: {
+    pageBadge: 'OIZ, R&D and Incentive Glossary',
+    pageTitleStart: 'OIZ and Industrial',
+    pageTitleAccent: 'Terminology Glossary',
+    pageDescription:
+      'Concise definitions of 50+ key concepts around Organized Industrial Zones (OIZ), R&D and Design Centres, Technoparks, KOSGEB-TÜBİTAK and green transformation.',
+    searchPlaceholder: 'Search term…',
+    emptyState: 'No matching terms found.',
+    backToTop: 'Back to top',
+    categories: [
+      {
+        title: 'Organized Industrial Zone (OIZ)',
+        terms: [
+          {
+            term: 'Organized Industrial Zone (OIZ)',
+            definition:
+              'A designated manufacturing area established under Law No. 4562 where infrastructure is delivered collectively to enable planned industrial development.',
+          },
+          { term: 'Law No. 4562 (OIZ Law)', definition: 'Primary Turkish law governing OIZ establishment, governance bodies and infrastructure and oversight processes.' },
+          { term: 'OIZ Implementing Regulation', definition: 'Secondary legislation detailing application of Law No. 4562 including procedural provisions.' },
+          { term: 'Founding Committee', definition: 'Founding governance body composed of representatives from local administrations and chambers of commerce/industry.' },
+          { term: 'General Assembly', definition: 'Highest decision-making body, replacing the Founding Committee after OIZ registration.' },
+          { term: 'Board of Directors', definition: 'Executive body responsible for allocations, tenders, contracts and day-to-day operations.' },
+          { term: 'Supervisory Board', definition: 'Independent body auditing financial and administrative operations and reporting to the General Assembly.' },
+          { term: 'Regional Directorate', definition: 'Professional management unit running daily administrative and technical services of the OIZ.' },
+          { term: 'Participant', definition: 'A manufacturer that has received a parcel allocation in an OIZ and operates from that parcel.' },
+          { term: 'Pre-Allocation', definition: 'Provisional land allocation contingent on fulfilment of investment and production commitments.' },
+          { term: 'Definitive Allocation', definition: 'Permanent land grant to a participant after pre-allocation conditions are fulfilled.' },
+          { term: 'Allocation Revocation', definition: 'Withdrawal of allocation by the Board where investment or production commitments are not met within regulatory timelines.' },
+          { term: 'Attendance Fee', definition: 'Compensation paid to OIZ body members per meeting or per month, capped by Presidential Decree.' },
+          { term: 'Ministry Credit', definition: 'Credit support provided by the Ministry of Industry and Technology for OIZ infrastructure and general administration.' },
+          { term: 'Progress Payment', definition: 'Payment in infrastructure projects tied to the completion percentage, evidenced by a technical report.' },
+          { term: 'Green OIZ', definition: 'Sustainability performance tier certified by the Ministry based on energy, waste, water and carbon criteria.' },
+          { term: 'Smart OIZ', definition: 'Digital transformation model integrating big data, AI, IoT and automation into OIZ management.' },
+          { term: 'Business Continuity Plan (BCP)', definition: 'Document defining risk analysis, response and recovery procedures for uninterrupted critical operations.' },
+        ],
+      },
+      {
+        title: 'R&D and Design Centre',
+        terms: [
+          { term: 'R&D Centre', definition: 'Certified unit under Law No. 5746 benefiting from R&D deduction, subject to minimum staff and facility requirements.' },
+          { term: 'Design Centre', definition: 'Unit focused on industrial design benefiting from incentives similar to R&D Centres under Law No. 5746.' },
+          { term: 'Law No. 5746', definition: 'Law on Supporting R&D and Design Activities, defining R&D deduction, withholding incentive and social-security premium support.' },
+          { term: 'R&D Deduction', definition: 'Tax advantage allowing 100% of eligible R&D expenses to be deducted from the corporate tax base.' },
+          { term: 'Full-Time Equivalent (FTE)', definition: 'Calculation method measuring R&D personnel work time for eligibility thresholds.' },
+          { term: 'Person-Month', definition: 'Work-time unit representing one person working for one month on average on a project.' },
+          { term: 'Activity Report', definition: 'Annual report documenting R&D or Design Centre activities, outputs and expenses to the Ministry.' },
+          { term: 'Pre-Audit', definition: 'Advisor-led simulation of the Ministry audit to detect and remediate risk findings in advance.' },
+        ],
+      },
+      {
+        title: 'Technopark and TDZ',
+        terms: [
+          { term: 'Technopark / Technology Development Zone (TDZ)', definition: 'Special economic zone established under Law No. 4691 where R&D, design and software activities enjoy tax exemptions.' },
+          { term: 'Law No. 4691', definition: 'Law on Technology Development Zones defining incentives and managing-company operations.' },
+          { term: 'Managing Company', definition: 'Legal entity handling planning, operation, leasing, project admission and Ministry coordination of a TDZ.' },
+          { term: 'Technopark Portal', definition: 'Ministry-managed system used for TDZ project submissions, exemption certificates, personnel records and audits.' },
+          { term: 'Technopark Exemption', definition: 'Bundle of income/corporate tax, VAT and withholding exemptions granted to zone firms under Law No. 4691.' },
+          { term: 'Incubation Centre (GO)', definition: 'Early-stage startup facility that, since 2022, may be opened outside the TDZ boundary with Ministry approval.' },
+        ],
+      },
+      {
+        title: 'KOSGEB, TÜBİTAK and Grants',
+        terms: [
+          { term: 'KOSGEB', definition: 'Small and Medium Enterprises Development Organization of Türkiye; runs SME grant and support programmes.' },
+          { term: 'SME', definition: 'Enterprise classified by headcount, annual turnover or balance-sheet thresholds defined by regulation.' },
+          { term: 'SME Declaration', definition: 'Document proving SME status, kept up to date for KOSGEB applications.' },
+          { term: 'TÜBİTAK', definition: 'Scientific and Technological Research Council of Türkiye; evaluates and funds R&D and innovation projects.' },
+          { term: 'TÜBİTAK 1501', definition: 'Industrial R&D Projects Support Programme targeting medium and large enterprises.' },
+          { term: 'TÜBİTAK 1507', definition: 'SME R&D Start-up Support Programme for SMEs within their first five R&D projects.' },
+        ],
+      },
+      {
+        title: 'Green Transformation and Other',
+        terms: [
+          { term: 'European Green Deal', definition: 'EU strategic framework for the 2050 carbon-neutral target.' },
+          { term: 'Carbon Border Adjustment Mechanism (CBAM)', definition: 'EU border pricing mechanism on certain imports based on their carbon footprint.' },
+          { term: 'Sustainability Certification', definition: 'Third-party verification of energy, water, waste and carbon performance (e.g. Green OIZ, LEED, BREEAM).' },
+          { term: 'KVKK', definition: 'Turkey’s Law No. 6698 on the Protection of Personal Data, the national data-protection framework.' },
+          { term: 'Resilience', definition: 'Capacity of an organisation to sustain operations through disruptions and recover quickly.' },
+          { term: 'Digital Transformation', definition: 'Redesign of business processes through digital technologies for efficiency, transparency and quality.' },
         ],
       },
     ],

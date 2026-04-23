@@ -35,6 +35,90 @@ const organizationLd = {
   ],
 };
 
+const SERVICE_AREA = { '@type': 'Country', name: 'Türkiye' };
+const PROVIDER_REF = { '@id': `${SITE_URL}/#organization` };
+
+const serviceOsbLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  '@id': `${SITE_URL}/#service-osb`,
+  serviceType: 'OSB Danışmanlığı ve Mevzuat Uyumu',
+  name: 'OSB Danışmanlığı ve Mevzuat Uyumu',
+  description:
+    '4562 sayılı Organize Sanayi Bölgeleri Kanunu ve OSB Uygulama Yönetmeliği kapsamında arsa tahsis ve iptal yönetimi, organ yönetimi (Müteşebbis Heyet, Genel Kurul, Yönetim ve Denetim Kurulu), altyapı proje danışmanlığı, ihale süreçleri ve Akıllı OSB dijital dönüşüm süreçlerini uçtan uca yönetiyoruz.',
+  provider: PROVIDER_REF,
+  areaServed: SERVICE_AREA,
+  category: 'OSB Danışmanlığı',
+  audience: { '@type': 'BusinessAudience', audienceType: 'OSB Yönetici Şirketleri ve Katılımcı Firmalar' },
+};
+
+const serviceArgeLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  '@id': `${SITE_URL}/#service-arge`,
+  serviceType: 'Ar-Ge, Tasarım Merkezi ve Teknopark Danışmanlığı',
+  name: 'Ar-Ge, Tasarım Merkezi ve Teknopark Danışmanlığı',
+  description:
+    '5746 sayılı Kanun kapsamında Ar-Ge ve Tasarım Merkezi kurulumu, 4691 sayılı Kanun kapsamında Teknopark muafiyetleri ve yönetici şirket operasyonları, yıllık faaliyet raporu hazırlığı ve ön denetim süreçlerini sıfır hata prensibiyle yürütüyoruz.',
+  provider: PROVIDER_REF,
+  areaServed: SERVICE_AREA,
+  category: 'Ar-Ge ve Tasarım Merkezi Danışmanlığı',
+  audience: { '@type': 'BusinessAudience', audienceType: 'Ar-Ge Yoğun İşletmeler ve Teknopark Firmaları' },
+};
+
+const serviceHibeLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  '@id': `${SITE_URL}/#service-hibe`,
+  serviceType: 'Hibe, Teşvik ve Proje Danışmanlığı',
+  name: 'Hibe, Teşvik ve KOSGEB-TÜBİTAK Proje Danışmanlığı',
+  description:
+    'KOSGEB destek programları, TÜBİTAK 1501 Sanayi Ar-Ge ve 1507 KOBİ Ar-Ge Başlangıç gibi proje çağrıları, AB fonları ve devlet teşviklerinde uygunluk analizi, fizibilite, başvuru dosyası hazırlama, proje yönetimi ve ara dönem raporlama süreçlerini yönetiyoruz.',
+  provider: PROVIDER_REF,
+  areaServed: SERVICE_AREA,
+  category: 'Hibe ve Teşvik Yönetimi',
+  audience: { '@type': 'BusinessAudience', audienceType: 'KOBİ ve Büyük Ölçekli Sanayi Firmaları' },
+};
+
+const serviceKurumsalLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  '@id': `${SITE_URL}/#service-kurumsal`,
+  serviceType: 'Kurumsal Yönetim ve Kapasite Geliştirme',
+  name: 'Kurumsal Yönetim ve Kapasite Geliştirme',
+  description:
+    'OSB organ yönetimi, yönetim ve denetim kurulu üyelerinin hukuki-cezai sorumluluk analizi, kurumsallaşma yol haritası ve yasal risk yönetimi süreçlerini; stratejik planlama ve veri odaklı karar destek mekanizmalarıyla birleştiriyoruz.',
+  provider: PROVIDER_REF,
+  areaServed: SERVICE_AREA,
+  category: 'Kurumsal Yönetim Danışmanlığı',
+};
+
+const serviceTeknoparkLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  '@id': `${SITE_URL}/#service-teknopark`,
+  serviceType: 'Teknopark ve TGB Yönetici Şirket Danışmanlığı',
+  name: 'TGB Yönetici Şirket Danışmanlığı',
+  description:
+    '4691 sayılı Kanun kapsamında Teknoloji Geliştirme Bölgeleri yönetici şirket operasyonları, Teknopark Portalı üzerinden proje giriş ve muafiyet yönetimi, portal üzerinden personel takibi ve ön denetim süreçlerinde mevzuata tam uyumlu ekosistem yönetimi sağlıyoruz.',
+  provider: PROVIDER_REF,
+  areaServed: SERVICE_AREA,
+  category: 'Teknopark Yönetim Danışmanlığı',
+};
+
+const serviceYesilLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  '@id': `${SITE_URL}/#service-yesil`,
+  serviceType: 'Stratejik Planlama ve Yeşil Dönüşüm',
+  name: 'Stratejik Planlama ve Yeşil Dönüşüm',
+  description:
+    'Avrupa Yeşil Mutabakatı uyumu, Yeşil OSB sertifikasyon süreci, sanayide yeşil dönüşüm ve inovasyon yönetimi, enerji verimliliği ve sürdürülebilirlik stratejilerinde uzun vadeli yol haritası oluşturuyoruz.',
+  provider: PROVIDER_REF,
+  areaServed: SERVICE_AREA,
+  category: 'Yeşil OSB ve Sürdürülebilirlik',
+};
+
 const professionalServiceLd = {
   '@context': 'https://schema.org',
   '@type': 'ProfessionalService',
@@ -48,10 +132,8 @@ const professionalServiceLd = {
   image: `${SITE_URL}/antlogo.png`,
   logo: `${SITE_URL}/antlogo.png`,
   priceRange: '$$',
-  areaServed: {
-    '@type': 'Country',
-    name: 'Türkiye',
-  },
+  areaServed: SERVICE_AREA,
+  parentOrganization: PROVIDER_REF,
   serviceType: [
     'OSB Danışmanlığı',
     'Organize Sanayi Bölgesi Danışmanlığı',
@@ -61,46 +143,24 @@ const professionalServiceLd = {
     'KOSGEB ve TÜBİTAK Proje Danışmanlığı',
     'Yeşil OSB ve Sürdürülebilirlik Danışmanlığı',
   ],
+  makesOffer: [
+    { '@id': `${SITE_URL}/#service-osb` },
+    { '@id': `${SITE_URL}/#service-arge` },
+    { '@id': `${SITE_URL}/#service-hibe` },
+    { '@id': `${SITE_URL}/#service-kurumsal` },
+    { '@id': `${SITE_URL}/#service-teknopark` },
+    { '@id': `${SITE_URL}/#service-yesil` },
+  ],
   hasOfferCatalog: {
     '@type': 'OfferCatalog',
     name: 'ANT Danışmanlık Hizmet Kataloğu',
     itemListElement: [
-      {
-        '@type': 'Offer',
-        itemOffered: {
-          '@type': 'Service',
-          name: 'OSB Danışmanlığı ve Mevzuat Uyumu',
-          description:
-            '4562 sayılı OSB Kanunu kapsamında arsa tahsis yönetimi, organ yönetimi ve altyapı proje danışmanlığı.',
-        },
-      },
-      {
-        '@type': 'Offer',
-        itemOffered: {
-          '@type': 'Service',
-          name: 'Ar-Ge, Tasarım Merkezi ve Teknopark Danışmanlığı',
-          description:
-            '5746 ve 4691 sayılı kanunlar kapsamında merkez kurulumu, teşvik yönetimi ve denetim hazırlığı.',
-        },
-      },
-      {
-        '@type': 'Offer',
-        itemOffered: {
-          '@type': 'Service',
-          name: 'Hibe, Teşvik ve Proje Danışmanlığı',
-          description:
-            'TÜBİTAK, KOSGEB projeleri ve AB fonlarında fizibilite, başvuru ve izleme süreçleri.',
-        },
-      },
-      {
-        '@type': 'Offer',
-        itemOffered: {
-          '@type': 'Service',
-          name: 'Kurumsal Yönetim ve Kapasite Geliştirme',
-          description:
-            'OSB organ yönetimi, kurumsallaşma yol haritası ve yasal risk yönetimi süreçleri.',
-        },
-      },
+      { '@type': 'Offer', itemOffered: { '@id': `${SITE_URL}/#service-osb` } },
+      { '@type': 'Offer', itemOffered: { '@id': `${SITE_URL}/#service-arge` } },
+      { '@type': 'Offer', itemOffered: { '@id': `${SITE_URL}/#service-hibe` } },
+      { '@type': 'Offer', itemOffered: { '@id': `${SITE_URL}/#service-kurumsal` } },
+      { '@type': 'Offer', itemOffered: { '@id': `${SITE_URL}/#service-teknopark` } },
+      { '@type': 'Offer', itemOffered: { '@id': `${SITE_URL}/#service-yesil` } },
     ],
   },
 };
@@ -188,7 +248,18 @@ const Home: React.FC = () => {
           '4691 sayılı Kanun',
           'ANT Yönetim Danışmanlık',
         ]}
-        jsonLd={[organizationLd, professionalServiceLd, websiteLd, homeFaqLd]}
+        jsonLd={[
+          organizationLd,
+          professionalServiceLd,
+          websiteLd,
+          serviceOsbLd,
+          serviceArgeLd,
+          serviceHibeLd,
+          serviceKurumsalLd,
+          serviceTeknoparkLd,
+          serviceYesilLd,
+          homeFaqLd,
+        ]}
       />
       <main>
         <Hero />
