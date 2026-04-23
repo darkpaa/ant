@@ -150,12 +150,6 @@ export interface Dictionary {
     relatedFaqTitle: string;
     relatedFaqDesc: string;
     otherPostsTitle: string;
-    linkedInBadge: string;
-    linkedInTitle: string;
-    linkedInSubtitle: string;
-    linkedInFollow: string;
-    linkedInViewPost: string;
-    linkedInPosts: { date: string; excerpt: string; url: string }[];
     posts: BlogPost[];
   };
   contact: {
@@ -609,32 +603,6 @@ const tr: Dictionary = {
     relatedFaqDesc:
       'OSB mevzuatı, Ar-Ge Merkezi kurulumu ve KOSGEB-TÜBİTAK projelerine dair uzman yanıtlar.',
     otherPostsTitle: 'Diğer Blog Yazıları',
-    linkedInBadge: 'LinkedIn',
-    linkedInTitle: 'LinkedIn’de Takipte Kalın',
-    linkedInSubtitle:
-      'Kurucumuz İlker Tura’nın OSB, Ar-Ge ve sanayi politikaları üzerine güncel paylaşımları.',
-    linkedInFollow: 'LinkedIn Profilini Ziyaret Et',
-    linkedInViewPost: 'Gönderiyi Gör',
-    linkedInPosts: [
-      {
-        date: 'Güncel',
-        excerpt:
-          'OSB mevzuatında 2026 yılı için öne çıkan değişiklikler ve katılımcıların yatırım planlamasına etkileri hakkında notlar.',
-        url: 'https://www.linkedin.com/in/ilker-tura-02354984/',
-      },
-      {
-        date: 'Güncel',
-        excerpt:
-          'Ar-Ge ve Tasarım Merkezi denetimlerinde sıkça karşılaştığımız bulgular ve sıfır hata prensibiyle hazırlık rehberi.',
-        url: 'https://www.linkedin.com/in/ilker-tura-02354984/',
-      },
-      {
-        date: 'Güncel',
-        excerpt:
-          'Yeşil OSB sertifikasyon süreci ve Avrupa Yeşil Mutabakatı uyumunun Türk sanayisine getirdiği fırsatlar.',
-        url: 'https://www.linkedin.com/in/ilker-tura-02354984/',
-      },
-    ],
     posts: [
       {
         id: 'osb-on-tahsis',
@@ -1540,32 +1508,6 @@ const en: Dictionary = {
     relatedFaqDesc:
       'Expert answers on OIZ regulation, R&D Centre setup and KOSGEB-TÜBİTAK projects.',
     otherPostsTitle: 'Other Articles',
-    linkedInBadge: 'LinkedIn',
-    linkedInTitle: 'Stay Connected on LinkedIn',
-    linkedInSubtitle:
-      'Founder İlker Tura’s recent posts on OIZ, R&D and industrial policy.',
-    linkedInFollow: 'Visit LinkedIn Profile',
-    linkedInViewPost: 'View Post',
-    linkedInPosts: [
-      {
-        date: 'Recent',
-        excerpt:
-          'Key changes in OIZ regulations for 2026 and their impact on participant investment planning.',
-        url: 'https://www.linkedin.com/in/ilker-tura-02354984/',
-      },
-      {
-        date: 'Recent',
-        excerpt:
-          'Common findings in R&D and Design Centre audits — a zero-error preparation guide.',
-        url: 'https://www.linkedin.com/in/ilker-tura-02354984/',
-      },
-      {
-        date: 'Recent',
-        excerpt:
-          'The Green OIZ certification process and opportunities the EU Green Deal creates for Turkish industry.',
-        url: 'https://www.linkedin.com/in/ilker-tura-02354984/',
-      },
-    ],
     backToBlog: 'Back to blog',
     disclaimerTitle: 'Disclaimer',
     posts: [

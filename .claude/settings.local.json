@@ -4,6 +4,9 @@
       "Bash(npx tsc *)",
       "Bash(npx vite *)",
       "Bash(npm install *)"
+    ],
+    "additionalDirectories": [
+      "c:\\Users\\lanad\\OneDrive\\Masaüstü\\ant\\src\\components"
     ]
   }
 }

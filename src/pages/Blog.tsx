@@ -2,7 +2,6 @@ import { Link } from 'react-router-dom';
 import { ArrowRight, Calendar, Clock } from 'lucide-react';
 import { useLang } from '../i18n/LanguageContext';
 import SEO from '../components/SEO';
-import LinkedInFeed from '../components/LinkedInFeed';
 
 const SITE_URL = 'https://antyonetim.com';
 
@@ -103,11 +102,7 @@ const Blog: React.FC = () => {
         </div>
       </section>
 
-      <section className="relative max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 pt-16 lg:pt-20">
-        <LinkedInFeed />
-      </section>
-
-      <section className="relative max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 pt-12 pb-20">
+      <section className="relative max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
         <div className="grid gap-8">
           {t.blog.posts.map((post) => (
             <Link

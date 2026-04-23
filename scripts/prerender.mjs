@@ -10,12 +10,46 @@ import { createServer } from 'node:http';
 import { readFileSync, existsSync, statSync, mkdirSync, writeFileSync } from 'node:fs';
 import { join, extname, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
-import puppeteer from 'puppeteer';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 const root = join(__dirname, '..');
 const distDir = join(root, 'dist');
+
+// Vercel/Netlify/CI containers don't bundle the system libs (libnspr4 etc.)
+// that puppeteer's default Chromium needs. Use @sparticuz/chromium there —
+// it ships a self-contained headless Chromium build. Local dev keeps plain
+// puppeteer which already has a matching Chromium from `npm install`.
+const isServerless = !!(
+  process.env.VERCEL ||
+  process.env.NETLIFY ||
+  process.env.AWS_LAMBDA_FUNCTION_NAME ||
+  process.env.CI
+);
+
+const loadBrowser = async () => {
+  if (isServerless) {
+    const { default: chromium } = await import('@sparticuz/chromium');
+    const { default: puppeteer } = await import('puppeteer-core');
+    return {
+      puppeteer,
+      launchOptions: {
+        args: chromium.args,
+        defaultViewport: chromium.defaultViewport,
+        executablePath: await chromium.executablePath(),
+        headless: chromium.headless,
+      },
+    };
+  }
+  const { default: puppeteer } = await import('puppeteer');
+  return {
+    puppeteer,
+    launchOptions: {
+      headless: 'new',
+      args: ['--no-sandbox', '--disable-setuid-sandbox', '--disable-dev-shm-usage'],
+    },
+  };
+};
 
 const MIME = {
   '.html': 'text/html; charset=utf-8',
@@ -92,12 +126,13 @@ const main = async () => {
   const port = 4174;
   const server = await serveStatic(port);
   const baseUrl = `http://127.0.0.1:${port}`;
-  console.log(`[prerender] static server → ${baseUrl}\n`);
+  console.log(`[prerender] static server → ${baseUrl}`);
 
-  const browser = await puppeteer.launch({
-    headless: 'new',
-    args: ['--no-sandbox', '--disable-setuid-sandbox', '--disable-dev-shm-usage'],
-  });
+  const { puppeteer, launchOptions } = await loadBrowser();
+  console.log(
+    `[prerender] browser: ${isServerless ? '@sparticuz/chromium (serverless)' : 'puppeteer (local)'}\n`
+  );
+  const browser = await puppeteer.launch(launchOptions);
 
   try {
     for (const route of routes) {
