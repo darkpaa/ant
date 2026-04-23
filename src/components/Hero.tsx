@@ -41,7 +41,7 @@ const Hero: React.FC = () => {
       if (!isPaused.current) {
         setCurrentSlide((c) => (c + 1) % slides.length);
       }
-    }, 6000);
+    }, 10000);
     return () => clearInterval(timer);
   }, [slides.length]);
 
@@ -124,6 +124,12 @@ const Hero: React.FC = () => {
           onPointerUp={endDrag}
           onPointerCancel={endDrag}
           onPointerLeave={endDrag}
+          onMouseEnter={() => {
+            isPaused.current = true;
+          }}
+          onMouseLeave={() => {
+            if (!isDragging) isPaused.current = false;
+          }}
         >
           <div
             className={`flex ${
@@ -163,13 +169,13 @@ const Hero: React.FC = () => {
                   </p>
 
                   <div className="flex flex-col sm:flex-row gap-4">
-                    <a
-                      href="#hizmetlerimiz"
+                    <Link
+                      to={slide.ctaHref}
                       className="group inline-flex items-center justify-center gap-3 bg-gradient-to-r from-accent-400 to-accent-500 hover:from-accent-500 hover:to-accent-600 text-white px-8 py-4 rounded-2xl text-base font-semibold transition-all duration-300 shadow-2xl shadow-accent-400/25 hover:shadow-accent-400/40 hover:-translate-y-1"
                     >
-                      {t.hero.ctaServices}
+                      {slide.ctaLabel}
                       <ArrowRight className="w-5 h-5 transition-transform duration-300 group-hover:translate-x-1" />
-                    </a>
+                    </Link>
                     <Link
                       to="/iletisim"
                       className="group inline-flex items-center justify-center gap-3 bg-white/10 hover:bg-white/15 backdrop-blur-sm border border-white/20 hover:border-white/30 text-white px-8 py-4 rounded-2xl text-base font-semibold transition-all duration-300 hover:-translate-y-1"

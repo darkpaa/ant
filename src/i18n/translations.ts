@@ -6,6 +6,8 @@ export interface HeroSlide {
   highlightedWord: string;
   headlineEnd: string;
   subHeadline: string;
+  ctaLabel: string;
+  ctaHref: string;
 }
 
 export interface ServiceItemText {
@@ -223,19 +225,23 @@ const tr: Dictionary = {
     slides: [
       {
         badge: '15+ Yıl Kamu ve Mevzuat Tecrübesi',
-        headline: 'OSB, Ar-Ge ve Kurumsal Yönetim ',
-        highlightedWord: 'Danışmanlığı',
-        headlineEnd: '\nStratejik Çözüm Ortağınız',
+        headline: '',
+        highlightedWord: 'OSB',
+        headlineEnd: ', Ar-Ge ve Kurumsal Yönetim Danışmanlığında\nStratejik Çözüm Ortağınız',
         subHeadline:
           'OSB mevzuatı, Teknopark muafiyetleri ve yeşil OSB süreçlerinde yasal risk yönetimiyle birleşen mühendislik disipliniyle, sanayi kuruluşlarına uçtan uca danışmanlık sunuyoruz.',
+        ctaLabel: 'OSB Danışmanlığı Detayları',
+        ctaHref: '/#hizmetlerimiz',
       },
       {
         badge: 'Ar-Ge, Tasarım Merkezi ve Teknopark',
-        headline: 'Ar-Ge ve Teknopark Süreçlerinde ',
-        highlightedWord: 'Stratejik',
-        headlineEnd: '\nÇözüm Ortağınız',
+        headline: 'Ar-Ge ve ',
+        highlightedWord: 'Teknopark',
+        headlineEnd: ' Süreçlerinde Stratejik\nÇözüm Ortağınız',
         subHeadline:
           '5746 sayılı Kanun kapsamında Ar-Ge indirimi, Teknopark muafiyetleri ve 4691 sayılı Kanun uyum süreçlerini sıfır hata prensibiyle yönetiyor; denetim hazırlığınızı veri odaklı raporlarla güvence altına alıyoruz.',
+        ctaLabel: 'Ar-Ge Merkezi Kurulum Süreci',
+        ctaHref: '/#hizmetlerimiz',
       },
       {
         badge: 'Kurumsal Yönetim ve Kapasite Geliştirme',
@@ -244,6 +250,8 @@ const tr: Dictionary = {
         headlineEnd: '\nOtorite Güvencesi',
         subHeadline:
           'OSB mevzuat uyum süreçleri, yasal risk yönetimi ve stratejik planlama alanlarında kamu tecrübesi ile desteklenmiş; veri odaklı ve yapay zeka destekli danışmanlık sunuyoruz.',
+        ctaLabel: 'Kurucu ve Kadromuzu Tanıyın',
+        ctaHref: '/kurumsal',
       },
       {
         badge: 'İş Sürekliliği ve Risk Yönetimi',
@@ -252,6 +260,8 @@ const tr: Dictionary = {
         headlineEnd: '\nve Dayanıklılık',
         subHeadline:
           'Endüstriyel altyapıların afetlere ve beklenmedik durumlara karşı dayanıklılığını artırıyor; kritik süreçlerin kesintisiz devamı için risk analizleri, İş Sürekliliği Planı (İSP) ve resilience odaklı acil durum yönetimi sunuyoruz.',
+        ctaLabel: 'İSP Analizi Alın',
+        ctaHref: '/iletisim',
       },
     ],
     ctaServices: 'Hizmetlerimizi İnceleyin',
@@ -1115,19 +1125,23 @@ const en: Dictionary = {
     slides: [
       {
         badge: 'OIZ Consulting',
-        headline: 'OIZ Consulting with ',
-        highlightedWord: 'Regulatory Mastery',
-        headlineEnd: '\nYour Strategic Partner',
+        headline: '',
+        highlightedWord: 'OIZ',
+        headlineEnd: ' Consulting with Regulatory Mastery\nYour Strategic Partner',
         subHeadline:
           'We deliver end-to-end administrative, technical and financial management for Organized Industrial Zones under Law No. 4562, with a focus on green transition and digital transformation.',
+        ctaLabel: 'Explore OIZ Consulting',
+        ctaHref: '/#hizmetlerimiz',
       },
       {
         badge: 'R&D and Design Centre Consulting',
-        headline: 'R&D and Design Centre ',
-        highlightedWord: 'Management',
-        headlineEnd: '\nConsulting',
+        headline: 'R&D, Design Centre and ',
+        highlightedWord: 'Technopark',
+        headlineEnd: '\nManagement Consulting',
         subHeadline:
           'Under Law No. 5746, we manage R&D tax deductions, Technopark exemptions and Law No. 4691 compliance with a zero-error principle, securing your audit readiness with data-driven reports.',
+        ctaLabel: 'R&D Centre Setup Process',
+        ctaHref: '/#hizmetlerimiz',
       },
       {
         badge: 'Corporate Governance Consulting',
@@ -1136,6 +1150,8 @@ const en: Dictionary = {
         headlineEnd: '\nConsulting',
         subHeadline:
           'We deliver data-driven, AI-supported consulting in OIZ regulatory compliance, incentive management and strategic planning — backed by deep public-sector experience.',
+        ctaLabel: 'Meet Our Founder',
+        ctaHref: '/kurumsal',
       },
       {
         badge: 'Business Continuity and Risk Management',
@@ -1144,6 +1160,8 @@ const en: Dictionary = {
         headlineEnd: '\nand Resilience in OIZs',
         subHeadline:
           'We strengthen industrial infrastructure resilience against disasters and unforeseen events — delivering risk analysis, Business Continuity Plans (BCP) and resilience-driven emergency management for uninterrupted critical operations.',
+        ctaLabel: 'Request a BCP Assessment',
+        ctaHref: '/iletisim',
       },
     ],
     ctaServices: 'Explore Our Services',
