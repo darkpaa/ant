@@ -8,6 +8,7 @@ const Corporate = lazy(() => import('./pages/Corporate'));
 const Blog = lazy(() => import('./pages/Blog'));
 const BlogPost = lazy(() => import('./pages/BlogPost'));
 const Contact = lazy(() => import('./pages/Contact'));
+const FAQ = lazy(() => import('./pages/FAQ'));
 
 const RouteFallback: React.FC = () => (
   <div
@@ -52,6 +53,8 @@ const App: React.FC = () => {
           <Route path="/blog/:id" element={<BlogPost />} />
           <Route path="/iletisim" element={<Contact />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/sss" element={<FAQ />} />
+          <Route path="/faq" element={<FAQ />} />
         </Routes>
       </Suspense>
       <Footer />

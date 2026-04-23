@@ -55,6 +55,7 @@ export interface Dictionary {
     references: string;
     blog: string;
     contact: string;
+    faq: string;
     cta: string;
     menuToggle: string;
     home: string;
@@ -183,6 +184,19 @@ export interface Dictionary {
     ctaText: string;
     ctaLabel: string;
   };
+  faq: {
+    pageBadge: string;
+    pageTitleStart: string;
+    pageTitleAccent: string;
+    pageDescription: string;
+    ctaText: string;
+    ctaLabel: string;
+    categories: {
+      title: string;
+      description: string;
+      items: { question: string; answer: string }[];
+    }[];
+  };
 }
 
 export const LINKEDIN_URL =
@@ -195,6 +209,7 @@ const tr: Dictionary = {
     references: 'Referanslar',
     blog: 'Blog',
     contact: 'İletişim',
+    faq: 'SSS',
     cta: 'Danışmanlık Alın',
     menuToggle: 'Menüyü aç/kapat',
     home: 'Anasayfa',
@@ -229,6 +244,14 @@ const tr: Dictionary = {
         headlineEnd: '\nOtorite Güvencesi',
         subHeadline:
           'OSB mevzuat uyum süreçleri, yasal risk yönetimi ve stratejik planlama alanlarında kamu tecrübesi ile desteklenmiş; veri odaklı ve yapay zeka destekli danışmanlık sunuyoruz.',
+      },
+      {
+        badge: 'İş Sürekliliği ve Risk Yönetimi',
+        headline: 'OSB\'lerde Kesintisiz ',
+        highlightedWord: 'İş Sürekliliği',
+        headlineEnd: '\nve Dayanıklılık',
+        subHeadline:
+          'Endüstriyel altyapıların afetlere ve beklenmedik durumlara karşı dayanıklılığını artırıyor; kritik süreçlerin kesintisiz devamı için risk analizleri, İş Sürekliliği Planı (İSP) ve resilience odaklı acil durum yönetimi sunuyoruz.',
       },
     ],
     ctaServices: 'Hizmetlerimizi İnceleyin',
@@ -526,6 +549,7 @@ const tr: Dictionary = {
       { label: 'Hakkımızda', href: '/kurumsal' },
       { label: 'Ekibimiz', href: '/kurumsal' },
       { label: 'Blog', href: '/blog' },
+      { label: 'SSS', href: '/sss' },
       { label: 'İletişim', href: '/iletisim' },
     ],
     serviceLinks: [
@@ -937,6 +961,137 @@ const tr: Dictionary = {
     ctaText: 'Projeleriniz için stratejik çözüm ortağınız olmaya hazırız.',
     ctaLabel: 'Bizimle İletişime Geçin',
   },
+  faq: {
+    pageBadge: 'Sıkça Sorulan Sorular',
+    pageTitleStart: 'OSB, Ar-Ge ve Teşvik Süreçleri Hakkında',
+    pageTitleAccent: 'Merak Edilenler',
+    pageDescription:
+      'Organize Sanayi Bölgesi (OSB) mevzuatı, Ar-Ge ve Tasarım Merkezi kurulumu, Teknopark muafiyetleri ve KOSGEB-TÜBİTAK proje süreçlerine ilişkin en çok sorulan soruları ve uzman yanıtlarını bir arada sunduk.',
+    ctaText: 'Sorunuzun cevabını bulamadıysanız bizimle iletişime geçin.',
+    ctaLabel: 'Uzmanımıza Sorun',
+    categories: [
+      {
+        title: 'Organize Sanayi Bölgesi (OSB) Soruları',
+        description:
+          '4562 sayılı OSB Kanunu, arsa tahsis, organ yönetimi ve Yeşil OSB süreçlerine dair en çok sorulan sorular.',
+        items: [
+          {
+            question: 'OSB (Organize Sanayi Bölgesi) nedir ve nasıl kurulur?',
+            answer:
+              'Organize Sanayi Bölgesi (OSB); sanayinin uygun görülen alanlarda yapılanmasını sağlamak amacıyla, 4562 sayılı OSB Kanunu kapsamında kurulan, mal ve hizmet üretim bölgeleridir. Kuruluşu; il özel idaresi, belediye, ticaret ve sanayi odası gibi kurumların ortaklığıyla Müteşebbis Heyet oluşturulması, yer seçimi, imar planı onayı, kamulaştırma ve Sanayi ve Teknoloji Bakanlığı sicil kaydı süreçlerinden oluşur.',
+          },
+          {
+            question: 'OSB’de arsa tahsisi nasıl yapılır? Tahsis iptali hangi durumlarda olur?',
+            answer:
+              'OSB’de arsa tahsisi; katılımcının yatırım niteliği, sektör uygunluğu ve mali yeterliliği değerlendirildikten sonra Yönetim Kurulu kararıyla önce ön tahsis, ardından tahsis şeklinde yapılır. Mevzuatta belirtilen sürelerde yatırımın başlamaması, üretime geçilmemesi veya taahhütlere uyulmaması durumunda tahsis iptal edilebilir. İptal süreci hukuki ve cezai sorumluluk riski taşıdığı için profesyonel danışmanlıkla yönetilmelidir.',
+          },
+          {
+            question: 'OSB organ yönetimi (Müteşebbis Heyet, Genel Kurul, Yönetim Kurulu) nasıl işler?',
+            answer:
+              'OSB’nin karar organları; kuruluş aşamasında Müteşebbis Heyet, sicile kaydından sonra ise Genel Kurul, Yönetim Kurulu ve Denetim Kurulu’dur. Her organın görev, yetki ve sorumlulukları 4562 sayılı Kanun ve OSB Uygulama Yönetmeliği ile belirlenmiştir. Kararların mevzuata aykırı alınması, organ üyelerinin hukuki ve cezai sorumluluğuna yol açabilir; bu nedenle organ yönetiminde mevzuat uyumu kritiktir.',
+          },
+          {
+            question: 'Yeşil OSB nedir ve sertifikasyon süreci nasıl işler?',
+            answer:
+              'Yeşil OSB; enerji verimliliği, atık yönetimi, karbon ayak izi, su tasarrufu ve yenilenebilir enerji kullanımı gibi kriterler çerçevesinde Sanayi ve Teknoloji Bakanlığı tarafından değerlendirilen sürdürülebilirlik sertifikasyonudur. Başvuru, öz değerlendirme, yerinde denetim ve puanlama aşamalarından oluşur. Avrupa Yeşil Mutabakatı uyumu açısından ihracatçı OSB’ler için stratejik öneme sahiptir.',
+          },
+        ],
+      },
+      {
+        title: 'Ar-Ge ve Tasarım Merkezi Soruları',
+        description:
+          '5746 sayılı Kanun kapsamında merkez kurulumu, denetim hazırlığı ve teşvik süreçlerine ilişkin sorular.',
+        items: [
+          {
+            question: 'Ar-Ge Merkezi kurmak için hangi şartlar aranır?',
+            answer:
+              '5746 sayılı Kanun kapsamında Ar-Ge Merkezi kurabilmek için; sektöre göre belirlenmiş asgari tam zamanlı eşdeğer Ar-Ge personeli sayısı (çoğu sektörde 15, bazı sektörlerde 30), Ar-Ge faaliyetlerine ayrılmış ayrı bir fiziksel mekan, teknik altyapı, proje portföyü ve yıllık faaliyet raporu şartı aranır. Sanayi ve Teknoloji Bakanlığı tarafından yerinde inceleme yapıldıktan sonra belge düzenlenir.',
+          },
+          {
+            question: '5746 sayılı Kanun hangi vergi ve teşvik avantajlarını sağlar?',
+            answer:
+              '5746 sayılı Ar-Ge ve Tasarım Faaliyetlerinin Desteklenmesi Hakkında Kanun; Ar-Ge indirimi (harcamaların %100’ü kurumlar vergisi matrahından düşülür), gelir vergisi stopajı teşviki, sigorta primi işveren hissesi desteği, damga vergisi istisnası, gümrük vergisi istisnası ve siparişe dayalı Ar-Ge indirimi gibi önemli mali avantajlar sunar.',
+          },
+          {
+            question: 'Tasarım Merkezi ile Ar-Ge Merkezi arasındaki fark nedir?',
+            answer:
+              'Ar-Ge Merkezi; yeni bilgi üretimi, bilimsel yorumlama ve teknolojik problem çözme süreçlerini; Tasarım Merkezi ise endüstriyel tasarım, yenilikçi ürün tasarımı ve estetik/işlevsel yenilik faaliyetlerini kapsar. Her iki merkez de 5746 sayılı Kanun’un sağladığı teşviklerden benzer ölçüde yararlanır; ancak faaliyet niteliği ve personel profili bakımından farklılaşır.',
+          },
+          {
+            question: 'Ar-Ge Merkezi denetimine nasıl hazırlanılır?',
+            answer:
+              'Ar-Ge Merkezi denetimleri; adam/ay hesaplamaları, harcama kalemlerinin Ar-Ge niteliğine uygunluğu, personel kayıtları, proje dokümantasyonu ve yıllık faaliyet raporlarının teknik derinliği üzerinden yapılır. “Ön Denetim” simülasyonu, veri odaklı raporlama ve süreç dijitalleşmesi; olası risk bulgularının önceden tespit edilip düzeltilmesini sağlar.',
+          },
+        ],
+      },
+      {
+        title: 'Teknopark ve TGB Soruları',
+        description:
+          '4691 sayılı Kanun kapsamındaki Teknoloji Geliştirme Bölgeleri ve muafiyet sorularının yanıtları.',
+        items: [
+          {
+            question: 'Teknopark muafiyetleri nelerdir?',
+            answer:
+              '4691 sayılı Teknoloji Geliştirme Bölgeleri Kanunu kapsamında bölge içerisinde Ar-Ge, tasarım ve yazılım faaliyeti yürüten firmalar; gelir ve kurumlar vergisi istisnası, gelir vergisi stopajı teşviki, sigorta primi işveren hissesi desteği, KDV istisnası ve damga vergisi istisnası gibi avantajlardan yararlanır. İstisnalar, 31/12/2028 tarihine kadar geçerlidir.',
+          },
+          {
+            question: 'TGB Yönetici Şirketi’nin sorumlulukları nelerdir?',
+            answer:
+              'TGB Yönetici Şirketi; bölgenin planlanması, altyapı yapımı, işletilmesi, kiralama süreçleri, projelerin kabulü, Teknopark Portalı üzerinden muafiyet ve denetim takipleri ile girişimci firmaların mevzuata uyumunu sağlamakla yükümlüdür. Bakanlık denetimlerinde Yönetici Şirket’in operasyonel ve mali performansı da değerlendirilir.',
+          },
+          {
+            question: 'Teknopark Portalı nedir ve hangi süreçlerde kullanılır?',
+            answer:
+              'Teknopark Portalı; Sanayi ve Teknoloji Bakanlığı tarafından yönetilen, TGB’lerdeki proje girişlerinin, muafiyet belgelerinin, personel kayıtlarının ve denetim süreçlerinin dijital olarak yürütüldüğü sistemdir. Portal üzerinden yapılan hatalı veya eksik girişler; muafiyet kayıplarına ve geri ödeme taleplerine yol açabilir.',
+          },
+        ],
+      },
+      {
+        title: 'KOSGEB, TÜBİTAK ve Hibe-Teşvik Soruları',
+        description:
+          'KOSGEB destek programları, TÜBİTAK proje çağrıları ve hibe başvuru süreçlerine ilişkin sorular.',
+        items: [
+          {
+            question: 'KOSGEB hangi destekleri sağlar ve kimler başvurabilir?',
+            answer:
+              'KOSGEB; KOBİ statüsündeki işletmelere; Girişimcilik Desteği, AR-GE ve İnovasyon Desteği, Stratejik Ürün Desteği, İşletme Geliştirme Destek Programı ve KOBİGEL gibi çok sayıda geri ödemesiz ve geri ödemeli destek programı sunar. Başvuru için firmanın KOSGEB veri tabanına kayıtlı ve KOBİ Bilgi Beyannamesi’nin güncel olması gerekir.',
+          },
+          {
+            question: 'TÜBİTAK 1501, 1507 gibi proje çağrıları hangi durumlarda tercih edilmelidir?',
+            answer:
+              'TÜBİTAK 1501 Sanayi Ar-Ge Projeleri Destekleme Programı; orta ve büyük ölçekli firmaların, 1507 KOBİ Ar-Ge Başlangıç Desteği ise ilk beş projesine kadar olan KOBİ’lerin Ar-Ge projelerine yöneliktir. Proje niteliği, yenilikçilik düzeyi, sektör ve firma büyüklüğüne göre uygun program belirlenmeli; başvuru dosyası, ölçülebilir çıktılarla desteklenmelidir.',
+          },
+          {
+            question: 'Hibe başvurusu neden profesyonel yönetim ister?',
+            answer:
+              'Hibe programları; uygunluk kriterleri, fizibilite analizi, iş planı, finansal projeksiyon, teknik metodoloji ve izleme süreçleri açısından çok katmanlı bir yapıya sahiptir. Eksik veya yanlış hazırlanmış bir başvuru; sadece reddedilmeyle değil, başarı ile biten projelerde bile kesinti ve geri ödeme riskiyle sonuçlanabilir. Profesyonel danışmanlık, başarı oranını belirgin şekilde artırır.',
+          },
+        ],
+      },
+      {
+        title: 'ANT Danışmanlık Süreci',
+        description:
+          'ANT Yönetim Danışmanlık ile çalışma süreci, kapsam ve iletişim hakkında sorular.',
+        items: [
+          {
+            question: 'Danışmanlık süreciniz nasıl işler?',
+            answer:
+              'Süreç; ücretsiz ön görüşme, ihtiyaç analizi, kapsam ve hedeflerin tanımlanması, yol haritasının hazırlanması, uygulama ve izleme aşamalarından oluşur. Her projede; mühendislik disipliniyle hazırlanmış iş planı, ölçülebilir çıktılar, düzenli raporlama ve denetim hazırlığı içeren bir yapı sunarız.',
+          },
+          {
+            question: 'Ücretsiz ön görüşme nedir, nasıl planlanır?',
+            answer:
+              'Ücretsiz ön görüşme; firmanızın mevcut durumunu, hedeflerini ve olası danışmanlık ihtiyaçlarını bağlayıcı olmayan şekilde değerlendirdiğimiz 30-45 dakikalık bir görüşmedir. İletişim sayfamızdaki formu doldurarak veya +90 (506) 986 26 20 numaramızı arayarak randevu talep edebilirsiniz.',
+          },
+          {
+            question: 'Türkiye genelinde mi hizmet veriyorsunuz?',
+            answer:
+              'Evet. ANT Yönetim Danışmanlık; Türkiye’nin 81 ilinde faaliyet gösteren OSB’lere, Ar-Ge ve Tasarım Merkezlerine, Teknoparklardaki yönetici şirketlere ve KOBİ’lere; hibrit (yerinde + uzaktan) çalışma modelimiz ile hizmet sunmaktadır.',
+          },
+        ],
+      },
+    ],
+  },
 };
 
 const en: Dictionary = {
@@ -946,6 +1101,7 @@ const en: Dictionary = {
     references: 'References',
     blog: 'Blog',
     contact: 'Contact',
+    faq: 'FAQ',
     cta: 'Get Consulting',
     menuToggle: 'Toggle menu',
     home: 'Home',
@@ -980,6 +1136,14 @@ const en: Dictionary = {
         headlineEnd: '\nConsulting',
         subHeadline:
           'We deliver data-driven, AI-supported consulting in OIZ regulatory compliance, incentive management and strategic planning — backed by deep public-sector experience.',
+      },
+      {
+        badge: 'Business Continuity and Risk Management',
+        headline: 'Uninterrupted ',
+        highlightedWord: 'Business Continuity',
+        headlineEnd: '\nand Resilience in OIZs',
+        subHeadline:
+          'We strengthen industrial infrastructure resilience against disasters and unforeseen events — delivering risk analysis, Business Continuity Plans (BCP) and resilience-driven emergency management for uninterrupted critical operations.',
       },
     ],
     ctaServices: 'Explore Our Services',
@@ -1276,6 +1440,7 @@ const en: Dictionary = {
       { label: 'About Us', href: '/kurumsal' },
       { label: 'Our Team', href: '/kurumsal' },
       { label: 'Blog', href: '/blog' },
+      { label: 'FAQ', href: '/sss' },
       { label: 'Contact', href: '/iletisim' },
     ],
     serviceLinks: [
@@ -1687,6 +1852,137 @@ const en: Dictionary = {
     ],
     ctaText: 'We are ready to be your strategic solution partner.',
     ctaLabel: 'Get in Touch',
+  },
+  faq: {
+    pageBadge: 'Frequently Asked Questions',
+    pageTitleStart: 'OIZ, R&D and Incentive Processes —',
+    pageTitleAccent: 'Answers You Need',
+    pageDescription:
+      'Expert answers to the most frequently asked questions about Organized Industrial Zone (OIZ) regulations, R&D and Design Centre setup, Technopark exemptions and KOSGEB-TÜBİTAK project processes.',
+    ctaText: 'Can’t find the answer you’re looking for? Reach out to our experts.',
+    ctaLabel: 'Ask an Expert',
+    categories: [
+      {
+        title: 'Organized Industrial Zone (OIZ) Questions',
+        description:
+          'The most asked questions on Law No. 4562, land allocation, governance bodies and Green OIZ processes.',
+        items: [
+          {
+            question: 'What is an Organized Industrial Zone (OIZ) and how is it established?',
+            answer:
+              'An OIZ is a designated industrial manufacturing area established under Turkish Law No. 4562 to enable structured industrial development. Its formation includes the creation of a Founding Committee by local administrations, chambers of commerce and industry, followed by site selection, zoning plan approval, expropriation and registration with the Ministry of Industry and Technology.',
+          },
+          {
+            question: 'How is land allocated in OIZs and when can it be revoked?',
+            answer:
+              'OIZ land is allocated based on the participant’s investment profile, sector fit and financial capacity — first as pre-allocation, then as formal allocation by Board of Directors resolution. Failure to commence investment, reach production or meet commitments within regulatory timelines can lead to revocation, which carries legal and criminal liability and must be managed with professional consulting.',
+          },
+          {
+            question: 'How do OIZ governance bodies (Founding Committee, General Assembly, Board) operate?',
+            answer:
+              'OIZ decision-making bodies include the Founding Committee at inception, and the General Assembly, Board of Directors and Supervisory Board after registration. Duties and responsibilities are defined in Law No. 4562 and the OIZ Implementation Regulation. Non-compliant decisions can create personal legal and criminal liability for board members — regulatory compliance is therefore critical.',
+          },
+          {
+            question: 'What is a Green OIZ and how does certification work?',
+            answer:
+              'Green OIZ is a sustainability certification awarded by the Ministry of Industry and Technology based on energy efficiency, waste management, carbon footprint, water conservation and renewable energy criteria. The process includes application, self-assessment, on-site audit and scoring. It is strategically important for export-oriented OIZs given EU Green Deal alignment.',
+          },
+        ],
+      },
+      {
+        title: 'R&D and Design Centre Questions',
+        description:
+          'Setup, audit readiness and incentive management under Law No. 5746.',
+        items: [
+          {
+            question: 'What are the requirements to establish an R&D Centre?',
+            answer:
+              'Under Law No. 5746, establishing an R&D Centre requires a sector-specific minimum number of full-time equivalent R&D personnel (15 in most sectors, 30 in some), dedicated physical space, technical infrastructure, a project portfolio and annual activity reports. An on-site inspection by the Ministry of Industry and Technology is followed by certification.',
+          },
+          {
+            question: 'What tax and incentive benefits does Law No. 5746 provide?',
+            answer:
+              'Law No. 5746 on Supporting R&D and Design Activities provides: R&D deduction (100% of eligible expenses deductible from corporate tax base), income tax withholding incentive, employer social security premium support, stamp duty exemption, customs duty exemption and contracted R&D deduction — creating substantial financial advantages.',
+          },
+          {
+            question: 'What is the difference between Design Centres and R&D Centres?',
+            answer:
+              'R&D Centres focus on new knowledge generation, scientific interpretation and technological problem solving; Design Centres focus on industrial design, innovative product design, and aesthetic/functional innovation. Both benefit from comparable Law No. 5746 incentives but differ in activity scope and personnel profile.',
+          },
+          {
+            question: 'How should we prepare for an R&D Centre audit?',
+            answer:
+              'Audits review person-month calculations, R&D eligibility of expense items, personnel records, project documentation and technical depth of annual activity reports. Pre-audit simulations, data-driven reporting and process digitalization enable early detection and resolution of risk findings.',
+          },
+        ],
+      },
+      {
+        title: 'Technopark and TDZ Questions',
+        description:
+          'Law No. 4691, exemptions and Technology Development Zones.',
+        items: [
+          {
+            question: 'What are Technopark exemptions?',
+            answer:
+              'Under Law No. 4691 on Technology Development Zones, companies conducting R&D, design and software activities within the zone enjoy income and corporate tax exemption, income tax withholding incentive, employer social security premium support, VAT exemption and stamp duty exemption. Exemptions are in effect until 31 December 2028.',
+          },
+          {
+            question: 'What are the responsibilities of a TDZ Managing Company?',
+            answer:
+              'A TDZ Managing Company is responsible for zone planning, infrastructure construction, operations, leasing, project approvals, exemption and audit tracking via the Technopark Portal, and ensuring entrepreneur compliance with legislation. Ministry audits also evaluate the managing company’s operational and financial performance.',
+          },
+          {
+            question: 'What is the Technopark Portal and when is it used?',
+            answer:
+              'The Technopark Portal is the Ministry-managed digital system through which project submissions, exemption certificates, personnel records and audit processes are operated for Technology Development Zones. Incorrect or incomplete submissions can trigger exemption losses and claw-back demands.',
+          },
+        ],
+      },
+      {
+        title: 'KOSGEB, TÜBİTAK and Grant-Incentive Questions',
+        description:
+          'KOSGEB programmes, TÜBİTAK calls and grant application processes.',
+        items: [
+          {
+            question: 'What supports does KOSGEB provide and who can apply?',
+            answer:
+              'KOSGEB provides several grant-based and repayable support programmes for SMEs, including Entrepreneurship Support, R&D and Innovation Support, Strategic Product Support, SME Development Support Programme and KOBİGEL. Applicants must be registered in the KOSGEB database with an up-to-date SME Declaration.',
+          },
+          {
+            question: 'When should TÜBİTAK 1501 or 1507 calls be preferred?',
+            answer:
+              'TÜBİTAK 1501 Industrial R&D Projects Programme targets medium and large enterprises, while 1507 SME R&D Start-up Support targets SMEs within their first five R&D projects. The right programme depends on project profile, innovation level, sector and company size — applications must be supported with measurable outputs.',
+          },
+          {
+            question: 'Why does a grant application require professional management?',
+            answer:
+              'Grant programmes involve multi-layered eligibility, feasibility, business plan, financial projection, technical methodology and monitoring requirements. An incomplete or incorrect submission can trigger rejection — or even partial revocation and claw-back in successful projects. Professional consulting materially raises success rates.',
+          },
+        ],
+      },
+      {
+        title: 'ANT Consulting Process',
+        description:
+          'Engagement, scope and communication with ANT Management Consulting.',
+        items: [
+          {
+            question: 'How does your consulting engagement work?',
+            answer:
+              'The process follows five stages: free introductory call, needs analysis, scope and objective definition, roadmap preparation, implementation and monitoring. Each project includes an engineering-grade work plan, measurable outputs, regular reporting and audit-readiness practices.',
+          },
+          {
+            question: 'What is the free introductory call and how do I schedule one?',
+            answer:
+              'The free introductory call is a non-binding 30-45 minute conversation in which we assess your current state, goals and potential consulting needs. You can request a meeting via the contact form or by calling +90 (506) 986 26 20.',
+          },
+          {
+            question: 'Do you serve nationwide in Turkey?',
+            answer:
+              'Yes. ANT Management Consulting serves OIZs, R&D and Design Centres, Technopark managing companies and SMEs across all 81 provinces of Turkey through a hybrid (on-site + remote) delivery model.',
+          },
+        ],
+      },
+    ],
   },
 };
 
