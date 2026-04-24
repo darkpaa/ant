@@ -612,7 +612,6 @@ const tr: Dictionary = {
       { label: 'Hakkımızda', href: '/kurumsal' },
       { label: 'Ekibimiz', href: '/kurumsal' },
       { label: 'Blog', href: '/blog' },
-      { label: 'SSS', href: '/sss' },
       { label: 'İletişim', href: '/iletisim' },
     ],
     serviceLinks: [
@@ -2074,7 +2073,6 @@ const en: Dictionary = {
       { label: 'About Us', href: '/kurumsal' },
       { label: 'Our Team', href: '/kurumsal' },
       { label: 'Blog', href: '/blog' },
-      { label: 'FAQ', href: '/sss' },
       { label: 'Contact', href: '/iletisim' },
     ],
     serviceLinks: [

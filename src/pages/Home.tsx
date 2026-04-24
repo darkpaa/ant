@@ -22,6 +22,7 @@ const organizationLd = {
     height: 512,
   },
   image: `${SITE_URL}/antlogo.png`,
+  founder: { '@id': `${SITE_URL}/kurumsal#ilker-tura` },
   sameAs: [LINKEDIN_URL],
   contactPoint: [
     {

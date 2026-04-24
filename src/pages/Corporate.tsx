@@ -7,6 +7,8 @@ import SEO from '../components/SEO';
 
 const SITE_URL = 'https://antyonetim.com';
 
+const PERSON_ID = `${SITE_URL}/kurumsal#ilker-tura`;
+
 const corporateBreadcrumbLd = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
@@ -21,18 +23,67 @@ const corporateBreadcrumbLd = {
   ],
 };
 
+const personLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Person',
+  '@id': PERSON_ID,
+  name: 'İlker Tura',
+  alternateName: 'Ilker Tura',
+  jobTitle: 'Kurucu',
+  image: `${SITE_URL}/ilkerphoto.jpg`,
+  url: `${SITE_URL}/kurumsal`,
+  description:
+    '15+ yıl Sanayi ve Teknoloji Bakanlığı müfettişlik tecrübesiyle; OSB, Ar-Ge ve Tasarım Merkezleri, Teknoparklar ve Endüstri Bölgeleri alanlarında mevzuat uyumu, denetim ve kurumsal yönetim uzmanı.',
+  nationality: { '@type': 'Country', name: 'Türkiye' },
+  worksFor: { '@id': `${SITE_URL}/#organization` },
+  founder: { '@id': `${SITE_URL}/#organization` },
+  sameAs: [LINKEDIN_URL],
+  knowsAbout: [
+    'OSB Danışmanlığı',
+    'Organize Sanayi Bölgesi Mevzuatı',
+    '4562 sayılı OSB Kanunu',
+    'Ar-Ge ve Tasarım Merkezi Danışmanlığı',
+    '5746 sayılı Kanun',
+    'Teknoloji Geliştirme Bölgeleri',
+    '4691 sayılı Kanun',
+    'Kurumsal Yönetim Danışmanlığı',
+    'Yeşil OSB',
+    'Akıllı OSB',
+    'Denetim ve Mevzuat Uyumu',
+    'Kamu Yönetimi',
+  ],
+  hasOccupation: {
+    '@type': 'Occupation',
+    name: 'Yönetim Danışmanı',
+    occupationalCategory: 'Business Management Consultant',
+    skills:
+      'OSB mevzuatı, Ar-Ge ve Tasarım Merkezi denetimi, Teknopark yönetici şirket danışmanlığı, Kurumsal Yönetim, Mevzuat Uyumu',
+  },
+  hasCredential: [
+    {
+      '@type': 'EducationalOccupationalCredential',
+      credentialCategory: 'Bachelor’s Degree',
+      educationalLevel: 'Lisans',
+      about: 'Elektrik-Elektronik Mühendisliği',
+    },
+    {
+      '@type': 'EducationalOccupationalCredential',
+      credentialCategory: 'Master’s Degree',
+      educationalLevel: 'Yüksek Lisans',
+      about: 'İşletme ve Kamu Yönetimi',
+    },
+  ],
+};
+
 const aboutPageLd = {
   '@context': 'https://schema.org',
   '@type': 'AboutPage',
   '@id': `${SITE_URL}/kurumsal#aboutpage`,
   name: 'Kurumsal — ANT Yönetim Danışmanlık',
   url: `${SITE_URL}/kurumsal`,
-  mainEntity: {
-    '@type': 'Organization',
-    name: 'ANT Yönetim Danışmanlık',
-    url: SITE_URL,
-    sameAs: [LINKEDIN_URL],
-  },
+  mainEntity: { '@id': PERSON_ID },
+  about: { '@id': `${SITE_URL}/#organization` },
+  inLanguage: 'tr-TR',
 };
 
 const Corporate: React.FC = () => {
@@ -55,7 +106,7 @@ const Corporate: React.FC = () => {
           'Ar-Ge ve Tasarım Merkezi danışmanlığı',
           'Sanayi ve Teknoloji Bakanlığı müfettişi',
         ]}
-        jsonLd={[aboutPageLd, corporateBreadcrumbLd]}
+        jsonLd={[personLd, aboutPageLd, corporateBreadcrumbLd]}
       />
     <main className="relative bg-gray-50/60 min-h-screen">
       <section className="relative bg-gradient-to-br from-navy-950 via-navy-900 to-navy-800 overflow-hidden">
