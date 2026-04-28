@@ -33,7 +33,7 @@ const personLd = {
   image: `${SITE_URL}/ilkerphoto.jpg`,
   url: `${SITE_URL}/kurumsal`,
   description:
-    '15+ yıl Sanayi ve Teknoloji Bakanlığı müfettişlik tecrübesiyle; OSB, Ar-Ge ve Tasarım Merkezleri, Teknoparklar ve Endüstri Bölgeleri alanlarında mevzuat uyumu, denetim ve kurumsal yönetim uzmanı.',
+    '15 yıl Sanayi ve Teknoloji Bakanlığı müfettişlik tecrübesiyle; OSB, Ar-Ge ve Tasarım Merkezleri, Teknoparklar ve Endüstri Bölgeleri alanlarında mevzuat uyumu, denetim ve kurumsal yönetim uzmanı.',
   nationality: { '@type': 'Country', name: 'Türkiye' },
   worksFor: { '@id': `${SITE_URL}/#organization` },
   founder: { '@id': `${SITE_URL}/#organization` },
@@ -94,7 +94,7 @@ const Corporate: React.FC = () => {
     <>
       <SEO
         title="Kurumsal — OSB ve Ar-Ge Danışmanlığında Otorite"
-        description="15+ yıl Bakanlık müfettişliği tecrübesiyle OSB, Ar-Ge ve Tasarım Merkezi ve Kurumsal Yönetim Danışmanlığında stratejik partneriniz. Tanışma görüşmesi için bize ulaşın."
+        description="15 yıl Bakanlık müfettişliği tecrübesiyle OSB, Ar-Ge ve Tasarım Merkezi ve Kurumsal Yönetim Danışmanlığında stratejik partneriniz. Tanışma görüşmesi için bize ulaşın."
         url="/kurumsal"
         type="profile"
         lang={lang}

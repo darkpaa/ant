@@ -1,5 +1,5 @@
 import { lazy, Suspense, useEffect } from 'react';
-import { Routes, Route, Navigate, useLocation } from 'react-router-dom';
+import { Routes, Route, useLocation } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import Home from './pages/Home';
@@ -8,6 +8,7 @@ const Corporate = lazy(() => import('./pages/Corporate'));
 const Blog = lazy(() => import('./pages/Blog'));
 const BlogPost = lazy(() => import('./pages/BlogPost'));
 const Contact = lazy(() => import('./pages/Contact'));
+const FAQ = lazy(() => import('./pages/FAQ'));
 const LegalPage = lazy(() => import('./pages/LegalPage'));
 const OsbDanismanligi = lazy(() => import('./pages/OsbDanismanligi'));
 const Glossary = lazy(() => import('./pages/Glossary'));
@@ -55,8 +56,8 @@ const App: React.FC = () => {
           <Route path="/blog/:id" element={<BlogPost />} />
           <Route path="/iletisim" element={<Contact />} />
           <Route path="/contact" element={<Contact />} />
-          <Route path="/sss" element={<Navigate to="/" replace />} />
-          <Route path="/faq" element={<Navigate to="/" replace />} />
+          <Route path="/sss" element={<FAQ />} />
+          <Route path="/faq" element={<FAQ />} />
           <Route path="/gizlilik" element={<LegalPage variant="privacy" />} />
           <Route path="/kvkk" element={<LegalPage variant="kvkk" />} />
           <Route path="/cerez" element={<LegalPage variant="cookies" />} />

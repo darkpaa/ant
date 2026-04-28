@@ -126,7 +126,7 @@ const professionalServiceLd = {
   '@id': `${SITE_URL}/#business`,
   name: 'ANT Yönetim Danışmanlık',
   description:
-    'OSB mevzuatı, Ar-Ge ve Tasarım Merkezi, Teknopark muafiyetleri ve Kurumsal Yönetim Danışmanlığı alanlarında 15+ yıl kamu tecrübesiyle otorite danışmanlık.',
+    'OSB mevzuatı, Ar-Ge ve Tasarım Merkezi, Teknopark muafiyetleri ve Kurumsal Yönetim Danışmanlığı alanlarında 15 yıl kamu tecrübesiyle otorite danışmanlık.',
   url: SITE_URL,
   telephone: '+90-506-986-26-20',
   email: 'kurumsal@antyonetim.com',
@@ -230,7 +230,7 @@ const Home: React.FC = () => {
     <>
       <SEO
         title="OSB, Ar-Ge ve Kurumsal Yönetim Danışmanlığı"
-        description="OSB mevzuatı, Ar-Ge ve Tasarım Merkezi kurulumu ve kurumsal yönetim süreçlerinde 15+ yıl kamu tecrübesiyle danışmanlık. Ücretsiz ön görüşme için bize ulaşın."
+        description="OSB mevzuatı, Ar-Ge ve Tasarım Merkezi kurulumu ve kurumsal yönetim süreçlerinde 15 yıl kamu tecrübesiyle danışmanlık. Ücretsiz ön görüşme için bize ulaşın."
         url="/"
         type="website"
         lang={lang}

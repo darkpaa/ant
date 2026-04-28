@@ -21,6 +21,7 @@ const Navbar: React.FC = () => {
     { label: t.nav.services, href: '/#hizmetlerimiz' },
     { label: t.nav.blog, href: '/blog' },
     { label: t.nav.contact, href: '/iletisim' },
+    { label: t.nav.faq, href: '/sss' },
   ];
 
   useEffect(() => {
