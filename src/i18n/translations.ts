@@ -1075,7 +1075,7 @@ const tr: Dictionary = {
       {
         title: 'Organize Sanayi Bölgeleri Danışmanlığı',
         description:
-          'Organize Sanayi Bölgesi (OSB) tanımı, kuruluşu, organları, altyapı, arsa tahsis ve Yeşil OSB süreçlerine ilişkin en çok sorulan sorular.',
+          'OSB tanımı, organları, altyapı, arsa tahsis, Yeşil OSB ve iş sürekliliği planlamasına ilişkin en çok sorulan sorular.',
         items: [
           {
             question: 'Organize Sanayi Bölgesi (OSB) nedir ve amacı nedir?',
@@ -1132,13 +1132,33 @@ const tr: Dictionary = {
             answer:
               'Kaynak ve enerji verimliliği, yalın üretim, endüstriyel atık işbirliği ve çevreye duyarlı uygulamaları ile öne çıkan OSB’ler Türk Standardları Enstitüsü (TSE) tarafından “Yeşil OSB” olarak sertifikalandırılır. Yeşil OSB kriterlerini sağlamak üzere hazırlanan projeler Bakanlık kredilendirme süreçlerinde öncelikle değerlendirilir.',
           },
+          {
+            question: 'Organize Sanayi Bölgeleri Uygulama Yönetmeliği’ne göre OSB’lerin iş sürekliliği planı hazırlama yükümlülüğü nedir?',
+            answer:
+              'Yönetmeliğe göre, olası bir afet durumunda iş sürekliliği hedeflerine uygun olarak, OSB’nin değer yaratan faaliyetlerini sürdürebilmesini, kurtarabilmesini veya eski haline getirebilmesini sağlamaya yönelik bir iş sürekliliği planının hazırlanması gerekmektedir. Bu planın hazırlanması Bölge Müdürlüğünün görevi olup, hazırlanan planı onaylama yetki ve sorumluluğu ise müteşebbis heyet veya genel kurula aittir.',
+          },
+          {
+            question: 'İş Sürekliliği Planı (İSP) nedir ve temel amacı nedir?',
+            answer:
+              'İş Sürekliliği Planı (İSP), kurumların ve kritik altyapıların bir kesinti veya kriz sonrasında kritik iş faaliyetlerini nasıl sürdüreceğini veya kurtaracağını tanımlayan operasyonel bir dokümandır. Temel amacı, kesinti anında oluşacak karmaşa ve stresi en aza indirerek, personele görevlerini yerine getirmeleri için açık, anlaşılır ve önceden belirlenmiş bir yol haritası sunmaktır. Bu planlar sayesinde, kurumun temel fonksiyonlarının önceden hedeflenen kurtarma süreleri (RTO) içinde ve asgari kabul edilebilir hizmet seviyelerinde (MBCO) yeniden başlatılması ve sürdürülmesi sağlanır. Ayrıca afet sonrası toparlanma sürecinin planlı bir biçimde yönetilmesini sağlayarak kurumsal, toplumsal ve idari dirençliliğin güçlendirilmesinde stratejik bir rol oynar.',
+          },
+          {
+            question: 'OSB’lerde Kurumsal Dirençlilik (Organizational Resilience) ne anlama gelmektedir ve sadece bir plan hazırlamak yeterli midir?',
+            answer:
+              'Kurumsal dirençlilik sadece bir plana sahip olmaktan ibaret değildir. İyi yönetişim uygulamaları, uyum sağlama kapasitesi, çeviklik, dönüşüm yeteneği ve tüm organizasyona yayılan bir risk ve dirençlilik kültürü üzerine inşa edilmesi gereken bir yapıdır. Bu temel üzerine oturan acil durum yönetimi, iş sürekliliği, kriz yönetimi, bilgi teknolojileri (BT) felaket kurtarma ve risk yönetimi gibi farklı disiplinlerin birbiriyle entegre çalıştığı bütüncül bir yönetim anlayışıdır.',
+          },
         ],
       },
       {
         title: 'Ar-Ge ve Tasarım Merkezleri Danışmanlığı',
         description:
-          '5746 sayılı Kanun kapsamında Ar-Ge ve Tasarım Merkezi kurulum şartları, vergi-SGK teşvikleri, dış görev süreleri, siparişe dayalı projeler ve girişim sermayesi yükümlülüğüne ilişkin sorular.',
+          '5746 sayılı Kanun kapsamında Ar-Ge ve Tasarım Merkezlerinin tanımı, kurulum şartları, vergi-SGK teşvikleri, kapsam dışı faaliyetler, dış görev süreleri, siparişe dayalı projeler, girişim sermayesi yükümlülüğü ve denetim hazırlığına ilişkin sorular.',
         items: [
+          {
+            question: 'Ar-Ge Merkezi ve Tasarım Merkezi nedir?',
+            answer:
+              'Ar-Ge merkezi; sermaye şirketlerinin organizasyon yapısı içinde ayrı bir birim şeklinde örgütlenmiş, münhasıran yurt içinde araştırma ve geliştirme faaliyetlerinde bulunan ve yeterli Ar-Ge birikimi ile yeteneği olan birimlerdir. Tasarım merkezi ise benzer şekilde yurt içinde münhasıran tasarım faaliyetleri yürüten birimlerdir.',
+          },
           {
             question: 'İşletmem bünyesinde Ar-Ge veya Tasarım Merkezi kurmanın şartları nelerdir?',
             answer:
@@ -1148,6 +1168,11 @@ const tr: Dictionary = {
             question: 'Ar-Ge ve Tasarım Merkezlerine sağlanan temel vergi ve SGK teşvikleri nelerdir?',
             answer:
               'Merkezlerde gerçekleştirilen Ar-Ge, yenilik ve tasarım harcamalarının %100’ü kurumlar veya gelir vergisi matrahından indirilir. Ayrıca istihdam edilen personelin eğitim durumuna göre (örneğin doktoralılar için %95, yüksek lisanslılar için %90, diğerleri için %80) muhtasar beyanname üzerinden gelir vergisi stopaj teşviki, brüt ücretler üzerinden hesaplanan SGK işveren hissesinin yarısı tutarında prim desteği ve projeler kapsamında düzenlenen belgeler için damga vergisi ile gümrük vergisi istisnası sağlanmaktadır.',
+          },
+          {
+            question: 'İşletmemin yürüttüğü hangi faaliyetler Ar-Ge veya Tasarım sayılmaz?',
+            answer:
+              'Pazarlama faaliyetleri, pazar araştırması, kalite kontrol, sosyal bilimlerdeki araştırmalar, petrol/maden arama faaliyetleri, kuruluş giderleri, rutin yazılım güncellemeleri ve reklam amaçlı tüketici testleri gibi faaliyetler kanun kapsamında Ar-Ge veya tasarım faaliyeti olarak değerlendirilmez.',
           },
           {
             question: 'Merkez personeli projeler için dışarıda (merkez dışında) çalışabilir mi? Bu süreler teşvik kapsamında mıdır?',
@@ -1164,13 +1189,33 @@ const tr: Dictionary = {
             answer:
               'Yıllık beyanname üzerinden yararlanılan Ar-Ge indirim tutarı 5.000.000 TL ve üzerinde olan kurumlar vergisi mükellefleri, bu tutarın %3’ünü (yıllık 100.000.000 TL’ye kadar) pasifte geçici bir hesaba aktarmak ve bu fonu yıl sonuna kadar Girişim Sermayesi Yatırım Fonlarına veya girişimcilere yatırım olarak kullanmak zorundadır. Aktarımın yapılmaması durumunda, indirim konusu yapılan tutarın %20’si iptal edilerek vergi cezası kesilir.',
           },
+          {
+            question: 'Ar-Ge ve Tasarım Merkezi denetimine nasıl hazırlanılır?',
+            answer:
+              'Ar-Ge Merkezi denetimleri; tam zaman eşdeğer Ar-Ge/tasarım personel hesaplamaları, harcama kalemlerinin Ar-Ge niteliğine uygunluğu, personel PKDS kayıtları, proje dokümantasyonu ve yıllık faaliyet raporlarının teknik derinliği üzerinden yapılır. “Ön Denetim” simülasyonu, veri odaklı raporlama ve süreç dijitalleşmesi; olası risk bulgularının önceden tespit edilip düzeltilmesini sağlar.',
+          },
         ],
       },
       {
         title: 'Teknoloji Geliştirme Bölgeleri (TGB / Teknopark) Danışmanlığı',
         description:
-          '4691 sayılı Kanun kapsamındaki TGB vergi muafiyetleri, doktora ve temel bilimler istihdam destekleri, girişim sermayesi yükümlülüğü ile kuluçka merkezlerine ilişkin sorular.',
+          '4691 sayılı Kanun kapsamındaki TGB tanımı, proje ve yer tahsis süreçleri, vergi muafiyetleri, doktora ve temel bilimler istihdam destekleri, girişim sermayesi yükümlülüğü ile kuluçka merkezlerine ilişkin sorular.',
         items: [
+          {
+            question: 'Teknoloji Geliştirme Bölgesi (TGB) nedir ve temel amacı nedir?',
+            answer:
+              'Yüksek veya ileri teknoloji kullanan firmaların, üniversite veya Ar-Ge merkezlerinin imkânlarından yararlanarak teknoloji ürettikleri, buluşları ticari ürünlere dönüştürdükleri ve bu sayede bölgenin kalkınmasına katkıda bulundukları, akademik ve ekonomik yapının bütünleştiği siteler veya teknoparklardır.',
+          },
+          {
+            question: 'TGB’de proje başlatma ve yer tahsis süreçleri idari olarak nasıl işler?',
+            answer:
+              'Girişimcilerin yürütecekleri her bir Ar-Ge veya tasarım projesi, yönetici şirket tarafından belirlenen ve uzman öğretim elemanları ile sektör temsilcisinden oluşan “Proje Değerlendirme Komisyonu” tarafından incelenir. İncelemesi tamamlanan ve uygun görülen projelere proje kabul belgesi düzenlenerek yer tahsisi yapılır.',
+          },
+          {
+            question: 'TGB’de yürütülen bir proje sona erdiğinde şirketin sözleşmesi devam eder mi?',
+            answer:
+              'Girişimcilerin projelerinin tamamlanma tarihinden itibaren üç ay içerisinde yeni bir Ar-Ge veya tasarım projesi başlatamamaları halinde, mevcut kira sözleşmesi süresi dikkate alınmaksızın kira sözleşmesi fesholunmuş sayılır ve girişimcinin bölgeden ihracı için gerekli işlemler başlatılır.',
+          },
           {
             question: 'Teknoloji Geliştirme Bölgelerinde (TGB) faaliyet gösteren firmalar için vergi muafiyetleri nelerdir?',
             answer:
@@ -1190,6 +1235,28 @@ const tr: Dictionary = {
             question: 'TGB Kuluçka Merkezi (İnkübatör) nedir ve kimler yer alabilir?',
             answer:
               'Kuluçka merkezleri, genç ve yeni işletmeleri geliştirmek amacıyla girişimcilere ofis, donanım, danışmanlık ve teknik destek hizmetlerinin tek elden sağlandığı yapılardır. Kuruluşunun üzerinden en fazla üç yıl geçmiş olan Ar-Ge, yazılım ve tasarım firmaları, kuluçka merkezlerinde yer tahsisi alarak (en fazla 36 ay) kira indirimleri gibi önemli mali avantajlardan faydalanabilmektedir.',
+          },
+        ],
+      },
+      {
+        title: 'Danışmanlık Süreci',
+        description:
+          'ANT Yönetim Danışmanlık ile çalışma süreci, ön görüşme ve hizmet kapsamına ilişkin sorular.',
+        items: [
+          {
+            question: 'Danışmanlık süreciniz nasıl işler?',
+            answer:
+              'Süreç; ön görüşme, ihtiyaç analizi, kapsam ve hedeflerin tanımlanması, yol haritasının hazırlanması, uygulama ve izleme aşamalarından oluşur. Her projede; mühendislik disipliniyle hazırlanmış iş planı, ölçülebilir çıktılar, düzenli raporlama ve denetim hazırlığı içeren bir yapı sunarız.',
+          },
+          {
+            question: 'Ön görüşme nedir, nasıl planlanır?',
+            answer:
+              'Ön görüşme; firmanızın mevcut durumunu, hedeflerini ve olası danışmanlık ihtiyaçlarını bağlayıcı olmayan şekilde değerlendirdiğimiz 30-45 dakikalık bir görüşmedir. İletişim sayfamızdaki formu doldurarak veya +90 (506) 986 26 20 numaramızı arayarak randevu talep edebilirsiniz.',
+          },
+          {
+            question: 'Türkiye genelinde mi hizmet veriyorsunuz?',
+            answer:
+              'Evet. ANT Yönetim Danışmanlık; Türkiye’nin 81 ilinde faaliyet gösteren OSB’lere, Ar-Ge ve Tasarım Merkezlerine, Teknoparklardaki yönetici şirketlere ve KOBİ’lere; hibrit (yerinde + uzaktan) çalışma modelimiz ile hizmet sunmaktadır.',
           },
         ],
       },
@@ -2539,7 +2606,7 @@ const en: Dictionary = {
       {
         title: 'Organized Industrial Zones (OIZ) Consulting',
         description:
-          'Most asked questions on the definition, establishment, governance, infrastructure, land allocation and Green OIZ processes of Organized Industrial Zones.',
+          'Most asked questions on the definition, governance, infrastructure, land allocation, Green OIZ and business continuity planning processes of OIZs.',
         items: [
           {
             question: 'What is an Organized Industrial Zone (OIZ) and what is its purpose?',
@@ -2596,13 +2663,33 @@ const en: Dictionary = {
             answer:
               'OIZs that stand out with resource and energy efficiency, lean production, industrial waste collaboration and environmentally responsible practices are certified as “Green OIZ” by the Turkish Standards Institution (TSE). Projects designed to meet Green OIZ criteria are given priority in the Ministry’s lending processes.',
           },
+          {
+            question: 'What is the OIZ’s obligation to prepare a Business Continuity Plan under the OIZ Implementation Regulation?',
+            answer:
+              'According to the Regulation, in the event of a possible disaster, a business continuity plan must be prepared in line with business continuity objectives so that the OIZ can sustain, recover or restore its value-creating activities. Preparation of the plan is the duty of the Zone Directorate, while the authority and responsibility to approve it belongs to the Founding Committee or the General Assembly.',
+          },
+          {
+            question: 'What is a Business Continuity Plan (BCP) and what is its main purpose?',
+            answer:
+              'A Business Continuity Plan (BCP) is an operational document that defines how organizations and critical infrastructures will sustain or recover their critical business activities after an interruption or crisis. Its core purpose is to minimize confusion and stress during a disruption and to provide personnel with a clear, easy-to-follow, pre-defined roadmap. These plans ensure that the organization’s essential functions are restarted and sustained within pre-targeted Recovery Time Objectives (RTO) and at the Minimum Business Continuity Objective (MBCO) service levels. They also play a strategic role in strengthening organizational, social and administrative resilience by enabling the post-disaster recovery process to be managed in a planned manner.',
+          },
+          {
+            question: 'What does Organizational Resilience mean for OIZs and is it enough just to prepare a plan?',
+            answer:
+              'Organizational resilience is not just about having a plan. It is a structure that must be built on good governance practices, adaptive capacity, agility, transformation capability and a risk and resilience culture spread across the entire organization. It is a holistic management approach in which different disciplines such as emergency management, business continuity, crisis management, IT disaster recovery and risk management — all sitting on this foundation — operate in an integrated manner.',
+          },
         ],
       },
       {
         title: 'R&D and Design Centres Consulting',
         description:
-          'Questions on Law No. 5746 — establishment requirements for R&D and Design Centres, tax and social-security incentives, off-site work, contracted R&D projects and the venture-capital obligation.',
+          'Questions on the definition, establishment requirements, tax and social-security incentives, out-of-scope activities, off-site work, contracted projects, the venture-capital obligation and audit readiness for R&D and Design Centres under Law No. 5746.',
         items: [
+          {
+            question: 'What are R&D Centres and Design Centres?',
+            answer:
+              'An R&D Centre is a unit organized as a separate department within the structure of capital companies, exclusively conducting research and development activities domestically and possessing sufficient R&D capability and capacity. A Design Centre is similarly defined as a unit operating exclusively in design activities within Turkey.',
+          },
           {
             question: 'What are the requirements to set up an R&D or Design Centre within my company?',
             answer:
@@ -2612,6 +2699,11 @@ const en: Dictionary = {
             question: 'What are the core tax and social-security incentives provided to R&D and Design Centres?',
             answer:
               '100% of R&D, innovation and design expenditures incurred at the centres can be deducted from the corporate or income tax base. In addition, depending on personnel education level (for example 95% for PhD holders, 90% for master’s holders, 80% for others), an income-tax withholding incentive on the withholding tax return, social-security premium support equal to half of the employer’s share calculated on gross wages, and stamp-duty as well as customs-duty exemptions on documents issued under projects are provided.',
+          },
+          {
+            question: 'Which activities of my company are NOT considered R&D or Design under the law?',
+            answer:
+              'Activities such as marketing, market research, quality control, social-science research, oil/mineral exploration, set-up costs, routine software updates and consumer testing for advertising purposes are not classified as R&D or design activities under the law.',
           },
           {
             question: 'Can centre personnel work outside the centre for projects? Are those periods covered by the incentive?',
@@ -2628,13 +2720,33 @@ const en: Dictionary = {
             answer:
               'Corporate-tax payers whose R&D deduction amount benefited from on the annual tax return is TRY 5,000,000 or more must transfer 3% of this amount (up to TRY 100,000,000 per year) to a temporary account on the liabilities side and use this fund by year-end as an investment in Venture Capital Investment Funds or in entrepreneurs. If the transfer is not made, 20% of the deducted amount is reversed and a tax penalty is imposed.',
           },
+          {
+            question: 'How should we prepare for an R&D or Design Centre audit?',
+            answer:
+              'Audits review full-time-equivalent R&D / design personnel calculations, R&D eligibility of expense items, personnel PKDS records, project documentation and the technical depth of annual activity reports. Pre-audit simulations, data-driven reporting and process digitalization enable early detection and resolution of risk findings.',
+          },
         ],
       },
       {
         title: 'Technology Development Zones (TDZ / Technopark) Consulting',
         description:
-          'Questions on tax exemptions for TDZ companies under Law No. 4691, employment supports for PhDs and basic-sciences graduates, the venture-capital obligation and incubation centres.',
+          'Questions on the definition of TDZs, project initiation and space allocation, tax exemptions, employment supports for PhDs and basic-sciences graduates, the venture-capital obligation and incubation centres under Law No. 4691.',
         items: [
+          {
+            question: 'What is a Technology Development Zone (TDZ) and what is its main purpose?',
+            answer:
+              'TDZs are sites or technoparks where companies using high or advanced technology, leveraging the resources of universities or R&D centres, produce technology, transform inventions into commercial products and thereby contribute to regional development — bringing the academic and economic structures together.',
+          },
+          {
+            question: 'How do project initiation and space allocation procedures work administratively in a TDZ?',
+            answer:
+              'Each R&D or design project to be executed by entrepreneurs is reviewed by a “Project Evaluation Committee” designated by the managing company and consisting of expert academic staff and a sector representative. Projects whose review is completed and deemed appropriate are issued a Project Acceptance Certificate, after which space is allocated.',
+          },
+          {
+            question: 'When a project executed in the TDZ ends, does the company’s contract continue?',
+            answer:
+              'If entrepreneurs cannot launch a new R&D or design project within three months following the completion date of their project, the existing lease is deemed terminated regardless of the contract period and the procedures to remove the entrepreneur from the zone are initiated.',
+          },
           {
             question: 'What are the tax exemptions for companies operating in Technology Development Zones (TDZ)?',
             answer:
@@ -2654,6 +2766,28 @@ const en: Dictionary = {
             question: 'What is a TDZ Incubation Centre and who can be hosted there?',
             answer:
               'Incubation centres are facilities where office space, equipment, consulting and technical support services are provided in a single point to entrepreneurs in order to develop young and new businesses. R&D, software and design companies whose establishment is at most three years old can take space allocations in incubation centres (for up to 36 months) and benefit from significant financial advantages such as rent reductions.',
+          },
+        ],
+      },
+      {
+        title: 'Consulting Process',
+        description:
+          'Questions on engaging with ANT Management Consulting, the introductory call and our service coverage.',
+        items: [
+          {
+            question: 'How does your consulting engagement work?',
+            answer:
+              'The process involves an introductory call, needs analysis, scope and objective definition, roadmap preparation, implementation and monitoring. Each project includes an engineering-grade work plan, measurable outputs, regular reporting and audit-readiness practices.',
+          },
+          {
+            question: 'What is the introductory call and how is it scheduled?',
+            answer:
+              'The introductory call is a non-binding 30–45 minute conversation in which we assess your current state, goals and potential consulting needs. You can request a meeting via the contact form or by calling +90 (506) 986 26 20.',
+          },
+          {
+            question: 'Do you serve nationwide in Turkey?',
+            answer:
+              'Yes. ANT Management Consulting serves OIZs, R&D and Design Centres, Technopark managing companies and SMEs across all 81 provinces of Turkey through a hybrid (on-site + remote) delivery model.',
           },
         ],
       },
