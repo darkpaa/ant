@@ -14,10 +14,14 @@ export interface SEOProps {
   description: string;
   url: string;
   image?: string;
+  imageWidth?: number;
+  imageHeight?: number;
   type?: SEOType;
   lang?: SEOLang;
   noIndex?: boolean;
   publishedAt?: string;
+  modifiedAt?: string;
+  author?: string;
   keywords?: string[];
   jsonLd?: JsonLd | JsonLd[];
 }
@@ -33,16 +37,29 @@ const SEO: React.FC<SEOProps> = ({
   description,
   url,
   image = DEFAULT_IMAGE,
+  imageWidth,
+  imageHeight,
   type = 'website',
   lang = 'tr',
   noIndex = false,
   publishedAt,
+  modifiedAt,
+  author,
   keywords,
   jsonLd,
 }) => {
   const canonical = buildCanonical(url);
   const fullTitle = `${title} | ${SITE_NAME}`;
   const ldArray = jsonLd ? (Array.isArray(jsonLd) ? jsonLd : [jsonLd]) : [];
+  const effectiveAuthor = author ?? 'İlker Tura';
+  const imageLower = image.toLowerCase();
+  let imageType = 'image/png';
+  if (imageLower.endsWith('.jpg') || imageLower.endsWith('.jpeg')) {
+    imageType = 'image/jpeg';
+  } else if (imageLower.endsWith('.webp')) {
+    imageType = 'image/webp';
+  }
+  const altLocale = lang === 'en' ? 'tr_TR' : 'en_US';
 
   return (
     <Helmet prioritizeSeoTags>
@@ -52,6 +69,8 @@ const SEO: React.FC<SEOProps> = ({
       {keywords && keywords.length > 0 && (
         <meta name="keywords" content={keywords.join(', ')} />
       )}
+      <meta name="author" content={effectiveAuthor} />
+      <meta name="publisher" content={SITE_NAME} />
       <meta
         name="robots"
         content={noIndex ? 'noindex, nofollow' : 'index, follow'}
@@ -73,15 +92,33 @@ const SEO: React.FC<SEOProps> = ({
       <meta property="og:url" content={canonical} />
       <meta property="og:image" content={image} />
       <meta property="og:image:alt" content={fullTitle} />
+      <meta property="og:image:type" content={imageType} />
+      {imageWidth && (
+        <meta property="og:image:width" content={String(imageWidth)} />
+      )}
+      {imageHeight && (
+        <meta property="og:image:height" content={String(imageHeight)} />
+      )}
       <meta property="og:locale" content={lang === 'en' ? 'en_US' : 'tr_TR'} />
+      <meta property="og:locale:alternate" content={altLocale} />
       {publishedAt && (
         <meta property="article:published_time" content={publishedAt} />
+      )}
+      {(modifiedAt || publishedAt) && (
+        <meta
+          property="article:modified_time"
+          content={modifiedAt ?? publishedAt ?? ''}
+        />
+      )}
+      {type === 'article' && (
+        <meta property="article:author" content={effectiveAuthor} />
       )}
 
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:title" content={fullTitle} />
       <meta name="twitter:description" content={description} />
       <meta name="twitter:image" content={image} />
+      <meta name="twitter:image:alt" content={fullTitle} />
 
       {ldArray.map((ld, idx) => (
         <script key={idx} type="application/ld+json">

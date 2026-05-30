@@ -26,6 +26,11 @@ const FAQ: React.FC = () => {
     '@context': 'https://schema.org',
     '@type': 'FAQPage',
     '@id': `${SITE_URL}/sss#faqpage`,
+    inLanguage: lang === 'en' ? 'en-US' : 'tr-TR',
+    speakable: {
+      '@type': 'SpeakableSpecification',
+      cssSelector: ['h1', 'h2', 'h3', '[data-faq-answer]'],
+    },
     mainEntity: faq.categories.flatMap((cat) =>
       cat.items.map((item) => ({
         '@type': 'Question',
@@ -191,7 +196,10 @@ const FAQ: React.FC = () => {
                         }`}
                       >
                         <div className="overflow-hidden">
-                          <p className="text-navy-600 leading-relaxed px-5 sm:px-6 pb-6 text-sm sm:text-base">
+                          <p
+                            data-faq-answer
+                            className="text-navy-600 leading-relaxed px-5 sm:px-6 pb-6 text-sm sm:text-base"
+                          >
                             {item.answer}
                           </p>
                         </div>

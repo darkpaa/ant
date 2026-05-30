@@ -144,6 +144,9 @@ export interface Dictionary {
     postMeta: (date: string, readTime: string) => string;
     readPost: string;
     backToBlog: string;
+    authorLabel: string;
+    authorRole: string;
+    authorBio: string;
     disclaimerTitle: string;
     relatedTitle: string;
     relatedServicesTitle: string;
@@ -641,6 +644,10 @@ const tr: Dictionary = {
     postMeta: (date, readTime) => `${date} · ${readTime}`,
     readPost: 'Yazıyı Oku',
     backToBlog: 'Blog listesine dön',
+    authorLabel: 'Yazar',
+    authorRole: 'Kurucu · ANT Yönetim Danışmanlık',
+    authorBio:
+      '15 yıl Sanayi ve Teknoloji Bakanlığı müfettişlik tecrübesiyle OSB, Ar-Ge ve Tasarım Merkezleri, Teknoparklar ve kurumsal yönetim alanlarında mevzuat uyumu ve denetim uzmanı.',
     disclaimerTitle: 'Not',
     relatedTitle: 'İlgili İçerikler',
     relatedServicesTitle: 'Hizmetlerimizi İnceleyin',
@@ -2180,6 +2187,10 @@ const en: Dictionary = {
     otherPostsTitle: 'Other Articles',
     sourcesTitle: 'Sources and Official References',
     backToBlog: 'Back to blog',
+    authorLabel: 'Author',
+    authorRole: 'Founder · ANT Management Consulting',
+    authorBio:
+      'With 15 years of inspection experience at the Ministry of Industry and Technology, expert in regulatory compliance and auditing across OIZs, R&D and Design Centres, Technoparks and corporate governance.',
     disclaimerTitle: 'Disclaimer',
     posts: [
       {

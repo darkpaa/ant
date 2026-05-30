@@ -42,21 +42,35 @@ const BlogPost: React.FC = () => {
     datePublished: post.publishedAt,
     dateModified: post.publishedAt,
     inLanguage: lang === 'en' ? 'en-US' : 'tr-TR',
+    isAccessibleForFree: true,
     author: {
-      '@type': 'Organization',
-      name: 'ANT Yönetim Danışmanlık',
-      url: SITE_URL,
+      '@type': 'Person',
+      '@id': `${SITE_URL}/kurumsal#ilker-tura`,
+      name: 'İlker Tura',
+      jobTitle: 'Kurucu',
+      url: `${SITE_URL}/kurumsal`,
+      worksFor: { '@id': `${SITE_URL}/#organization` },
     },
     publisher: {
       '@type': 'Organization',
+      '@id': `${SITE_URL}/#organization`,
       name: 'ANT Yönetim Danışmanlık',
       logo: {
         '@type': 'ImageObject',
         url: `${SITE_URL}/antlogo.png`,
+        width: 512,
+        height: 512,
       },
     },
-    image: `${SITE_URL}/antlogo.png`,
+    image: {
+      '@type': 'ImageObject',
+      url: `${SITE_URL}/hero-bg.png`,
+      width: 1200,
+      height: 630,
+    },
     keywords: seoKeywords ? seoKeywords.join(', ') : undefined,
+    articleSection: 'Blog',
+    about: { '@id': `${SITE_URL}/#organization` },
   };
 
   const breadcrumbLd = {
@@ -93,6 +107,10 @@ const BlogPost: React.FC = () => {
         type="article"
         lang={lang}
         publishedAt={post.publishedAt}
+        author="İlker Tura"
+        image={`${SITE_URL}/hero-bg.png`}
+        imageWidth={1200}
+        imageHeight={630}
         keywords={seoKeywords}
         jsonLd={[articleLd, breadcrumbLd]}
       />
@@ -124,6 +142,32 @@ const BlogPost: React.FC = () => {
           <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white tracking-tight leading-tight">
             {post.title}
           </h1>
+
+          <Link
+            to="/kurumsal"
+            rel="author"
+            className="mt-8 inline-flex items-center gap-3 group"
+          >
+            <img
+              src="/ilkerphoto.jpg"
+              alt="İlker Tura"
+              loading="lazy"
+              width={48}
+              height={48}
+              className="w-12 h-12 rounded-full object-cover ring-2 ring-white/20 shadow-lg shadow-black/20 group-hover:ring-accent-400/60 transition-all"
+            />
+            <span className="flex flex-col text-left">
+              <span className="text-[11px] uppercase tracking-wider text-white/50 font-semibold">
+                {t.blog.authorLabel}
+              </span>
+              <span className="text-white font-semibold text-sm group-hover:text-accent-300 transition-colors">
+                İlker Tura
+              </span>
+              <span className="text-white/60 text-xs">
+                {t.blog.authorRole}
+              </span>
+            </span>
+          </Link>
         </div>
       </section>
 
