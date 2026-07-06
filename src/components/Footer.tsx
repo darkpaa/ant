@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { Phone, Mail, ArrowUpRight } from 'lucide-react';
+import { Phone, Mail, MapPin, ArrowUpRight } from 'lucide-react';
 import { useLang } from '../i18n/LanguageContext';
 import { LINKEDIN_URL } from '../i18n/translations';
 import LinkedinIcon from './icons/LinkedinIcon';
@@ -133,6 +133,15 @@ const Footer: React.FC = () => {
                     </div>
                   </div>
                 </a>
+              </li>
+              <li className="flex items-start gap-3">
+                <div className="w-9 h-9 rounded-lg bg-white/5 flex items-center justify-center flex-shrink-0">
+                  <MapPin className="w-4 h-4 text-accent-400" />
+                </div>
+                <address className="not-italic text-sm text-white/60 leading-relaxed">
+                  Mustafa Kemal Mah. 2157. Sk. No:4 D:13<br />
+                  06510 Çankaya / Ankara
+                </address>
               </li>
             </ul>
           </div>
