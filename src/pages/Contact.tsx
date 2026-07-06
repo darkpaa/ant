@@ -2,6 +2,7 @@ import { useEffect, useMemo, useRef, useState } from 'react';
 import {
   Phone,
   Mail,
+  MapPin,
   ArrowRight,
   Send,
   CheckCircle2,
@@ -155,6 +156,14 @@ const Contact: React.FC = () => {
             email: 'kurumsal@antyonetim.com',
             telephone: '+90-506-986-26-20',
             url: 'https://antyonetim.com',
+            address: {
+              '@type': 'PostalAddress',
+              streetAddress: 'Mustafa Kemal Mah. 2157. Sk. No:4 D:13',
+              postalCode: '06510',
+              addressLocality: 'Çankaya',
+              addressRegion: 'Ankara',
+              addressCountry: 'TR',
+            },
           },
         }}
       />
@@ -430,7 +439,34 @@ const Contact: React.FC = () => {
                     </div>
                   </a>
                 </li>
+                <li className="flex items-start gap-4">
+                  <div className="w-11 h-11 rounded-xl bg-accent-400/10 flex items-center justify-center flex-shrink-0">
+                    <MapPin className="w-5 h-5 text-accent-500" />
+                  </div>
+                  <div>
+                    <div className="text-xs font-semibold text-navy-500 uppercase tracking-wider mb-1">
+                      {lang === 'tr' ? 'Adres' : 'Address'}
+                    </div>
+                    <address className="not-italic text-navy-900 font-medium text-sm leading-relaxed">
+                      Mustafa Kemal Mah. 2157. Sk. No:4 D:13<br />
+                      06510 Çankaya / Ankara
+                    </address>
+                  </div>
+                </li>
               </ul>
+            </div>
+
+            <div className="rounded-3xl overflow-hidden border border-navy-100 shadow-sm h-64">
+              <iframe
+                title="ANT Yönetim Danışmanlık Ofis Konumu"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3060.2915036993268!2d32.77146457640225!3d39.91249228617404!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14d3494cf5462ac3%3A0xc90dea443ed5a29!2zQW50IERhbsSxxZ9tYW5sxLFrIC0gT1NCIHZlIEFyLWdlIERhbsSxxZ9tYW5sxLHEn8Sx!5e0!3m2!1str!2str!4v1783340945240!5m2!1str!2str"
+                width="100%"
+                height="100%"
+                style={{ border: 0 }}
+                allowFullScreen
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+              />
             </div>
 
             <a
