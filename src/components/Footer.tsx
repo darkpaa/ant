@@ -136,7 +136,7 @@ const Footer: React.FC = () => {
               </li>
               <li>
                 <a
-                  href="https://www.google.com/maps?q=39.91249228617404,32.77146457640225&z=17"
+                  href="https://share.google/Jrw7wgpPg7RhE5Y4x"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-start gap-3 text-white/40 hover:text-white transition-colors duration-300 group"
