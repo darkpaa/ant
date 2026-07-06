@@ -36,13 +36,50 @@ const OsbDanismanligi: React.FC = () => {
     description: p.pageDescription,
     url: `${SITE_URL}/osb-danismanligi`,
     inLanguage: lang === 'en' ? 'en-US' : 'tr-TR',
+    isAccessibleForFree: true,
     datePublished: '2026-04-23',
     dateModified: '2026-04-23',
-    author: { '@id': `${SITE_URL}/#organization` },
-    publisher: { '@id': `${SITE_URL}/#organization` },
+    author: {
+      '@type': 'Person',
+      '@id': `${SITE_URL}/kurumsal#ilker-tura`,
+      name: 'İlker Tura',
+      jobTitle: 'Kurucu',
+      url: `${SITE_URL}/kurumsal`,
+      worksFor: { '@id': `${SITE_URL}/#organization` },
+    },
+    publisher: {
+      '@type': 'Organization',
+      '@id': `${SITE_URL}/#organization`,
+      name: 'ANT Yönetim Danışmanlık',
+      logo: {
+        '@type': 'ImageObject',
+        url: `${SITE_URL}/antlogo.png`,
+        width: 512,
+        height: 512,
+      },
+    },
     mainEntityOfPage: { '@type': 'WebPage', '@id': `${SITE_URL}/osb-danismanligi` },
-    image: `${SITE_URL}/antlogo.png`,
+    image: {
+      '@type': 'ImageObject',
+      url: `${SITE_URL}/hero-bg.png`,
+      width: 1200,
+      height: 630,
+    },
     articleSection: p.sections.map((s) => s.title),
+    about: { '@id': `${SITE_URL}/#organization` },
+  };
+
+  const serviceLd = {
+    '@context': 'https://schema.org',
+    '@type': 'ProfessionalService',
+    '@id': `${SITE_URL}/osb-danismanligi#service`,
+    name: lang === 'en' ? 'OIZ Consulting — ANT Management Consulting' : 'OSB Danışmanlığı — ANT Yönetim Danışmanlık',
+    description: p.pageDescription,
+    url: `${SITE_URL}/osb-danismanligi`,
+    provider: { '@id': `${SITE_URL}/#organization` },
+    areaServed: { '@type': 'Country', name: 'Türkiye' },
+    serviceType: lang === 'en' ? 'OIZ Consulting' : 'OSB Danışmanlığı',
+    inLanguage: lang === 'en' ? 'en-US' : 'tr-TR',
   };
 
   return (
@@ -66,7 +103,7 @@ const OsbDanismanligi: React.FC = () => {
           'OSB danışmanlık rehberi',
           'ANT Yönetim Danışmanlık',
         ]}
-        jsonLd={[articleLd, breadcrumbLd]}
+        jsonLd={[articleLd, serviceLd, breadcrumbLd]}
       />
       <main className="relative bg-gray-50/60 min-h-screen">
         <section className="relative bg-gradient-to-br from-navy-950 via-navy-900 to-navy-800 overflow-hidden">
