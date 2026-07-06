@@ -134,14 +134,21 @@ const Footer: React.FC = () => {
                   </div>
                 </a>
               </li>
-              <li className="flex items-start gap-3">
-                <div className="w-9 h-9 rounded-lg bg-white/5 flex items-center justify-center flex-shrink-0">
-                  <MapPin className="w-4 h-4 text-accent-400" />
-                </div>
-                <address className="not-italic text-sm text-white/60 leading-relaxed">
-                  Mustafa Kemal Mah. 2157. Sk. No:4 D:13<br />
-                  06510 Çankaya / Ankara
-                </address>
+              <li>
+                <a
+                  href="https://www.google.com/maps/place/?q=place_id:0x14d3494cf5462ac3:0xc90dea443ed5a29"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-start gap-3 text-white/40 hover:text-white transition-colors duration-300 group"
+                >
+                  <div className="w-9 h-9 rounded-lg bg-white/5 group-hover:bg-accent-400/10 flex items-center justify-center flex-shrink-0 transition-colors duration-300">
+                    <MapPin className="w-4 h-4 text-accent-400" />
+                  </div>
+                  <address className="not-italic text-sm text-white/60 group-hover:text-white leading-relaxed transition-colors">
+                    Mustafa Kemal Mah. 2157. Sk. No:4 D:13<br />
+                    06510 Çankaya / Ankara
+                  </address>
+                </a>
               </li>
             </ul>
           </div>
