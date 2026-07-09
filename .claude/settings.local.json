@@ -9,7 +9,8 @@
       "Bash(curl -sL --max-redirs 10 -A \"Mozilla/5.0\" \"https://share.google/Jrw7wgpPg7RhE5Y4x\")"
     ],
     "additionalDirectories": [
-      "c:\\Users\\lanad\\OneDrive\\Masaüstü\\ant\\src\\components"
+      "c:\\Users\\lanad\\OneDrive\\Masaüstü\\ant\\src\\components",
+      "c:\\Users\\lanad\\OneDrive\\Masa�st�\\ant\\public"
     ]
   }
 }

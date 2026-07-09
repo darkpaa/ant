@@ -177,6 +177,20 @@ const BlogPost: React.FC = () => {
             {post.content.intro}
           </p>
 
+          {post.content.images && post.content.images.length > 0 && (
+            <div className="space-y-4">
+              {post.content.images.map((img, idx) => (
+                <img
+                  key={idx}
+                  src={img.src}
+                  alt={img.alt}
+                  loading="lazy"
+                  className="w-full rounded-2xl shadow-sm border border-navy-100 object-contain"
+                />
+              ))}
+            </div>
+          )}
+
           {post.content.sections.map((section) => (
             <div key={section.title} className="space-y-4">
               <h2 className="text-2xl sm:text-3xl font-bold text-navy-900 tracking-tight leading-tight">
@@ -190,6 +204,14 @@ const BlogPost: React.FC = () => {
                   {p}
                 </p>
               ))}
+              {section.image && (
+                <img
+                  src={section.image.src}
+                  alt={section.image.alt}
+                  loading="lazy"
+                  className="w-full rounded-2xl shadow-sm border border-navy-100 object-contain mt-4"
+                />
+              )}
             </div>
           ))}
 
@@ -326,7 +348,7 @@ const BlogPost: React.FC = () => {
           </section>
 
           {(() => {
-            const others = t.blog.posts.filter((p) => p.id !== post.id).slice(0, 3);
+            const others = [...t.blog.posts].reverse().filter((p) => p.id !== post.id).slice(0, 3);
             if (others.length === 0) return null;
             return (
               <section aria-labelledby="other-posts-heading" className="pt-4">

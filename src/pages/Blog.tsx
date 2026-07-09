@@ -39,7 +39,7 @@ const Blog: React.FC = () => {
       name: 'ANT Yönetim Danışmanlık',
       url: SITE_URL,
     },
-    blogPost: t.blog.posts.map((p) => ({
+    blogPost: [...t.blog.posts].reverse().map((p) => ({
       '@type': 'BlogPosting',
       headline: p.title,
       description: p.excerpt,
@@ -104,7 +104,7 @@ const Blog: React.FC = () => {
 
       <section className="relative max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
         <div className="grid gap-8">
-          {t.blog.posts.map((post) => (
+          {[...t.blog.posts].reverse().map((post) => (
             <Link
               key={post.id}
               to={`/blog/${post.id}`}

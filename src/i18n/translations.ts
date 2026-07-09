@@ -31,7 +31,10 @@ export interface BlogPostContent {
   sections: {
     title: string;
     paragraphs: string[];
+    bullets?: string[];
+    image?: { src: string; alt: string };
   }[];
+  images?: { src: string; alt: string }[];
   summary?: {
     intro: string;
     items: string[];
@@ -1010,6 +1013,137 @@ const tr: Dictionary = {
           sources: [
             { label: '4562 sayılı Organize Sanayi Bölgeleri Kanunu — Mevzuat Bilgi Sistemi', url: 'https://www.mevzuat.gov.tr/' },
             { label: 'T.C. Resmî Gazete — Cumhurbaşkanlığı Kararları', url: 'https://www.resmigazete.gov.tr/' },
+            { label: 'Organize Sanayi Bölgeleri Üst Kuruluşu (OSBÜK)', url: 'https://www.osbuk.org.tr/' },
+          ],
+        },
+      },
+      {
+        id: 'osb-dogru-bilinen-yanlislar',
+        title: 'OSB\'lerde Doğru Bilinen Yanlışlar',
+        excerpt:
+          'Mevzuat uygulamalarında en büyük risk, kuralların bilinmemesi değil; eksik veya yanlış yorumlanmasıdır. 6 kritik soru üzerinden OSB\'lerde sık karşılaşılan yanlış kabuller ve doğru hukuki çerçeve.',
+        publishedAt: '9 Temmuz 2026',
+        readTime: '8 dk okuma',
+        content: {
+          intro:
+            'Doğru bildiklerimiz, bazen en büyük risk alanımız olabilir. Mevzuat uygulamalarında karşılaşılan en büyük risk; kuralların hiç bilinmemesi değil; eksik, yanlış veya geçmiş alışkanlıklarla yorumlanmasıdır. Özellikle kurumsal yapılarda ve Organize Sanayi Bölgelerinde sıkça duyduğumuz "Biz hep böyle yapıyorduk" anlayışı, zamanla geri dönüşü zor idari, mali ve hukuki sorumluluklar doğurabilir. Bu paylaşımda, uygulamada sıkça karşılaşılan bazı yanlış kabulleri kısa ve sade bir formatta ele aldım. Unutmamak gerekir ki; mevzuata tam uyum bir yükümlülük değil, işletmenizi ve yönetiminizi güvence altına alan en önemli kalkanınızdır.',
+          sections: [
+            {
+              title:
+                'Soru 1: OSB Yönetim Kurulu, kanun ve yönetmelikle kendisine verilen yetkilerden bir kısmını bölge müdürüne veya kendi üyelerine devrederse, bu yetkilerin kullanımından doğacak yasal sorumluluktan kurtulur mu?',
+              paragraphs: [
+                '❌ Yanlış Bilinen: "Yönetim kurulu yetki devri yaptıktan sonra, devredilen iş ve işlemlerden ötürü yasal sorumluluk tamamen yetkiyi alan kişiye (örneğin Bölge Müdürüne) geçer, yönetim kurulunun sorumluluğu sona erer."',
+                '✅ Doğru Olan: Yönetim kurulu, gerekli hallerde yetkilerinden bir kısmını başkan veya başkan vekiline, üyelerinden birine, birkaçına veya bölge müdürüne devredebilir; ancak yetki devri, yönetim kurulunun sorumluluğunu ortadan kaldırmaz. Yönetim kurulunun genel sevk, idare, gözetim ve mevzuata uygun işlem yapılmasını takip etme sorumluluğu aynen devam eder. Yetkiyi devretmiş olmak, o yetkinin kötüye kullanılmasından veya yanlış uygulanmasından doğan zararlardan idarecileri hukuken muaf tutmaz.',
+              ],
+            },
+            {
+              title:
+                'Soru 2: OSB sınırları içinde yer alan ancak mülkiyeti OSB tüzel kişiliğine ait olmayan (şahıslara veya firmalara ait müstakil tapulu) taşınmazların satışı veya devri esnasında OSB yönetiminin herhangi bir söz hakkı veya müdahale yetkisi var mıdır?',
+              paragraphs: [
+                '❌ Yanlış Bilinen: "Arsanın tapusu tamamen bana ait, OSB mülkiyetinde olmayan müstakil taşınmazımı dilediğim kişiye, OSB\'den izin almadan serbestçe satabilir veya devredebilirim."',
+                '✅ Doğru Olan: OSB sınırları içerisinde yer alan ve OSB mülkiyetinde bulunmayan taşınmazların tamamının tapu kaydına "taşınmazın icra yoluyla satışı dahil üçüncü kişilere devrinde OSB\'den uygunluk görüşü alınması zorunludur" şerhi konulur. Bu yasal şerh nedeniyle, mülk sahibi OSB mülkiyetinde olmayan bir taşınmazı satmak istediğinde bile OSB yönetiminden resmi uygunluk görüşü almak zorundadır. Ayrıca yeni alıcı, eski katılımcının tüm yasal taahhütlerini aynen kabul etmiş sayılır.',
+              ],
+              image: { src: '/blog/dogrubilinen1.jpg', alt: 'OSB\'lerde Doğru Bilinen Yanlışlar — Soru 1-2' },
+            },
+            {
+              title:
+                'Soru 3: Bir sanayi tesisinin parsel sınırları içinde kalan "Çevre Yeşili" alanları, fabrika personeli veya misafirler için açık otopark ya da mal indirme/yükleme alanı olarak düzenlenebilir mi?',
+              paragraphs: [
+                '❌ Yanlış Bilinen: "Parsel içi çevre yeşili benim tapulu kullanım alanımdır; lojistik ihtiyacım doğrultusunda bu alanları açık otopark veya yükleme-boşaltma alanı olarak değerlendirebilirim."',
+                '✅ Doğru Olan: Çevre yeşilleri üzerinde, mülk sınırları içinde yapılabilecek işlemler yasal olarak çok sınırlıdır. Bu alanlar otopark, yükleme-boşaltma alanı ve benzeri lojistik amaçlarla kesinlikle kullanılamaz ve üzerlerinde peyzaj düzenlemesi yapılması zorunludur.',
+              ],
+            },
+            {
+              title:
+                'Soru 4: OSB\'nin arıtma tesisi ilk yatırım ve inşaat maliyetlerine katılım payları, sadece fabrikasını tamamlayıp atık su üretmeye başlayan sanayicilerden mi tahsil edilir?',
+              paragraphs: [
+                '❌ Yanlış Bilinen: "Henüz fabrikamı kurmadım, inşaat aşamasındayım veya üretime geçip atık su üretmeye başlamadım; dolayısıyla ortak arıtma tesisinin yapım maliyetine ve yatırımlarına katılmam gerekmez."',
+                '✅ Doğru Olan: Yatırım bedeline katılım miktarının tahsilinde, katılımcının tesisini faaliyete geçirip geçirmediği kesinlikle dikkate alınmaz. Sanayiciler; yatırım maliyetinin %25\'ine parsel büyüklüklerine göre, geri kalan %75\'ine ise arıtma tesisinin teknik özelliği dikkate alınarak yönetim kurulunca belirlenecek debi ve kirlilik yükünün oranlarına göre katılım sağlarlar.',
+              ],
+              image: { src: '/blog/dogrubilinen2.jpg', alt: 'OSB\'lerde Doğru Bilinen Yanlışlar — Soru 3-4' },
+            },
+            {
+              title:
+                'Soru 5: OSB içinde yer alan bir sanayi parseli; adi ortaklıklara, birden fazla şirkete veya şahıslara hisseli olarak tahsis edilebilir mi?',
+              paragraphs: [
+                '❌ Yanlış Bilinen: "Yatırım maliyetlerini ve riskleri bölüşmek adına iki farklı ortak şirket veya şahıs olarak bir araya gelebilir, OSB\'den tek bir parseli ortaklaşa (hisseli) olarak tahsis veya satın alabiliriz."',
+                '✅ Doğru Olan: OSB\'lerde parsel tahsisi veya satışı yalnızca tek bir gerçek kişiye ya da tek bir tüzel kişiye yapılabilir. Hisseli olarak birden fazla kişiye, adi ortaklığa ya da birden fazla tüzel kişiye parsel tahsisi veya satışı yapılması yasal olarak kesinlikle yasaktır. Aykırı işlemlerin tespit edilmesi halinde, hissedarlığın giderilmesi için taraflara 1 ay süre tanınır; süre sonunda aykırılık giderilmezse tahsis OSB tarafından derhal iptal edilir.',
+              ],
+            },
+            {
+              title:
+                'Soru 6: Genel kurul aşamasına geçmiş ancak genel kurulda müteşebbis heyetin göreve devam etmesine karar verilmiş olan OSB\'lerde; müteşebbis heyet, yönetim ve denetim kurulu üyelerine ödenecek huzur hakkı miktarını belirlerken tamamen serbest midir, yasal bir sınır var mıdır?',
+              paragraphs: [
+                '❌ Yanlış Bilinen: "Genel kurulda müteşebbis heyetle devam kararı alındıysa, üyelerin huzur hakkı tutarını müteşebbis heyet dilediği tutarda ve tamamen serbestçe belirleyebilir."',
+                '✅ Doğru Olan: Huzur hakkı miktarını belirleme yetkisi müteşebbis heyete ait olsa da bu ödemeler çok net ve katı yasal sınırlara tabidir. Ödenecek huzur hakkının aylık toplam tutarı, her yıl Cumhurbaşkanlığınca belirlenen Kamu İktisadi Teşebbüsleri (KİT) ve bağlı ortaklıklarının yönetim kurulu başkan ve üyelerine ödenen net aylık ücreti kesinlikle aşamaz. (Kamu personeli olan üyeler için ise 631 sayılı KHK hükümleri esastır).',
+              ],
+              image: { src: '/blog/dogrubilinen3.jpg', alt: 'OSB\'lerde Doğru Bilinen Yanlışlar — Soru 5-6' },
+            },
+          ],
+          hashtags: [
+            '#OSB',
+            '#Mevzuat',
+            '#KurumsalYönetim',
+            '#Sanayi',
+            '#Hukuk',
+            '#Yönetim',
+            '#AntDanışmanlık',
+            '#YönetimKurulu',
+          ],
+          disclaimer: 'Bilgilendirme amaçlı özet içeriktir.',
+        },
+      },
+      {
+        id: 'osb-huzur-hakki-2026',
+        title: 'OSB\'lerde Huzur Hakkı Üst Limiti — 2026 Temmuz-Aralık Dönemi',
+        excerpt:
+          'OSB organ üyelerine ödenecek huzur haklarının 2026 Temmuz-Aralık dönemi üst limiti 48.399,73 TL olarak belirlendi. Cumhurbaşkanlığı Kararı çerçevesinde hesaplama yöntemi ve ödeme esasları.',
+        publishedAt: 'Temmuz 2026',
+        readTime: '5 dk okuma',
+        content: {
+          images: [
+            { src: '/blog/huzur.jpg', alt: 'OSB\'lerde Huzur Hakkı Üst Limiti 2026 Temmuz-Aralık Dönemi' },
+          ],
+          intro:
+            '📌 OSB Uygulama Yönetmeliğinde OSB organ üyelerine ödenecek huzur hakları ile ilgili olarak; "Müteşebbis heyet ile yönetim ve denetim kurullarının üyelerine, müteşebbis heyet tarafından toplantı başına tespit edilen tutarda huzur hakkı ödenebilir. Ödenecek bu huzur hakkının aylık toplam tutarı, her yıl Cumhurbaşkanlığınca belirlenen kamu iktisadi teşebbüsleri ve bağlı ortaklıklarının yönetim kurulu başkan ve üyelerine ödenen net aylık ücreti aşamaz." denilmektedir.',
+          sections: [
+            {
+              title: '📄 Cumhurbaşkanlığı Kararı ve 2026 Temmuz-Aralık Hesabı',
+              paragraphs: [
+                '29/5/2025 tarihli ve 9904 sayılı Cumhurbaşkanı Kararında ödeme sistemi belirlenmiş ve kararda Posta ve Telgraf Teşkilatı A.Ş. ve İller Bankası A.Ş. yönetim kurulu üyelerine (30.720) gösterge rakamının memur aylık katsayısı ile çarpımı sonucunda bulunacak tutarı, yönetim kurulu başkanına bu ücretin iki katını, denetim kurulu üyelerine ise yönetim kurulu üyeleri için belirlenen ücretin 3/4\'ünü aşmayacak şekilde Genel Kurul tarafından belirlenen miktarda net aylık ücret verilir hükmüne yer verilmiştir. Memur maaş aylık katsayısı ise 2026 yılı Temmuz-Aralık dönemi için 1,575512 olarak belirlenmiştir.',
+                '*Net ifadesi bir önceki kararda yer almamaktadır.',
+                '💰 Buradan yapılacak hesap ile 30.720 × 1,575512 = 48.399,73 TL huzur hakları için belirlenen üst limittir. Bu tutar net olarak ödenebilecektir.',
+              ],
+            },
+            {
+              title: '👥 Müteşebbis Heyet ve Yönetim Kurulu Başkanlarına Yapılacak Ödemeler',
+              paragraphs: [
+                'Müteşebbis heyet ile yönetilen OSB\'lerde yetkili organ tarafından karar alınması halinde yönetim ve denetim kurulu üyelerine ödenebilecek en yüksek tutarın (48.399,73 TL) aylık ❗iki katını❗ geçmemek üzere müteşebbis ve yönetim kurulu başkanına ödeme yapılabilir.',
+              ],
+            },
+            {
+              title: '⚠️ Diğer Ödemeler',
+              paragraphs: [
+                'OSB organ üyelerine yetkili organ kararı olsa bile huzur hakkı ödemesi dışında prim, ikramiye, komisyon başkan ve üyesi gibi gerekçelerle her ne ad altında olursa olsun farklı bir ödeme yapılamaz. Özetle; CB kararında bahsedilen Ocak ve Temmuz aylarında yapılabileceği belirtilen ek ödemeler OSB organ ve üyelerine ödenemeyecektir.',
+              ],
+            },
+            {
+              title: '✅ Genel Kurul ile İdare Edilen OSB\'lerde Huzur Hakkı',
+              paragraphs: [
+                'Genel kurula geçen ve müteşebbis heyetin görevinin sona erdiği OSB\'lerde yönetim ve denetim kurulu üyelerine, genel kurul tarafından tespit edilecek tutarda huzur hakkı ödenebilir.',
+              ],
+            },
+          ],
+          hashtags: [
+            '#OSB',
+            '#HuzurHakkı',
+            '#KurumsalYönetim',
+            '#SanayiBölgeleri',
+            '#MevzuatUygulama',
+          ],
+          sources: [
+            { label: '4562 sayılı Organize Sanayi Bölgeleri Kanunu — Mevzuat Bilgi Sistemi', url: 'https://www.mevzuat.gov.tr/' },
+            { label: 'T.C. Resmî Gazete — 29/5/2025 tarihli ve 9904 sayılı Cumhurbaşkanlığı Kararı', url: 'https://www.resmigazete.gov.tr/' },
             { label: 'Organize Sanayi Bölgeleri Üst Kuruluşu (OSBÜK)', url: 'https://www.osbuk.org.tr/' },
           ],
         },
@@ -2545,6 +2679,131 @@ const en: Dictionary = {
           sources: [
             { label: 'Law No. 4562 on Organized Industrial Zones — Turkish Legislation Database', url: 'https://www.mevzuat.gov.tr/' },
             { label: 'Official Gazette of Türkiye — Presidential Decrees', url: 'https://www.resmigazete.gov.tr/' },
+            { label: 'OSBÜK — OIZ Umbrella Organization of Türkiye', url: 'https://www.osbuk.org.tr/' },
+          ],
+        },
+      },
+      {
+        id: 'osb-dogru-bilinen-yanlislar',
+        title: 'Common Misconceptions in OIZ Legislation',
+        excerpt:
+          'The biggest risk in regulatory compliance is not ignorance of the rules but their incomplete or erroneous interpretation. Six critical questions covering frequent misconceptions in OIZs and the correct legal framework.',
+        publishedAt: 'July 9, 2026',
+        readTime: '8 min read',
+        content: {
+          intro:
+            'What we believe to be correct can sometimes be our greatest area of risk. The biggest risk in regulatory compliance is not ignorance of the rules but their incomplete, erroneous, or outdated interpretation. The "We\'ve always done it this way" mindset, frequently heard in corporate structures and Organized Industrial Zones, can over time give rise to administrative, financial and legal liabilities that are difficult to reverse. This post examines some of the most common misconceptions encountered in practice in a concise format. Never forget: full regulatory compliance is not merely an obligation — it is the most important shield protecting your business and management.',
+          sections: [
+            {
+              title:
+                'Question 1: If the OIZ Board of Directors delegates some of its statutory powers to the regional manager or its own members, does it escape legal liability for the exercise of those powers?',
+              paragraphs: [
+                '❌ Misconception: "Once the board of directors delegates authority, all legal liability for the delegated matters passes entirely to the person who receives the authority (e.g. the Regional Manager), and the board\'s liability ends."',
+                '✅ Correct: The board of directors may, where necessary, delegate some of its powers to the chairman, deputy chairman, one or more of its members, or the regional manager; however, such delegation does not eliminate the board\'s liability. The board\'s responsibilities for general direction, management, oversight, and ensuring regulatory compliance continue in full. Having delegated a power does not exempt directors from liability for damages arising from the misuse or misapplication of that power.',
+              ],
+            },
+            {
+              title:
+                'Question 2: Does OIZ management have any say or right of intervention in the sale or transfer of immovable properties located within OIZ boundaries but not owned by the OIZ legal entity (individually titled properties owned by individuals or companies)?',
+              paragraphs: [
+                '❌ Misconception: "The title deed is entirely mine. I can freely sell or transfer my individually titled property, which is not OIZ-owned, to anyone I choose without obtaining OIZ permission."',
+                '✅ Correct: The title deed of every immovable property located within OIZ boundaries but not owned by the OIZ must bear the annotation: "OIZ approval is required for the transfer of this property to third parties, including sale by enforcement proceedings." Due to this legal annotation, even when the owner wishes to sell a property not owned by the OIZ, they must obtain formal approval from OIZ management. Furthermore, the new buyer is deemed to have accepted all the legal commitments of the previous participant.',
+              ],
+            },
+            {
+              title:
+                'Question 3: Can "Green Buffer" areas within a parcel boundary of an industrial facility be arranged as open car parks or loading/unloading areas for factory staff or visitors?',
+              paragraphs: [
+                '❌ Misconception: "The green buffer within my parcel is my titled usage area; I can use these areas as an open car park or loading/unloading area to meet my logistics needs."',
+                '✅ Correct: The permissible activities on green buffer areas within property boundaries are very limited by law. These areas may absolutely not be used for car parking, loading/unloading or similar logistics purposes, and landscaping is mandatory on them.',
+              ],
+            },
+            {
+              title:
+                'Question 4: Are participation shares in the initial investment and construction costs of an OIZ\'s treatment plant collected only from industrialists who have completed their factory and started producing wastewater?',
+              paragraphs: [
+                '❌ Misconception: "I have not yet established my factory, I am at the construction stage, or I have not yet gone into production and started generating wastewater; therefore I am not required to contribute to the construction costs and investments of the joint treatment plant."',
+                '✅ Correct: Whether or not a participant has commissioned their facility is absolutely not taken into account when collecting participation amounts for investment costs. Industrialists contribute 25% of the investment cost in proportion to their parcel sizes, and the remaining 75% in proportion to the flow rate and pollution load to be determined by the board of directors taking into account the technical characteristics of the treatment plant.',
+              ],
+            },
+            {
+              title:
+                'Question 5: Can an industrial parcel within an OIZ be allocated in shares to ordinary partnerships, multiple companies, or individuals?',
+              paragraphs: [
+                '❌ Misconception: "Two different partner companies or individuals can come together to share investment costs and risks, and we can jointly (in shares) obtain the allocation or purchase of a single parcel from the OIZ."',
+                '✅ Correct: Parcel allocation or sale in OIZs may only be made to a single natural person or a single legal entity. It is strictly prohibited by law to allocate or sell a parcel in shares to more than one person, to an ordinary partnership, or to more than one legal entity. If a violation is detected, the parties are given one month to rectify the shareholding; if the violation is not remedied within that period, the allocation is immediately cancelled by the OIZ.',
+              ],
+            },
+            {
+              title:
+                'Question 6: In OIZs that have passed to the general assembly stage but where the general assembly has decided that the entrepreneur committee should continue in office — is the entrepreneur committee entirely free to determine the attendance fees payable to management and audit board members, or is there a legal limit?',
+              paragraphs: [
+                '❌ Misconception: "If a decision has been made for the entrepreneur committee to continue at the general assembly, the entrepreneur committee can freely determine the attendance fee amounts for members at whatever level it wishes."',
+                '✅ Correct: Although the authority to determine attendance fees belongs to the entrepreneur committee, such payments are subject to very clear and strict statutory limits. The total monthly attendance fee payable may not under any circumstances exceed the net monthly remuneration paid to the chairman and members of the boards of directors of Public Economic Enterprises (KİT) and their affiliates, as determined each year by the Presidency. (For members who are public servants, the provisions of Decree-Law No. 631 apply.)',
+              ],
+            },
+          ],
+          hashtags: [
+            '#OIZ',
+            '#Regulations',
+            '#CorporateGovernance',
+            '#Industry',
+            '#Law',
+            '#Management',
+            '#AntConsulting',
+            '#BoardOfDirectors',
+          ],
+          disclaimer: 'This content is provided for informational purposes only as a summary.',
+        },
+      },
+      {
+        id: 'osb-huzur-hakki-2026',
+        title: 'OIZ Attendance Fee Upper Limit — July–December 2026',
+        excerpt:
+          'The upper limit for attendance fees payable to OIZ body members for the July–December 2026 period has been set at TRY 48,399.73. Calculation methodology and payment principles under the Presidential Decree.',
+        publishedAt: 'July 2026',
+        readTime: '5 min read',
+        content: {
+          intro:
+            '📌 The OIZ Implementing Regulation states the following on attendance fees payable to OIZ body members: "Members of the Entrepreneur Committee and the boards of directors and audit may receive an attendance fee per meeting in an amount determined by the Entrepreneur Committee. The total monthly amount of this attendance fee may not exceed the net monthly remuneration paid to the chairman and members of the boards of directors of public economic enterprises and their affiliates, as determined each year by the Presidency."',
+          sections: [
+            {
+              title: '📄 Presidential Decree and July–December 2026 Calculation',
+              paragraphs: [
+                'Presidential Decree No. 9904 dated 29 May 2025 sets out the payment system. Under the decree, board members of Türkiye Post and Telegraph A.Ş. and İller Bankası A.Ş. receive an amount calculated by multiplying the indicator figure (30,720) by the civil-servant monthly coefficient; the board chairman receives twice this amount; and audit board members receive an amount set by the General Assembly not exceeding 3/4 of the figure set for board members. The civil-servant monthly coefficient for July–December 2026 has been set at 1.575512.',
+                '*The term "net" did not appear in the previous decree.',
+                '💰 Based on this, the calculation 30,720 × 1.575512 = TRY 48,399.73 is the upper limit for attendance fees. This amount may be paid as a net figure.',
+              ],
+            },
+            {
+              title: '👥 Payments to the Entrepreneur Committee and Board Chairmen',
+              paragraphs: [
+                'In OIZs administered by an Entrepreneur Committee, if a decision is taken by the authorised body, the Entrepreneur Committee chairman and the Board of Directors chairman may receive payment not exceeding ❗twice❗ the monthly maximum payable to board of directors and audit board members (TRY 48,399.73).',
+              ],
+            },
+            {
+              title: '⚠️ Other Payments',
+              paragraphs: [
+                'Even with an authorised body decision, OIZ body members cannot receive any other payment besides the attendance fee under any name — such as bonuses, commissions, or committee chairmanship/membership fees. In short, the additional January and July payments mentioned in the Presidential Decree cannot be made to OIZ body members.',
+              ],
+            },
+            {
+              title: '✅ Attendance Fees in OIZs Governed by a General Assembly',
+              paragraphs: [
+                'In OIZs where governance has passed to the General Assembly and the Entrepreneur Committee\'s duties have ended, attendance fees may be paid to board of directors and audit board members in amounts determined by the General Assembly.',
+              ],
+            },
+          ],
+          hashtags: [
+            '#OIZ',
+            '#AttendanceFee',
+            '#CorporateGovernance',
+            '#IndustrialZones',
+            '#RegulatoryCompliance',
+          ],
+          sources: [
+            { label: 'Law No. 4562 on Organized Industrial Zones — Turkish Legislation Database', url: 'https://www.mevzuat.gov.tr/' },
+            { label: 'Official Gazette of Türkiye — Presidential Decree No. 9904 dated 29 May 2025', url: 'https://www.resmigazete.gov.tr/' },
             { label: 'OSBÜK — OIZ Umbrella Organization of Türkiye', url: 'https://www.osbuk.org.tr/' },
           ],
         },
