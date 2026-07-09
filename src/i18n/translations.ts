@@ -619,7 +619,6 @@ const tr: Dictionary = {
       { label: 'Ekibimiz', href: '/kurumsal' },
       { label: 'Blog', href: '/blog' },
       { label: 'SSS', href: '/sss' },
-      { label: 'OSB Sözlüğü', href: '/osb-sozlugu' },
       { label: 'İletişim', href: '/iletisim' },
     ],
     serviceLinks: [
@@ -2285,7 +2284,6 @@ const en: Dictionary = {
       { label: 'Our Team', href: '/kurumsal' },
       { label: 'Blog', href: '/blog' },
       { label: 'FAQ', href: '/sss' },
-      { label: 'OIZ Glossary', href: '/osb-sozlugu' },
       { label: 'Contact', href: '/iletisim' },
     ],
     serviceLinks: [
