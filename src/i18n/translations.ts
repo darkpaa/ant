@@ -619,6 +619,7 @@ const tr: Dictionary = {
       { label: 'Ekibimiz', href: '/kurumsal' },
       { label: 'Blog', href: '/blog' },
       { label: 'SSS', href: '/sss' },
+      { label: 'OSB Sözlüğü', href: '/osb-sozlugu' },
       { label: 'İletişim', href: '/iletisim' },
     ],
     serviceLinks: [
@@ -626,7 +627,7 @@ const tr: Dictionary = {
       { label: 'Ar-Ge ve İnovasyon', href: '/#hizmetlerimiz' },
       { label: 'Hibe ve Teşvikler', href: '/#hizmetlerimiz' },
       { label: 'Kurumsal Gelişim', href: '/#hizmetlerimiz' },
-      { label: 'OSB Mevzuat ve Yönetim', href: '/#hizmetlerimiz' },
+      { label: 'OSB Mevzuat ve Yönetim', href: '/osb-danismanligi' },
       { label: 'Stratejik Planlama', href: '/#hizmetlerimiz' },
     ],
     legalLinks: [
@@ -2284,6 +2285,7 @@ const en: Dictionary = {
       { label: 'Our Team', href: '/kurumsal' },
       { label: 'Blog', href: '/blog' },
       { label: 'FAQ', href: '/sss' },
+      { label: 'OIZ Glossary', href: '/osb-sozlugu' },
       { label: 'Contact', href: '/iletisim' },
     ],
     serviceLinks: [
@@ -2291,7 +2293,7 @@ const en: Dictionary = {
       { label: 'R&D and Innovation', href: '/#hizmetlerimiz' },
       { label: 'Grants and Incentives', href: '/#hizmetlerimiz' },
       { label: 'Corporate Development', href: '/#hizmetlerimiz' },
-      { label: 'OIZ Regulation & Governance', href: '/#hizmetlerimiz' },
+      { label: 'OIZ Regulation & Governance', href: '/osb-danismanligi' },
       { label: 'Strategic Planning', href: '/#hizmetlerimiz' },
     ],
     legalLinks: [

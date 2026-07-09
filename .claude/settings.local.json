@@ -6,7 +6,8 @@
       "Bash(npm install *)",
       "Bash(curl -sI \"https://share.google/Jrw7wgpPg7RhE5Y4x\")",
       "Bash(curl -sL \"https://share.google/Jrw7wgpPg7RhE5Y4x\")",
-      "Bash(curl -sL --max-redirs 10 -A \"Mozilla/5.0\" \"https://share.google/Jrw7wgpPg7RhE5Y4x\")"
+      "Bash(curl -sL --max-redirs 10 -A \"Mozilla/5.0\" \"https://share.google/Jrw7wgpPg7RhE5Y4x\")",
+      "PowerShell(npx tsc --noEmit)"
     ],
     "additionalDirectories": [
       "c:\\Users\\lanad\\OneDrive\\Masaüstü\\ant\\src\\components",

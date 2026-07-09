@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 import {
   Briefcase,
   Lightbulb,
@@ -7,6 +8,7 @@ import {
   Building2,
   Target,
   ArrowRight,
+  BookOpen,
   X,
   Leaf,
   Cpu,
@@ -72,7 +74,7 @@ const sectionIcons: LucideIcon[] = [Building2, Leaf, Cpu, ShieldAlert, Rocket];
 const argeSectionIcons: LucideIcon[] = [Lightbulb, Rocket];
 
 const Services: React.FC = () => {
-  const { t } = useLang();
+  const { t, lang } = useLang();
   const [openDetail, setOpenDetail] = useState<null | DetailKey>(null);
 
   useEffect(() => {
@@ -277,7 +279,15 @@ const Services: React.FC = () => {
               </div>
             </div>
 
-            <div className="border-t border-navy-100 px-6 sm:px-10 py-5 flex items-center justify-end gap-3 bg-white">
+            <div className="border-t border-navy-100 px-6 sm:px-10 py-5 flex flex-wrap items-center justify-end gap-3 bg-white">
+              <Link
+                to="/osb-danismanligi"
+                onClick={() => setOpenDetail(null)}
+                className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl text-sm font-semibold text-navy-700 border border-navy-200 hover:border-accent-400/60 hover:text-accent-600 transition-all duration-300"
+              >
+                <BookOpen className="w-4 h-4" />
+                {lang === 'en' ? 'Full OIZ Guide' : 'Detaylı OSB Rehberi'}
+              </Link>
               <button
                 onClick={() => setOpenDetail(null)}
                 className="px-5 py-2.5 rounded-xl text-sm font-semibold text-navy-600 hover:text-navy-900 transition-colors cursor-pointer"
