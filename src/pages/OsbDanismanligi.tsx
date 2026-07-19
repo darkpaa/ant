@@ -233,7 +233,7 @@ const OsbDanismanligi: React.FC = () => {
               >
                 {t.blog.relatedTitle}
               </h2>
-              <div className="grid sm:grid-cols-2 gap-4">
+              <div className="grid sm:grid-cols-3 gap-4">
                 <Link
                   to="/sss"
                   className="group block bg-white rounded-2xl p-5 border border-navy-100 hover:border-accent-400/40 hover:shadow-lg hover:shadow-navy-900/5 transition-all duration-300"
@@ -241,6 +241,15 @@ const OsbDanismanligi: React.FC = () => {
                   <HelpCircle className="w-5 h-5 text-accent-500 mb-3" />
                   <h3 className="font-semibold text-navy-900 text-sm leading-snug group-hover:text-accent-600 transition-colors">
                     {t.blog.relatedFaqTitle}
+                  </h3>
+                </Link>
+                <Link
+                  to="/osb-sozlugu"
+                  className="group block bg-white rounded-2xl p-5 border border-navy-100 hover:border-accent-400/40 hover:shadow-lg hover:shadow-navy-900/5 transition-all duration-300"
+                >
+                  <BookOpen className="w-5 h-5 text-accent-500 mb-3" />
+                  <h3 className="font-semibold text-navy-900 text-sm leading-snug group-hover:text-accent-600 transition-colors">
+                    {t.glossary.pageTitleStart} {t.glossary.pageTitleAccent}
                   </h3>
                 </Link>
                 <Link

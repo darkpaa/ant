@@ -7,7 +7,8 @@
       "Bash(curl -sI \"https://share.google/Jrw7wgpPg7RhE5Y4x\")",
       "Bash(curl -sL \"https://share.google/Jrw7wgpPg7RhE5Y4x\")",
       "Bash(curl -sL --max-redirs 10 -A \"Mozilla/5.0\" \"https://share.google/Jrw7wgpPg7RhE5Y4x\")",
-      "PowerShell(npx tsc --noEmit)"
+      "PowerShell(npx tsc --noEmit)",
+      "Bash(node glossary-update.mjs)"
     ],
     "additionalDirectories": [
       "c:\\Users\\lanad\\OneDrive\\Masaüstü\\ant\\src\\components",

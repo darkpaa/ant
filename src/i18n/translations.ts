@@ -619,6 +619,7 @@ const tr: Dictionary = {
       { label: 'Ekibimiz', href: '/kurumsal' },
       { label: 'Blog', href: '/blog' },
       { label: 'SSS', href: '/sss' },
+      { label: 'OSB Sözlüğü', href: '/osb-sozlugu' },
       { label: 'İletişim', href: '/iletisim' },
     ],
     serviceLinks: [
@@ -1675,254 +1676,105 @@ const tr: Dictionary = {
     pageTitleStart: 'OSB ve Sanayi',
     pageTitleAccent: 'Terimler Sözlüğü',
     pageDescription:
-      'Organize Sanayi Bölgesi (OSB), Ar-Ge ve Tasarım Merkezi, Teknopark, KOSGEB-TÜBİTAK ve yeşil dönüşüm süreçlerinde sıkça karşılaşılan 50+ temel kavramın özet açıklamaları.',
+      'Organize Sanayi Bölgesi (OSB), Ar-Ge ve Tasarım Merkezi, Teknoloji Geliştirme Bölgeleri (TGB) ve iş sürekliliği yönetiminde sıkça karşılaşılan 70+ temel kavramın özet açıklamaları.',
     searchPlaceholder: 'Terim ara…',
     emptyState: 'Aradığınız terime ilişkin sonuç bulunamadı.',
     backToTop: 'Yukarı çık',
     categories: [
       {
-        title: 'Organize Sanayi Bölgesi (OSB)',
+        title: 'Organize Sanayi Bölgeleri (OSB) Tanımları',
         terms: [
-          {
-            term: 'Organize Sanayi Bölgesi (OSB)',
-            definition:
-              'Sanayinin uygun görülen alanlarda yapılanmasını sağlamak amacıyla 4562 sayılı Kanun kapsamında kurulan, altyapısı ortaklaşa sunulan mal ve hizmet üretim bölgesi.',
-          },
-          {
-            term: '4562 sayılı OSB Kanunu',
-            definition:
-              'Organize Sanayi Bölgelerinin kuruluşunu, organlarını, altyapı ve denetim süreçlerini düzenleyen temel yasal çerçeve.',
-          },
-          {
-            term: 'OSB Uygulama Yönetmeliği',
-            definition:
-              '4562 sayılı Kanun’un uygulanmasına ilişkin ayrıntılı hükümleri düzenleyen, prosedürel konuları kapsayan ikincil mevzuat.',
-          },
-          {
-            term: 'Müteşebbis Heyet',
-            definition:
-              'OSB’nin kuruluş aşamasında karar organı olarak görev yapan; il özel idaresi, belediye, ticaret/sanayi odası ve sanayici temsilcilerinden oluşan kurul.',
-          },
-          {
-            term: 'Genel Kurul',
-            definition:
-              'Müteşebbis Heyetin yerini alan; katılımcıların temsil edildiği en üst karar organı. OSB sicile kaydından sonra göreve gelir.',
-          },
-          {
-            term: 'Yönetim Kurulu',
-            definition:
-              'OSB’nin icrai organı; arsa tahsisi, ihale, sözleşmeler ve günlük operasyon kararlarını alır.',
-          },
-          {
-            term: 'Denetim Kurulu',
-            definition:
-              'OSB’nin mali ve idari işlemlerini denetleyen; raporunu Genel Kurul’a sunan bağımsız organ.',
-          },
-          {
-            term: 'Bölge Müdürlüğü',
-            definition:
-              'OSB’nin günlük idari ve teknik hizmetlerini yürüten profesyonel yönetim birimi.',
-          },
-          {
-            term: 'Katılımcı',
-            definition:
-              'OSB içinde parsel tahsisi almış ve faaliyet gösteren sanayi kuruluşu.',
-          },
-          {
-            term: 'Ön Tahsis',
-            definition:
-              'Yatırım ve üretim taahhütlerine bağlı olarak, kesin tahsise dönüşmek üzere verilen geçici arsa tahsisi.',
-          },
-          {
-            term: 'Kesin Tahsis',
-            definition:
-              'Ön tahsis şartlarının yerine getirilmesinin ardından, katılımcıya arsa üzerinde kalıcı hak veren tahsis işlemi.',
-          },
-          {
-            term: 'Tahsis İptali',
-            definition:
-              'Katılımcının yatırım veya üretim taahhütlerini süresinde yerine getirmemesi halinde Yönetim Kurulu tarafından tahsisin geri alınması.',
-          },
-          {
-            term: 'Huzur Hakkı',
-            definition:
-              'OSB organ üyelerine, toplantı başına veya aylık olarak ödenen; Cumhurbaşkanlığı Kararı ile belirlenen üst limite tâbi ücret.',
-          },
-          {
-            term: 'Bakanlık Kredisi',
-            definition:
-              'Sanayi ve Teknoloji Bakanlığı’nca OSB’lerin altyapı ve genel idare giderleri için sağlanan kredi desteği.',
-          },
-          {
-            term: 'Hakediş Raporu',
-            definition:
-              'Altyapı projelerinde ilerleme düzeyine göre hak edilen ödeme tutarını ortaya koyan teknik belge.',
-          },
-          {
-            term: 'Yeşil OSB',
-            definition:
-              'Enerji verimliliği, atık yönetimi ve karbon ayak izi kriterleri çerçevesinde Bakanlıkça sertifikalandırılan sürdürülebilirlik performans düzeyi.',
-          },
-          {
-            term: 'Akıllı OSB',
-            definition:
-              'Büyük veri, yapay zeka, IoT ve süreç otomasyonu teknolojilerinin OSB yönetimine entegre edildiği dijital dönüşüm modeli.',
-          },
-          {
-            term: 'İş Sürekliliği Planı (İSP)',
-            definition:
-              'Kritik süreçlerin kesintisiz devamı için risk analizi, müdahale ve kurtarma prosedürlerini tanımlayan belge.',
-          },
+          { term: 'Organize Sanayi Bölgesi (OSB)', definition: 'Sanayinin uygun görülen alanlarda yapılanmasını sağlamak, çarpık sanayileşme ve çevre sorunlarını önlemek, kentleşmeyi yönlendirmek, kaynakları rasyonel kullanmak, sanayi türlerinin belirli bir plan dâhilinde yerleştirilmesi amacıyla oluşturulan mal ve hizmet üretim bölgeleridir.' },
+          { term: 'İhtisas OSB', definition: 'Aynı sektör grubunda ve bu sektör grubuna dâhil alt sektörlerde faaliyet gösteren tesislerin yer aldığı OSB’yi ifade eder.' },
+          { term: 'Karma OSB', definition: 'Farklı sektörlerde faaliyet gösteren tesislerin yer aldığı OSB’yi ifade eder.' },
+          { term: 'Özel OSB', definition: 'Özel hukuk tüzel kişilerince kurulan OSB’yi ifade eder.' },
+          { term: 'Yeşil OSB', definition: 'Kaynak ve enerji verimliliği, yalın üretim, endüstriyel atık işbirliği ve çevreye duyarlı uygulamaları ile öne çıkan ve Türk Standardları Enstitüsü tarafından sertifikalandırılan OSB’leri ifade eder.' },
+          { term: 'Islah OSB', definition: '1/7/2017 tarihinden önce mer’i plana göre yapılaşan sanayi tesislerinin bulunduğu alanların ıslah edilmesi suretiyle oluşacak OSB’yi ifade eder.' },
+          { term: 'Müteşebbis Heyet', definition: 'OSB’nin kuruluşuna katılan kurum ve kuruluşların tespit edeceği on beş asıl ve on beş yedek üyeden oluşan, OSB’nin en üst karar organıdır.' },
+          { term: 'Yönetim Kurulu', definition: 'Kanun, yönetmelik, kuruluş protokolü ve müteşebbis heyetin kararları çerçevesinde OSB’nin sevk ve idaresini yürütmekle görevli organdır.' },
+          { term: 'Denetim Kurulu', definition: 'Bütçenin sarf ve uygulamasını denetlemek, rapor düzenleyerek müteşebbis heyete veya genel kurula sunmakla görevli organdır.' },
+          { term: 'Bölge Müdürlüğü', definition: 'Bölge müdürü ile yeteri kadar idarî ve teknik personelden oluşan, yönetim kurulunun kararları doğrultusunda OSB’nin sevk ve idaresini yürüten birimdir.' },
+          { term: 'OSBÜK', definition: 'Organize Sanayi Bölgeleri Üst Kuruluşunu ifade eder. OSB’ler arası dayanışma ve uygulama birlikteliğini sağlamak amacıyla kurulan bir özel hukuk tüzel kişiliğidir.' },
+          { term: 'Katılımcı', definition: 'OSB’lerde parsel tahsisi veya satışı yapılanlar ile üretimde bulunan/bulunmayı taahhüt eden gerçek veya tüzel kişi ile finansal kiracıyı ifade eder.' },
+          { term: 'Kiracı', definition: 'Katılımcının tesisini, yönetmelikte belirlenen usul ve esaslara uygun biçimde kiralayan gerçek veya tüzel kişiyi ifade eder.' },
+          { term: 'Finansal Kiracı', definition: '6361 sayılı Kanun kapsamında finansal kiralamayı kabul eden gerçek veya tüzel kişiyi ifade eder.' },
+          { term: 'Ortak Kullanım Alanları', definition: 'OSB mülkiyet ve tasarrufundaki sosyal, idari, teknik altyapı ve hizmet alanları ile park alanlarını (yollar vb. hariç) ifade eder.' },
+          { term: 'Hizmet ve Destek Alanları', definition: 'Küçük imalat, tamirat, ticaret, eğitim ve sağlık sektörlerinde katılımcı veya kiracı olarak faaliyet gösterilen alanları ifade eder.' },
+          { term: 'Katılma Payı / Katılma Payı Oranı', definition: 'OSB’nin oluşumuna katılan kurum ve kuruluşlar tarafından karşılanacak tutarı ve bu payın %6’dan az olmayan oranını ifade eder.' },
+          { term: 'Onaylı Sınır', definition: 'Teknik altyapılara ilişkin tesis ve bağlantı hatlarının yer aldığı, yer seçimi sonucunda tasdik edilmiş alanlar dışındaki OSB alanlarıdır.' },
+          { term: 'OSB Alanı', definition: 'Tasdik edilmiş alanlar ile onaylı sınır kapsamında belirlenen alanların bütününü ifade eder.' },
+          { term: 'Ön Tahsis', definition: 'OSB’nin tüzel kişilik kazanmasından parselasyon planının onaylanmasına kadar Bakanlığın izni alınarak yapılan arsa tahsis işlemidir.' },
+          { term: 'Giriş Yapısı', definition: 'Sanayi parsel büyüklüklerine göre belirlenen; güvenlik, bekleme salonu ve benzeri mekanların bulunduğu yapıyı ifade eder.' },
         ],
       },
       {
-        title: 'Ar-Ge ve Tasarım Merkezi',
+        title: 'Ar-Ge, Tasarım ve İnovasyon Ekosistemi Tanımları',
         terms: [
-          {
-            term: 'Ar-Ge Merkezi',
-            definition:
-              '5746 sayılı Kanun kapsamında, asgari Ar-Ge personeli ve fiziksel altyapı şartıyla Bakanlık onayıyla kurulan, Ar-Ge indirimlerinden yararlanan birim.',
-          },
-          {
-            term: 'Tasarım Merkezi',
-            definition:
-              'Endüstriyel tasarım faaliyetleri yürüten, 5746 sayılı Kanun teşviklerinden yararlanan, Ar-Ge Merkezi ile benzer nitelikte tescilli birim.',
-          },
-          {
-            term: '5746 sayılı Kanun',
-            definition:
-              'Ar-Ge ve Tasarım Faaliyetlerinin Desteklenmesi Hakkında Kanun; Ar-Ge indirimi, stopaj teşviki ve SGK prim desteği gibi avantajları düzenler.',
-          },
-          {
-            term: 'Ar-Ge İndirimi',
-            definition:
-              'Ar-Ge harcamalarının %100’ünün kurumlar vergisi matrahından düşülmesine imkân veren vergi avantajı.',
-          },
-          {
-            term: 'Tam Zamanlı Eşdeğer (TZE)',
-            definition:
-              'Ar-Ge personelinin çalışma süresini tam zamanlı eşdeğer olarak ölçen; Ar-Ge Merkezi eşikleri için kullanılan hesaplama yöntemi.',
-          },
-          {
-            term: 'Adam/Ay',
-            definition:
-              'Bir projede ortalama bir kişinin bir ayda yaptığı işi temsil eden çalışma süresi birimi.',
-          },
-          {
-            term: 'Faaliyet Raporu',
-            definition:
-              'Ar-Ge veya Tasarım Merkezi’nin yıllık Ar-Ge faaliyetlerini, çıktılarını ve harcamalarını Bakanlığa sunulmak üzere düzenleyen resmi rapor.',
-          },
-          {
-            term: 'Ön Denetim',
-            definition:
-              'Bakanlık denetiminden önce danışman tarafından gerçekleştirilen simülasyon niteliğindeki risk analizi incelemesi.',
-          },
+          { term: 'Ar-Ge (Araştırma ve Geliştirme)', definition: 'Bilgi dağarcığının artırılması ve bunun yeni süreç, sistem ve uygulamalar tasarlamak üzere kullanılması için sistematik bir temelde yürütülen yaratıcı çalışmalardır.' },
+          { term: 'Yenilik', definition: 'Sosyal ve ekonomik ihtiyaçlara cevap verebilen, mevcut veya yeni pazarlara sunulabilecek yeni ürün, hizmet, uygulama, yöntem veya iş modeli süreçlerini ifade eder.' },
+          { term: 'Üründe / Üretim Yöntemlerinde Yenilik', definition: 'Teknolojik açıdan önceki ürüne göre teknolojik farklar gösteren ürün ile geleneksel tesislerde üretilemeyen ürünlerin yeni tekniklerle üretilme yöntemidir.' },
+          { term: 'Ar-Ge Merkezi', definition: 'Yurtiçinde münhasıran araştırma ve geliştirme faaliyetlerinde bulunan ve en az 50 (veya belirlenen sayıda) tam zaman eşdeğer Ar-Ge personeli istihdam eden ayrı birimlerdir.' },
+          { term: 'Tasarım Merkezi', definition: 'Yurtiçinde tasarım faaliyetlerinde bulunan ve en az 10 (veya belirlenen sayıda) tam zaman eşdeğer tasarım personeli istihdam eden birimlerdir.' },
+          { term: 'Ar-Ge Projesi', definition: 'Amacı, bütçesi, sonuçta doğacak fikri mülkiyet haklarının paylaşım esasları tespit edilmiş ve araştırmacı tarafından yürütülen bilimsel projelerdir.' },
+          { term: 'Tasarım Projesi', definition: 'Aynı şekilde bütçesi, kapsamı ve hakları belirlenmiş, tasarımcı tarafından yürütülen projeleri ifade eder.' },
+          { term: 'Tasarım Faaliyeti', definition: 'Sanayi alanında ve uygun görülen alanlarda katma değer/rekabet avantajı yaratma potansiyeli taşıyan, ürün işlevselliğini geliştirmeye yönelik yenilikçi faaliyetlerdir.' },
+          { term: 'Rekabet Öncesi İşbirliği Projeleri', definition: 'Birden fazla kuruluşun verimliliği artırmak ve daha yüksek katma değer sağlamak üzere ortak yürütecekleri teknolojik niteliği olan işbirliği projeleridir.' },
+          { term: 'Teknogirişim Sermayesi', definition: 'Üniversite öğrencilerinin, mezunlarının veya doktora sahiplerinin teknoloji odaklı iş fikirlerini yüksek katma değerli teşebbüslere dönüştürmeleri için yapılan sermaye desteğidir.' },
+          { term: 'Araştırmacı', definition: 'Ar-Ge ve yenilik projelerinde görev alan en az lisans mezunu uzmanlardır.' },
+          { term: 'Tasarımcı', definition: 'Tasarım projelerinde görev alan mühendislik, mimarlık veya tasarım mezunu lisans derecesine veya lisansüstü eğitime sahip kişilerdir.' },
+          { term: 'Yazılımcı Personel', definition: 'Program geliştiren, üreten, yeterli deneyime veya eğitime sahip nitelikli personeldir.' },
+          { term: 'Teknisyen', definition: 'Meslek lisesi/yüksekokulu mezunu teknik, fen veya sağlık bölümlerinden mezun kişilerdir.' },
+          { term: 'Destek Personeli', definition: 'Faaliyetlere katılan yönetici, teknik eleman, laborant, sekreter, işçi vb. personeldir.' },
+          { term: 'Ar-Ge Personeli / Tasarım Personeli', definition: 'İlgili merkezlerde veya projelerde doğrudan görev alan uzman, teknisyen ve yazılımcıları ifade eder.' },
+          { term: 'Proje Değerlendirme Komisyonu', definition: 'Teknopark yönetici şirketlerince kurulan, en az iki öğretim elemanı ve bir sektör uzmanı (veya melek yatırımcı) içeren kuruldur.' },
+          { term: 'Değerlendirme ve Denetim Komisyonu', definition: 'Ar-Ge/Tasarım merkezleri ve projelerin değerlendirme/denetimini yapmak üzere Bakanlıkça oluşturulan komisyondur.' },
         ],
       },
       {
-        title: 'Teknopark ve TGB',
+        title: 'Teknoloji Geliştirme Bölgeleri (TGB) Tanımları',
         terms: [
-          {
-            term: 'Teknopark / Teknoloji Geliştirme Bölgesi (TGB)',
-            definition:
-              '4691 sayılı Kanun kapsamında kurulan, Ar-Ge, tasarım ve yazılım faaliyetlerinin vergi istisnalarından yararlandığı özel ekonomik bölge.',
-          },
-          {
-            term: '4691 sayılı Kanun',
-            definition:
-              'Teknoloji Geliştirme Bölgeleri Kanunu; bölge içindeki firmalara sağlanan teşvikleri ve yönetici şirket operasyonlarını düzenler.',
-          },
-          {
-            term: 'Yönetici Şirket',
-            definition:
-              'TGB’nin planlama, işletme, kiralama, proje kabulü ve Bakanlıkla koordinasyon süreçlerini yürüten tüzel kişilik.',
-          },
-          {
-            term: 'Teknopark Portalı',
-            definition:
-              'Bakanlıkça yönetilen; TGB proje girişleri, muafiyet belgeleri, personel kayıtları ve denetim süreçlerinin dijital olarak yürütüldüğü sistem.',
-          },
-          {
-            term: 'Teknopark Muafiyeti',
-            definition:
-              '4691 sayılı Kanun kapsamında bölge içi firmalara sağlanan gelir-kurumlar vergisi, KDV ve stopaj istisnaları paketi.',
-          },
-          {
-            term: 'Kuluçka Merkezi (Girişim Ofisi - GO)',
-            definition:
-              '2022 sonrası Bakanlık izniyle TGB alanı dışında da kurulabilen, erken aşama girişimleri barındıran yapılar.',
-          },
+          { term: 'Teknoloji Geliştirme Bölgesi (Teknopark/Teknokent)', definition: 'Üniversite, yüksek teknoloji enstitüsü veya Ar-Ge merkezlerinin olanaklarından yararlanarak teknoloji/yazılım üreten firmaların bulunduğu akademik ve sosyal bütünleşmiş sitelerdir.' },
+          { term: 'İhtisas TGB', definition: 'Aynı sektör grubunda ve alt sektörlerde faaliyet gösteren girişimcilerin yer aldığı tematik teknoloji geliştirme bölgeleridir.' },
+          { term: 'Yönetici Şirket', definition: 'Kanuna uygun anonim şirket olarak kurulan, bölgenin yönetimi ve işletmesinden sorumlu şirkettir.' },
+          { term: 'Kurucu Heyet', definition: 'Yönetici şirketin kuruluşuna kadar geçen süreçten sorumlu, bölgede yer alan üniversite veya kamu Ar-Ge merkezlerini içeren heyettir.' },
+          { term: 'Kuluçka Merkezi (İnkübatör)', definition: 'Genç ve yeni işletmeleri geliştirmek amacıyla ofis, ekipman, yönetim desteği ve mali kaynak erişiminin tek elden sağlandığı yapılardır.' },
+          { term: 'Ön Kuluçka', definition: 'Fikri olan ancak henüz şirketleşmemiş girişimcilere yönelik danışmanlık, mentorluk ve doğrulama süreçlerini içeren yapılardır.' },
+          { term: 'Kuluçka Girişimcisi', definition: 'Kuluçka merkezlerinde yer alan erken aşama girişimcileridir.' },
+          { term: 'Girişimci', definition: 'Bölgedeki hizmet ve imkânlardan yararlanan veya yararlanmak isteyen gerçek/tüzel kişilerdir.' },
+          { term: 'Teknoloji Transfer Ofisi (TTO)', definition: 'Teknoloji geliştiriciler ile sanayi/kullanıcı şirketler arasında işbirliği, pazarlama, fikri mülkiyet haklarının satışı konularında faaliyet gösteren yapıdır.' },
+          { term: 'Teknolojik Ürün', definition: 'Katma değeri ve rekabet edebilirliği yüksek, belirgin bir farklılık gösteren ürünü ifade eder.' },
+          { term: 'Teknoloji Geliştirme Merkezleri (TEKMER)', definition: 'KOSGEB destekli Ar-Ge ve yenilik projelerinin desteklendiği teknoloji geliştirme merkezleridir.' },
+          { term: 'Üretim Birimleri', definition: 'TGB içinde yer alan, yeni ve yüksek teknolojilere dayalı, çevreye zarar vermeyen üretim birimleridir.' },
+          { term: 'Ar-Ge Binası / Atölye', definition: 'Ofislerin, ortak alanların sunulduğu yapılar (bina) ile girişimcilerin makine/ekipman ihtiyaçları için kurulan yapılardır (atölye).' },
+          { term: 'Proje Bitirme Belgesi', definition: 'Projelerin TGB’de sonuçlandırılması ardından yönetici şirket tarafından düzenlenen elektronik belgedir.' },
+          { term: 'Dijital Üretim ve Tasarım Laboratuvarı', definition: 'Bilgi/tasarımın paylaşıldığı açık ortak laboratuvar platformudur.' },
+          { term: 'Stajyer', definition: 'Mesleki çalışma yapan mesleki/teknik eğitim öğrencileri veya üniversite öğrencileridir.' },
         ],
       },
       {
-        title: 'KOSGEB, TÜBİTAK ve Hibe-Teşvik',
+        title: 'İş Sürekliliği, Kriz ve Afet Yönetimi Tanımları',
         terms: [
-          {
-            term: 'KOSGEB',
-            definition:
-              'Küçük ve Orta Ölçekli İşletmeleri Geliştirme ve Destekleme İdaresi Başkanlığı; KOBİ’lere yönelik hibe ve proje desteklerini yürütür.',
-          },
-          {
-            term: 'KOBİ',
-            definition:
-              'Çalışan sayısı, yıllık ciro ve bilanço değerlerine göre mevzuatta tanımlanan küçük ve orta ölçekli işletme.',
-          },
-          {
-            term: 'KOBİ Bilgi Beyannamesi',
-            definition:
-              'Bir işletmenin KOBİ statüsünü ortaya koyan ve KOSGEB desteklerine başvuru için güncel tutulması gereken belge.',
-          },
-          {
-            term: 'TÜBİTAK',
-            definition:
-              'Türkiye Bilimsel ve Teknolojik Araştırma Kurumu; Ar-Ge ve inovasyon projelerinin değerlendirilmesi ve desteklenmesi süreçlerinden sorumludur.',
-          },
-          {
-            term: 'TÜBİTAK 1501',
-            definition:
-              'Sanayi Ar-Ge Projeleri Destekleme Programı; orta ve büyük ölçekli firmalara yönelik hibe destek çağrısı.',
-          },
-          {
-            term: 'TÜBİTAK 1507',
-            definition:
-              'KOBİ Ar-Ge Başlangıç Destek Programı; KOBİ’lerin ilk beş Ar-Ge projesi için hibe desteği sağlar.',
-          },
-        ],
-      },
-      {
-        title: 'Yeşil Dönüşüm ve Diğer',
-        terms: [
-          {
-            term: 'Avrupa Yeşil Mutabakatı',
-            definition:
-              'Avrupa Birliği’nin 2050 karbon-nötr hedefi kapsamında yayımladığı yeşil dönüşüm strateji çerçevesi.',
-          },
-          {
-            term: 'Sınırda Karbon Düzenlemesi (CBAM)',
-            definition:
-              'AB’ye ithal edilen belirli ürünler için karbon ayak izine bağlı olarak uygulanacak sınır vergisi mekanizması.',
-          },
-          {
-            term: 'Sürdürülebilirlik Sertifikası',
-            definition:
-              'Enerji, su, atık ve karbon ayak izi performansının bağımsız biçimde doğrulandığı belge (ör. Yeşil OSB, LEED, BREEAM).',
-          },
-          {
-            term: 'KVKK',
-            definition:
-              '6698 sayılı Kişisel Verilerin Korunması Kanunu; kişisel veri işlemenin hukuki çerçevesini düzenler.',
-          },
-          {
-            term: 'Resilience (Dayanıklılık)',
-            definition:
-              'Kuruluşun beklenmedik kesintilere rağmen faaliyetlerini sürdürebilme ve hızla toparlanma kapasitesi.',
-          },
-          {
-            term: 'Dijital Dönüşüm',
-            definition:
-              'İş süreçlerinin dijital teknolojiler yardımıyla yeniden tasarlanarak verimlilik, şeffaflık ve kalite kazandırılması.',
-          },
+          { term: 'İş Sürekliliği Yönetim Sistemi (İSYS)', definition: 'Operasyonel direnci artıran, kuruluşun kesintilere hazırlıklı olmasını, müdahale etmesini ve toparlanmasını sağlayan bütünsel yönetim sistemidir.' },
+          { term: 'İş Etki Analizi (İEA)', definition: 'Kesintilerin zamana bağlı operasyonel, yasal, finansal ve itibar etkilerini bilimsel şekilde değerlendiren sistematik analiz sürecidir.' },
+          { term: 'Risk Değerlendirmesi (RD)', definition: 'Kritik hizmetleri tehdit eden potansiyel olayların (doğa, siber, teknolojik) gerçekleşme olasılıklarını ve etkilerini analiz etme sürecidir.' },
+          { term: 'MTPD / MAO (Maksimum Tolere Edilebilir Kesinti Süresi)', definition: 'İlgili faaliyetin kesintiye uğraması durumunda kuruluşun kabul edilemez etkilere maruz kalmadan dayanabileceği en uzun süredir.' },
+          { term: 'RTO (Kurtarma Süresi Hedefi)', definition: 'Hedeflenen işlevselliğe ulaşmak için faaliyetin yeniden başlatılması adına planlanan zaman aralığıdır (RTO süresi MTPD’den küçük veya eşittir).' },
+          { term: 'MBCO (Asgari İş Sürekliliği Hedefi)', definition: 'RTO anında hizmetin sunulacağı asgari kabul edilebilir kapasite ve işlevsellik seviyesidir.' },
+          { term: 'RPO (Kurtarma Noktası Hedefi)', definition: 'Özellikle veri/BT sistemleri için kabul edilebilir maksimum veri kaybı miktarının süre cinsinden ifadesidir.' },
+          { term: 'Bütünleşik Olay Yönetim Planı (BOYP)', definition: 'Tüm acil durum, kriz ve süreklilik planlarını tek çatı altında toplayan üst çerçeve ("Anayasa") dokümanıdır.' },
+          { term: 'İş Sürekliliği Planı (İSP)', definition: 'Olayın kontrolünden sonra kritik hizmetlerin hedeflenen RTO ve MBCO seviyelerinde yeniden başlatılmasını anlatan operasyonel dokümandır.' },
+          { term: 'Acil Durum Müdahale Planı (ADMP)', definition: 'Yangın, deprem gibi olaylarda can güvenliğini sağlamak ve hasarı sınırlandırmak için atılacak anlık adımları kapsayan plandır.' },
+          { term: 'Kriz Yönetim Planı (KYP)', definition: 'Kurumsal itibarı, stratejik ve finansal yapıyı tehdit eden üst düzey olayları yönetmek için kullanılır.' },
+          { term: 'Siber Olay Müdahale Planı (SOMP)', definition: 'Fidye yazılımı, veri sızıntısı gibi olaylarda uygulanan siber güvenlik planıdır.' },
+          { term: 'BT Felaket Kurtarma Planı (BT-FKP)', definition: 'Kesinti durumunda BT altyapısı, ağ ve sunucuların yeniden ayağa kaldırılmasını tanımlar.' },
+          { term: 'ADOM / EOC (Acil Durum Operasyon Merkezi)', definition: 'Kriz anlarında komuta ve kontrolün sağlandığı koordinasyon merkezidir.' },
+          { term: 'Soğuk Alan (Cold Site)', definition: 'Sadece fiziksel alanın bulunduğu, donanım/verilerin kriz anında kurulması gereken yedek merkezdir.' },
+          { term: 'Ilık Alan (Warm Site)', definition: 'İnternet, masa vb. altyapının hazır olduğu ancak BT donanımlarının aktive edilmesi gereken yedek ofistir.' },
+          { term: 'Sıcak Alan (Hot Site)', definition: 'Tüm sistemlerin, verilerin ve altyapının çalışır ve güncel durumda beklediği yedekleme merkezidir.' },
+          { term: 'DÖF (Düzeltici ve Önleyici Faaliyet)', definition: 'Bir uygunsuzluğun kök nedenini düzeltmek veya potansiyel sorunu önlemek için yapılan iyileştirme faaliyetidir.' },
+          { term: 'KYE (Kriz Yönetim Ekibi)', definition: 'Kurum itibarı ve en üst düzey kararlardan sorumlu stratejik yönetim ekibidir.' },
+          { term: 'OKE (Olay Koordinasyon Ekibi)', definition: 'Ekipleri koordine eden ve KYE’ye raporlama yapan taktiksel orta kademe ekibidir.' },
+          { term: 'İSE (İş Sürekliliği Ekibi)', definition: 'Departmanlara ait İş Sürekliliği Planlarını uygulamaktan sorumlu operasyonel gruptur.' },
         ],
       },
     ],
@@ -2284,6 +2136,7 @@ const en: Dictionary = {
       { label: 'Our Team', href: '/kurumsal' },
       { label: 'Blog', href: '/blog' },
       { label: 'FAQ', href: '/sss' },
+      { label: 'OIZ Glossary', href: '/osb-sozlugu' },
       { label: 'Contact', href: '/iletisim' },
     ],
     serviceLinks: [
@@ -3335,82 +3188,105 @@ const en: Dictionary = {
     pageTitleStart: 'OIZ and Industrial',
     pageTitleAccent: 'Terminology Glossary',
     pageDescription:
-      'Concise definitions of 50+ key concepts around Organized Industrial Zones (OIZ), R&D and Design Centres, Technoparks, KOSGEB-TÜBİTAK and green transformation.',
+      'Concise definitions of 70+ key concepts across Organized Industrial Zones (OIZ), R&D and Design ecosystems, Technology Development Zones (TDZ) and business continuity management.',
     searchPlaceholder: 'Search term…',
     emptyState: 'No matching terms found.',
     backToTop: 'Back to top',
     categories: [
       {
-        title: 'Organized Industrial Zone (OIZ)',
+        title: 'Organized Industrial Zones (OIZ) Definitions',
         terms: [
-          {
-            term: 'Organized Industrial Zone (OIZ)',
-            definition:
-              'A designated manufacturing area established under Law No. 4562 where infrastructure is delivered collectively to enable planned industrial development.',
-          },
-          { term: 'Law No. 4562 (OIZ Law)', definition: 'Primary Turkish law governing OIZ establishment, governance bodies and infrastructure and oversight processes.' },
-          { term: 'OIZ Implementing Regulation', definition: 'Secondary legislation detailing application of Law No. 4562 including procedural provisions.' },
-          { term: 'Founding Committee', definition: 'Founding governance body composed of representatives from local administrations and chambers of commerce/industry.' },
-          { term: 'General Assembly', definition: 'Highest decision-making body, replacing the Founding Committee after OIZ registration.' },
-          { term: 'Board of Directors', definition: 'Executive body responsible for allocations, tenders, contracts and day-to-day operations.' },
-          { term: 'Supervisory Board', definition: 'Independent body auditing financial and administrative operations and reporting to the General Assembly.' },
-          { term: 'Regional Directorate', definition: 'Professional management unit running daily administrative and technical services of the OIZ.' },
-          { term: 'Participant', definition: 'A manufacturer that has received a parcel allocation in an OIZ and operates from that parcel.' },
-          { term: 'Pre-Allocation', definition: 'Provisional land allocation contingent on fulfilment of investment and production commitments.' },
-          { term: 'Definitive Allocation', definition: 'Permanent land grant to a participant after pre-allocation conditions are fulfilled.' },
-          { term: 'Allocation Revocation', definition: 'Withdrawal of allocation by the Board where investment or production commitments are not met within regulatory timelines.' },
-          { term: 'Attendance Fee', definition: 'Compensation paid to OIZ body members per meeting or per month, capped by Presidential Decree.' },
-          { term: 'Ministry Credit', definition: 'Credit support provided by the Ministry of Industry and Technology for OIZ infrastructure and general administration.' },
-          { term: 'Progress Payment', definition: 'Payment in infrastructure projects tied to the completion percentage, evidenced by a technical report.' },
-          { term: 'Green OIZ', definition: 'Sustainability performance tier certified by the Ministry based on energy, waste, water and carbon criteria.' },
-          { term: 'Smart OIZ', definition: 'Digital transformation model integrating big data, AI, IoT and automation into OIZ management.' },
-          { term: 'Business Continuity Plan (BCP)', definition: 'Document defining risk analysis, response and recovery procedures for uninterrupted critical operations.' },
+          { term: 'Organized Industrial Zone (OIZ)', definition: 'Zones for the production of goods and services created to enable industry to develop in suitable areas, prevent unplanned industrialisation and environmental problems, guide urbanisation, use resources rationally and site industry types within a defined plan.' },
+          { term: 'Specialised OIZ', definition: 'An OIZ hosting facilities operating in the same sector group and its sub-sectors.' },
+          { term: 'Mixed OIZ', definition: 'An OIZ hosting facilities operating in different sectors.' },
+          { term: 'Private OIZ', definition: 'An OIZ established by private-law legal entities.' },
+          { term: 'Green OIZ', definition: 'OIZs distinguished by resource and energy efficiency, lean production, industrial waste collaboration and environmentally sensitive practices, certified by the Turkish Standards Institution.' },
+          { term: 'Rehabilitation OIZ', definition: 'An OIZ formed by rehabilitating areas of industrial facilities built before 1/7/2017 under the applicable plan.' },
+          { term: 'Founding (Entrepreneur) Committee', definition: 'The OIZ’s highest decision-making body, composed of fifteen principal and fifteen substitute members designated by the institutions participating in the OIZ’s establishment.' },
+          { term: 'Board of Directors', definition: 'The body responsible for the management and administration of the OIZ within the framework of the law, regulation, founding protocol and the entrepreneur committee’s decisions.' },
+          { term: 'Supervisory Board', definition: 'The body responsible for auditing the expenditure and implementation of the budget and reporting to the entrepreneur committee or general assembly.' },
+          { term: 'Regional Directorate', definition: 'The unit, composed of the regional manager and sufficient administrative and technical staff, that runs the management and administration of the OIZ in line with the board’s decisions.' },
+          { term: 'OSBÜK', definition: 'The OIZ Umbrella Organization; a private-law legal entity established to ensure solidarity and unity of practice among OIZs.' },
+          { term: 'Participant', definition: 'Real or legal persons to whom a parcel is allocated or sold in OIZs and who produce or undertake to produce, as well as financial lessees.' },
+          { term: 'Tenant (Lessee)', definition: 'A real or legal person who leases a participant’s facility in accordance with the procedures and principles set in the regulation.' },
+          { term: 'Financial Lessee', definition: 'A real or legal person who accepts financial leasing under Law No. 6361.' },
+          { term: 'Common Use Areas', definition: 'Social, administrative, technical infrastructure and service areas and park areas under OIZ ownership and disposal (excluding roads, etc.).' },
+          { term: 'Service and Support Areas', definition: 'Areas where activities are carried out as participant or tenant in small manufacturing, repair, trade, education and health sectors.' },
+          { term: 'Contribution Share / Contribution Share Ratio', definition: 'The amount to be covered by the institutions participating in the OIZ’s formation, and its ratio of no less than 6%.' },
+          { term: 'Approved Boundary', definition: 'OIZ areas outside the areas approved as a result of site selection, containing facilities and connection lines for technical infrastructure.' },
+          { term: 'OIZ Area', definition: 'The whole of the approved areas and the areas defined within the approved boundary.' },
+          { term: 'Pre-Allocation', definition: 'The land allocation carried out with the Ministry’s permission from the moment the OIZ acquires legal personality until the parcelling plan is approved.' },
+          { term: 'Entrance Structure', definition: 'A structure — determined by industrial parcel size — housing security, waiting room and similar spaces.' },
         ],
       },
       {
-        title: 'R&D and Design Centre',
+        title: 'R&D, Design and Innovation Ecosystem Definitions',
         terms: [
-          { term: 'R&D Centre', definition: 'Certified unit under Law No. 5746 benefiting from R&D deduction, subject to minimum staff and facility requirements.' },
-          { term: 'Design Centre', definition: 'Unit focused on industrial design benefiting from incentives similar to R&D Centres under Law No. 5746.' },
-          { term: 'Law No. 5746', definition: 'Law on Supporting R&D and Design Activities, defining R&D deduction, withholding incentive and social-security premium support.' },
-          { term: 'R&D Deduction', definition: 'Tax advantage allowing 100% of eligible R&D expenses to be deducted from the corporate tax base.' },
-          { term: 'Full-Time Equivalent (FTE)', definition: 'Calculation method measuring R&D personnel work time for eligibility thresholds.' },
-          { term: 'Person-Month', definition: 'Work-time unit representing one person working for one month on average on a project.' },
-          { term: 'Activity Report', definition: 'Annual report documenting R&D or Design Centre activities, outputs and expenses to the Ministry.' },
-          { term: 'Pre-Audit', definition: 'Advisor-led simulation of the Ministry audit to detect and remediate risk findings in advance.' },
+          { term: 'R&D (Research and Development)', definition: 'Creative work carried out on a systematic basis to increase the stock of knowledge and to use it to design new processes, systems and applications.' },
+          { term: 'Innovation', definition: 'New product, service, application, method or business-model processes that meet social and economic needs and can be offered to existing or new markets.' },
+          { term: 'Innovation in Product / Production Methods', definition: 'A product showing technological differences from its predecessor, and the method of producing — with new techniques — products that cannot be made in conventional facilities.' },
+          { term: 'R&D Centre', definition: 'Separate units carrying out exclusively research and development activities domestically and employing at least 50 (or the prescribed number of) full-time-equivalent R&D personnel.' },
+          { term: 'Design Centre', definition: 'Units carrying out design activities domestically and employing at least 10 (or the prescribed number of) full-time-equivalent design personnel.' },
+          { term: 'R&D Project', definition: 'Scientific projects with defined objectives, budget and sharing principles for the resulting intellectual property, carried out by a researcher.' },
+          { term: 'Design Project', definition: 'Projects similarly defined in budget, scope and rights, carried out by a designer.' },
+          { term: 'Design Activity', definition: 'Innovative activities aimed at improving product functionality with the potential to create added value/competitive advantage in industry and approved fields.' },
+          { term: 'Pre-Competitive Collaboration Projects', definition: 'Collaboration projects of a technological nature jointly conducted by more than one organisation to increase productivity and generate higher added value.' },
+          { term: 'Techno-Entrepreneurship Capital', definition: 'Capital support provided to help university students, graduates or PhD holders turn technology-focused business ideas into high-value ventures.' },
+          { term: 'Researcher', definition: 'Experts with at least a bachelor’s degree who take part in R&D and innovation projects.' },
+          { term: 'Designer', definition: 'Persons with a bachelor’s or postgraduate degree in engineering, architecture or design who take part in design projects.' },
+          { term: 'Software Personnel', definition: 'Qualified personnel who develop and produce programs and have sufficient experience or training.' },
+          { term: 'Technician', definition: 'Persons who graduated from vocational high schools/colleges in technical, science or health fields.' },
+          { term: 'Support Personnel', definition: 'Personnel taking part in activities such as managers, technical staff, laboratory assistants, secretaries, workers, etc.' },
+          { term: 'R&D Personnel / Design Personnel', definition: 'The experts, technicians and software personnel directly involved in the relevant centres or projects.' },
+          { term: 'Project Evaluation Commission', definition: 'A board established by technopark management companies, including at least two academics and one sector expert (or angel investor).' },
+          { term: 'Evaluation and Audit Commission', definition: 'A commission formed by the Ministry to evaluate/audit R&D/Design centres and projects.' },
         ],
       },
       {
-        title: 'Technopark and TDZ',
+        title: 'Technology Development Zones (TDZ) Definitions',
         terms: [
-          { term: 'Technopark / Technology Development Zone (TDZ)', definition: 'Special economic zone established under Law No. 4691 where R&D, design and software activities enjoy tax exemptions.' },
-          { term: 'Law No. 4691', definition: 'Law on Technology Development Zones defining incentives and managing-company operations.' },
-          { term: 'Managing Company', definition: 'Legal entity handling planning, operation, leasing, project admission and Ministry coordination of a TDZ.' },
-          { term: 'Technopark Portal', definition: 'Ministry-managed system used for TDZ project submissions, exemption certificates, personnel records and audits.' },
-          { term: 'Technopark Exemption', definition: 'Bundle of income/corporate tax, VAT and withholding exemptions granted to zone firms under Law No. 4691.' },
-          { term: 'Incubation Centre (GO)', definition: 'Early-stage startup facility that, since 2022, may be opened outside the TDZ boundary with Ministry approval.' },
+          { term: 'Technology Development Zone (Technopark/Technocity)', definition: 'Academically and socially integrated sites hosting firms that produce technology/software by drawing on the resources of universities, high-technology institutes or R&D centres.' },
+          { term: 'Specialised TDZ', definition: 'Thematic technology development zones hosting entrepreneurs operating in the same sector group and sub-sectors.' },
+          { term: 'Management Company', definition: 'A company established as a joint-stock company in accordance with the law, responsible for the management and operation of the zone.' },
+          { term: 'Founding Committee', definition: 'The committee responsible for the process up to the establishment of the management company, comprising the universities or public R&D centres located in the zone.' },
+          { term: 'Incubation Centre (Incubator)', definition: 'Structures where office space, equipment, management support and access to financial resources are provided from a single point to develop young and new businesses.' },
+          { term: 'Pre-Incubation', definition: 'Structures offering consultancy, mentoring and validation processes for entrepreneurs who have an idea but have not yet formed a company.' },
+          { term: 'Incubation Entrepreneur', definition: 'Early-stage entrepreneurs located in incubation centres.' },
+          { term: 'Entrepreneur', definition: 'Real/legal persons who benefit or wish to benefit from the services and facilities in the zone.' },
+          { term: 'Technology Transfer Office (TTO)', definition: 'A structure operating in collaboration, marketing and the sale of intellectual property rights between technology developers and industry/user companies.' },
+          { term: 'Technological Product', definition: 'A product with high added value and competitiveness that shows a distinct difference.' },
+          { term: 'Technology Development Centres (TEKMER)', definition: 'KOSGEB-supported technology development centres where R&D and innovation projects are supported.' },
+          { term: 'Production Units', definition: 'Environmentally harmless production units within the TDZ based on new and high technologies.' },
+          { term: 'R&D Building / Workshop', definition: 'Structures offering offices and common areas (building) and structures established for entrepreneurs’ machinery/equipment needs (workshop).' },
+          { term: 'Project Completion Certificate', definition: 'An electronic document issued by the management company after projects are concluded in the TDZ.' },
+          { term: 'Digital Production and Design Laboratory', definition: 'An open, shared laboratory platform where knowledge/design is shared.' },
+          { term: 'Intern', definition: 'Vocational/technical education students or university students undertaking vocational work.' },
         ],
       },
       {
-        title: 'KOSGEB, TÜBİTAK and Grants',
+        title: 'Business Continuity, Crisis and Disaster Management Definitions',
         terms: [
-          { term: 'KOSGEB', definition: 'Small and Medium Enterprises Development Organization of Türkiye; runs SME grant and support programmes.' },
-          { term: 'SME', definition: 'Enterprise classified by headcount, annual turnover or balance-sheet thresholds defined by regulation.' },
-          { term: 'SME Declaration', definition: 'Document proving SME status, kept up to date for KOSGEB applications.' },
-          { term: 'TÜBİTAK', definition: 'Scientific and Technological Research Council of Türkiye; evaluates and funds R&D and innovation projects.' },
-          { term: 'TÜBİTAK 1501', definition: 'Industrial R&D Projects Support Programme targeting medium and large enterprises.' },
-          { term: 'TÜBİTAK 1507', definition: 'SME R&D Start-up Support Programme for SMEs within their first five R&D projects.' },
-        ],
-      },
-      {
-        title: 'Green Transformation and Other',
-        terms: [
-          { term: 'European Green Deal', definition: 'EU strategic framework for the 2050 carbon-neutral target.' },
-          { term: 'Carbon Border Adjustment Mechanism (CBAM)', definition: 'EU border pricing mechanism on certain imports based on their carbon footprint.' },
-          { term: 'Sustainability Certification', definition: 'Third-party verification of energy, water, waste and carbon performance (e.g. Green OIZ, LEED, BREEAM).' },
-          { term: 'KVKK', definition: 'Turkey’s Law No. 6698 on the Protection of Personal Data, the national data-protection framework.' },
-          { term: 'Resilience', definition: 'Capacity of an organisation to sustain operations through disruptions and recover quickly.' },
-          { term: 'Digital Transformation', definition: 'Redesign of business processes through digital technologies for efficiency, transparency and quality.' },
+          { term: 'Business Continuity Management System (BCMS)', definition: 'A holistic management system that increases operational resilience and enables the organisation to be prepared for, respond to and recover from disruptions.' },
+          { term: 'Business Impact Analysis (BIA)', definition: 'A systematic analysis process that scientifically assesses the time-dependent operational, legal, financial and reputational impacts of disruptions.' },
+          { term: 'Risk Assessment (RA)', definition: 'The process of analysing the likelihood and impact of potential events (natural, cyber, technological) that threaten critical services.' },
+          { term: 'MTPD (Maximum Tolerable Period of Disruption)', definition: 'The longest time an organisation can withstand the disruption of an activity without suffering unacceptable impacts.' },
+          { term: 'RTO (Recovery Time Objective)', definition: 'The planned timeframe for restarting an activity to reach targeted functionality (RTO is less than or equal to MTPD).' },
+          { term: 'MBCO (Minimum Business Continuity Objective)', definition: 'The minimum acceptable level of capacity and functionality at which the service will be delivered at the RTO.' },
+          { term: 'RPO (Recovery Point Objective)', definition: 'The maximum acceptable amount of data loss, expressed in time, particularly for data/IT systems.' },
+          { term: 'Integrated Incident Management Plan (IIMP)', definition: 'The top-level framework ("constitution") document bringing all emergency, crisis and continuity plans under one roof.' },
+          { term: 'Business Continuity Plan (BCP)', definition: 'The operational document describing the restart of critical services at the targeted RTO and MBCO levels after the incident is under control.' },
+          { term: 'Emergency Response Plan (ERP)', definition: 'A plan covering the immediate steps to be taken to ensure life safety and limit damage in events such as fire and earthquake.' },
+          { term: 'Crisis Management Plan (CMP)', definition: 'Used to manage high-level events threatening corporate reputation and the strategic and financial structure.' },
+          { term: 'Cyber Incident Response Plan (CIRP)', definition: 'A cybersecurity plan applied in events such as ransomware and data breaches.' },
+          { term: 'IT Disaster Recovery Plan (IT-DRP)', definition: 'Defines the restoration of IT infrastructure, networks and servers in the event of a disruption.' },
+          { term: 'EOC (Emergency Operations Centre)', definition: 'The coordination centre where command and control are maintained during crises.' },
+          { term: 'Cold Site', definition: 'A backup centre with only physical space, where hardware/data must be set up during a crisis.' },
+          { term: 'Warm Site', definition: 'A backup office where infrastructure such as internet and desks is ready but IT hardware must be activated.' },
+          { term: 'Hot Site', definition: 'A backup centre where all systems, data and infrastructure stand ready, operational and up to date.' },
+          { term: 'CAPA (Corrective and Preventive Action)', definition: 'An improvement activity to correct the root cause of a nonconformity or prevent a potential problem.' },
+          { term: 'CMT (Crisis Management Team)', definition: 'The strategic management team responsible for corporate reputation and top-level decisions.' },
+          { term: 'ICT (Incident Coordination Team)', definition: 'The tactical mid-level team that coordinates the teams and reports to the CMT.' },
+          { term: 'BCT (Business Continuity Team)', definition: 'The operational group responsible for implementing departmental Business Continuity Plans.' },
         ],
       },
     ],
